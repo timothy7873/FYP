@@ -8289,3 +8289,19 @@ com.mysql.jdbc.exceptions.jdbc4.MySQLSyntaxErrorException: Invalid default value
 2018-10-04 15:13:40 INFO  [marauroad ] Statistics               ( 122) - Total/Used memory: 115712/92056
 2018-10-04 15:14:40 INFO  [marauroad ] Statistics               ( 122) - Total/Used memory: 115712/93085
 2018-10-04 15:15:14 INFO  [verManager] TeleporterBehaviour      ( 174) - Cannot place teleporting NPC Mizuno at 0_ados_city_s 101 58
+2018-10-04 15:15:40 INFO  [marauroad ] Statistics               ( 122) - Total/Used memory: 116224/88397
+2018-10-04 15:16:40 INFO  [marauroad ] Statistics               ( 122) - Total/Used memory: 115200/87022
+2018-10-04 15:17:40 INFO  [marauroad ] Statistics               ( 122) - Total/Used memory: 115712/87514
+2018-10-04 15:18:40 INFO  [marauroad ] Statistics               ( 122) - Total/Used memory: 115712/87859
+2018-10-04 15:19:40 INFO  [marauroad ] Statistics               ( 122) - Total/Used memory: 106496/88365
+2018-10-04 15:20:40 INFO  [marauroad ] Statistics               ( 122) - Total/Used memory: 115200/90097
+2018-10-04 15:21:40 INFO  [marauroad ] Statistics               ( 122) - Total/Used memory: 106496/90372
+2018-10-04 15:22:40 INFO  [marauroad ] Statistics               ( 122) - Total/Used memory: 114688/90538
+2018-10-04 15:23:40 INFO  [marauroad ] Statistics               ( 122) - Total/Used memory: 106496/90790
+2018-10-04 15:24:20 INFO  [verManager] TeleporterBehaviour      ( 174) - Cannot place teleporting NPC Mizuno at 0_ados_swamp 124 73
+2018-10-04 15:24:40 INFO  [marauroad ] Statistics               ( 122) - Total/Used memory: 105984/80815
+2018-10-04 15:25:40 INFO  [marauroad ] Statistics               ( 122) - Total/Used memory: 113664/80864
+2018-10-04 15:26:40 INFO  [marauroad ] Statistics               ( 122) - Total/Used memory: 105984/82217
+2018-10-04 15:27:40 INFO  [marauroad ] Statistics               ( 122) - Total/Used memory: 113152/82605
+2018-10-04 15:28:40 INFO  [marauroad ] Statistics               ( 122) - Total/Used memory: 105984/83063
+2018-10-04 15:28:52 INFO  [verManager] TeleporterBehaviour      ( 174) - Cannot place teleporting NPC Mizuno at 0_ados_wall_n2 120 79

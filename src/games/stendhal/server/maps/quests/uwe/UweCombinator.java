@@ -19,6 +19,14 @@ public class UweCombinator implements LoadableContent{
 	private String npcName = "UweCombinator";
 	private SpeakerNPC npc;
 	private CombinatorCorpse corpse;
+	
+	private int posX, posY;
+	
+	public UweCombinator()
+	{
+		posX=10;
+		posY=10;
+	}
 
 	private void buildConditions() {
 	}
@@ -43,7 +51,7 @@ public class UweCombinator implements LoadableContent{
 		// npc.setOutfit(new Outfit(0, 4, 7, 32, 13));
 		npc.setEntityClass("noimagenpc");
 		npc.setCollisionAction(CollisionAction.REVERSE);
-		npc.setPosition(9, 10);
+		npc.setPosition(posX, posY);
 		npc.setDirection(Direction.UP);
 		npc.initHP(100);
 		// npc.setSpeed(1.0);
@@ -103,7 +111,7 @@ public class UweCombinator implements LoadableContent{
 	
 	private void createCorpse()
 	{
-		corpse=new CombinatorCorpse(10,10);
+		corpse=new CombinatorCorpse(posX+1,posY);
 		zone.add(corpse);
 	}
 

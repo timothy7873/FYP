@@ -1,26 +1,26 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<statistics time="1538637340">
-  <uptime value="1696.83"/>
-  <memory total="116224" used="88397"/>
+<statistics time="1538638120">
+  <uptime value="2476.935"/>
+  <memory total="105984" used="83063"/>
 <attrib name="Transfer content" value="1" />
 <attrib name="Transfer content cache" value="8" />
-<attrib name="Bytes recv" value="10157" />
-<attrib name="Killed rat" value="16" />
-<attrib name="Bytes send" value="735951" />
+<attrib name="Bytes recv" value="13711" />
+<attrib name="Killed rat" value="19" />
+<attrib name="Bytes send" value="1112044" />
 <attrib name="Players logged" value="1" />
 <attrib name="Perceptions SYNC" value="1" />
-<attrib name="Message send" value="5399" />
+<attrib name="Message send" value="7977" />
 <attrib name="Players online" value="0" />
 <attrib name="Players login" value="1" />
 <attrib name="Tranfer content size" value="145" />
 <attrib name="Players logout" value="0" />
-<attrib name="Actions added" value="46" />
+<attrib name="Actions added" value="59" />
 <attrib name="Players timeout" value="0" />
-<attrib name="Message recv" value="218" />
-<attrib name="Objects now" value="11011" />
-<attrib name="Actions invalid" value="16" />
-<attrib name="Actions drop" value="1" />
+<attrib name="Message recv" value="309" />
+<attrib name="Objects now" value="11179" />
+<attrib name="Actions invalid" value="18" />
+<attrib name="Actions drop" value="2" />
 <attrib name="Ips online" value="1" />
-<attrib name="Perceptions DELTA" value="5514" />
-<attrib name="Actions equip" value="29" />
+<attrib name="Perceptions DELTA" value="8092" />
+<attrib name="Actions equip" value="39" />
 </statistics>

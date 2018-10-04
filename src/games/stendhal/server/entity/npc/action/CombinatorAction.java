@@ -2,6 +2,8 @@ package games.stendhal.server.entity.npc.action;
 
 import static com.google.common.base.Preconditions.checkNotNull;
 
+import java.util.LinkedList;
+
 import org.apache.log4j.Logger;
 
 import games.stendhal.common.parser.Sentence;
@@ -28,12 +30,13 @@ public class CombinatorAction implements ChatAction{
 		this.corpse=corpse;
 		
 		combinationList=new String[1][2];
-		
+		combinationList[0][0]="club";
+		combinationList[0][1]="club";
 	}
 	
 	private PassiveEntity combine(PassiveEntity item1, PassiveEntity item2)
 	{
-		if(true)return (PassiveEntity)new Item("a","b","c",null);
+		//if(true)return (PassiveEntity)new Item("a","b","c",null);
 		for(int row=0;row<combinationList.length;row++)
 		{
 			if(combinationList[row][0].equals(item1.getName()) &&
@@ -43,37 +46,32 @@ public class CombinatorAction implements ChatAction{
 				return (PassiveEntity)new Item("a","b","c",null);
 			}
 		}
-		return (PassiveEntity)new Item("a","b","c",null);
-		//return null;
+		//return (PassiveEntity)new Item("a","b","c",null);
+		return null;
 	}
 
 	@Override
 	public void fire(final Player player, final Sentence sentence, final EventRaiser npc) {
-		if(false)return;
-		//logger.warn("corpse: "+corpse.toString());
-		PassiveEntity[] items=corpse.getItems();
-		corpse.getSlot().clear();
-		//corpse.getSlot().add((PassiveEntity)new Item("a","b","c",null));
-		//corpse.update();
-		//corpse.notifyWorldAboutChanges();
-		if(false)return;
 		
-		if(items.length==0)
+		LinkedList<PassiveEntity> items=corpse.getItems();
+		
+		if(items.size()==0)
 			return;
-		PassiveEntity comItem=items[0];
+		PassiveEntity comItem=items.getFirst();
 		logger.error("club name: "+comItem.getName());
-		logger.error("items size: "+items.length);
-		for(int i=1;i<items.length;i++)
+		logger.error("items size: "+items.size());
+		for(int i=1;i<items.size();i++)
 		{
-			comItem=combine(comItem,items[i]);
+			comItem=combine(comItem,items.get(i));
 			if(comItem==null)
 				break;
 			//corpse.getSlot().add(comItem);
 			logger.error("loop index: "+i);
 		}
 		logger.error("combine name: "+comItem.getName());
+		
+		corpse.getSlot().clear();
 		corpse.getSlot().add(comItem);
-		//corpse.update();
 		corpse.notifyWorldAboutChanges();
 	}
 
