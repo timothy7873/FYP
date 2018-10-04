@@ -1,0 +1,65 @@
+2018-09-12 13:58:42 WARN  [verManager] RPServerManager          ( 207) - Turn duration overflow by 1046 ms:  12 12 20 1298 1298 1300 1300 1328 1345 1345 1346 1346
+2018-09-12 13:58:46 INFO  [marauroad ] Statistics               ( 122) - Total/Used memory: 108032/104373
+2018-09-12 13:59:44 INFO  [marauroad ] Statistics               ( 122) - Total/Used memory: 108032/94437
+2018-09-12 14:00:44 INFO  [marauroad ] Statistics               ( 122) - Total/Used memory: 108032/104366
+2018-09-12 14:01:44 INFO  [marauroad ] Statistics               ( 122) - Total/Used memory: 107520/95323
+2018-09-12 14:02:44 INFO  [marauroad ] Statistics               ( 122) - Total/Used memory: 107520/85971
+2018-09-12 14:03:44 INFO  [marauroad ] Statistics               ( 122) - Total/Used memory: 107520/95281
+2018-09-12 14:04:44 INFO  [marauroad ] Statistics               ( 122) - Total/Used memory: 107520/104974
+2018-09-12 14:05:44 INFO  [marauroad ] Statistics               ( 122) - Total/Used memory: 107520/94955
+2018-09-12 14:06:44 INFO  [marauroad ] Statistics               ( 122) - Total/Used memory: 107520/86085
+2018-09-12 14:07:44 INFO  [marauroad ] Statistics               ( 122) - Total/Used memory: 107520/95464
+2018-09-12 14:08:44 INFO  [marauroad ] Statistics               ( 122) - Total/Used memory: 107520/104987
+2018-09-12 14:09:44 INFO  [marauroad ] Statistics               ( 122) - Total/Used memory: 107520/95026
+2018-09-12 14:10:42 INFO  [verManager] TeleporterBehaviour      ( 174) - Cannot place teleporting NPC Rose Leigh at 0_kalavan_forest_e2 21 73
+2018-09-12 14:10:42 INFO  [verManager] TeleporterBehaviour      ( 174) - Cannot place teleporting NPC Rose Leigh at 0_kalavan_forest_e 120 97
+2018-09-12 14:10:44 INFO  [marauroad ] Statistics               ( 122) - Total/Used memory: 107520/104717
+2018-09-12 14:11:44 INFO  [marauroad ] Statistics               ( 122) - Total/Used memory: 107520/94693
+2018-09-12 14:12:44 INFO  [marauroad ] Statistics               ( 122) - Total/Used memory: 107520/104317
+2018-09-12 14:13:44 INFO  [marauroad ] Statistics               ( 122) - Total/Used memory: 107520/94380
+2018-09-12 14:14:15 INFO  [marauroad ] Statistics               ( 122) - Total/Used memory: 107520/104210
+2018-09-12 14:15:15 INFO  [marauroad ] Statistics               ( 122) - Total/Used memory: 107520/94833
+2018-09-12 14:16:15 INFO  [marauroad ] Statistics               ( 122) - Total/Used memory: 107520/104829
+2018-09-12 14:17:15 INFO  [marauroad ] Statistics               ( 122) - Total/Used memory: 107520/95210
+2018-09-12 14:18:16 INFO  [marauroad ] Statistics               ( 122) - Total/Used memory: 107520/104848
+2018-09-12 14:19:16 INFO  [marauroad ] Statistics               ( 122) - Total/Used memory: 107520/95216
+2018-09-12 14:19:22 INFO  [verManager] TeleporterBehaviour      ( 174) - Cannot place teleporting NPC Mizuno at 0_ados_city_s 107 55
+2018-09-12 14:20:16 INFO  [marauroad ] Statistics               ( 122) - Total/Used memory: 107520/86699
+2018-09-12 14:21:16 INFO  [marauroad ] Statistics               ( 122) - Total/Used memory: 107520/96462
+2018-09-12 14:22:16 INFO  [marauroad ] Statistics               ( 122) - Total/Used memory: 107520/86738
+2018-09-12 14:23:16 INFO  [marauroad ] Statistics               ( 122) - Total/Used memory: 107520/96045
+2018-09-12 14:24:16 INFO  [marauroad ] Statistics               ( 122) - Total/Used memory: 107520/89983
+2018-09-12 14:25:16 INFO  [marauroad ] Statistics               ( 122) - Total/Used memory: 108032/99525
+2018-09-12 14:26:16 INFO  [marauroad ] Statistics               ( 122) - Total/Used memory: 108032/89251
+2018-09-12 14:27:16 INFO  [marauroad ] Statistics               ( 122) - Total/Used memory: 108032/99226
+2018-09-12 14:49:03 INFO  [marauroad ] Statistics               ( 122) - Total/Used memory: 108032/88208
+2018-09-12 14:49:20 INFO  [verManager] TeleporterBehaviour      ( 174) - Cannot place teleporting NPC Rose Leigh at 0_orril_river_sw 21 108
+2018-09-12 14:50:03 INFO  [marauroad ] Statistics               ( 122) - Total/Used memory: 108032/90195
+2018-09-12 14:51:03 INFO  [marauroad ] Statistics               ( 122) - Total/Used memory: 108032/101306
+2018-09-12 14:52:03 INFO  [marauroad ] Statistics               ( 122) - Total/Used memory: 108032/99468
+2018-09-12 14:53:03 INFO  [marauroad ] Statistics               ( 122) - Total/Used memory: 108032/94132
+2018-09-12 14:54:03 INFO  [marauroad ] Statistics               ( 122) - Total/Used memory: 108032/84252
+2018-09-12 14:55:03 INFO  [marauroad ] Statistics               ( 122) - Total/Used memory: 108032/85943
+2018-09-12 14:56:03 INFO  [marauroad ] Statistics               ( 122) - Total/Used memory: 108032/84894
+2018-09-12 14:57:03 INFO  [marauroad ] Statistics               ( 122) - Total/Used memory: 108032/80156
+2018-09-12 14:58:03 INFO  [marauroad ] Statistics               ( 122) - Total/Used memory: 108032/95846
+2018-09-12 14:59:03 INFO  [marauroad ] Statistics               ( 122) - Total/Used memory: 108032/94368
+2018-09-12 15:00:03 INFO  [marauroad ] Statistics               ( 122) - Total/Used memory: 108032/90568
+2018-09-12 15:01:03 INFO  [marauroad ] Statistics               ( 122) - Total/Used memory: 108032/87626
+2018-09-12 15:02:03 INFO  [marauroad ] Statistics               ( 122) - Total/Used memory: 108032/82130
+2018-09-12 15:03:03 INFO  [marauroad ] Statistics               ( 122) - Total/Used memory: 108032/88837
+2018-09-12 15:04:03 INFO  [marauroad ] Statistics               ( 122) - Total/Used memory: 108032/89618
+2018-09-12 15:05:02 INFO  [marauroad ] Statistics               ( 122) - Total/Used memory: 108032/87059
+2018-09-12 15:06:02 INFO  [marauroad ] Statistics               ( 122) - Total/Used memory: 107520/79193
+2018-09-12 15:07:02 INFO  [marauroad ] Statistics               ( 122) - Total/Used memory: 107520/90297
+2018-09-12 15:07:29 INFO  [verManager] TeleporterBehaviour      ( 174) - Cannot place teleporting NPC Rose Leigh at 0_orril_river_s_w2 28 53
+2018-09-12 15:07:29 INFO  [verManager] TeleporterBehaviour      ( 174) - Cannot place teleporting NPC Mizuno at 0_ados_outside_w 109 6
+2018-09-12 15:07:29 INFO  [verManager] TeleporterBehaviour      ( 174) - Cannot place teleporting NPC Mizuno at 0_ados_swamp 85 2
+2018-09-12 15:08:02 INFO  [marauroad ] Statistics               ( 122) - Total/Used memory: 107520/95613
+2018-09-12 15:09:02 INFO  [marauroad ] Statistics               ( 122) - Total/Used memory: 107520/87321
+2018-09-12 15:10:02 INFO  [marauroad ] Statistics               ( 122) - Total/Used memory: 107520/79252
+2018-09-12 18:11:01 INFO  [verManager] RPServerManager          ( 122) - Request (TIMEOUT) disconnection of Player /127.0.0.1
+2018-09-12 18:11:01 WARN  [verManager] RPServerManager          ( 207) - RP Disconnecting entry: PlayerEntry[clientid=1025306917][channel=Channel [internalChannel=java.nio.channels.SocketChannel[connected local=/127.0.0.1:32160 remote=/127.0.0.1:52153], address=/127.0.0.1:52153]][state=GAME_BEGIN][username=ivetyy][character=ivetyy][object defined=true]
+2018-09-12 18:11:01 INFO  [verManager] NIONetworkConnectionManager( 122) - NET Disconnecting /127.0.0.1:52153
+2018-09-12 18:11:01 INFO  [verManager] GameServerManager        ( 122) - GAME Disconnecting /127.0.0.1:52153
+2018-09-12 18:11:02 INFO  [marauroad ] Statistics               ( 122) - Total/Used memory: 107520/89910

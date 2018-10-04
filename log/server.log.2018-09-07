@@ -1,0 +1,367 @@
+2018-09-07 12:59:46 INFO  [marauroad ] Statistics               ( 122) - Total/Used memory: 103936/84465
+2018-09-07 12:59:46 WARN  [verManager] RPServerManager          ( 207) - Turn duration overflow by 1215 ms:  4 5 7 1495 1495 1495 1495 1510 1515 1515 1515 1515
+2018-09-07 13:00:04 INFO  [main      ] AbstractDatabaseAdapter  ( 122) - Connected to jdbc:mysql://localhost:8889/marauroa127?useUnicode=yes&characterEncoding=UTF-8: MySQL 5.7.23 with driver MySQL-AB JDBC Driver mysql-connector-java-5.1.5 ( Revision: ${svn.Revision} )
+2018-09-07 13:00:04 INFO  [main      ] AbstractDatabaseAdapter  ( 122) - Connected to jdbc:mysql://localhost:8889/marauroa127?useUnicode=yes&characterEncoding=UTF-8: MySQL 5.7.23 with driver MySQL-AB JDBC Driver mysql-connector-java-5.1.5 ( Revision: ${svn.Revision} )
+2018-09-07 13:00:04 INFO  [main      ] AbstractDatabaseAdapter  ( 122) - Connected to jdbc:mysql://localhost:8889/marauroa127?useUnicode=yes&characterEncoding=UTF-8: MySQL 5.7.23 with driver MySQL-AB JDBC Driver mysql-connector-java-5.1.5 ( Revision: ${svn.Revision} )
+2018-09-07 13:00:04 INFO  [main      ] AbstractDatabaseAdapter  ( 122) - Connected to jdbc:mysql://localhost:8889/marauroa127?useUnicode=yes&characterEncoding=UTF-8: MySQL 5.7.23 with driver MySQL-AB JDBC Driver mysql-connector-java-5.1.5 ( Revision: ${svn.Revision} )
+2018-09-07 13:00:05 ERROR [main      ] JDBCSQLHelper            (  67) - error running SQL Script (file: marauroa/server/marauroa_init.sql): create table if not exists email  (  id integer auto_increment not null,  player_id  integer,  email      varchar(64),  token      varchar(64),  address    varchar(64),  timedate   timestamp default CURRENT_TIMESTAMP,  confirmed  timestamp,  primary key(id)  );
+com.mysql.jdbc.exceptions.jdbc4.MySQLSyntaxErrorException: Invalid default value for 'confirmed'
+	at sun.reflect.NativeConstructorAccessorImpl.newInstance0(Native Method)
+	at sun.reflect.NativeConstructorAccessorImpl.newInstance(NativeConstructorAccessorImpl.java:62)
+	at sun.reflect.DelegatingConstructorAccessorImpl.newInstance(DelegatingConstructorAccessorImpl.java:45)
+	at java.lang.reflect.Constructor.newInstance(Constructor.java:423)
+	at com.mysql.jdbc.Util.handleNewInstance(Util.java:406)
+	at com.mysql.jdbc.Util.getInstance(Util.java:381)
+	at com.mysql.jdbc.SQLError.createSQLException(SQLError.java:1031)
+	at com.mysql.jdbc.SQLError.createSQLException(SQLError.java:957)
+	at com.mysql.jdbc.MysqlIO.checkErrorPacket(MysqlIO.java:3376)
+	at com.mysql.jdbc.MysqlIO.checkErrorPacket(MysqlIO.java:3308)
+	at com.mysql.jdbc.MysqlIO.sendCommand(MysqlIO.java:1837)
+	at com.mysql.jdbc.MysqlIO.sqlQueryDirect(MysqlIO.java:1961)
+	at com.mysql.jdbc.ConnectionImpl.execSQL(ConnectionImpl.java:2537)
+	at com.mysql.jdbc.ConnectionImpl.execSQL(ConnectionImpl.java:2466)
+	at com.mysql.jdbc.StatementImpl.execute(StatementImpl.java:735)
+	at marauroa.server.db.adapter.AbstractDatabaseAdapter.execute(AbstractDatabaseAdapter.java:136)
+	at marauroa.server.db.DBTransaction.execute(DBTransaction.java:172)
+	at marauroa.server.db.JDBCSQLHelper.runDBScript(JDBCSQLHelper.java:69)
+	at marauroa.server.game.db.DatabaseFactory.initializeDatabaseSchema(DatabaseFactory.java:78)
+	at marauroa.server.game.db.DatabaseFactory.internalInit(DatabaseFactory.java:65)
+	at marauroa.server.game.db.DatabaseFactory.initializeDatabase(DatabaseFactory.java:53)
+	at marauroa.server.marauroad.init(marauroad.java:321)
+	at marauroa.server.marauroad.main(marauroad.java:199)
+	at games.stendhal.server.StendhalServer.main(StendhalServer.java:61)
+2018-09-07 13:00:05 INFO  [main      ] UpdateScript             ( 122) - Checking database structure and updating it if needed.
+2018-09-07 13:00:05 INFO  [main      ] UpdateScript             ( 122) - Completed database update.
+2018-09-07 13:00:05 ERROR [main      ] JDBCSQLHelper            (  67) - error running SQL Script (file: games/stendhal/server/stendhal_init.sql): create table if not exists character_stats(  name varchar(32) not null,  online integer,  admin int default 0,  sentence varchar(256),  age integer,  level integer,  outfit varchar(32),  outfit_colors varchar(100),  xp integer,  money integer,  married varchar(32),  /* Attributes */  atk integer,  def integer,  ratk integer,  hp integer,  karma integer,  /* Equipment */  head varchar(32),  armor varchar(32),  lhand varchar(32),  rhand varchar(32),  legs varchar(32),  feet varchar(32),  cloak varchar(32),  zone varchar(50),  timedate timestamp default CURRENT_TIMESTAMP,  lastseen timestamp,  primary key(name)  );
+com.mysql.jdbc.exceptions.jdbc4.MySQLSyntaxErrorException: Invalid default value for 'lastseen'
+	at sun.reflect.NativeConstructorAccessorImpl.newInstance0(Native Method)
+	at sun.reflect.NativeConstructorAccessorImpl.newInstance(NativeConstructorAccessorImpl.java:62)
+	at sun.reflect.DelegatingConstructorAccessorImpl.newInstance(DelegatingConstructorAccessorImpl.java:45)
+	at java.lang.reflect.Constructor.newInstance(Constructor.java:423)
+	at com.mysql.jdbc.Util.handleNewInstance(Util.java:406)
+	at com.mysql.jdbc.Util.getInstance(Util.java:381)
+	at com.mysql.jdbc.SQLError.createSQLException(SQLError.java:1031)
+	at com.mysql.jdbc.SQLError.createSQLException(SQLError.java:957)
+	at com.mysql.jdbc.MysqlIO.checkErrorPacket(MysqlIO.java:3376)
+	at com.mysql.jdbc.MysqlIO.checkErrorPacket(MysqlIO.java:3308)
+	at com.mysql.jdbc.MysqlIO.sendCommand(MysqlIO.java:1837)
+	at com.mysql.jdbc.MysqlIO.sqlQueryDirect(MysqlIO.java:1961)
+	at com.mysql.jdbc.ConnectionImpl.execSQL(ConnectionImpl.java:2537)
+	at com.mysql.jdbc.ConnectionImpl.execSQL(ConnectionImpl.java:2466)
+	at com.mysql.jdbc.StatementImpl.execute(StatementImpl.java:735)
+	at marauroa.server.db.adapter.AbstractDatabaseAdapter.execute(AbstractDatabaseAdapter.java:136)
+	at marauroa.server.db.DBTransaction.execute(DBTransaction.java:172)
+	at marauroa.server.db.JDBCSQLHelper.runDBScript(JDBCSQLHelper.java:69)
+	at games.stendhal.server.core.engine.StendhalPlayerDatabase.createTablesUnlessTheyAlreadyExist(StendhalPlayerDatabase.java:74)
+	at games.stendhal.server.core.engine.StendhalPlayerDatabase.initialize(StendhalPlayerDatabase.java:55)
+	at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+	at sun.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:62)
+	at sun.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+	at java.lang.reflect.Method.invoke(Method.java:498)
+	at marauroa.server.game.db.DatabaseFactory.configureGameDatabaseAccess(DatabaseFactory.java:98)
+	at marauroa.server.game.db.DatabaseFactory.internalInit(DatabaseFactory.java:67)
+	at marauroa.server.game.db.DatabaseFactory.initializeDatabase(DatabaseFactory.java:53)
+	at marauroa.server.marauroad.init(marauroad.java:321)
+	at marauroa.server.marauroad.main(marauroad.java:199)
+	at games.stendhal.server.StendhalServer.main(StendhalServer.java:61)
+2018-09-07 13:00:05 ERROR [main      ] marauroad                (  67) - Marauroa can't create NetworkServerManager.
+Possible Reasons:
+- You are already running a copy of Marauroa on the same TCP port
+- You haven't specified a valid configuration file
+- You haven't create database
+- You have invalid username and password to connect to database
+
+java.net.BindException: Address already in use
+	at sun.nio.ch.Net.bind0(Native Method)
+	at sun.nio.ch.Net.bind(Net.java:433)
+	at sun.nio.ch.Net.bind(Net.java:425)
+	at sun.nio.ch.ServerSocketChannelImpl.bind(ServerSocketChannelImpl.java:223)
+	at sun.nio.ch.ServerSocketAdaptor.bind(ServerSocketAdaptor.java:74)
+	at sun.nio.ch.ServerSocketAdaptor.bind(ServerSocketAdaptor.java:67)
+	at marauroa.server.net.nio.NioServer.initSelector(NioServer.java:348)
+	at marauroa.server.net.nio.NioServer.<init>(NioServer.java:88)
+	at marauroa.server.net.nio.NIONetworkConnectionManager.<init>(NIONetworkConnectionManager.java:106)
+	at marauroa.server.net.NetworkServerManager.<init>(NetworkServerManager.java:77)
+	at marauroa.server.marauroad.init(marauroad.java:343)
+	at marauroa.server.marauroad.main(marauroad.java:199)
+	at games.stendhal.server.StendhalServer.main(StendhalServer.java:61)
+2018-09-07 13:00:48 INFO  [marauroad ] Statistics               ( 122) - Total/Used memory: 104448/87565
+2018-09-07 13:01:48 INFO  [marauroad ] Statistics               ( 122) - Total/Used memory: 104960/92643
+2018-09-07 13:02:48 INFO  [marauroad ] Statistics               ( 122) - Total/Used memory: 104960/81397
+2018-09-07 13:03:20 INFO  [verManager] TeleporterBehaviour      ( 174) - Cannot place teleporting NPC Mizuno at 0_ados_city_s 118 111
+2018-09-07 13:03:48 INFO  [marauroad ] Statistics               ( 122) - Total/Used memory: 104960/86935
+2018-09-07 13:04:48 INFO  [marauroad ] Statistics               ( 122) - Total/Used memory: 104960/90487
+2018-09-07 13:05:48 INFO  [marauroad ] Statistics               ( 122) - Total/Used memory: 104960/94139
+2018-09-07 13:06:48 INFO  [marauroad ] Statistics               ( 122) - Total/Used memory: 104960/82470
+2018-09-07 13:07:06 WARN  [verManager] UnknownAction            (  55) Player [ivetyy, -1176806724] Attributes of Class(): [sourceid=11][zoneid=int_semos_temple][type=sow]- Player [ivetyy, -1176806724] tried to execute unknown action sow
+2018-09-07 13:07:08 WARN  [verManager] UnknownAction            (  55) Player [ivetyy, -1176806724] Attributes of Class(): [sourceid=11][zoneid=int_semos_temple][type=show]- Player [ivetyy, -1176806724] tried to execute unknown action show
+2018-09-07 13:07:48 INFO  [marauroad ] Statistics               ( 122) - Total/Used memory: 104960/84228
+2018-09-07 13:07:53 INFO  [verManager] TeleporterBehaviour      ( 174) - Cannot place teleporting NPC Rose Leigh at 0_nalwor_forest_e 106 117
+2018-09-07 13:07:53 INFO  [verManager] TeleporterBehaviour      ( 174) - Cannot place teleporting NPC Rose Leigh at 0_ados_coast_sw 8 116
+2018-09-07 13:08:48 INFO  [marauroad ] Statistics               ( 122) - Total/Used memory: 104960/87742
+2018-09-07 13:09:48 INFO  [marauroad ] Statistics               ( 122) - Total/Used memory: 104960/90294
+2018-09-07 13:10:48 INFO  [marauroad ] Statistics               ( 122) - Total/Used memory: 102912/91670
+2018-09-07 13:11:48 INFO  [marauroad ] Statistics               ( 122) - Total/Used memory: 104448/93129
+2018-09-07 13:12:25 INFO  [verManager] TeleporterBehaviour      ( 174) - Cannot place teleporting NPC Rose Leigh at 0_orril_river_s 53 103
+2018-09-07 13:12:25 INFO  [verManager] TeleporterBehaviour      ( 174) - Cannot place teleporting NPC Rose Leigh at 0_athor_island_e 52 4
+2018-09-07 13:12:48 INFO  [marauroad ] Statistics               ( 122) - Total/Used memory: 104448/86543
+2018-09-07 13:13:48 INFO  [marauroad ] Statistics               ( 122) - Total/Used memory: 103936/81259
+2018-09-07 13:14:48 INFO  [marauroad ] Statistics               ( 122) - Total/Used memory: 103936/91900
+2018-09-07 13:15:45 INFO  [marauroad ] Statistics               ( 122) - Total/Used memory: 103424/87449
+2018-09-07 13:16:45 INFO  [marauroad ] Statistics               ( 122) - Total/Used memory: 104960/91994
+2018-09-07 13:17:45 INFO  [marauroad ] Statistics               ( 122) - Total/Used memory: 106496/85517
+2018-09-07 13:17:56 WARN  [verManager] UnknownAction            (  55) Player [ivetyy, -1176806724] Attributes of Class(): [sourceid=69][zoneid=0_semos_plains_w][type=home]- Player [ivetyy, -1176806724] tried to execute unknown action home
+2018-09-07 13:18:45 INFO  [marauroad ] Statistics               ( 122) - Total/Used memory: 106496/82402
+2018-09-07 13:19:45 INFO  [marauroad ] Statistics               ( 122) - Total/Used memory: 106496/83177
+2018-09-07 13:20:45 INFO  [marauroad ] Statistics               ( 122) - Total/Used memory: 105984/98646
+2018-09-07 13:21:28 INFO  [verManager] TeleporterBehaviour      ( 174) - Cannot place teleporting NPC Rose Leigh at 0_ados_coast_sw 16 117
+2018-09-07 13:21:28 INFO  [verManager] TeleporterBehaviour      ( 174) - Cannot place teleporting NPC Mizuno at 0_ados_swamp 11 94
+2018-09-07 13:21:45 INFO  [marauroad ] Statistics               ( 122) - Total/Used memory: 105984/84343
+2018-09-07 13:22:45 INFO  [marauroad ] Statistics               ( 122) - Total/Used memory: 105984/82337
+2018-09-07 13:23:45 INFO  [marauroad ] Statistics               ( 122) - Total/Used memory: 105984/96133
+2018-09-07 13:24:45 INFO  [marauroad ] Statistics               ( 122) - Total/Used memory: 105984/87444
+2018-09-07 13:25:45 INFO  [marauroad ] Statistics               ( 122) - Total/Used memory: 105984/90177
+2018-09-07 13:41:42 INFO  [verManager] RPServerManager          ( 122) - Request (TIMEOUT) disconnection of Player /127.0.0.1
+2018-09-07 13:41:42 WARN  [verManager] RPServerManager          ( 207) - RP Disconnecting entry: PlayerEntry[clientid=-260121332][channel=Channel [internalChannel=java.nio.channels.SocketChannel[connected local=/127.0.0.1:32160 remote=/127.0.0.1:50965], address=/127.0.0.1:50965]][state=GAME_BEGIN][username=ivetyy][character=ivetyy][object defined=true]
+2018-09-07 13:41:42 INFO  [verManager] NIONetworkConnectionManager( 122) - NET Disconnecting /127.0.0.1:50965
+2018-09-07 13:41:42 INFO  [verManager] GameServerManager        ( 122) - GAME Disconnecting /127.0.0.1:50965
+2018-09-07 13:41:44 INFO  [marauroad ] Statistics               ( 122) - Total/Used memory: 105984/85674
+2018-09-07 15:31:45 WARN  [verManager] RPServerManager          ( 207) - Turn duration overflow by 1170 ms:  21 21 28 1431 1431 1441 1441 1459 1468 1468 1469 1470
+2018-09-07 15:32:14 INFO  [marauroad ] Statistics               ( 122) - Total/Used memory: 105984/82664
+2018-09-07 15:33:14 INFO  [marauroad ] Statistics               ( 122) - Total/Used memory: 105984/93395
+2018-09-07 15:34:11 INFO  [main      ] AbstractDatabaseAdapter  ( 122) - Connected to jdbc:mysql://localhost:8889/marauroa127?useUnicode=yes&characterEncoding=UTF-8: MySQL 5.7.23 with driver MySQL-AB JDBC Driver mysql-connector-java-5.1.5 ( Revision: ${svn.Revision} )
+2018-09-07 15:34:11 INFO  [main      ] AbstractDatabaseAdapter  ( 122) - Connected to jdbc:mysql://localhost:8889/marauroa127?useUnicode=yes&characterEncoding=UTF-8: MySQL 5.7.23 with driver MySQL-AB JDBC Driver mysql-connector-java-5.1.5 ( Revision: ${svn.Revision} )
+2018-09-07 15:34:11 INFO  [main      ] AbstractDatabaseAdapter  ( 122) - Connected to jdbc:mysql://localhost:8889/marauroa127?useUnicode=yes&characterEncoding=UTF-8: MySQL 5.7.23 with driver MySQL-AB JDBC Driver mysql-connector-java-5.1.5 ( Revision: ${svn.Revision} )
+2018-09-07 15:34:11 INFO  [main      ] AbstractDatabaseAdapter  ( 122) - Connected to jdbc:mysql://localhost:8889/marauroa127?useUnicode=yes&characterEncoding=UTF-8: MySQL 5.7.23 with driver MySQL-AB JDBC Driver mysql-connector-java-5.1.5 ( Revision: ${svn.Revision} )
+2018-09-07 15:34:11 ERROR [main      ] JDBCSQLHelper            (  67) - error running SQL Script (file: marauroa/server/marauroa_init.sql): create table if not exists email  (  id integer auto_increment not null,  player_id  integer,  email      varchar(64),  token      varchar(64),  address    varchar(64),  timedate   timestamp default CURRENT_TIMESTAMP,  confirmed  timestamp,  primary key(id)  );
+com.mysql.jdbc.exceptions.jdbc4.MySQLSyntaxErrorException: Invalid default value for 'confirmed'
+	at sun.reflect.NativeConstructorAccessorImpl.newInstance0(Native Method)
+	at sun.reflect.NativeConstructorAccessorImpl.newInstance(NativeConstructorAccessorImpl.java:62)
+	at sun.reflect.DelegatingConstructorAccessorImpl.newInstance(DelegatingConstructorAccessorImpl.java:45)
+	at java.lang.reflect.Constructor.newInstance(Constructor.java:423)
+	at com.mysql.jdbc.Util.handleNewInstance(Util.java:406)
+	at com.mysql.jdbc.Util.getInstance(Util.java:381)
+	at com.mysql.jdbc.SQLError.createSQLException(SQLError.java:1031)
+	at com.mysql.jdbc.SQLError.createSQLException(SQLError.java:957)
+	at com.mysql.jdbc.MysqlIO.checkErrorPacket(MysqlIO.java:3376)
+	at com.mysql.jdbc.MysqlIO.checkErrorPacket(MysqlIO.java:3308)
+	at com.mysql.jdbc.MysqlIO.sendCommand(MysqlIO.java:1837)
+	at com.mysql.jdbc.MysqlIO.sqlQueryDirect(MysqlIO.java:1961)
+	at com.mysql.jdbc.ConnectionImpl.execSQL(ConnectionImpl.java:2537)
+	at com.mysql.jdbc.ConnectionImpl.execSQL(ConnectionImpl.java:2466)
+	at com.mysql.jdbc.StatementImpl.execute(StatementImpl.java:735)
+	at marauroa.server.db.adapter.AbstractDatabaseAdapter.execute(AbstractDatabaseAdapter.java:136)
+	at marauroa.server.db.DBTransaction.execute(DBTransaction.java:172)
+	at marauroa.server.db.JDBCSQLHelper.runDBScript(JDBCSQLHelper.java:69)
+	at marauroa.server.game.db.DatabaseFactory.initializeDatabaseSchema(DatabaseFactory.java:78)
+	at marauroa.server.game.db.DatabaseFactory.internalInit(DatabaseFactory.java:65)
+	at marauroa.server.game.db.DatabaseFactory.initializeDatabase(DatabaseFactory.java:53)
+	at marauroa.server.marauroad.init(marauroad.java:321)
+	at marauroa.server.marauroad.main(marauroad.java:199)
+	at games.stendhal.server.StendhalServer.main(StendhalServer.java:61)
+2018-09-07 15:34:11 INFO  [main      ] UpdateScript             ( 122) - Checking database structure and updating it if needed.
+2018-09-07 15:34:11 INFO  [main      ] UpdateScript             ( 122) - Completed database update.
+2018-09-07 15:34:12 ERROR [main      ] JDBCSQLHelper            (  67) - error running SQL Script (file: games/stendhal/server/stendhal_init.sql): create table if not exists character_stats(  name varchar(32) not null,  online integer,  admin int default 0,  sentence varchar(256),  age integer,  level integer,  outfit varchar(32),  outfit_colors varchar(100),  xp integer,  money integer,  married varchar(32),  /* Attributes */  atk integer,  def integer,  ratk integer,  hp integer,  karma integer,  /* Equipment */  head varchar(32),  armor varchar(32),  lhand varchar(32),  rhand varchar(32),  legs varchar(32),  feet varchar(32),  cloak varchar(32),  zone varchar(50),  timedate timestamp default CURRENT_TIMESTAMP,  lastseen timestamp,  primary key(name)  );
+com.mysql.jdbc.exceptions.jdbc4.MySQLSyntaxErrorException: Invalid default value for 'lastseen'
+	at sun.reflect.NativeConstructorAccessorImpl.newInstance0(Native Method)
+	at sun.reflect.NativeConstructorAccessorImpl.newInstance(NativeConstructorAccessorImpl.java:62)
+	at sun.reflect.DelegatingConstructorAccessorImpl.newInstance(DelegatingConstructorAccessorImpl.java:45)
+	at java.lang.reflect.Constructor.newInstance(Constructor.java:423)
+	at com.mysql.jdbc.Util.handleNewInstance(Util.java:406)
+	at com.mysql.jdbc.Util.getInstance(Util.java:381)
+	at com.mysql.jdbc.SQLError.createSQLException(SQLError.java:1031)
+	at com.mysql.jdbc.SQLError.createSQLException(SQLError.java:957)
+	at com.mysql.jdbc.MysqlIO.checkErrorPacket(MysqlIO.java:3376)
+	at com.mysql.jdbc.MysqlIO.checkErrorPacket(MysqlIO.java:3308)
+	at com.mysql.jdbc.MysqlIO.sendCommand(MysqlIO.java:1837)
+	at com.mysql.jdbc.MysqlIO.sqlQueryDirect(MysqlIO.java:1961)
+	at com.mysql.jdbc.ConnectionImpl.execSQL(ConnectionImpl.java:2537)
+	at com.mysql.jdbc.ConnectionImpl.execSQL(ConnectionImpl.java:2466)
+	at com.mysql.jdbc.StatementImpl.execute(StatementImpl.java:735)
+	at marauroa.server.db.adapter.AbstractDatabaseAdapter.execute(AbstractDatabaseAdapter.java:136)
+	at marauroa.server.db.DBTransaction.execute(DBTransaction.java:172)
+	at marauroa.server.db.JDBCSQLHelper.runDBScript(JDBCSQLHelper.java:69)
+	at games.stendhal.server.core.engine.StendhalPlayerDatabase.createTablesUnlessTheyAlreadyExist(StendhalPlayerDatabase.java:74)
+	at games.stendhal.server.core.engine.StendhalPlayerDatabase.initialize(StendhalPlayerDatabase.java:55)
+	at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+	at sun.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:62)
+	at sun.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+	at java.lang.reflect.Method.invoke(Method.java:498)
+	at marauroa.server.game.db.DatabaseFactory.configureGameDatabaseAccess(DatabaseFactory.java:98)
+	at marauroa.server.game.db.DatabaseFactory.internalInit(DatabaseFactory.java:67)
+	at marauroa.server.game.db.DatabaseFactory.initializeDatabase(DatabaseFactory.java:53)
+	at marauroa.server.marauroad.init(marauroad.java:321)
+	at marauroa.server.marauroad.main(marauroad.java:199)
+	at games.stendhal.server.StendhalServer.main(StendhalServer.java:61)
+2018-09-07 15:34:12 ERROR [main      ] marauroad                (  67) - Marauroa can't create NetworkServerManager.
+Possible Reasons:
+- You are already running a copy of Marauroa on the same TCP port
+- You haven't specified a valid configuration file
+- You haven't create database
+- You have invalid username and password to connect to database
+
+java.net.BindException: Address already in use
+	at sun.nio.ch.Net.bind0(Native Method)
+	at sun.nio.ch.Net.bind(Net.java:433)
+	at sun.nio.ch.Net.bind(Net.java:425)
+	at sun.nio.ch.ServerSocketChannelImpl.bind(ServerSocketChannelImpl.java:223)
+	at sun.nio.ch.ServerSocketAdaptor.bind(ServerSocketAdaptor.java:74)
+	at sun.nio.ch.ServerSocketAdaptor.bind(ServerSocketAdaptor.java:67)
+	at marauroa.server.net.nio.NioServer.initSelector(NioServer.java:348)
+	at marauroa.server.net.nio.NioServer.<init>(NioServer.java:88)
+	at marauroa.server.net.nio.NIONetworkConnectionManager.<init>(NIONetworkConnectionManager.java:106)
+	at marauroa.server.net.NetworkServerManager.<init>(NetworkServerManager.java:77)
+	at marauroa.server.marauroad.init(marauroad.java:343)
+	at marauroa.server.marauroad.main(marauroad.java:199)
+	at games.stendhal.server.StendhalServer.main(StendhalServer.java:61)
+2018-09-07 15:34:14 INFO  [marauroad ] Statistics               ( 122) - Total/Used memory: 105984/86338
+2018-09-07 15:35:14 INFO  [marauroad ] Statistics               ( 122) - Total/Used memory: 105984/97378
+2018-09-07 15:36:14 INFO  [marauroad ] Statistics               ( 122) - Total/Used memory: 105984/90687
+2018-09-07 15:37:14 INFO  [marauroad ] Statistics               ( 122) - Total/Used memory: 105984/83142
+2018-09-07 15:38:14 INFO  [marauroad ] Statistics               ( 122) - Total/Used memory: 105984/93940
+2018-09-07 15:39:14 INFO  [marauroad ] Statistics               ( 122) - Total/Used memory: 105984/86817
+2018-09-07 15:40:09 INFO  [verManager] TeleporterBehaviour      ( 174) - Cannot place teleporting NPC Rose Leigh at 0_kalavan_castle 29 54
+2018-09-07 15:40:09 INFO  [verManager] TeleporterBehaviour      ( 174) - Cannot place teleporting NPC Rose Leigh at 0_ados_river_s2_w2 123 53
+2018-09-07 15:40:14 INFO  [marauroad ] Statistics               ( 122) - Total/Used memory: 105984/86529
+2018-09-07 15:41:14 INFO  [marauroad ] Statistics               ( 122) - Total/Used memory: 106496/97625
+2018-09-07 15:42:14 INFO  [marauroad ] Statistics               ( 122) - Total/Used memory: 106496/90911
+2018-09-07 15:43:14 INFO  [marauroad ] Statistics               ( 122) - Total/Used memory: 106496/83717
+2018-09-07 15:44:14 INFO  [marauroad ] Statistics               ( 122) - Total/Used memory: 106496/94539
+2018-09-07 15:45:15 INFO  [marauroad ] Statistics               ( 122) - Total/Used memory: 106496/88443
+2018-09-07 15:46:15 INFO  [marauroad ] Statistics               ( 122) - Total/Used memory: 106496/99095
+2018-09-07 15:47:15 INFO  [marauroad ] Statistics               ( 122) - Total/Used memory: 106496/92144
+2018-09-07 15:48:14 INFO  [marauroad ] Statistics               ( 122) - Total/Used memory: 106496/84957
+2018-09-07 15:49:14 INFO  [marauroad ] Statistics               ( 122) - Total/Used memory: 106496/95630
+2018-09-07 15:50:14 INFO  [marauroad ] Statistics               ( 122) - Total/Used memory: 106496/88591
+2018-09-07 15:51:14 INFO  [marauroad ] Statistics               ( 122) - Total/Used memory: 106496/98936
+2018-09-07 15:52:14 INFO  [marauroad ] Statistics               ( 122) - Total/Used memory: 106496/91459
+2018-09-07 15:53:14 INFO  [marauroad ] Statistics               ( 122) - Total/Used memory: 106496/83976
+2018-09-07 15:53:54 INFO  [verManager] TeleporterBehaviour      ( 174) - Cannot place teleporting NPC Rose Leigh at 0_amazon_island_sw 70 104
+2018-09-07 15:54:14 INFO  [marauroad ] Statistics               ( 122) - Total/Used memory: 106496/95152
+2018-09-07 15:55:14 INFO  [marauroad ] Statistics               ( 122) - Total/Used memory: 106496/87909
+2018-09-07 15:56:14 INFO  [marauroad ] Statistics               ( 122) - Total/Used memory: 106496/98341
+2018-09-07 15:57:14 INFO  [marauroad ] Statistics               ( 122) - Total/Used memory: 106496/90837
+2018-09-07 15:58:14 INFO  [marauroad ] Statistics               ( 122) - Total/Used memory: 106496/101153
+2018-09-07 15:58:31 INFO  [verManager] TeleporterBehaviour      ( 174) - Cannot place teleporting NPC Rose Leigh at 0_orril_river_se 103 2
+2018-09-07 15:58:31 INFO  [verManager] TeleporterBehaviour      ( 174) - Cannot place teleporting NPC Rose Leigh at 0_kalavan_forest_e2 110 100
+2018-09-07 15:58:31 INFO  [verManager] TeleporterBehaviour      ( 174) - Cannot place teleporting NPC Rose Leigh at 0_ados_coast_s 67 68
+2018-09-07 15:59:14 INFO  [marauroad ] Statistics               ( 122) - Total/Used memory: 106496/99418
+2018-09-07 16:00:14 INFO  [marauroad ] Statistics               ( 122) - Total/Used memory: 106496/92050
+2018-09-07 16:01:14 INFO  [marauroad ] Statistics               ( 122) - Total/Used memory: 105984/84771
+2018-09-07 16:04:48 INFO  [marauroad ] Statistics               ( 122) - Total/Used memory: 105984/95098
+2018-09-07 16:05:42 INFO  [verManager] TeleporterBehaviour      ( 174) - Cannot place teleporting NPC Rose Leigh at 0_semos_mountain_n2_w2 43 10
+2018-09-07 16:05:42 INFO  [verManager] TeleporterBehaviour      ( 174) - Cannot place teleporting NPC Rose Leigh at 0_fado_forest_s_e3 6 2
+2018-09-07 16:05:42 INFO  [verManager] TeleporterBehaviour      ( 174) - Cannot place teleporting NPC Mizuno at 0_ados_wall_n2 85 59
+2018-09-07 16:05:48 INFO  [marauroad ] Statistics               ( 122) - Total/Used memory: 105984/88625
+2018-09-07 16:06:48 INFO  [marauroad ] Statistics               ( 122) - Total/Used memory: 105984/99393
+2018-09-07 16:07:48 INFO  [marauroad ] Statistics               ( 122) - Total/Used memory: 105984/92268
+2018-09-07 16:08:48 INFO  [marauroad ] Statistics               ( 122) - Total/Used memory: 105984/85207
+2018-09-07 16:09:48 INFO  [marauroad ] Statistics               ( 122) - Total/Used memory: 105984/96237
+2018-09-07 16:10:48 INFO  [marauroad ] Statistics               ( 122) - Total/Used memory: 105984/90274
+2018-09-07 16:11:48 INFO  [marauroad ] Statistics               ( 122) - Total/Used memory: 105984/101256
+2018-09-07 16:12:48 INFO  [marauroad ] Statistics               ( 122) - Total/Used memory: 105984/94491
+2018-09-07 16:13:48 INFO  [marauroad ] Statistics               ( 122) - Total/Used memory: 105984/87023
+2018-09-07 16:14:48 INFO  [marauroad ] Statistics               ( 122) - Total/Used memory: 105984/98037
+2018-09-07 16:26:51 INFO  [marauroad ] Statistics               ( 122) - Total/Used memory: 105984/95383
+2018-09-07 16:27:51 INFO  [marauroad ] Statistics               ( 122) - Total/Used memory: 106496/88683
+2018-09-07 16:28:51 INFO  [marauroad ] Statistics               ( 122) - Total/Used memory: 106496/99280
+2018-09-07 16:46:48 INFO  [marauroad ] Statistics               ( 122) - Total/Used memory: 106496/91538
+2018-09-07 16:47:18 INFO  [main      ] AbstractDatabaseAdapter  ( 122) - Connected to jdbc:mysql://localhost:8889/marauroa127?useUnicode=yes&characterEncoding=UTF-8: MySQL 5.7.23 with driver MySQL-AB JDBC Driver mysql-connector-java-5.1.5 ( Revision: ${svn.Revision} )
+2018-09-07 16:47:18 INFO  [main      ] AbstractDatabaseAdapter  ( 122) - Connected to jdbc:mysql://localhost:8889/marauroa127?useUnicode=yes&characterEncoding=UTF-8: MySQL 5.7.23 with driver MySQL-AB JDBC Driver mysql-connector-java-5.1.5 ( Revision: ${svn.Revision} )
+2018-09-07 16:47:18 INFO  [main      ] AbstractDatabaseAdapter  ( 122) - Connected to jdbc:mysql://localhost:8889/marauroa127?useUnicode=yes&characterEncoding=UTF-8: MySQL 5.7.23 with driver MySQL-AB JDBC Driver mysql-connector-java-5.1.5 ( Revision: ${svn.Revision} )
+2018-09-07 16:47:18 INFO  [main      ] AbstractDatabaseAdapter  ( 122) - Connected to jdbc:mysql://localhost:8889/marauroa127?useUnicode=yes&characterEncoding=UTF-8: MySQL 5.7.23 with driver MySQL-AB JDBC Driver mysql-connector-java-5.1.5 ( Revision: ${svn.Revision} )
+2018-09-07 16:47:18 ERROR [main      ] JDBCSQLHelper            (  67) - error running SQL Script (file: marauroa/server/marauroa_init.sql): create table if not exists email  (  id integer auto_increment not null,  player_id  integer,  email      varchar(64),  token      varchar(64),  address    varchar(64),  timedate   timestamp default CURRENT_TIMESTAMP,  confirmed  timestamp,  primary key(id)  );
+com.mysql.jdbc.exceptions.jdbc4.MySQLSyntaxErrorException: Invalid default value for 'confirmed'
+	at sun.reflect.NativeConstructorAccessorImpl.newInstance0(Native Method)
+	at sun.reflect.NativeConstructorAccessorImpl.newInstance(NativeConstructorAccessorImpl.java:62)
+	at sun.reflect.DelegatingConstructorAccessorImpl.newInstance(DelegatingConstructorAccessorImpl.java:45)
+	at java.lang.reflect.Constructor.newInstance(Constructor.java:423)
+	at com.mysql.jdbc.Util.handleNewInstance(Util.java:406)
+	at com.mysql.jdbc.Util.getInstance(Util.java:381)
+	at com.mysql.jdbc.SQLError.createSQLException(SQLError.java:1031)
+	at com.mysql.jdbc.SQLError.createSQLException(SQLError.java:957)
+	at com.mysql.jdbc.MysqlIO.checkErrorPacket(MysqlIO.java:3376)
+	at com.mysql.jdbc.MysqlIO.checkErrorPacket(MysqlIO.java:3308)
+	at com.mysql.jdbc.MysqlIO.sendCommand(MysqlIO.java:1837)
+	at com.mysql.jdbc.MysqlIO.sqlQueryDirect(MysqlIO.java:1961)
+	at com.mysql.jdbc.ConnectionImpl.execSQL(ConnectionImpl.java:2537)
+	at com.mysql.jdbc.ConnectionImpl.execSQL(ConnectionImpl.java:2466)
+	at com.mysql.jdbc.StatementImpl.execute(StatementImpl.java:735)
+	at marauroa.server.db.adapter.AbstractDatabaseAdapter.execute(AbstractDatabaseAdapter.java:136)
+	at marauroa.server.db.DBTransaction.execute(DBTransaction.java:172)
+	at marauroa.server.db.JDBCSQLHelper.runDBScript(JDBCSQLHelper.java:69)
+	at marauroa.server.game.db.DatabaseFactory.initializeDatabaseSchema(DatabaseFactory.java:78)
+	at marauroa.server.game.db.DatabaseFactory.internalInit(DatabaseFactory.java:65)
+	at marauroa.server.game.db.DatabaseFactory.initializeDatabase(DatabaseFactory.java:53)
+	at marauroa.server.marauroad.init(marauroad.java:321)
+	at marauroa.server.marauroad.main(marauroad.java:199)
+	at games.stendhal.server.StendhalServer.main(StendhalServer.java:61)
+2018-09-07 16:47:18 INFO  [main      ] UpdateScript             ( 122) - Checking database structure and updating it if needed.
+2018-09-07 16:47:18 INFO  [main      ] UpdateScript             ( 122) - Completed database update.
+2018-09-07 16:47:19 ERROR [main      ] JDBCSQLHelper            (  67) - error running SQL Script (file: games/stendhal/server/stendhal_init.sql): create table if not exists character_stats(  name varchar(32) not null,  online integer,  admin int default 0,  sentence varchar(256),  age integer,  level integer,  outfit varchar(32),  outfit_colors varchar(100),  xp integer,  money integer,  married varchar(32),  /* Attributes */  atk integer,  def integer,  ratk integer,  hp integer,  karma integer,  /* Equipment */  head varchar(32),  armor varchar(32),  lhand varchar(32),  rhand varchar(32),  legs varchar(32),  feet varchar(32),  cloak varchar(32),  zone varchar(50),  timedate timestamp default CURRENT_TIMESTAMP,  lastseen timestamp,  primary key(name)  );
+com.mysql.jdbc.exceptions.jdbc4.MySQLSyntaxErrorException: Invalid default value for 'lastseen'
+	at sun.reflect.NativeConstructorAccessorImpl.newInstance0(Native Method)
+	at sun.reflect.NativeConstructorAccessorImpl.newInstance(NativeConstructorAccessorImpl.java:62)
+	at sun.reflect.DelegatingConstructorAccessorImpl.newInstance(DelegatingConstructorAccessorImpl.java:45)
+	at java.lang.reflect.Constructor.newInstance(Constructor.java:423)
+	at com.mysql.jdbc.Util.handleNewInstance(Util.java:406)
+	at com.mysql.jdbc.Util.getInstance(Util.java:381)
+	at com.mysql.jdbc.SQLError.createSQLException(SQLError.java:1031)
+	at com.mysql.jdbc.SQLError.createSQLException(SQLError.java:957)
+	at com.mysql.jdbc.MysqlIO.checkErrorPacket(MysqlIO.java:3376)
+	at com.mysql.jdbc.MysqlIO.checkErrorPacket(MysqlIO.java:3308)
+	at com.mysql.jdbc.MysqlIO.sendCommand(MysqlIO.java:1837)
+	at com.mysql.jdbc.MysqlIO.sqlQueryDirect(MysqlIO.java:1961)
+	at com.mysql.jdbc.ConnectionImpl.execSQL(ConnectionImpl.java:2537)
+	at com.mysql.jdbc.ConnectionImpl.execSQL(ConnectionImpl.java:2466)
+	at com.mysql.jdbc.StatementImpl.execute(StatementImpl.java:735)
+	at marauroa.server.db.adapter.AbstractDatabaseAdapter.execute(AbstractDatabaseAdapter.java:136)
+	at marauroa.server.db.DBTransaction.execute(DBTransaction.java:172)
+	at marauroa.server.db.JDBCSQLHelper.runDBScript(JDBCSQLHelper.java:69)
+	at games.stendhal.server.core.engine.StendhalPlayerDatabase.createTablesUnlessTheyAlreadyExist(StendhalPlayerDatabase.java:74)
+	at games.stendhal.server.core.engine.StendhalPlayerDatabase.initialize(StendhalPlayerDatabase.java:55)
+	at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+	at sun.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:62)
+	at sun.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+	at java.lang.reflect.Method.invoke(Method.java:498)
+	at marauroa.server.game.db.DatabaseFactory.configureGameDatabaseAccess(DatabaseFactory.java:98)
+	at marauroa.server.game.db.DatabaseFactory.internalInit(DatabaseFactory.java:67)
+	at marauroa.server.game.db.DatabaseFactory.initializeDatabase(DatabaseFactory.java:53)
+	at marauroa.server.marauroad.init(marauroad.java:321)
+	at marauroa.server.marauroad.main(marauroad.java:199)
+	at games.stendhal.server.StendhalServer.main(StendhalServer.java:61)
+2018-09-07 16:47:19 ERROR [main      ] marauroad                (  67) - Marauroa can't create NetworkServerManager.
+Possible Reasons:
+- You are already running a copy of Marauroa on the same TCP port
+- You haven't specified a valid configuration file
+- You haven't create database
+- You have invalid username and password to connect to database
+
+java.net.BindException: Address already in use
+	at sun.nio.ch.Net.bind0(Native Method)
+	at sun.nio.ch.Net.bind(Net.java:433)
+	at sun.nio.ch.Net.bind(Net.java:425)
+	at sun.nio.ch.ServerSocketChannelImpl.bind(ServerSocketChannelImpl.java:223)
+	at sun.nio.ch.ServerSocketAdaptor.bind(ServerSocketAdaptor.java:74)
+	at sun.nio.ch.ServerSocketAdaptor.bind(ServerSocketAdaptor.java:67)
+	at marauroa.server.net.nio.NioServer.initSelector(NioServer.java:348)
+	at marauroa.server.net.nio.NioServer.<init>(NioServer.java:88)
+	at marauroa.server.net.nio.NIONetworkConnectionManager.<init>(NIONetworkConnectionManager.java:106)
+	at marauroa.server.net.NetworkServerManager.<init>(NetworkServerManager.java:77)
+	at marauroa.server.marauroad.init(marauroad.java:343)
+	at marauroa.server.marauroad.main(marauroad.java:199)
+	at games.stendhal.server.StendhalServer.main(StendhalServer.java:61)
+2018-09-07 16:47:48 INFO  [marauroad ] Statistics               ( 122) - Total/Used memory: 106496/86912
+2018-09-07 16:48:48 INFO  [marauroad ] Statistics               ( 122) - Total/Used memory: 106496/96733
+2018-09-07 16:49:48 INFO  [marauroad ] Statistics               ( 122) - Total/Used memory: 105984/99442
+2018-09-07 16:50:48 INFO  [marauroad ] Statistics               ( 122) - Total/Used memory: 106496/98493
+2018-09-07 16:51:48 INFO  [marauroad ] Statistics               ( 122) - Total/Used memory: 105984/98962
+2018-09-07 16:52:48 INFO  [marauroad ] Statistics               ( 122) - Total/Used memory: 105984/94617
+2018-09-07 16:53:48 INFO  [marauroad ] Statistics               ( 122) - Total/Used memory: 105984/97359
+2018-09-07 16:54:48 INFO  [marauroad ] Statistics               ( 122) - Total/Used memory: 106496/102232
+2018-09-07 16:55:48 INFO  [marauroad ] Statistics               ( 122) - Total/Used memory: 108032/91134
+2018-09-07 16:56:48 INFO  [marauroad ] Statistics               ( 122) - Total/Used memory: 107520/97474
+2018-09-07 16:57:09 INFO  [verManager] LogoutHandler            ( 122) - Logging out correctly channel: /127.0.0.1:51794
+2018-09-07 16:57:10 INFO  [NioServer ] NIONetworkConnectionManager( 122) - NET Disconnecting /127.0.0.1:51794
+2018-09-07 16:57:10 INFO  [NioServer ] GameServerManager        ( 122) - GAME Disconnecting /127.0.0.1:51794
+2018-09-07 16:57:48 INFO  [marauroad ] Statistics               ( 122) - Total/Used memory: 108032/91191

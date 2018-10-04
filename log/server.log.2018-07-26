@@ -1,0 +1,1429 @@
+2018-07-26 11:16:43 INFO  [main      ] AbstractDatabaseAdapter  ( 122) - Connected to jdbc:mysql://localhost:8889/marauroa127?useUnicode=yes&characterEncoding=UTF-8: MySQL 5.6.38 with driver MySQL-AB JDBC Driver mysql-connector-java-5.1.5 ( Revision: ${svn.Revision} )
+2018-07-26 11:16:43 INFO  [main      ] AbstractDatabaseAdapter  ( 122) - Connected to jdbc:mysql://localhost:8889/marauroa127?useUnicode=yes&characterEncoding=UTF-8: MySQL 5.6.38 with driver MySQL-AB JDBC Driver mysql-connector-java-5.1.5 ( Revision: ${svn.Revision} )
+2018-07-26 11:16:43 INFO  [main      ] AbstractDatabaseAdapter  ( 122) - Connected to jdbc:mysql://localhost:8889/marauroa127?useUnicode=yes&characterEncoding=UTF-8: MySQL 5.6.38 with driver MySQL-AB JDBC Driver mysql-connector-java-5.1.5 ( Revision: ${svn.Revision} )
+2018-07-26 11:16:43 INFO  [main      ] AbstractDatabaseAdapter  ( 122) - Connected to jdbc:mysql://localhost:8889/marauroa127?useUnicode=yes&characterEncoding=UTF-8: MySQL 5.6.38 with driver MySQL-AB JDBC Driver mysql-connector-java-5.1.5 ( Revision: ${svn.Revision} )
+2018-07-26 11:16:43 INFO  [main      ] UpdateScript             ( 122) - Checking database structure and updating it if needed.
+2018-07-26 11:16:43 INFO  [main      ] UpdateScript             ( 122) - Completed database update.
+2018-07-26 11:16:44 WARN  [main      ] StendhalRPWorld          (  44) - Developing mode, loading maps from tiled/ instead of data/maps
+2018-07-26 11:16:44 WARN  [main      ] WordList                 ( 230) - suspicious plural: lilium -> liliums (lilias?)
+2018-07-26 11:16:44 WARN  [main      ] WordList                 ( 230) - suspicious plural: captain -> SUB-NAM (captains?)
+2018-07-26 11:16:44 INFO  [main      ] ZonesXMLLoader           ( 145) - Loading zone: 0_ados_mountain_n2_w2
+2018-07-26 11:16:45 INFO  [main      ] ZonesXMLLoader           ( 145) - Loading zone: 0_ados_mountain_n2_w
+2018-07-26 11:16:45 INFO  [main      ] ConfiguratorDescriptor   ( 103) - Configuring zone [0_ados_mountain_n2_w] with: games.stendhal.server.core.config.zone.NoTeleportIn
+2018-07-26 11:16:46 INFO  [main      ] ConfiguratorDescriptor   ( 103) - Configuring zone [0_ados_mountain_n2_w] with: games.stendhal.server.maps.ados.entwives.EntwifeNPC
+2018-07-26 11:16:46 INFO  [main      ] ZonesXMLLoader           ( 145) - Loading zone: 0_ados_mountain_n2
+2018-07-26 11:16:46 INFO  [main      ] ZonesXMLLoader           ( 145) - Loading zone: 0_ados_wall_n2
+2018-07-26 11:16:46 INFO  [main      ] ZonesXMLLoader           ( 145) - Loading zone: 0_ados_city_n2
+2018-07-26 11:16:46 INFO  [main      ] ConfiguratorDescriptor   ( 103) - Configuring zone [0_ados_city_n2] with: games.stendhal.server.maps.ados.market.FoodSellerNPC
+2018-07-26 11:16:46 INFO  [main      ] ConfiguratorDescriptor   ( 103) - Configuring zone [0_ados_city_n2] with: games.stendhal.server.maps.ados.market.WeaponryTraderNPC
+2018-07-26 11:16:46 INFO  [main      ] ConfiguratorDescriptor   ( 103) - Configuring zone [0_ados_city_n2] with: games.stendhal.server.maps.ados.market.BBQGrillmasterNPC
+2018-07-26 11:16:46 INFO  [main      ] ConfiguratorDescriptor   ( 103) - Configuring zone [0_ados_city_n2] with: games.stendhal.server.maps.ados.market.OldFishermanNPC
+2018-07-26 11:16:46 INFO  [main      ] ConfiguratorDescriptor   ( 103) - Configuring zone [0_ados_city_n2] with: games.stendhal.server.maps.ados.market.FishSoupMakerNPC
+2018-07-26 11:16:46 INFO  [main      ] ConfiguratorDescriptor   ( 103) - Configuring zone [0_ados_city_n2] with: games.stendhal.server.maps.ados.market.FierywaterDistillerNPC
+2018-07-26 11:16:46 INFO  [main      ] ConfiguratorDescriptor   ( 103) - Configuring zone [0_ados_city_n2] with: games.stendhal.server.maps.ados.market.DistilleryCustomerNPC
+2018-07-26 11:16:46 INFO  [main      ] ConfiguratorDescriptor   ( 103) - Configuring zone [0_ados_city_n2] with: games.stendhal.server.maps.ados.market.OracleNPC
+2018-07-26 11:16:46 INFO  [main      ] ConfiguratorDescriptor   ( 103) - Configuring zone [0_ados_city_n2] with: games.stendhal.server.maps.ados.market.CafeSellerNPC
+2018-07-26 11:16:46 INFO  [main      ] ConfiguratorDescriptor   ( 103) - Configuring zone [0_ados_city_n2] with: games.stendhal.server.maps.ados.market.HalfElfNPC
+2018-07-26 11:16:46 INFO  [main      ] ZonesXMLLoader           ( 145) - Loading zone: 0_ados_mountain_n_w2
+2018-07-26 11:16:46 INFO  [main      ] ZonesXMLLoader           ( 145) - Loading zone: 0_ados_mountain_nw
+2018-07-26 11:16:46 INFO  [main      ] ConfiguratorDescriptor   ( 103) - Configuring zone [0_ados_mountain_nw] with: games.stendhal.server.maps.ados.outside.MagicianHouseGreeterNPC
+2018-07-26 11:16:46 INFO  [main      ] ZonesXMLLoader           ( 145) - Loading zone: int_ados_magician_house
+2018-07-26 11:16:46 INFO  [main      ] ConfiguratorDescriptor   ( 103) - Configuring zone [int_ados_magician_house] with: games.stendhal.server.maps.ados.magician_house.WizardNPC
+2018-07-26 11:16:46 INFO  [main      ] ConfiguratorDescriptor   ( 103) - Configuring zone [int_ados_magician_house] with: games.stendhal.server.maps.ados.magician_house.ItemsOnTable
+2018-07-26 11:16:46 INFO  [main      ] ZonesXMLLoader           ( 145) - Loading zone: 0_ados_outside_nw
+2018-07-26 11:16:46 INFO  [main      ] ConfiguratorDescriptor   ( 103) - Configuring zone [0_ados_outside_nw] with: games.stendhal.server.maps.ados.outside.AnimalKeeperNPC
+2018-07-26 11:16:46 INFO  [main      ] ConfiguratorDescriptor   ( 103) - Configuring zone [0_ados_outside_nw] with: games.stendhal.server.maps.ados.outside.VeterinarianNPC
+2018-07-26 11:16:47 INFO  [main      ] ZonesXMLLoader           ( 145) - Loading zone: int_ados_pet_sanctuary
+2018-07-26 11:16:47 INFO  [main      ] ZonesXMLLoader           ( 145) - Loading zone: 0_ados_wall_n
+2018-07-26 11:16:47 INFO  [main      ] ConfiguratorDescriptor   ( 103) - Configuring zone [0_ados_wall_n] with: games.stendhal.server.maps.ados.wall.Deathmatch
+2018-07-26 11:16:47 INFO  [main      ] ConfiguratorDescriptor   ( 103) - Configuring zone [0_ados_wall_n] with: games.stendhal.server.maps.ados.wall.GreeterSoldierNPC
+2018-07-26 11:16:47 INFO  [main      ] ZonesXMLLoader           ( 145) - Loading zone: 0_ados_city_n
+2018-07-26 11:16:47 INFO  [main      ] ConfiguratorDescriptor   ( 103) - Configuring zone [0_ados_city_n] with: games.stendhal.server.maps.ados.city.MakeupArtistNPC
+2018-07-26 11:16:47 INFO  [main      ] ConfiguratorDescriptor   ( 103) - Configuring zone [0_ados_city_n] with: games.stendhal.server.maps.ados.city.KidsNPCs
+2018-07-26 11:16:47 INFO  [main      ] ConfiguratorDescriptor   ( 103) - Configuring zone [0_ados_city_n] with: games.stendhal.server.maps.ados.city.DogNPC
+2018-07-26 11:16:47 INFO  [main      ] ConfiguratorDescriptor   ( 103) - Configuring zone [0_ados_city_n] with: games.stendhal.server.maps.ados.city.KidGhostNPC
+2018-07-26 11:16:47 INFO  [main      ] ConfiguratorDescriptor   ( 103) - Configuring zone [0_ados_city_n] with: games.stendhal.server.maps.ados.city.HolidayingWomanNPC
+2018-07-26 11:16:47 INFO  [main      ] ZonesXMLLoader           ( 145) - Loading zone: int_ados_reverse_arrow
+2018-07-26 11:16:47 INFO  [main      ] ConfiguratorDescriptor   ( 103) - Configuring zone [int_ados_reverse_arrow] with: games.stendhal.server.core.config.zone.NoTeleportIn
+2018-07-26 11:16:47 INFO  [main      ] ZonesXMLLoader           ( 145) - Loading zone: int_ados_bank
+2018-07-26 11:16:47 INFO  [main      ] ConfiguratorDescriptor   ( 103) - Configuring zone [int_ados_bank] with: games.stendhal.server.maps.ados.bank.BankNPC
+2018-07-26 11:16:47 INFO  [main      ] ZonesXMLLoader           ( 145) - Loading zone: int_ados_haunted_house
+2018-07-26 11:16:47 INFO  [main      ] ConfiguratorDescriptor   ( 103) - Configuring zone [int_ados_haunted_house] with: games.stendhal.server.maps.ados.hauntedhouse.WomanGhostNPC
+2018-07-26 11:16:47 INFO  [main      ] ZonesXMLLoader           ( 145) - Loading zone: int_ados_haunted_house_basement
+2018-07-26 11:16:47 INFO  [main      ] ZonesXMLLoader           ( 145) - Loading zone: int_ados_bakery
+2018-07-26 11:16:47 INFO  [main      ] ConfiguratorDescriptor   ( 103) - Configuring zone [int_ados_bakery] with: games.stendhal.server.maps.ados.bakery.BakerNPC
+2018-07-26 11:16:47 INFO  [main      ] ConfiguratorDescriptor   ( 103) - Configuring zone [int_ados_bakery] with: games.stendhal.server.maps.ados.bakery.ItemsOnTable
+2018-07-26 11:16:47 INFO  [main      ] ZonesXMLLoader           ( 145) - Loading zone: int_ados_library
+2018-07-26 11:16:47 INFO  [main      ] ConfiguratorDescriptor   ( 103) - Configuring zone [int_ados_library] with: games.stendhal.server.maps.ados.library.LibrarianNPC
+2018-07-26 11:16:47 INFO  [main      ] ConfiguratorDescriptor   ( 103) - Configuring zone [int_ados_library] with: games.stendhal.server.maps.ados.library.WriterNPC
+2018-07-26 11:16:47 INFO  [main      ] ZonesXMLLoader           ( 145) - Loading zone: int_ados_tavern_0
+2018-07-26 11:16:48 INFO  [main      ] ConfiguratorDescriptor   ( 103) - Configuring zone [int_ados_tavern_0] with: games.stendhal.server.maps.ados.tavern.BarMaidNPC
+2018-07-26 11:16:48 INFO  [main      ] ConfiguratorDescriptor   ( 103) - Configuring zone [int_ados_tavern_0] with: games.stendhal.server.maps.ados.tavern.BarmanNPC
+2018-07-26 11:16:48 INFO  [main      ] ConfiguratorDescriptor   ( 103) - Configuring zone [int_ados_tavern_0] with: games.stendhal.server.maps.ados.tavern.ItemsOnTable
+2018-07-26 11:16:48 INFO  [main      ] ZonesXMLLoader           ( 145) - Loading zone: int_ados_zaras_house_0
+2018-07-26 11:16:48 INFO  [main      ] ZonesXMLLoader           ( 145) - Loading zone: int_ados_zaras_house_1
+2018-07-26 11:16:48 INFO  [main      ] ZonesXMLLoader           ( 145) - Loading zone: int_ados_goldsmith
+2018-07-26 11:16:48 INFO  [main      ] ConfiguratorDescriptor   ( 103) - Configuring zone [int_ados_goldsmith] with: games.stendhal.server.maps.ados.goldsmith.GoldsmithNPC
+2018-07-26 11:16:48 INFO  [main      ] ConfiguratorDescriptor   ( 103) - Configuring zone [int_ados_goldsmith] with: games.stendhal.server.maps.ados.goldsmith.MithrilForgerNPC
+2018-07-26 11:16:48 INFO  [main      ] ZonesXMLLoader           ( 145) - Loading zone: int_ados_carolines_house_0
+2018-07-26 11:16:48 INFO  [main      ] ConfiguratorDescriptor   ( 103) - Configuring zone [int_ados_carolines_house_0] with: games.stendhal.server.maps.ados.market.FishermansDaughterNPC
+2018-07-26 11:16:48 INFO  [main      ] ZonesXMLLoader           ( 145) - Loading zone: int_ados_felinas_house
+2018-07-26 11:16:48 INFO  [main      ] ConfiguratorDescriptor   ( 103) - Configuring zone [int_ados_felinas_house] with: games.stendhal.server.maps.ados.felinashouse.CatSellerNPC
+2018-07-26 11:16:48 INFO  [main      ] ConfiguratorDescriptor   ( 103) - Configuring zone [int_ados_felinas_house] with: games.stendhal.server.maps.ados.felinashouse.KittensNPC
+2018-07-26 11:16:48 INFO  [main      ] ZonesXMLLoader           ( 145) - Loading zone: int_ados_house_71
+2018-07-26 11:16:48 INFO  [main      ] ConfiguratorDescriptor   ( 103) - Configuring zone [int_ados_house_71] with: games.stendhal.server.core.config.zone.NoTeleportIn
+2018-07-26 11:16:48 INFO  [main      ] ConfiguratorDescriptor   ( 103) - Configuring zone [int_ados_house_71] with: games.stendhal.server.entity.mapstuff.chest.StoredChestConfigurator
+2018-07-26 11:16:48 INFO  [main      ] ZonesXMLLoader           ( 145) - Loading zone: int_ados_house_72
+2018-07-26 11:16:48 INFO  [main      ] ConfiguratorDescriptor   ( 103) - Configuring zone [int_ados_house_72] with: games.stendhal.server.core.config.zone.NoTeleportIn
+2018-07-26 11:16:48 INFO  [main      ] ConfiguratorDescriptor   ( 103) - Configuring zone [int_ados_house_72] with: games.stendhal.server.entity.mapstuff.chest.StoredChestConfigurator
+2018-07-26 11:16:48 INFO  [main      ] ZonesXMLLoader           ( 145) - Loading zone: int_ados_house_73
+2018-07-26 11:16:48 INFO  [main      ] ConfiguratorDescriptor   ( 103) - Configuring zone [int_ados_house_73] with: games.stendhal.server.core.config.zone.NoTeleportIn
+2018-07-26 11:16:48 INFO  [main      ] ConfiguratorDescriptor   ( 103) - Configuring zone [int_ados_house_73] with: games.stendhal.server.entity.mapstuff.chest.StoredChestConfigurator
+2018-07-26 11:16:48 INFO  [main      ] ZonesXMLLoader           ( 145) - Loading zone: int_ados_house_74
+2018-07-26 11:16:48 INFO  [main      ] ConfiguratorDescriptor   ( 103) - Configuring zone [int_ados_house_74] with: games.stendhal.server.core.config.zone.NoTeleportIn
+2018-07-26 11:16:48 INFO  [main      ] ConfiguratorDescriptor   ( 103) - Configuring zone [int_ados_house_74] with: games.stendhal.server.entity.mapstuff.chest.StoredChestConfigurator
+2018-07-26 11:16:48 INFO  [main      ] ZonesXMLLoader           ( 145) - Loading zone: int_ados_house_75
+2018-07-26 11:16:48 INFO  [main      ] ConfiguratorDescriptor   ( 103) - Configuring zone [int_ados_house_75] with: games.stendhal.server.core.config.zone.NoTeleportIn
+2018-07-26 11:16:48 INFO  [main      ] ConfiguratorDescriptor   ( 103) - Configuring zone [int_ados_house_75] with: games.stendhal.server.entity.mapstuff.chest.StoredChestConfigurator
+2018-07-26 11:16:48 INFO  [main      ] ZonesXMLLoader           ( 145) - Loading zone: int_ados_house_76
+2018-07-26 11:16:48 INFO  [main      ] ConfiguratorDescriptor   ( 103) - Configuring zone [int_ados_house_76] with: games.stendhal.server.core.config.zone.NoTeleportIn
+2018-07-26 11:16:48 INFO  [main      ] ConfiguratorDescriptor   ( 103) - Configuring zone [int_ados_house_76] with: games.stendhal.server.entity.mapstuff.chest.StoredChestConfigurator
+2018-07-26 11:16:48 INFO  [main      ] ZonesXMLLoader           ( 145) - Loading zone: int_ados_house_77
+2018-07-26 11:16:48 INFO  [main      ] ConfiguratorDescriptor   ( 103) - Configuring zone [int_ados_house_77] with: games.stendhal.server.core.config.zone.NoTeleportIn
+2018-07-26 11:16:48 INFO  [main      ] ConfiguratorDescriptor   ( 103) - Configuring zone [int_ados_house_77] with: games.stendhal.server.entity.mapstuff.chest.StoredChestConfigurator
+2018-07-26 11:16:48 INFO  [main      ] ZonesXMLLoader           ( 145) - Loading zone: int_ados_barracks_0
+2018-07-26 11:16:48 INFO  [main      ] ConfiguratorDescriptor   ( 103) - Configuring zone [int_ados_barracks_0] with: games.stendhal.server.maps.ados.barracks.BuyerNPC
+2018-07-26 11:16:48 INFO  [main      ] ConfiguratorDescriptor   ( 103) - Configuring zone [int_ados_barracks_0] with: games.stendhal.server.maps.semos.townhall.LeaderNPC
+2018-07-26 11:16:48 INFO  [main      ] ConfiguratorDescriptor   ( 103) - Configuring zone [int_ados_barracks_0] with: games.stendhal.server.maps.semos.townhall.CadetsNPCs
+2018-07-26 11:16:48 INFO  [main      ] ZonesXMLLoader           ( 145) - Loading zone: int_ados_barracks_1
+2018-07-26 11:16:48 INFO  [main      ] ZonesXMLLoader           ( 145) - Loading zone: int_ados_storage
+2018-07-26 11:16:48 INFO  [main      ] ZonesXMLLoader           ( 145) - Loading zone: int_ados_sewing_room
+2018-07-26 11:16:48 INFO  [main      ] ConfiguratorDescriptor   ( 103) - Configuring zone [int_ados_sewing_room] with: games.stendhal.server.maps.ados.sewingroom.SeamstressNPC
+2018-07-26 11:16:48 INFO  [main      ] ZonesXMLLoader           ( 145) - Loading zone: int_ados_twilight_zone
+2018-07-26 11:16:48 INFO  [main      ] ConfiguratorDescriptor   ( 103) - Configuring zone [int_ados_twilight_zone] with: games.stendhal.server.maps.ados.twilightzone.SeamstressNPC
+2018-07-26 11:16:48 INFO  [main      ] ConfiguratorDescriptor   ( 103) - Configuring zone [int_ados_twilight_zone] with: games.stendhal.server.maps.ados.twilightzone.SlimeCreature
+2018-07-26 11:16:48 INFO  [main      ] ConfiguratorDescriptor   ( 103) - Configuring zone [int_ados_twilight_zone] with: games.stendhal.server.core.config.zone.NoTeleport
+2018-07-26 11:16:48 INFO  [main      ] ZonesXMLLoader           ( 145) - Loading zone: int_ados_bar
+2018-07-26 11:16:48 INFO  [main      ] ConfiguratorDescriptor   ( 103) - Configuring zone [int_ados_bar] with: games.stendhal.server.maps.ados.bar.BarMaidNPC
+2018-07-26 11:16:48 INFO  [main      ] ConfiguratorDescriptor   ( 103) - Configuring zone [int_ados_bar] with: games.stendhal.server.maps.semos.tavern.StichardRallmanNPC
+2018-07-26 11:16:48 INFO  [main      ] ConfiguratorDescriptor   ( 103) - Configuring zone [int_ados_bar] with: games.stendhal.server.maps.ados.bar.ItemsOnTable
+2018-07-26 11:16:48 INFO  [main      ] ZonesXMLLoader           ( 145) - Loading zone: int_ados_bar_1
+2018-07-26 11:16:48 INFO  [main      ] ConfiguratorDescriptor   ( 103) - Configuring zone [int_ados_bar_1] with: games.stendhal.server.maps.ados.bar.ItemsOnTableUpstairs
+2018-07-26 11:16:48 INFO  [main      ] ZonesXMLLoader           ( 145) - Loading zone: int_ados_town_hall
+2018-07-26 11:16:48 INFO  [main      ] ConfiguratorDescriptor   ( 103) - Configuring zone [int_ados_town_hall] with: games.stendhal.server.maps.ados.townhall.TaxmanNPC
+2018-07-26 11:16:48 INFO  [main      ] ZonesXMLLoader           ( 145) - Loading zone: int_ados_town_hall_1
+2018-07-26 11:16:48 INFO  [main      ] ConfiguratorDescriptor   ( 103) - Configuring zone [int_ados_town_hall_1] with: games.stendhal.server.maps.ados.townhall.ClerkNPC
+2018-07-26 11:16:48 INFO  [main      ] ZonesXMLLoader           ( 145) - Loading zone: int_ados_town_hall_2
+2018-07-26 11:16:48 INFO  [main      ] ConfiguratorDescriptor   ( 103) - Configuring zone [int_ados_town_hall_2] with: games.stendhal.server.maps.ados.townhall.MayorNPC
+2018-07-26 11:16:48 INFO  [main      ] ZonesXMLLoader           ( 145) - Loading zone: int_ados_town_hall_3
+2018-07-26 11:16:48 INFO  [main      ] ZonesXMLLoader           ( 145) - Loading zone: int_ados_fishermans_hut_west
+2018-07-26 11:16:48 INFO  [main      ] ConfiguratorDescriptor   ( 103) - Configuring zone [int_ados_fishermans_hut_west] with: games.stendhal.server.maps.ados.fishermans_hut.TeacherNPC
+2018-07-26 11:16:48 INFO  [main      ] ZonesXMLLoader           ( 145) - Loading zone: int_ados_fishermans_hut_north
+2018-07-26 11:16:48 INFO  [main      ] ConfiguratorDescriptor   ( 103) - Configuring zone [int_ados_fishermans_hut_north] with: games.stendhal.server.maps.ados.fishermans_hut.FishermanNPC
+2018-07-26 11:16:48 INFO  [main      ] ZonesXMLLoader           ( 145) - Loading zone: int_ados_meat_market
+2018-07-26 11:16:48 INFO  [main      ] ConfiguratorDescriptor   ( 103) - Configuring zone [int_ados_meat_market] with: games.stendhal.server.maps.ados.meat_market.BlacksheepHarryNPC
+2018-07-26 11:16:48 INFO  [main      ] ConfiguratorDescriptor   ( 103) - Configuring zone [int_ados_meat_market] with: games.stendhal.server.maps.ados.meat_market.BlacksheepJoeNPC
+2018-07-26 11:16:48 INFO  [main      ] ConfiguratorDescriptor   ( 103) - Configuring zone [int_ados_meat_market] with: games.stendhal.server.maps.ados.meat_market.BlacksheepBobNPC
+2018-07-26 11:16:48 INFO  [main      ] ZonesXMLLoader           ( 145) - Loading zone: int_ados_castle_entrance
+2018-07-26 11:16:48 INFO  [main      ] ZonesXMLLoader           ( 145) - Loading zone: int_ados_castle_left
+2018-07-26 11:16:48 INFO  [main      ] ConfiguratorDescriptor   ( 103) - Configuring zone [int_ados_castle_left] with: games.stendhal.server.maps.ados.castle.JesterNPC
+2018-07-26 11:16:48 INFO  [main      ] ZonesXMLLoader           ( 145) - Loading zone: int_ados_castle_right
+2018-07-26 11:16:48 INFO  [main      ] ZonesXMLLoader           ( 145) - Loading zone: int_ados_castle_throne
+2018-07-26 11:16:48 INFO  [main      ] ZonesXMLLoader           ( 145) - Loading zone: int_ados_castle_dungeons
+2018-07-26 11:16:48 INFO  [main      ] ZonesXMLLoader           ( 145) - Loading zone: int_ados_ross_house
+2018-07-26 11:16:48 INFO  [main      ] ConfiguratorDescriptor   ( 103) - Configuring zone [int_ados_ross_house] with: games.stendhal.server.maps.ados.rosshouse.LittleGirlNPC
+2018-07-26 11:16:48 INFO  [main      ] ConfiguratorDescriptor   ( 103) - Configuring zone [int_ados_ross_house] with: games.stendhal.server.maps.ados.rosshouse.FatherNPC
+2018-07-26 11:16:48 INFO  [main      ] ConfiguratorDescriptor   ( 103) - Configuring zone [int_ados_ross_house] with: games.stendhal.server.maps.ados.rosshouse.ItemsOnTable
+2018-07-26 11:16:48 INFO  [main      ] ZonesXMLLoader           ( 145) - Loading zone: int_ados_house_50
+2018-07-26 11:16:48 INFO  [main      ] ConfiguratorDescriptor   ( 103) - Configuring zone [int_ados_house_50] with: games.stendhal.server.core.config.zone.NoTeleportIn
+2018-07-26 11:16:48 INFO  [main      ] ConfiguratorDescriptor   ( 103) - Configuring zone [int_ados_house_50] with: games.stendhal.server.entity.mapstuff.chest.StoredChestConfigurator
+2018-07-26 11:16:48 INFO  [main      ] ConfiguratorDescriptor   ( 103) - Configuring zone [int_ados_house_50] with: games.stendhal.server.maps.semos.city.FertileGrounds
+2018-07-26 11:16:48 INFO  [main      ] ZonesXMLLoader           ( 145) - Loading zone: int_ados_house_50_1
+2018-07-26 11:16:48 INFO  [main      ] ConfiguratorDescriptor   ( 103) - Configuring zone [int_ados_house_50_1] with: games.stendhal.server.core.config.zone.NoTeleportIn
+2018-07-26 11:16:48 INFO  [main      ] ZonesXMLLoader           ( 145) - Loading zone: int_ados_house_51
+2018-07-26 11:16:48 INFO  [main      ] ConfiguratorDescriptor   ( 103) - Configuring zone [int_ados_house_51] with: games.stendhal.server.core.config.zone.NoTeleportIn
+2018-07-26 11:16:48 INFO  [main      ] ConfiguratorDescriptor   ( 103) - Configuring zone [int_ados_house_51] with: games.stendhal.server.entity.mapstuff.chest.StoredChestConfigurator
+2018-07-26 11:16:48 INFO  [main      ] ConfiguratorDescriptor   ( 103) - Configuring zone [int_ados_house_51] with: games.stendhal.server.maps.semos.city.FertileGrounds
+2018-07-26 11:16:48 INFO  [main      ] ZonesXMLLoader           ( 145) - Loading zone: int_ados_house_51_1
+2018-07-26 11:16:48 INFO  [main      ] ConfiguratorDescriptor   ( 103) - Configuring zone [int_ados_house_51_1] with: games.stendhal.server.core.config.zone.NoTeleportIn
+2018-07-26 11:16:48 INFO  [main      ] ZonesXMLLoader           ( 145) - Loading zone: int_ados_house_52
+2018-07-26 11:16:48 INFO  [main      ] ConfiguratorDescriptor   ( 103) - Configuring zone [int_ados_house_52] with: games.stendhal.server.core.config.zone.NoTeleportIn
+2018-07-26 11:16:48 INFO  [main      ] ConfiguratorDescriptor   ( 103) - Configuring zone [int_ados_house_52] with: games.stendhal.server.entity.mapstuff.chest.StoredChestConfigurator
+2018-07-26 11:16:48 INFO  [main      ] ConfiguratorDescriptor   ( 103) - Configuring zone [int_ados_house_52] with: games.stendhal.server.maps.semos.city.FertileGrounds
+2018-07-26 11:16:48 INFO  [main      ] ZonesXMLLoader           ( 145) - Loading zone: int_ados_house_52_1
+2018-07-26 11:16:48 INFO  [main      ] ConfiguratorDescriptor   ( 103) - Configuring zone [int_ados_house_52_1] with: games.stendhal.server.core.config.zone.NoTeleportIn
+2018-07-26 11:16:48 INFO  [main      ] ZonesXMLLoader           ( 145) - Loading zone: int_ados_house_53
+2018-07-26 11:16:48 INFO  [main      ] ConfiguratorDescriptor   ( 103) - Configuring zone [int_ados_house_53] with: games.stendhal.server.core.config.zone.NoTeleportIn
+2018-07-26 11:16:48 INFO  [main      ] ConfiguratorDescriptor   ( 103) - Configuring zone [int_ados_house_53] with: games.stendhal.server.entity.mapstuff.chest.StoredChestConfigurator
+2018-07-26 11:16:48 INFO  [main      ] ConfiguratorDescriptor   ( 103) - Configuring zone [int_ados_house_53] with: games.stendhal.server.maps.semos.city.FertileGrounds
+2018-07-26 11:16:48 INFO  [main      ] ZonesXMLLoader           ( 145) - Loading zone: int_ados_house_53_1
+2018-07-26 11:16:48 INFO  [main      ] ConfiguratorDescriptor   ( 103) - Configuring zone [int_ados_house_53_1] with: games.stendhal.server.core.config.zone.NoTeleportIn
+2018-07-26 11:16:48 INFO  [main      ] ZonesXMLLoader           ( 145) - Loading zone: int_ados_house_54
+2018-07-26 11:16:48 INFO  [main      ] ConfiguratorDescriptor   ( 103) - Configuring zone [int_ados_house_54] with: games.stendhal.server.core.config.zone.NoTeleportIn
+2018-07-26 11:16:48 INFO  [main      ] ConfiguratorDescriptor   ( 103) - Configuring zone [int_ados_house_54] with: games.stendhal.server.entity.mapstuff.chest.StoredChestConfigurator
+2018-07-26 11:16:48 INFO  [main      ] ConfiguratorDescriptor   ( 103) - Configuring zone [int_ados_house_54] with: games.stendhal.server.maps.semos.city.FertileGrounds
+2018-07-26 11:16:48 INFO  [main      ] ZonesXMLLoader           ( 145) - Loading zone: int_ados_house_54_1
+2018-07-26 11:16:48 INFO  [main      ] ConfiguratorDescriptor   ( 103) - Configuring zone [int_ados_house_54_1] with: games.stendhal.server.core.config.zone.NoTeleportIn
+2018-07-26 11:16:48 INFO  [main      ] ZonesXMLLoader           ( 145) - Loading zone: int_ados_house_55
+2018-07-26 11:16:48 INFO  [main      ] ConfiguratorDescriptor   ( 103) - Configuring zone [int_ados_house_55] with: games.stendhal.server.core.config.zone.NoTeleportIn
+2018-07-26 11:16:48 INFO  [main      ] ConfiguratorDescriptor   ( 103) - Configuring zone [int_ados_house_55] with: games.stendhal.server.entity.mapstuff.chest.StoredChestConfigurator
+2018-07-26 11:16:48 INFO  [main      ] ConfiguratorDescriptor   ( 103) - Configuring zone [int_ados_house_55] with: games.stendhal.server.maps.semos.city.FertileGrounds
+2018-07-26 11:16:48 INFO  [main      ] ZonesXMLLoader           ( 145) - Loading zone: int_ados_house_55_1
+2018-07-26 11:16:48 INFO  [main      ] ConfiguratorDescriptor   ( 103) - Configuring zone [int_ados_house_55_1] with: games.stendhal.server.core.config.zone.NoTeleportIn
+2018-07-26 11:16:48 INFO  [main      ] ZonesXMLLoader           ( 145) - Loading zone: int_ados_house_56
+2018-07-26 11:16:48 INFO  [main      ] ConfiguratorDescriptor   ( 103) - Configuring zone [int_ados_house_56] with: games.stendhal.server.core.config.zone.NoTeleportIn
+2018-07-26 11:16:48 INFO  [main      ] ConfiguratorDescriptor   ( 103) - Configuring zone [int_ados_house_56] with: games.stendhal.server.entity.mapstuff.chest.StoredChestConfigurator
+2018-07-26 11:16:48 INFO  [main      ] ConfiguratorDescriptor   ( 103) - Configuring zone [int_ados_house_56] with: games.stendhal.server.maps.semos.city.FertileGrounds
+2018-07-26 11:16:48 INFO  [main      ] ZonesXMLLoader           ( 145) - Loading zone: int_ados_house_56_1
+2018-07-26 11:16:48 INFO  [main      ] ConfiguratorDescriptor   ( 103) - Configuring zone [int_ados_house_56_1] with: games.stendhal.server.core.config.zone.NoTeleportIn
+2018-07-26 11:16:48 INFO  [main      ] ZonesXMLLoader           ( 145) - Loading zone: int_ados_house_57
+2018-07-26 11:16:48 INFO  [main      ] ConfiguratorDescriptor   ( 103) - Configuring zone [int_ados_house_57] with: games.stendhal.server.core.config.zone.NoTeleportIn
+2018-07-26 11:16:48 INFO  [main      ] ConfiguratorDescriptor   ( 103) - Configuring zone [int_ados_house_57] with: games.stendhal.server.entity.mapstuff.chest.StoredChestConfigurator
+2018-07-26 11:16:48 INFO  [main      ] ConfiguratorDescriptor   ( 103) - Configuring zone [int_ados_house_57] with: games.stendhal.server.maps.semos.city.FertileGrounds
+2018-07-26 11:16:48 INFO  [main      ] ZonesXMLLoader           ( 145) - Loading zone: int_ados_house_57_1
+2018-07-26 11:16:48 INFO  [main      ] ConfiguratorDescriptor   ( 103) - Configuring zone [int_ados_house_57_1] with: games.stendhal.server.core.config.zone.NoTeleportIn
+2018-07-26 11:16:48 INFO  [main      ] ZonesXMLLoader           ( 145) - Loading zone: int_ados_house_58
+2018-07-26 11:16:48 INFO  [main      ] ConfiguratorDescriptor   ( 103) - Configuring zone [int_ados_house_58] with: games.stendhal.server.core.config.zone.NoTeleportIn
+2018-07-26 11:16:48 INFO  [main      ] ConfiguratorDescriptor   ( 103) - Configuring zone [int_ados_house_58] with: games.stendhal.server.entity.mapstuff.chest.StoredChestConfigurator
+2018-07-26 11:16:48 INFO  [main      ] ZonesXMLLoader           ( 145) - Loading zone: int_ados_house_58_1
+2018-07-26 11:16:48 INFO  [main      ] ConfiguratorDescriptor   ( 103) - Configuring zone [int_ados_house_58_1] with: games.stendhal.server.core.config.zone.NoTeleportIn
+2018-07-26 11:16:48 INFO  [main      ] ConfiguratorDescriptor   ( 103) - Configuring zone [int_ados_house_58_1] with: games.stendhal.server.maps.semos.city.FertileGrounds
+2018-07-26 11:16:48 INFO  [main      ] ZonesXMLLoader           ( 145) - Loading zone: int_ados_house_59
+2018-07-26 11:16:48 INFO  [main      ] ConfiguratorDescriptor   ( 103) - Configuring zone [int_ados_house_59] with: games.stendhal.server.core.config.zone.NoTeleportIn
+2018-07-26 11:16:48 INFO  [main      ] ConfiguratorDescriptor   ( 103) - Configuring zone [int_ados_house_59] with: games.stendhal.server.entity.mapstuff.chest.StoredChestConfigurator
+2018-07-26 11:16:48 INFO  [main      ] ConfiguratorDescriptor   ( 103) - Configuring zone [int_ados_house_59] with: games.stendhal.server.maps.semos.city.FertileGrounds
+2018-07-26 11:16:48 INFO  [main      ] ZonesXMLLoader           ( 145) - Loading zone: int_ados_house_59_1
+2018-07-26 11:16:48 INFO  [main      ] ConfiguratorDescriptor   ( 103) - Configuring zone [int_ados_house_59_1] with: games.stendhal.server.core.config.zone.NoTeleportIn
+2018-07-26 11:16:48 INFO  [main      ] ZonesXMLLoader           ( 145) - Loading zone: int_ados_house_60
+2018-07-26 11:16:48 INFO  [main      ] ConfiguratorDescriptor   ( 103) - Configuring zone [int_ados_house_60] with: games.stendhal.server.core.config.zone.NoTeleportIn
+2018-07-26 11:16:48 INFO  [main      ] ConfiguratorDescriptor   ( 103) - Configuring zone [int_ados_house_60] with: games.stendhal.server.entity.mapstuff.chest.StoredChestConfigurator
+2018-07-26 11:16:48 INFO  [main      ] ConfiguratorDescriptor   ( 103) - Configuring zone [int_ados_house_60] with: games.stendhal.server.maps.semos.city.FertileGrounds
+2018-07-26 11:16:48 INFO  [main      ] ZonesXMLLoader           ( 145) - Loading zone: int_ados_house_60_1
+2018-07-26 11:16:48 INFO  [main      ] ConfiguratorDescriptor   ( 103) - Configuring zone [int_ados_house_60_1] with: games.stendhal.server.core.config.zone.NoTeleportIn
+2018-07-26 11:16:48 INFO  [main      ] ZonesXMLLoader           ( 145) - Loading zone: int_ados_house_61
+2018-07-26 11:16:48 INFO  [main      ] ConfiguratorDescriptor   ( 103) - Configuring zone [int_ados_house_61] with: games.stendhal.server.core.config.zone.NoTeleportIn
+2018-07-26 11:16:48 INFO  [main      ] ConfiguratorDescriptor   ( 103) - Configuring zone [int_ados_house_61] with: games.stendhal.server.entity.mapstuff.chest.StoredChestConfigurator
+2018-07-26 11:16:48 INFO  [main      ] ZonesXMLLoader           ( 145) - Loading zone: int_ados_house_61_1
+2018-07-26 11:16:48 INFO  [main      ] ConfiguratorDescriptor   ( 103) - Configuring zone [int_ados_house_61_1] with: games.stendhal.server.core.config.zone.NoTeleportIn
+2018-07-26 11:16:48 INFO  [main      ] ConfiguratorDescriptor   ( 103) - Configuring zone [int_ados_house_61_1] with: games.stendhal.server.maps.semos.city.FertileGrounds
+2018-07-26 11:16:48 INFO  [main      ] ZonesXMLLoader           ( 145) - Loading zone: int_ados_house_62
+2018-07-26 11:16:48 INFO  [main      ] ConfiguratorDescriptor   ( 103) - Configuring zone [int_ados_house_62] with: games.stendhal.server.core.config.zone.NoTeleportIn
+2018-07-26 11:16:48 INFO  [main      ] ConfiguratorDescriptor   ( 103) - Configuring zone [int_ados_house_62] with: games.stendhal.server.entity.mapstuff.chest.StoredChestConfigurator
+2018-07-26 11:16:48 INFO  [main      ] ConfiguratorDescriptor   ( 103) - Configuring zone [int_ados_house_62] with: games.stendhal.server.maps.semos.city.FertileGrounds
+2018-07-26 11:16:48 INFO  [main      ] ZonesXMLLoader           ( 145) - Loading zone: int_ados_house_62_1
+2018-07-26 11:16:48 INFO  [main      ] ConfiguratorDescriptor   ( 103) - Configuring zone [int_ados_house_62_1] with: games.stendhal.server.core.config.zone.NoTeleportIn
+2018-07-26 11:16:48 INFO  [main      ] ZonesXMLLoader           ( 145) - Loading zone: int_ados_house_63
+2018-07-26 11:16:48 INFO  [main      ] ConfiguratorDescriptor   ( 103) - Configuring zone [int_ados_house_63] with: games.stendhal.server.core.config.zone.NoTeleportIn
+2018-07-26 11:16:48 INFO  [main      ] ConfiguratorDescriptor   ( 103) - Configuring zone [int_ados_house_63] with: games.stendhal.server.entity.mapstuff.chest.StoredChestConfigurator
+2018-07-26 11:16:48 INFO  [main      ] ConfiguratorDescriptor   ( 103) - Configuring zone [int_ados_house_63] with: games.stendhal.server.maps.semos.city.FertileGrounds
+2018-07-26 11:16:48 INFO  [main      ] ZonesXMLLoader           ( 145) - Loading zone: int_ados_house_64
+2018-07-26 11:16:48 INFO  [main      ] ConfiguratorDescriptor   ( 103) - Configuring zone [int_ados_house_64] with: games.stendhal.server.core.config.zone.NoTeleportIn
+2018-07-26 11:16:48 INFO  [main      ] ConfiguratorDescriptor   ( 103) - Configuring zone [int_ados_house_64] with: games.stendhal.server.entity.mapstuff.chest.StoredChestConfigurator
+2018-07-26 11:16:48 INFO  [main      ] ConfiguratorDescriptor   ( 103) - Configuring zone [int_ados_house_64] with: games.stendhal.server.maps.semos.city.FertileGrounds
+2018-07-26 11:16:48 INFO  [main      ] ZonesXMLLoader           ( 145) - Loading zone: int_ados_house_65
+2018-07-26 11:16:48 INFO  [main      ] ConfiguratorDescriptor   ( 103) - Configuring zone [int_ados_house_65] with: games.stendhal.server.core.config.zone.NoTeleportIn
+2018-07-26 11:16:48 INFO  [main      ] ConfiguratorDescriptor   ( 103) - Configuring zone [int_ados_house_65] with: games.stendhal.server.entity.mapstuff.chest.StoredChestConfigurator
+2018-07-26 11:16:48 INFO  [main      ] ConfiguratorDescriptor   ( 103) - Configuring zone [int_ados_house_65] with: games.stendhal.server.maps.semos.city.FertileGrounds
+2018-07-26 11:16:48 INFO  [main      ] ZonesXMLLoader           ( 145) - Loading zone: int_ados_house_66
+2018-07-26 11:16:48 INFO  [main      ] ConfiguratorDescriptor   ( 103) - Configuring zone [int_ados_house_66] with: games.stendhal.server.core.config.zone.NoTeleportIn
+2018-07-26 11:16:48 INFO  [main      ] ConfiguratorDescriptor   ( 103) - Configuring zone [int_ados_house_66] with: games.stendhal.server.entity.mapstuff.chest.StoredChestConfigurator
+2018-07-26 11:16:48 INFO  [main      ] ConfiguratorDescriptor   ( 103) - Configuring zone [int_ados_house_66] with: games.stendhal.server.maps.semos.city.FertileGrounds
+2018-07-26 11:16:48 INFO  [main      ] ZonesXMLLoader           ( 145) - Loading zone: int_ados_house_67
+2018-07-26 11:16:48 INFO  [main      ] ConfiguratorDescriptor   ( 103) - Configuring zone [int_ados_house_67] with: games.stendhal.server.core.config.zone.NoTeleportIn
+2018-07-26 11:16:48 INFO  [main      ] ConfiguratorDescriptor   ( 103) - Configuring zone [int_ados_house_67] with: games.stendhal.server.entity.mapstuff.chest.StoredChestConfigurator
+2018-07-26 11:16:48 INFO  [main      ] ConfiguratorDescriptor   ( 103) - Configuring zone [int_ados_house_67] with: games.stendhal.server.maps.semos.city.FertileGrounds
+2018-07-26 11:16:48 INFO  [main      ] ZonesXMLLoader           ( 145) - Loading zone: int_ados_house_68
+2018-07-26 11:16:48 INFO  [main      ] ConfiguratorDescriptor   ( 103) - Configuring zone [int_ados_house_68] with: games.stendhal.server.core.config.zone.NoTeleportIn
+2018-07-26 11:16:48 INFO  [main      ] ConfiguratorDescriptor   ( 103) - Configuring zone [int_ados_house_68] with: games.stendhal.server.entity.mapstuff.chest.StoredChestConfigurator
+2018-07-26 11:16:48 INFO  [main      ] ZonesXMLLoader           ( 145) - Loading zone: int_ados_house_69
+2018-07-26 11:16:48 INFO  [main      ] ConfiguratorDescriptor   ( 103) - Configuring zone [int_ados_house_69] with: games.stendhal.server.core.config.zone.NoTeleportIn
+2018-07-26 11:16:48 INFO  [main      ] ConfiguratorDescriptor   ( 103) - Configuring zone [int_ados_house_69] with: games.stendhal.server.entity.mapstuff.chest.StoredChestConfigurator
+2018-07-26 11:16:48 INFO  [main      ] ZonesXMLLoader           ( 145) - Loading zone: int_ados_house_70
+2018-07-26 11:16:48 INFO  [main      ] ConfiguratorDescriptor   ( 103) - Configuring zone [int_ados_house_70] with: games.stendhal.server.core.config.zone.NoTeleportIn
+2018-07-26 11:16:48 INFO  [main      ] ConfiguratorDescriptor   ( 103) - Configuring zone [int_ados_house_70] with: games.stendhal.server.entity.mapstuff.chest.StoredChestConfigurator
+2018-07-26 11:16:48 INFO  [main      ] ConfiguratorDescriptor   ( 103) - Configuring zone [int_ados_house_70] with: games.stendhal.server.maps.semos.city.FertileGrounds
+2018-07-26 11:16:48 INFO  [main      ] ZonesXMLLoader           ( 145) - Loading zone: 0_ados_forest_w2
+2018-07-26 11:16:48 INFO  [main      ] ConfiguratorDescriptor   ( 103) - Configuring zone [0_ados_forest_w2] with: games.stendhal.server.maps.ados.forest.FarmerNPC
+2018-07-26 11:16:48 INFO  [main      ] ConfiguratorDescriptor   ( 103) - Configuring zone [0_ados_forest_w2] with: games.stendhal.server.maps.ados.forest.SickleingHalfelfNPC
+2018-07-26 11:16:48 INFO  [main      ] ZonesXMLLoader           ( 145) - Loading zone: int_ados_farm_house
+2018-07-26 11:16:48 INFO  [main      ] ConfiguratorDescriptor   ( 103) - Configuring zone [int_ados_farm_house] with: games.stendhal.server.maps.ados.farmhouse.FarmersWifeNPC
+2018-07-26 11:16:48 INFO  [main      ] ZonesXMLLoader           ( 145) - Loading zone: int_ados_farm_house_1
+2018-07-26 11:16:48 INFO  [main      ] ConfiguratorDescriptor   ( 103) - Configuring zone [int_ados_farm_house_1] with: games.stendhal.server.maps.ados.farmhouse.MotherNPC
+2018-07-26 11:16:48 INFO  [main      ] ConfiguratorDescriptor   ( 103) - Configuring zone [int_ados_farm_house_1] with: games.stendhal.server.maps.ados.farmhouse.BoyNPC
+2018-07-26 11:16:48 INFO  [main      ] ZonesXMLLoader           ( 145) - Loading zone: 0_ados_rock_w
+2018-07-26 11:16:49 INFO  [main      ] ZonesXMLLoader           ( 145) - Loading zone: 0_ados_rock
+2018-07-26 11:16:49 INFO  [main      ] ConfiguratorDescriptor   ( 103) - Configuring zone [0_ados_rock] with: games.stendhal.server.maps.ados.rock.WeaponsCollectorNPC
+2018-07-26 11:16:49 INFO  [main      ] ZonesXMLLoader           ( 145) - Loading zone: 0_ados_outside_w
+2018-07-26 11:16:49 INFO  [main      ] ZonesXMLLoader           ( 145) - Loading zone: 0_ados_wall
+2018-07-26 11:16:49 INFO  [main      ] ConfiguratorDescriptor   ( 103) - Configuring zone [0_ados_wall] with: games.stendhal.server.maps.ados.wall.WallSoldier1NPC
+2018-07-26 11:16:49 INFO  [main      ] ConfiguratorDescriptor   ( 103) - Configuring zone [0_ados_wall] with: games.stendhal.server.maps.ados.wall.WallSoldier2NPC
+2018-07-26 11:16:49 INFO  [main      ] ConfiguratorDescriptor   ( 103) - Configuring zone [0_ados_wall] with: games.stendhal.server.maps.ados.wall.WallSoldier3NPC
+2018-07-26 11:16:49 INFO  [main      ] ConfiguratorDescriptor   ( 103) - Configuring zone [0_ados_wall] with: games.stendhal.server.maps.ados.wall.WallSoldier4NPC
+2018-07-26 11:16:49 INFO  [main      ] ConfiguratorDescriptor   ( 103) - Configuring zone [0_ados_wall] with: games.stendhal.server.maps.ados.wall.WallSoldier5NPC
+2018-07-26 11:16:49 INFO  [main      ] ConfiguratorDescriptor   ( 103) - Configuring zone [0_ados_wall] with: games.stendhal.server.maps.ados.wall.HolidayingManNPC
+2018-07-26 11:16:49 INFO  [main      ] ConfiguratorDescriptor   ( 103) - Configuring zone [0_ados_wall] with: games.stendhal.server.maps.ados.wall.HolidayingBoyNPC
+2018-07-26 11:16:49 INFO  [main      ] ZonesXMLLoader           ( 145) - Loading zone: 0_ados_city
+2018-07-26 11:16:49 INFO  [main      ] ConfiguratorDescriptor   ( 103) - Configuring zone [0_ados_city] with: games.stendhal.server.maps.ados.city.ForeignWomanNPC
+2018-07-26 11:16:49 INFO  [main      ] ConfiguratorDescriptor   ( 103) - Configuring zone [0_ados_city] with: games.stendhal.server.maps.ados.city.FishesNPC
+2018-07-26 11:16:49 INFO  [main      ] ZonesXMLLoader           ( 145) - Loading zone: 0_ados_ocean_e
+2018-07-26 11:16:49 INFO  [main      ] ConfiguratorDescriptor   ( 103) - Configuring zone [0_ados_ocean_e] with: games.stendhal.server.core.config.zone.NoTeleportIn
+2018-07-26 11:16:49 INFO  [main      ] ZonesXMLLoader           ( 145) - Loading zone: 0_ados_swamp
+2018-07-26 11:16:49 INFO  [main      ] ConfiguratorDescriptor   ( 103) - Configuring zone [0_ados_swamp] with: games.stendhal.server.maps.ados.swamp.DeathmatchRecruiterNPC
+2018-07-26 11:16:49 INFO  [main      ] ZonesXMLLoader           ( 145) - Loading zone: 0_ados_wall_s
+2018-07-26 11:16:49 INFO  [main      ] ZonesXMLLoader           ( 145) - Loading zone: 0_ados_city_s
+2018-07-26 11:16:49 INFO  [main      ] ConfiguratorDescriptor   ( 103) - Configuring zone [0_ados_city_s] with: games.stendhal.server.maps.ados.city.ManWithHatNPC
+2018-07-26 11:16:49 INFO  [main      ] ConfiguratorDescriptor   ( 103) - Configuring zone [0_ados_city_s] with: games.stendhal.server.maps.ados.city.WallSoldier1NPC
+2018-07-26 11:16:49 INFO  [main      ] ConfiguratorDescriptor   ( 103) - Configuring zone [0_ados_city_s] with: games.stendhal.server.maps.ados.city.WallSoldier2NPC
+2018-07-26 11:16:49 INFO  [main      ] ConfiguratorDescriptor   ( 103) - Configuring zone [0_ados_city_s] with: games.stendhal.server.maps.ados.city.WallSoldier3NPC
+2018-07-26 11:16:49 INFO  [main      ] ZonesXMLLoader           ( 145) - Loading zone: int_ados_church_0
+2018-07-26 11:16:49 INFO  [main      ] ConfiguratorDescriptor   ( 103) - Configuring zone [int_ados_church_0] with: games.stendhal.server.maps.ados.church.VergerNPC
+2018-07-26 11:16:49 INFO  [main      ] ZonesXMLLoader           ( 145) - Loading zone: int_ados_church_1
+2018-07-26 11:16:49 INFO  [main      ] ConfiguratorDescriptor   ( 103) - Configuring zone [int_ados_church_1] with: games.stendhal.server.maps.ados.church.HealerNPC
+2018-07-26 11:16:49 INFO  [main      ] ZonesXMLLoader           ( 145) - Loading zone: int_ados_fishermans_hut_south
+2018-07-26 11:16:49 INFO  [main      ] ZonesXMLLoader           ( 145) - Loading zone: 0_ados_coast_s_w2
+2018-07-26 11:16:49 INFO  [main      ] ConfiguratorDescriptor   ( 103) - Configuring zone [0_ados_coast_s_w2] with: games.stendhal.server.maps.ados.coast.FerryConveyerNPC
+2018-07-26 11:16:49 INFO  [main      ] ZonesXMLLoader           ( 145) - Loading zone: 0_ados_coast_sw
+2018-07-26 11:16:49 INFO  [main      ] ZonesXMLLoader           ( 145) - Loading zone: 0_ados_coast_s
+2018-07-26 11:16:49 INFO  [main      ] ZonesXMLLoader           ( 145) - Loading zone: 0_ados_river_s2_w2
+2018-07-26 11:16:49 INFO  [main      ] ZonesXMLLoader           ( 145) - Loading zone: -1_ados_abandoned_keep
+2018-07-26 11:16:49 INFO  [main      ] ConfiguratorDescriptor   ( 103) - Configuring zone [-1_ados_abandoned_keep] with: games.stendhal.server.maps.ados.abandonedkeep.OrcWeaponArmorGuyNPC
+2018-07-26 11:16:49 INFO  [main      ] ConfiguratorDescriptor   ( 103) - Configuring zone [-1_ados_abandoned_keep] with: games.stendhal.server.maps.ados.abandonedkeep.OrcKillGiantDwarfNPC
+2018-07-26 11:16:49 INFO  [main      ] ZonesXMLLoader           ( 145) - Loading zone: -1_ados_tunnel_w
+2018-07-26 11:16:49 INFO  [main      ] ZonesXMLLoader           ( 145) - Loading zone: -1_ados_tunnel_w2
+2018-07-26 11:16:49 INFO  [main      ] ZonesXMLLoader           ( 145) - Loading zone: -1_ados_caves
+2018-07-26 11:16:49 INFO  [main      ] ZonesXMLLoader           ( 145) - Loading zone: -1_ados_caves_e
+2018-07-26 11:16:49 INFO  [main      ] ZonesXMLLoader           ( 145) - Loading zone: -1_ados_caves_s
+2018-07-26 11:16:49 INFO  [main      ] ZonesXMLLoader           ( 145) - Loading zone: -1_ados_caves_se
+2018-07-26 11:16:49 INFO  [main      ] ZonesXMLLoader           ( 145) - Loading zone: -1_ados_outside_nw
+2018-07-26 11:16:49 INFO  [main      ] ZonesXMLLoader           ( 145) - Loading zone: -1_ados_wall_n
+2018-07-26 11:16:49 INFO  [main      ] ZonesXMLLoader           ( 145) - Loading zone: -1_ados_city_n
+2018-07-26 11:16:49 INFO  [main      ] ZonesXMLLoader           ( 145) - Loading zone: -1_ados_wall
+2018-07-26 11:16:49 INFO  [main      ] ZonesXMLLoader           ( 145) - Loading zone: -1_ados_city
+2018-07-26 11:16:49 INFO  [main      ] ZonesXMLLoader           ( 145) - Loading zone: -1_ados_city_s
+2018-07-26 11:16:49 INFO  [main      ] ZonesXMLLoader           ( 145) - Loading zone: -1_ados_outside_w
+2018-07-26 11:16:49 INFO  [main      ] ConfiguratorDescriptor   ( 103) - Configuring zone [-1_ados_outside_w] with: games.stendhal.server.core.config.zone.NoTeleportIn
+2018-07-26 11:16:49 INFO  [main      ] ConfiguratorDescriptor   ( 103) - Configuring zone [-1_ados_outside_w] with: games.stendhal.server.core.config.zone.NoTeleportIn
+2018-07-26 11:16:49 INFO  [main      ] ConfiguratorDescriptor   ( 103) - Configuring zone [-1_ados_outside_w] with: games.stendhal.server.maps.ados.tunnel.WishmanNPC
+2018-07-26 11:16:49 INFO  [main      ] ZonesXMLLoader           ( 145) - Loading zone: -2_ados_abandoned_keep
+2018-07-26 11:16:49 INFO  [main      ] ZonesXMLLoader           ( 145) - Loading zone: -2_ados_outside_nw
+2018-07-26 11:16:49 INFO  [main      ] ZonesXMLLoader           ( 145) - Loading zone: -2_ados_snake_pit
+2018-07-26 11:16:49 INFO  [main      ] ZonesXMLLoader           ( 145) - Loading zone: -2_ados_snake_pit_s
+2018-07-26 11:16:49 INFO  [main      ] ConfiguratorDescriptor   ( 103) - Configuring zone [-2_ados_snake_pit_s] with: games.stendhal.server.maps.ados.snake_pit.PurpleCrystalNPC
+2018-07-26 11:16:49 INFO  [main      ] ZonesXMLLoader           ( 145) - Loading zone: -3_ados_abandoned_keep
+2018-07-26 11:16:49 INFO  [main      ] ConfiguratorDescriptor   ( 103) - Configuring zone [-3_ados_abandoned_keep] with: games.stendhal.server.maps.ados.abandonedkeep.DwarfBuyerGuyNPC
+2018-07-26 11:16:49 INFO  [main      ] ZonesXMLLoader           ( 145) - Loading zone: -3_ados_outside_nw
+2018-07-26 11:16:49 INFO  [main      ] ConfiguratorDescriptor   ( 103) - Configuring zone [-3_ados_outside_nw] with: games.stendhal.server.maps.ados.outside.CloaksCollectorNPC
+2018-07-26 11:16:49 INFO  [main      ] ZonesXMLLoader           ( 145) - Loading zone: -3_ados_snake_pit
+2018-07-26 11:16:49 INFO  [main      ] ZonesXMLLoader           ( 145) - Loading zone: -3_ados_snake_pit_e
+2018-07-26 11:16:49 INFO  [main      ] ConfiguratorDescriptor   ( 103) - Configuring zone [-3_ados_snake_pit_e] with: games.stendhal.server.maps.ados.snake_pit.KingCobraCreature
+2018-07-26 11:16:49 INFO  [main      ] ZonesXMLLoader           ( 145) - Loading zone: -3_ados_snake_pit_e2
+2018-07-26 11:16:49 INFO  [main      ] ZonesXMLLoader           ( 145) - Loading zone: -3_ados_snake_pit_s
+2018-07-26 11:16:49 INFO  [main      ] ZonesXMLLoader           ( 145) - Loading zone: -3_ados_snake_pit_se
+2018-07-26 11:16:49 INFO  [main      ] ZonesXMLLoader           ( 145) - Loading zone: -4_ados_abandoned_keep
+2018-07-26 11:16:49 INFO  [main      ] ConfiguratorDescriptor   ( 103) - Configuring zone [-4_ados_abandoned_keep] with: games.stendhal.server.maps.ados.abandonedkeep.DwarfWeaponArmorGuyNPC
+2018-07-26 11:16:49 INFO  [main      ] ZonesXMLLoader           ( 145) - Loading zone: -5_ados_abandoned_keep
+2018-07-26 11:16:49 INFO  [main      ] ConfiguratorDescriptor   ( 103) - Configuring zone [-5_ados_abandoned_keep] with: games.stendhal.server.core.config.zone.NoTeleportIn
+2018-07-26 11:16:49 INFO  [main      ] ZonesXMLLoader           ( 145) - Loading zone: -6_ados_abandoned_keep
+2018-07-26 11:16:49 INFO  [main      ] ZonesXMLLoader           ( 145) - Loading zone: int_amazon_princess_hut
+2018-07-26 11:16:49 INFO  [main      ] ConfiguratorDescriptor   ( 103) - Configuring zone [int_amazon_princess_hut] with: games.stendhal.server.maps.amazon.hut.PrincessNPC
+2018-07-26 11:16:49 INFO  [main      ] ZonesXMLLoader           ( 145) - Loading zone: int_amazon_prison_hut
+2018-07-26 11:16:49 INFO  [main      ] ConfiguratorDescriptor   ( 103) - Configuring zone [int_amazon_prison_hut] with: games.stendhal.server.maps.amazon.hut.JailedBarbNPC
+2018-07-26 11:16:49 INFO  [main      ] ZonesXMLLoader           ( 145) - Loading zone: 0_amazon_island_nw
+2018-07-26 11:16:49 INFO  [main      ] ZonesXMLLoader           ( 145) - Loading zone: 0_amazon_island_ne
+2018-07-26 11:16:49 INFO  [main      ] ConfiguratorDescriptor   ( 103) - Configuring zone [0_amazon_island_ne] with: games.stendhal.server.maps.amazon.fleamarket.AmazonMermaidArmorNPC
+2018-07-26 11:16:49 INFO  [main      ] ZonesXMLLoader           ( 145) - Loading zone: 0_amazon_island_sw
+2018-07-26 11:16:49 INFO  [main      ] ZonesXMLLoader           ( 145) - Loading zone: 0_amazon_island_se
+2018-07-26 11:16:49 INFO  [main      ] ZonesXMLLoader           ( 145) - Loading zone: -1_amazon_caves
+2018-07-26 11:16:49 INFO  [main      ] ZonesXMLLoader           ( 145) - Loading zone: -1_amazon_tunnel_e
+2018-07-26 11:16:49 INFO  [main      ] ZonesXMLLoader           ( 145) - Loading zone: -1_amazon_tunnel
+2018-07-26 11:16:49 INFO  [main      ] ZonesXMLLoader           ( 145) - Loading zone: 0_athor_ship_w2
+2018-07-26 11:16:49 INFO  [main      ] ConfiguratorDescriptor   ( 103) - Configuring zone [0_athor_ship_w2] with: games.stendhal.server.maps.athor.ship.CoastConveyerNPC
+2018-07-26 11:16:49 INFO  [main      ] ConfiguratorDescriptor   ( 103) - Configuring zone [0_athor_ship_w2] with: games.stendhal.server.maps.athor.ship.CaptainNPC
+2018-07-26 11:16:49 INFO  [main      ] ConfiguratorDescriptor   ( 103) - Configuring zone [0_athor_ship_w2] with: games.stendhal.server.maps.athor.ship.ScubaNPC
+2018-07-26 11:16:49 INFO  [main      ] ZonesXMLLoader           ( 145) - Loading zone: 0_athor_island_w
+2018-07-26 11:16:49 INFO  [main      ] ZonesXMLLoader           ( 145) - Loading zone: 0_athor_island
+2018-07-26 11:16:50 INFO  [main      ] ConfiguratorDescriptor   ( 103) - Configuring zone [0_athor_island] with: games.stendhal.server.maps.athor.holiday_area.TouristFromAdosNPC
+2018-07-26 11:16:50 INFO  [main      ] ConfiguratorDescriptor   ( 103) - Configuring zone [0_athor_island] with: games.stendhal.server.maps.athor.holiday_area.HusbandNPC
+2018-07-26 11:16:50 INFO  [main      ] ConfiguratorDescriptor   ( 103) - Configuring zone [0_athor_island] with: games.stendhal.server.maps.athor.holiday_area.WifeNPC
+2018-07-26 11:16:50 INFO  [main      ] ConfiguratorDescriptor   ( 103) - Configuring zone [0_athor_island] with: games.stendhal.server.maps.athor.holiday_area.WalkingWomanNPC
+2018-07-26 11:16:50 INFO  [main      ] ConfiguratorDescriptor   ( 103) - Configuring zone [0_athor_island] with: games.stendhal.server.maps.athor.holiday_area.YanNPC
+2018-07-26 11:16:50 INFO  [main      ] ConfiguratorDescriptor   ( 103) - Configuring zone [0_athor_island] with: games.stendhal.server.maps.athor.holiday_area.DiverNPC
+2018-07-26 11:16:50 INFO  [main      ] ConfiguratorDescriptor   ( 103) - Configuring zone [0_athor_island] with: games.stendhal.server.maps.athor.holiday_area.SwimmerNPC
+2018-07-26 11:16:50 INFO  [main      ] ConfiguratorDescriptor   ( 103) - Configuring zone [0_athor_island] with: games.stendhal.server.maps.athor.holiday_area.FerryConveyerNPC
+2018-07-26 11:16:50 INFO  [main      ] ConfiguratorDescriptor   ( 103) - Configuring zone [0_athor_island] with: games.stendhal.server.maps.athor.holiday_area.HotdogLadyNPC
+2018-07-26 11:16:50 INFO  [main      ] ZonesXMLLoader           ( 145) - Loading zone: int_athor_apartment_101
+2018-07-26 11:16:50 INFO  [main      ] ConfiguratorDescriptor   ( 103) - Configuring zone [int_athor_apartment_101] with: games.stendhal.server.core.config.zone.NoTeleportIn
+2018-07-26 11:16:50 INFO  [main      ] ConfiguratorDescriptor   ( 103) - Configuring zone [int_athor_apartment_101] with: games.stendhal.server.entity.mapstuff.chest.StoredChestConfigurator
+2018-07-26 11:16:50 INFO  [main      ] ZonesXMLLoader           ( 145) - Loading zone: int_athor_apartment_102
+2018-07-26 11:16:50 INFO  [main      ] ConfiguratorDescriptor   ( 103) - Configuring zone [int_athor_apartment_102] with: games.stendhal.server.core.config.zone.NoTeleportIn
+2018-07-26 11:16:50 INFO  [main      ] ConfiguratorDescriptor   ( 103) - Configuring zone [int_athor_apartment_102] with: games.stendhal.server.entity.mapstuff.chest.StoredChestConfigurator
+2018-07-26 11:16:50 INFO  [main      ] ZonesXMLLoader           ( 145) - Loading zone: int_athor_apartment_103
+2018-07-26 11:16:50 INFO  [main      ] ConfiguratorDescriptor   ( 103) - Configuring zone [int_athor_apartment_103] with: games.stendhal.server.core.config.zone.NoTeleportIn
+2018-07-26 11:16:50 INFO  [main      ] ConfiguratorDescriptor   ( 103) - Configuring zone [int_athor_apartment_103] with: games.stendhal.server.entity.mapstuff.chest.StoredChestConfigurator
+2018-07-26 11:16:50 INFO  [main      ] ZonesXMLLoader           ( 145) - Loading zone: int_athor_apartment_104
+2018-07-26 11:16:50 INFO  [main      ] ConfiguratorDescriptor   ( 103) - Configuring zone [int_athor_apartment_104] with: games.stendhal.server.core.config.zone.NoTeleportIn
+2018-07-26 11:16:50 INFO  [main      ] ConfiguratorDescriptor   ( 103) - Configuring zone [int_athor_apartment_104] with: games.stendhal.server.entity.mapstuff.chest.StoredChestConfigurator
+2018-07-26 11:16:50 INFO  [main      ] ZonesXMLLoader           ( 145) - Loading zone: int_athor_apartment_105
+2018-07-26 11:16:50 INFO  [main      ] ConfiguratorDescriptor   ( 103) - Configuring zone [int_athor_apartment_105] with: games.stendhal.server.core.config.zone.NoTeleportIn
+2018-07-26 11:16:50 INFO  [main      ] ConfiguratorDescriptor   ( 103) - Configuring zone [int_athor_apartment_105] with: games.stendhal.server.entity.mapstuff.chest.StoredChestConfigurator
+2018-07-26 11:16:50 INFO  [main      ] ZonesXMLLoader           ( 145) - Loading zone: int_athor_apartment_106
+2018-07-26 11:16:50 INFO  [main      ] ConfiguratorDescriptor   ( 103) - Configuring zone [int_athor_apartment_106] with: games.stendhal.server.core.config.zone.NoTeleportIn
+2018-07-26 11:16:50 INFO  [main      ] ConfiguratorDescriptor   ( 103) - Configuring zone [int_athor_apartment_106] with: games.stendhal.server.entity.mapstuff.chest.StoredChestConfigurator
+2018-07-26 11:16:50 INFO  [main      ] ZonesXMLLoader           ( 145) - Loading zone: int_athor_apartment_107
+2018-07-26 11:16:50 INFO  [main      ] ConfiguratorDescriptor   ( 103) - Configuring zone [int_athor_apartment_107] with: games.stendhal.server.core.config.zone.NoTeleportIn
+2018-07-26 11:16:50 INFO  [main      ] ConfiguratorDescriptor   ( 103) - Configuring zone [int_athor_apartment_107] with: games.stendhal.server.entity.mapstuff.chest.StoredChestConfigurator
+2018-07-26 11:16:50 INFO  [main      ] ZonesXMLLoader           ( 145) - Loading zone: int_athor_apartment_108
+2018-07-26 11:16:50 INFO  [main      ] ConfiguratorDescriptor   ( 103) - Configuring zone [int_athor_apartment_108] with: games.stendhal.server.core.config.zone.NoTeleportIn
+2018-07-26 11:16:50 INFO  [main      ] ConfiguratorDescriptor   ( 103) - Configuring zone [int_athor_apartment_108] with: games.stendhal.server.entity.mapstuff.chest.StoredChestConfigurator
+2018-07-26 11:16:50 INFO  [main      ] ZonesXMLLoader           ( 145) - Loading zone: int_athor_dressing_room_m
+2018-07-26 11:16:50 INFO  [main      ] ConfiguratorDescriptor   ( 103) - Configuring zone [int_athor_dressing_room_m] with: games.stendhal.server.maps.athor.dressingroom_male.LifeguardNPC
+2018-07-26 11:16:50 INFO  [main      ] ZonesXMLLoader           ( 145) - Loading zone: int_athor_dressing_room_f
+2018-07-26 11:16:50 INFO  [main      ] ConfiguratorDescriptor   ( 103) - Configuring zone [int_athor_dressing_room_f] with: games.stendhal.server.maps.athor.dressingroom_female.LifeguardNPC
+2018-07-26 11:16:50 INFO  [main      ] ZonesXMLLoader           ( 145) - Loading zone: int_athor_cocktail_bar
+2018-07-26 11:16:50 INFO  [main      ] ConfiguratorDescriptor   ( 103) - Configuring zone [int_athor_cocktail_bar] with: games.stendhal.server.maps.athor.cocktail_bar.BarmanNPC
+2018-07-26 11:16:50 INFO  [main      ] ZonesXMLLoader           ( 145) - Loading zone: int_athor_labyrinth_entrance
+2018-07-26 11:16:50 INFO  [main      ] ZonesXMLLoader           ( 145) - Loading zone: 0_athor_island_e
+2018-07-26 11:16:50 INFO  [main      ] ZonesXMLLoader           ( 145) - Loading zone: -1_athor_ship_w2
+2018-07-26 11:16:50 INFO  [main      ] ConfiguratorDescriptor   ( 103) - Configuring zone [-1_athor_ship_w2] with: games.stendhal.server.maps.athor.ship.CookNPC
+2018-07-26 11:16:50 INFO  [main      ] ZonesXMLLoader           ( 145) - Loading zone: -1_athor_island
+2018-07-26 11:16:50 INFO  [main      ] ConfiguratorDescriptor   ( 103) - Configuring zone [-1_athor_island] with: games.stendhal.server.maps.athor.cave.MinotaurCreature
+2018-07-26 11:16:50 INFO  [main      ] ConfiguratorDescriptor   ( 103) - Configuring zone [-1_athor_island] with: games.stendhal.server.maps.athor.cave.GhostNPC
+2018-07-26 11:16:50 INFO  [main      ] ZonesXMLLoader           ( 145) - Loading zone: -1_athor_island_e
+2018-07-26 11:16:50 INFO  [main      ] ConfiguratorDescriptor   ( 103) - Configuring zone [-1_athor_island_e] with: games.stendhal.server.maps.athor.labyrinth.MinotaurKingCreature
+2018-07-26 11:16:50 INFO  [main      ] ZonesXMLLoader           ( 145) - Loading zone: -2_athor_ship_w2
+2018-07-26 11:16:50 INFO  [main      ] ConfiguratorDescriptor   ( 103) - Configuring zone [-2_athor_ship_w2] with: games.stendhal.server.maps.athor.ship.CargoWorkerNPC
+2018-07-26 11:16:50 INFO  [main      ] ZonesXMLLoader           ( 145) - Loading zone: -3_athor_sea_floor
+2018-07-26 11:16:50 INFO  [main      ] ConfiguratorDescriptor   ( 103) - Configuring zone [-3_athor_sea_floor] with: games.stendhal.server.core.config.zone.NoTeleportIn
+2018-07-26 11:16:50 INFO  [main      ] ZonesXMLLoader           ( 145) - Loading zone: 0_fado_city
+2018-07-26 11:16:50 INFO  [main      ] ConfiguratorDescriptor   ( 103) - Configuring zone [0_fado_city] with: games.stendhal.server.maps.fado.city.GreeterNPC
+2018-07-26 11:16:50 INFO  [main      ] ConfiguratorDescriptor   ( 103) - Configuring zone [0_fado_city] with: games.stendhal.server.maps.fado.city.NunNPC
+2018-07-26 11:16:50 INFO  [main      ] ConfiguratorDescriptor   ( 103) - Configuring zone [0_fado_city] with: games.stendhal.server.maps.fado.city.SmallBoyNPC
+2018-07-26 11:16:50 INFO  [main      ] ConfiguratorDescriptor   ( 103) - Configuring zone [0_fado_city] with: games.stendhal.server.maps.fado.city.RabbitNPC
+2018-07-26 11:16:50 INFO  [main      ] ZonesXMLLoader           ( 145) - Loading zone: int_fado_bank
+2018-07-26 11:16:50 INFO  [main      ] ConfiguratorDescriptor   ( 103) - Configuring zone [int_fado_bank] with: games.stendhal.server.maps.fado.bank.TellerNPC
+2018-07-26 11:16:50 INFO  [main      ] ZonesXMLLoader           ( 145) - Loading zone: int_fado_bakery
+2018-07-26 11:16:50 INFO  [main      ] ConfiguratorDescriptor   ( 103) - Configuring zone [int_fado_bakery] with: games.stendhal.server.maps.fado.bakery.BakerNPC
+2018-07-26 11:16:50 INFO  [main      ] ZonesXMLLoader           ( 145) - Loading zone: int_fado_tavern
+2018-07-26 11:16:50 INFO  [main      ] ConfiguratorDescriptor   ( 103) - Configuring zone [int_fado_tavern] with: games.stendhal.server.maps.fado.tavern.MaidNPC
+2018-07-26 11:16:50 INFO  [main      ] ConfiguratorDescriptor   ( 103) - Configuring zone [int_fado_tavern] with: games.stendhal.server.maps.fado.tavern.ItemsOnTable
+2018-07-26 11:16:50 INFO  [main      ] ZonesXMLLoader           ( 145) - Loading zone: int_fado_house
+2018-07-26 11:16:50 INFO  [main      ] ConfiguratorDescriptor   ( 103) - Configuring zone [int_fado_house] with: games.stendhal.server.maps.fado.house.WomanNPC
+2018-07-26 11:16:50 INFO  [main      ] ZonesXMLLoader           ( 145) - Loading zone: int_fado_weaponshop
+2018-07-26 11:16:50 INFO  [main      ] ConfiguratorDescriptor   ( 103) - Configuring zone [int_fado_weaponshop] with: games.stendhal.server.maps.fado.weaponshop.BuyerNPC
+2018-07-26 11:16:50 INFO  [main      ] ConfiguratorDescriptor   ( 103) - Configuring zone [int_fado_weaponshop] with: games.stendhal.server.maps.fado.weaponshop.RingSmithNPC
+2018-07-26 11:16:50 INFO  [main      ] ZonesXMLLoader           ( 145) - Loading zone: int_fado_hut
+2018-07-26 11:16:50 INFO  [main      ] ConfiguratorDescriptor   ( 103) - Configuring zone [int_fado_hut] with: games.stendhal.server.maps.fado.hut.SellerNPC
+2018-07-26 11:16:50 INFO  [main      ] ZonesXMLLoader           ( 145) - Loading zone: int_fado_church
+2018-07-26 11:16:50 INFO  [main      ] ConfiguratorDescriptor   ( 103) - Configuring zone [int_fado_church] with: games.stendhal.server.maps.fado.church.VergerNPC
+2018-07-26 11:16:50 INFO  [main      ] ConfiguratorDescriptor   ( 103) - Configuring zone [int_fado_church] with: games.stendhal.server.maps.fado.church.PriestNPC
+2018-07-26 11:16:50 INFO  [main      ] ZonesXMLLoader           ( 145) - Loading zone: int_fado_shepherd_house
+2018-07-26 11:16:50 INFO  [main      ] ZonesXMLLoader           ( 145) - Loading zone: int_fado_dressing_rooms
+2018-07-26 11:16:50 INFO  [main      ] ConfiguratorDescriptor   ( 103) - Configuring zone [int_fado_dressing_rooms] with: games.stendhal.server.maps.fado.dressingrooms.BrideAssistantNPC
+2018-07-26 11:16:50 INFO  [main      ] ConfiguratorDescriptor   ( 103) - Configuring zone [int_fado_dressing_rooms] with: games.stendhal.server.maps.fado.dressingrooms.GroomAssistantNPC
+2018-07-26 11:16:50 INFO  [main      ] ZonesXMLLoader           ( 145) - Loading zone: int_fado_hotel_0
+2018-07-26 11:16:50 INFO  [main      ] ConfiguratorDescriptor   ( 103) - Configuring zone [int_fado_hotel_0] with: games.stendhal.server.maps.fado.hotel.GreeterNPC
+2018-07-26 11:16:50 INFO  [main      ] ConfiguratorDescriptor   ( 103) - Configuring zone [int_fado_hotel_0] with: games.stendhal.server.maps.fado.hotel.HotelChefNPC
+2018-07-26 11:16:50 INFO  [main      ] ConfiguratorDescriptor   ( 103) - Configuring zone [int_fado_hotel_0] with: games.stendhal.server.maps.fado.hotel.HotelGuestNPC
+2018-07-26 11:16:50 INFO  [main      ] ZonesXMLLoader           ( 145) - Loading zone: int_fado_lovers_room_0
+2018-07-26 11:16:50 INFO  [main      ] ConfiguratorDescriptor   ( 103) - Configuring zone [int_fado_lovers_room_0] with: games.stendhal.server.core.config.zone.NoTeleportIn
+2018-07-26 11:16:50 INFO  [main      ] ZonesXMLLoader           ( 145) - Loading zone: int_fado_lovers_room_1
+2018-07-26 11:16:50 INFO  [main      ] ConfiguratorDescriptor   ( 103) - Configuring zone [int_fado_lovers_room_1] with: games.stendhal.server.core.config.zone.NoTeleportIn
+2018-07-26 11:16:50 INFO  [main      ] ZonesXMLLoader           ( 145) - Loading zone: int_fado_lovers_room_2
+2018-07-26 11:16:50 INFO  [main      ] ConfiguratorDescriptor   ( 103) - Configuring zone [int_fado_lovers_room_2] with: games.stendhal.server.core.config.zone.NoTeleportIn
+2018-07-26 11:16:50 INFO  [main      ] ZonesXMLLoader           ( 145) - Loading zone: int_fado_lovers_room_3
+2018-07-26 11:16:50 INFO  [main      ] ConfiguratorDescriptor   ( 103) - Configuring zone [int_fado_lovers_room_3] with: games.stendhal.server.core.config.zone.NoTeleportIn
+2018-07-26 11:16:50 INFO  [main      ] ZonesXMLLoader           ( 145) - Loading zone: int_fado_lovers_room_4
+2018-07-26 11:16:50 INFO  [main      ] ConfiguratorDescriptor   ( 103) - Configuring zone [int_fado_lovers_room_4] with: games.stendhal.server.core.config.zone.NoTeleportIn
+2018-07-26 11:16:50 INFO  [main      ] ZonesXMLLoader           ( 145) - Loading zone: int_fado_lovers_room_5
+2018-07-26 11:16:50 INFO  [main      ] ConfiguratorDescriptor   ( 103) - Configuring zone [int_fado_lovers_room_5] with: games.stendhal.server.core.config.zone.NoTeleportIn
+2018-07-26 11:16:50 INFO  [main      ] ZonesXMLLoader           ( 145) - Loading zone: int_fado_lovers_room_6
+2018-07-26 11:16:50 INFO  [main      ] ConfiguratorDescriptor   ( 103) - Configuring zone [int_fado_lovers_room_6] with: games.stendhal.server.core.config.zone.NoTeleportIn
+2018-07-26 11:16:50 INFO  [main      ] ZonesXMLLoader           ( 145) - Loading zone: int_fado_lovers_room_7
+2018-07-26 11:16:50 INFO  [main      ] ConfiguratorDescriptor   ( 103) - Configuring zone [int_fado_lovers_room_7] with: games.stendhal.server.core.config.zone.NoTeleportIn
+2018-07-26 11:16:50 INFO  [main      ] ZonesXMLLoader           ( 145) - Loading zone: int_fado_lovers_room_8
+2018-07-26 11:16:50 INFO  [main      ] ConfiguratorDescriptor   ( 103) - Configuring zone [int_fado_lovers_room_8] with: games.stendhal.server.core.config.zone.NoTeleportIn
+2018-07-26 11:16:50 INFO  [main      ] ZonesXMLLoader           ( 145) - Loading zone: int_fado_lovers_room_9
+2018-07-26 11:16:50 INFO  [main      ] ConfiguratorDescriptor   ( 103) - Configuring zone [int_fado_lovers_room_9] with: games.stendhal.server.core.config.zone.NoTeleportIn
+2018-07-26 11:16:50 INFO  [main      ] ZonesXMLLoader           ( 145) - Loading zone: int_fado_lovers_room_10
+2018-07-26 11:16:50 INFO  [main      ] ConfiguratorDescriptor   ( 103) - Configuring zone [int_fado_lovers_room_10] with: games.stendhal.server.core.config.zone.NoTeleportIn
+2018-07-26 11:16:50 INFO  [main      ] ZonesXMLLoader           ( 145) - Loading zone: int_fado_lovers_room_11
+2018-07-26 11:16:50 INFO  [main      ] ConfiguratorDescriptor   ( 103) - Configuring zone [int_fado_lovers_room_11] with: games.stendhal.server.core.config.zone.NoTeleportIn
+2018-07-26 11:16:50 INFO  [main      ] ZonesXMLLoader           ( 145) - Loading zone: int_fado_lovers_room_12
+2018-07-26 11:16:50 INFO  [main      ] ConfiguratorDescriptor   ( 103) - Configuring zone [int_fado_lovers_room_12] with: games.stendhal.server.core.config.zone.NoTeleportIn
+2018-07-26 11:16:50 INFO  [main      ] ZonesXMLLoader           ( 145) - Loading zone: int_fado_lovers_room_13
+2018-07-26 11:16:50 INFO  [main      ] ConfiguratorDescriptor   ( 103) - Configuring zone [int_fado_lovers_room_13] with: games.stendhal.server.core.config.zone.NoTeleportIn
+2018-07-26 11:16:50 INFO  [main      ] ZonesXMLLoader           ( 145) - Loading zone: int_fado_lovers_room_14
+2018-07-26 11:16:50 INFO  [main      ] ConfiguratorDescriptor   ( 103) - Configuring zone [int_fado_lovers_room_14] with: games.stendhal.server.core.config.zone.NoTeleportIn
+2018-07-26 11:16:50 INFO  [main      ] ZonesXMLLoader           ( 145) - Loading zone: int_fado_lovers_room_15
+2018-07-26 11:16:50 INFO  [main      ] ConfiguratorDescriptor   ( 103) - Configuring zone [int_fado_lovers_room_15] with: games.stendhal.server.core.config.zone.NoTeleportIn
+2018-07-26 11:16:50 INFO  [main      ] ZonesXMLLoader           ( 145) - Loading zone: int_fado_battle_arena
+2018-07-26 11:16:50 INFO  [main      ] ZonesXMLLoader           ( 145) - Loading zone: int_fado_battle_pit
+2018-07-26 11:16:50 INFO  [main      ] ConfiguratorDescriptor   ( 103) - Configuring zone [int_fado_battle_pit] with: games.stendhal.server.core.config.zone.NoTeleportIn
+2018-07-26 11:16:50 INFO  [main      ] ZonesXMLLoader           ( 145) - Loading zone: 0_fado_forest
+2018-07-26 11:16:50 INFO  [main      ] ConfiguratorDescriptor   ( 103) - Configuring zone [0_fado_forest] with: games.stendhal.server.maps.fado.forest.WoodCutterNPC
+2018-07-26 11:16:50 INFO  [main      ] ZonesXMLLoader           ( 145) - Loading zone: int_fado_woodcutter_lodge
+2018-07-26 11:16:50 INFO  [main      ] ZonesXMLLoader           ( 145) - Loading zone: 0_fado_forest_e
+2018-07-26 11:16:50 INFO  [main      ] ZonesXMLLoader           ( 145) - Loading zone: int_oni_palace_0
+2018-07-26 11:16:50 INFO  [main      ] ZonesXMLLoader           ( 145) - Loading zone: int_oni_palace_1
+2018-07-26 11:16:50 INFO  [main      ] ZonesXMLLoader           ( 145) - Loading zone: int_oni_palace_2
+2018-07-26 11:16:50 INFO  [main      ] ZonesXMLLoader           ( 145) - Loading zone: 0_fado_forest_s
+2018-07-26 11:16:50 INFO  [main      ] ConfiguratorDescriptor   ( 103) - Configuring zone [0_fado_forest_s] with: games.stendhal.server.maps.fado.forest.BeeKeeperNPC
+2018-07-26 11:16:50 INFO  [main      ] ConfiguratorDescriptor   ( 103) - Configuring zone [0_fado_forest_s] with: games.stendhal.server.maps.fado.forest.OldWomanNPC
+2018-07-26 11:16:50 INFO  [main      ] ConfiguratorDescriptor   ( 103) - Configuring zone [0_fado_forest_s] with: games.stendhal.server.maps.fado.forest.WitchNPC
+2018-07-26 11:16:50 INFO  [main      ] ConfiguratorDescriptor   ( 103) - Configuring zone [0_fado_forest_s] with: games.stendhal.server.maps.fado.forest.ItemsOnTable
+2018-07-26 11:16:50 INFO  [main      ] ZonesXMLLoader           ( 145) - Loading zone: int_imorgens_house
+2018-07-26 11:16:50 INFO  [main      ] ConfiguratorDescriptor   ( 103) - Configuring zone [int_imorgens_house] with: games.stendhal.server.maps.fado.forest.OldWitchNPC
+2018-07-26 11:16:50 INFO  [main      ] ZonesXMLLoader           ( 145) - Loading zone: 0_fado_forest_se
+2018-07-26 11:16:50 INFO  [main      ] ZonesXMLLoader           ( 145) - Loading zone: 0_fado_forest_s_e2
+2018-07-26 11:16:50 INFO  [main      ] ConfiguratorDescriptor   ( 103) - Configuring zone [0_fado_forest_s_e2] with: games.stendhal.server.maps.fado.forest.GreeterNPC
+2018-07-26 11:16:50 INFO  [main      ] ZonesXMLLoader           ( 145) - Loading zone: 0_fado_forest_s_e3
+2018-07-26 11:16:50 INFO  [main      ] ZonesXMLLoader           ( 145) - Loading zone: int_fado_elf_hut_1
+2018-07-26 11:16:50 INFO  [main      ] ZonesXMLLoader           ( 145) - Loading zone: int_fado_elf_hut_2
+2018-07-26 11:16:50 INFO  [main      ] ConfiguratorDescriptor   ( 103) - Configuring zone [int_fado_elf_hut_2] with: games.stendhal.server.maps.fado.forest.CraftsmanNPC
+2018-07-26 11:16:50 INFO  [main      ] ZonesXMLLoader           ( 145) - Loading zone: int_fado_elf_hut_3
+2018-07-26 11:16:50 INFO  [main      ] ZonesXMLLoader           ( 145) - Loading zone: int_fado_elf_hut_4
+2018-07-26 11:16:50 INFO  [main      ] ConfiguratorDescriptor   ( 103) - Configuring zone [int_fado_elf_hut_4] with: games.stendhal.server.maps.fado.hut.BlueCrystalNPC
+2018-07-26 11:16:50 INFO  [main      ] ZonesXMLLoader           ( 145) - Loading zone: -1_fado_great_cave_n_w2
+2018-07-26 11:16:50 INFO  [main      ] ZonesXMLLoader           ( 145) - Loading zone: -1_fado_great_cave_nw
+2018-07-26 11:16:50 INFO  [main      ] ZonesXMLLoader           ( 145) - Loading zone: -1_fado_great_cave_n
+2018-07-26 11:16:50 INFO  [main      ] ZonesXMLLoader           ( 145) - Loading zone: -1_fado_great_cave_ne
+2018-07-26 11:16:50 INFO  [main      ] ZonesXMLLoader           ( 145) - Loading zone: -1_fado_great_cave_n_e2
+2018-07-26 11:16:50 INFO  [main      ] ZonesXMLLoader           ( 145) - Loading zone: -1_fado_great_cave_n_e3
+2018-07-26 11:16:50 INFO  [main      ] ConfiguratorDescriptor   ( 103) - Configuring zone [-1_fado_great_cave_n_e3] with: games.stendhal.server.maps.magic.city.HealerNPC
+2018-07-26 11:16:50 INFO  [main      ] ZonesXMLLoader           ( 145) - Loading zone: -1_fado_great_cave_w2
+2018-07-26 11:16:50 INFO  [main      ] ConfiguratorDescriptor   ( 103) - Configuring zone [-1_fado_great_cave_w2] with: games.stendhal.server.maps.sedah.gatehouse.GateKeeperNPC
+2018-07-26 11:16:51 INFO  [main      ] ZonesXMLLoader           ( 145) - Loading zone: int_sedah_house0
+2018-07-26 11:16:51 INFO  [main      ] ZonesXMLLoader           ( 145) - Loading zone: int_sedah_house1
+2018-07-26 11:16:51 INFO  [main      ] ZonesXMLLoader           ( 145) - Loading zone: int_sedah_house2
+2018-07-26 11:16:51 INFO  [main      ] ZonesXMLLoader           ( 145) - Loading zone: int_sedah_house4_0
+2018-07-26 11:16:51 INFO  [main      ] ZonesXMLLoader           ( 145) - Loading zone: int_sedah_house4_1
+2018-07-26 11:16:51 INFO  [main      ] ConfiguratorDescriptor   ( 103) - Configuring zone [int_sedah_house4_1] with: games.stendhal.server.maps.sedah.house.WannaBeKingNPC
+2018-07-26 11:16:51 INFO  [main      ] ZonesXMLLoader           ( 145) - Loading zone: int_sedah_mausoleum
+2018-07-26 11:16:51 INFO  [main      ] ZonesXMLLoader           ( 145) - Loading zone: int_sedah_barracks_0
+2018-07-26 11:16:51 INFO  [main      ] ZonesXMLLoader           ( 145) - Loading zone: int_sedah_barracks_1
+2018-07-26 11:16:51 INFO  [main      ] ZonesXMLLoader           ( 145) - Loading zone: int_sedah_barracks_2
+2018-07-26 11:16:51 INFO  [main      ] ZonesXMLLoader           ( 145) - Loading zone: -1_fado_great_cave_w
+2018-07-26 11:16:51 INFO  [main      ] ZonesXMLLoader           ( 145) - Loading zone: int_sedah_storage
+2018-07-26 11:16:51 INFO  [main      ] ConfiguratorDescriptor   ( 103) - Configuring zone [int_sedah_storage] with: games.stendhal.server.maps.sedah.storage.StorageNPC
+2018-07-26 11:16:51 INFO  [main      ] ZonesXMLLoader           ( 145) - Loading zone: int_sedah_house5
+2018-07-26 11:16:51 INFO  [main      ] ZonesXMLLoader           ( 145) - Loading zone: int_sedah_house6
+2018-07-26 11:16:51 INFO  [main      ] ZonesXMLLoader           ( 145) - Loading zone: -1_fado_great_cave
+2018-07-26 11:16:51 INFO  [main      ] ZonesXMLLoader           ( 145) - Loading zone: -1_fado_great_cave_e
+2018-07-26 11:16:51 INFO  [main      ] ZonesXMLLoader           ( 145) - Loading zone: -1_fado_great_cave_e2
+2018-07-26 11:16:51 INFO  [main      ] ZonesXMLLoader           ( 145) - Loading zone: -1_fado_great_cave_e3
+2018-07-26 11:16:51 INFO  [main      ] ConfiguratorDescriptor   ( 103) - Configuring zone [-1_fado_great_cave_e3] with: games.stendhal.server.maps.magic.city.GreeterNPC
+2018-07-26 11:16:51 INFO  [main      ] ZonesXMLLoader           ( 145) - Loading zone: int_magic_theater
+2018-07-26 11:16:51 INFO  [main      ] ConfiguratorDescriptor   ( 103) - Configuring zone [int_magic_theater] with: games.stendhal.server.maps.magic.theater.MagicBarmaidNPC
+2018-07-26 11:16:51 INFO  [main      ] ConfiguratorDescriptor   ( 103) - Configuring zone [int_magic_theater] with: games.stendhal.server.maps.magic.theater.MithrilShieldForgerNPC
+2018-07-26 11:16:51 INFO  [main      ] ZonesXMLLoader           ( 145) - Loading zone: int_magic_shrine
+2018-07-26 11:16:51 INFO  [main      ] ConfiguratorDescriptor   ( 103) - Configuring zone [int_magic_shrine] with: games.stendhal.server.maps.magic.shrine.PriestessNPC
+2018-07-26 11:16:51 INFO  [main      ] ZonesXMLLoader           ( 145) - Loading zone: int_magic_lounge
+2018-07-26 11:16:51 INFO  [main      ] ZonesXMLLoader           ( 145) - Loading zone: int_magic_clothing_boutique
+2018-07-26 11:16:51 INFO  [main      ] ConfiguratorDescriptor   ( 103) - Configuring zone [int_magic_clothing_boutique] with: games.stendhal.server.maps.magic.clothing_boutique.OutfitLenderNPC
+2018-07-26 11:16:51 INFO  [main      ] ConfiguratorDescriptor   ( 103) - Configuring zone [int_magic_clothing_boutique] with: games.stendhal.server.maps.magic.clothing_boutique.OutfitLender2NPC
+2018-07-26 11:16:51 INFO  [main      ] ZonesXMLLoader           ( 145) - Loading zone: int_magic_flower_shop
+2018-07-26 11:16:51 INFO  [main      ] ZonesXMLLoader           ( 145) - Loading zone: int_magic_house1
+2018-07-26 11:16:51 INFO  [main      ] ConfiguratorDescriptor   ( 103) - Configuring zone [int_magic_house1] with: games.stendhal.server.maps.magic.house1.ChallengerNPC
+2018-07-26 11:16:51 INFO  [main      ] ZonesXMLLoader           ( 145) - Loading zone: int_magic_house2
+2018-07-26 11:16:51 INFO  [main      ] ConfiguratorDescriptor   ( 103) - Configuring zone [int_magic_house2] with: games.stendhal.server.maps.magic.house2.WizardNPC
+2018-07-26 11:16:51 INFO  [main      ] ZonesXMLLoader           ( 145) - Loading zone: int_magic_house3
+2018-07-26 11:16:51 INFO  [main      ] ZonesXMLLoader           ( 145) - Loading zone: int_magic_house4
+2018-07-26 11:16:51 INFO  [main      ] ZonesXMLLoader           ( 145) - Loading zone: int_magic_house5
+2018-07-26 11:16:51 INFO  [main      ] ZonesXMLLoader           ( 145) - Loading zone: int_magic_house6
+2018-07-26 11:16:51 INFO  [main      ] ZonesXMLLoader           ( 145) - Loading zone: int_magic_school_0
+2018-07-26 11:16:51 INFO  [main      ] ConfiguratorDescriptor   ( 103) - Configuring zone [int_magic_school_0] with: games.stendhal.server.maps.magic.school.TeacherNPC
+2018-07-26 11:16:51 INFO  [main      ] ZonesXMLLoader           ( 145) - Loading zone: int_magic_school_cellar
+2018-07-26 11:16:51 INFO  [main      ] ConfiguratorDescriptor   ( 103) - Configuring zone [int_magic_school_cellar] with: games.stendhal.server.maps.magic.school.SpidersCreatures
+2018-07-26 11:16:51 INFO  [main      ] ZonesXMLLoader           ( 145) - Loading zone: int_magic_school_1
+2018-07-26 11:16:51 INFO  [main      ] ConfiguratorDescriptor   ( 103) - Configuring zone [int_magic_school_1] with: games.stendhal.server.maps.magic.school.GroundskeeperNPC
+2018-07-26 11:16:51 INFO  [main      ] ZonesXMLLoader           ( 145) - Loading zone: int_magic_bric_a_brac
+2018-07-26 11:16:51 INFO  [main      ] ConfiguratorDescriptor   ( 103) - Configuring zone [int_magic_bric_a_brac] with: games.stendhal.server.maps.magic.bricabrac.BuyerNPC
+2018-07-26 11:16:51 INFO  [main      ] ZonesXMLLoader           ( 145) - Loading zone: int_magic_bank
+2018-07-26 11:16:51 INFO  [main      ] ConfiguratorDescriptor   ( 103) - Configuring zone [int_magic_bank] with: games.stendhal.server.core.config.zone.NoTeleport
+2018-07-26 11:16:51 INFO  [main      ] ZonesXMLLoader           ( 145) - Loading zone: 0_kalavan_castle
+2018-07-26 11:16:51 INFO  [main      ] ZonesXMLLoader           ( 145) - Loading zone: int_kalavan_castle_basement
+2018-07-26 11:16:51 INFO  [main      ] ConfiguratorDescriptor   ( 103) - Configuring zone [int_kalavan_castle_basement] with: games.stendhal.server.maps.kalavan.castle.ItemsOnTable
+2018-07-26 11:16:51 INFO  [main      ] ConfiguratorDescriptor   ( 103) - Configuring zone [int_kalavan_castle_basement] with: games.stendhal.server.maps.kalavan.castle.MadScientist1NPC
+2018-07-26 11:16:51 INFO  [main      ] ConfiguratorDescriptor   ( 103) - Configuring zone [int_kalavan_castle_basement] with: games.stendhal.server.maps.kalavan.castle.MadScientist2NPC
+2018-07-26 11:16:51 INFO  [main      ] ConfiguratorDescriptor   ( 103) - Configuring zone [int_kalavan_castle_basement] with: games.stendhal.server.maps.kalavan.castle.SadScientistNPC
+2018-07-26 11:16:51 INFO  [main      ] ConfiguratorDescriptor   ( 103) - Configuring zone [int_kalavan_castle_basement] with: games.stendhal.server.maps.kalavan.castle.SadScientsBrother
+2018-07-26 11:16:51 INFO  [main      ] ZonesXMLLoader           ( 145) - Loading zone: int_kalavan_castle
+2018-07-26 11:16:51 INFO  [main      ] ConfiguratorDescriptor   ( 103) - Configuring zone [int_kalavan_castle] with: games.stendhal.server.maps.kalavan.castle.PrincessNPC
+2018-07-26 11:16:51 INFO  [main      ] ConfiguratorDescriptor   ( 103) - Configuring zone [int_kalavan_castle] with: games.stendhal.server.maps.kalavan.castle.KingNPC
+2018-07-26 11:16:51 INFO  [main      ] ZonesXMLLoader           ( 145) - Loading zone: int_kalavan_castle_1
+2018-07-26 11:16:51 INFO  [main      ] ZonesXMLLoader           ( 145) - Loading zone: int_kalavan_castle_2
+2018-07-26 11:16:51 INFO  [main      ] ZonesXMLLoader           ( 145) - Loading zone: 0_kalavan_city
+2018-07-26 11:16:51 INFO  [main      ] ZonesXMLLoader           ( 145) - Loading zone: int_kalavan_house_1
+2018-07-26 11:16:51 INFO  [main      ] ConfiguratorDescriptor   ( 103) - Configuring zone [int_kalavan_house_1] with: games.stendhal.server.core.config.zone.NoTeleportIn
+2018-07-26 11:16:51 INFO  [main      ] ConfiguratorDescriptor   ( 103) - Configuring zone [int_kalavan_house_1] with: games.stendhal.server.entity.mapstuff.chest.StoredChestConfigurator
+2018-07-26 11:16:51 INFO  [main      ] ConfiguratorDescriptor   ( 103) - Configuring zone [int_kalavan_house_1] with: games.stendhal.server.maps.semos.city.FertileGrounds
+2018-07-26 11:16:51 INFO  [main      ] ZonesXMLLoader           ( 145) - Loading zone: int_kalavan_house_2
+2018-07-26 11:16:51 INFO  [main      ] ConfiguratorDescriptor   ( 103) - Configuring zone [int_kalavan_house_2] with: games.stendhal.server.core.config.zone.NoTeleportIn
+2018-07-26 11:16:51 INFO  [main      ] ConfiguratorDescriptor   ( 103) - Configuring zone [int_kalavan_house_2] with: games.stendhal.server.entity.mapstuff.chest.StoredChestConfigurator
+2018-07-26 11:16:51 INFO  [main      ] ConfiguratorDescriptor   ( 103) - Configuring zone [int_kalavan_house_2] with: games.stendhal.server.maps.semos.city.FertileGrounds
+2018-07-26 11:16:51 INFO  [main      ] ZonesXMLLoader           ( 145) - Loading zone: int_kalavan_house_3
+2018-07-26 11:16:51 INFO  [main      ] ConfiguratorDescriptor   ( 103) - Configuring zone [int_kalavan_house_3] with: games.stendhal.server.core.config.zone.NoTeleportIn
+2018-07-26 11:16:51 INFO  [main      ] ConfiguratorDescriptor   ( 103) - Configuring zone [int_kalavan_house_3] with: games.stendhal.server.entity.mapstuff.chest.StoredChestConfigurator
+2018-07-26 11:16:51 INFO  [main      ] ConfiguratorDescriptor   ( 103) - Configuring zone [int_kalavan_house_3] with: games.stendhal.server.maps.semos.city.FertileGrounds
+2018-07-26 11:16:51 INFO  [main      ] ZonesXMLLoader           ( 145) - Loading zone: int_kalavan_house_4
+2018-07-26 11:16:51 INFO  [main      ] ConfiguratorDescriptor   ( 103) - Configuring zone [int_kalavan_house_4] with: games.stendhal.server.core.config.zone.NoTeleportIn
+2018-07-26 11:16:51 INFO  [main      ] ConfiguratorDescriptor   ( 103) - Configuring zone [int_kalavan_house_4] with: games.stendhal.server.entity.mapstuff.chest.StoredChestConfigurator
+2018-07-26 11:16:51 INFO  [main      ] ConfiguratorDescriptor   ( 103) - Configuring zone [int_kalavan_house_4] with: games.stendhal.server.maps.semos.city.FertileGrounds
+2018-07-26 11:16:51 INFO  [main      ] ZonesXMLLoader           ( 145) - Loading zone: int_kalavan_house_5
+2018-07-26 11:16:51 INFO  [main      ] ConfiguratorDescriptor   ( 103) - Configuring zone [int_kalavan_house_5] with: games.stendhal.server.core.config.zone.NoTeleportIn
+2018-07-26 11:16:51 INFO  [main      ] ConfiguratorDescriptor   ( 103) - Configuring zone [int_kalavan_house_5] with: games.stendhal.server.entity.mapstuff.chest.StoredChestConfigurator
+2018-07-26 11:16:51 INFO  [main      ] ConfiguratorDescriptor   ( 103) - Configuring zone [int_kalavan_house_5] with: games.stendhal.server.maps.semos.city.FertileGrounds
+2018-07-26 11:16:51 INFO  [main      ] ZonesXMLLoader           ( 145) - Loading zone: int_kalavan_house_6
+2018-07-26 11:16:51 INFO  [main      ] ConfiguratorDescriptor   ( 103) - Configuring zone [int_kalavan_house_6] with: games.stendhal.server.core.config.zone.NoTeleportIn
+2018-07-26 11:16:51 INFO  [main      ] ConfiguratorDescriptor   ( 103) - Configuring zone [int_kalavan_house_6] with: games.stendhal.server.entity.mapstuff.chest.StoredChestConfigurator
+2018-07-26 11:16:51 INFO  [main      ] ConfiguratorDescriptor   ( 103) - Configuring zone [int_kalavan_house_6] with: games.stendhal.server.maps.semos.city.FertileGrounds
+2018-07-26 11:16:51 INFO  [main      ] ZonesXMLLoader           ( 145) - Loading zone: int_kalavan_house_7
+2018-07-26 11:16:51 INFO  [main      ] ConfiguratorDescriptor   ( 103) - Configuring zone [int_kalavan_house_7] with: games.stendhal.server.core.config.zone.NoTeleportIn
+2018-07-26 11:16:51 INFO  [main      ] ConfiguratorDescriptor   ( 103) - Configuring zone [int_kalavan_house_7] with: games.stendhal.server.entity.mapstuff.chest.StoredChestConfigurator
+2018-07-26 11:16:51 INFO  [main      ] ConfiguratorDescriptor   ( 103) - Configuring zone [int_kalavan_house_7] with: games.stendhal.server.maps.semos.city.FertileGrounds
+2018-07-26 11:16:51 INFO  [main      ] ZonesXMLLoader           ( 145) - Loading zone: int_kalavan_house_8
+2018-07-26 11:16:51 INFO  [main      ] ConfiguratorDescriptor   ( 103) - Configuring zone [int_kalavan_house_8] with: games.stendhal.server.core.config.zone.NoTeleportIn
+2018-07-26 11:16:51 INFO  [main      ] ConfiguratorDescriptor   ( 103) - Configuring zone [int_kalavan_house_8] with: games.stendhal.server.entity.mapstuff.chest.StoredChestConfigurator
+2018-07-26 11:16:51 INFO  [main      ] ConfiguratorDescriptor   ( 103) - Configuring zone [int_kalavan_house_8] with: games.stendhal.server.maps.semos.city.FertileGrounds
+2018-07-26 11:16:51 INFO  [main      ] ZonesXMLLoader           ( 145) - Loading zone: int_kalavan_house_9
+2018-07-26 11:16:51 INFO  [main      ] ConfiguratorDescriptor   ( 103) - Configuring zone [int_kalavan_house_9] with: games.stendhal.server.core.config.zone.NoTeleportIn
+2018-07-26 11:16:51 INFO  [main      ] ConfiguratorDescriptor   ( 103) - Configuring zone [int_kalavan_house_9] with: games.stendhal.server.entity.mapstuff.chest.StoredChestConfigurator
+2018-07-26 11:16:51 INFO  [main      ] ConfiguratorDescriptor   ( 103) - Configuring zone [int_kalavan_house_9] with: games.stendhal.server.maps.semos.city.FertileGrounds
+2018-07-26 11:16:51 INFO  [main      ] ZonesXMLLoader           ( 145) - Loading zone: int_kalavan_house_10
+2018-07-26 11:16:51 INFO  [main      ] ConfiguratorDescriptor   ( 103) - Configuring zone [int_kalavan_house_10] with: games.stendhal.server.core.config.zone.NoTeleportIn
+2018-07-26 11:16:51 INFO  [main      ] ConfiguratorDescriptor   ( 103) - Configuring zone [int_kalavan_house_10] with: games.stendhal.server.entity.mapstuff.chest.StoredChestConfigurator
+2018-07-26 11:16:51 INFO  [main      ] ConfiguratorDescriptor   ( 103) - Configuring zone [int_kalavan_house_10] with: games.stendhal.server.maps.semos.city.FertileGrounds
+2018-07-26 11:16:51 INFO  [main      ] ZonesXMLLoader           ( 145) - Loading zone: int_kalavan_house_11
+2018-07-26 11:16:51 INFO  [main      ] ConfiguratorDescriptor   ( 103) - Configuring zone [int_kalavan_house_11] with: games.stendhal.server.core.config.zone.NoTeleportIn
+2018-07-26 11:16:51 INFO  [main      ] ConfiguratorDescriptor   ( 103) - Configuring zone [int_kalavan_house_11] with: games.stendhal.server.entity.mapstuff.chest.StoredChestConfigurator
+2018-07-26 11:16:51 INFO  [main      ] ConfiguratorDescriptor   ( 103) - Configuring zone [int_kalavan_house_11] with: games.stendhal.server.maps.semos.city.FertileGrounds
+2018-07-26 11:16:51 INFO  [main      ] ZonesXMLLoader           ( 145) - Loading zone: int_kalavan_house_12
+2018-07-26 11:16:51 INFO  [main      ] ConfiguratorDescriptor   ( 103) - Configuring zone [int_kalavan_house_12] with: games.stendhal.server.core.config.zone.NoTeleportIn
+2018-07-26 11:16:51 INFO  [main      ] ConfiguratorDescriptor   ( 103) - Configuring zone [int_kalavan_house_12] with: games.stendhal.server.entity.mapstuff.chest.StoredChestConfigurator
+2018-07-26 11:16:51 INFO  [main      ] ConfiguratorDescriptor   ( 103) - Configuring zone [int_kalavan_house_12] with: games.stendhal.server.maps.semos.city.FertileGrounds
+2018-07-26 11:16:51 INFO  [main      ] ZonesXMLLoader           ( 145) - Loading zone: int_kalavan_house_13
+2018-07-26 11:16:51 INFO  [main      ] ConfiguratorDescriptor   ( 103) - Configuring zone [int_kalavan_house_13] with: games.stendhal.server.core.config.zone.NoTeleportIn
+2018-07-26 11:16:51 INFO  [main      ] ConfiguratorDescriptor   ( 103) - Configuring zone [int_kalavan_house_13] with: games.stendhal.server.entity.mapstuff.chest.StoredChestConfigurator
+2018-07-26 11:16:51 INFO  [main      ] ConfiguratorDescriptor   ( 103) - Configuring zone [int_kalavan_house_13] with: games.stendhal.server.maps.semos.city.FertileGrounds
+2018-07-26 11:16:51 INFO  [main      ] ZonesXMLLoader           ( 145) - Loading zone: int_kalavan_house_14
+2018-07-26 11:16:51 INFO  [main      ] ConfiguratorDescriptor   ( 103) - Configuring zone [int_kalavan_house_14] with: games.stendhal.server.core.config.zone.NoTeleportIn
+2018-07-26 11:16:51 INFO  [main      ] ConfiguratorDescriptor   ( 103) - Configuring zone [int_kalavan_house_14] with: games.stendhal.server.entity.mapstuff.chest.StoredChestConfigurator
+2018-07-26 11:16:51 INFO  [main      ] ConfiguratorDescriptor   ( 103) - Configuring zone [int_kalavan_house_14] with: games.stendhal.server.maps.semos.city.FertileGrounds
+2018-07-26 11:16:51 INFO  [main      ] ZonesXMLLoader           ( 145) - Loading zone: int_kalavan_house_15
+2018-07-26 11:16:51 INFO  [main      ] ConfiguratorDescriptor   ( 103) - Configuring zone [int_kalavan_house_15] with: games.stendhal.server.core.config.zone.NoTeleportIn
+2018-07-26 11:16:51 INFO  [main      ] ConfiguratorDescriptor   ( 103) - Configuring zone [int_kalavan_house_15] with: games.stendhal.server.entity.mapstuff.chest.StoredChestConfigurator
+2018-07-26 11:16:51 INFO  [main      ] ConfiguratorDescriptor   ( 103) - Configuring zone [int_kalavan_house_15] with: games.stendhal.server.maps.semos.city.FertileGrounds
+2018-07-26 11:16:51 INFO  [main      ] ZonesXMLLoader           ( 145) - Loading zone: int_kalavan_house_16
+2018-07-26 11:16:51 INFO  [main      ] ConfiguratorDescriptor   ( 103) - Configuring zone [int_kalavan_house_16] with: games.stendhal.server.core.config.zone.NoTeleportIn
+2018-07-26 11:16:51 INFO  [main      ] ConfiguratorDescriptor   ( 103) - Configuring zone [int_kalavan_house_16] with: games.stendhal.server.entity.mapstuff.chest.StoredChestConfigurator
+2018-07-26 11:16:51 INFO  [main      ] ConfiguratorDescriptor   ( 103) - Configuring zone [int_kalavan_house_16] with: games.stendhal.server.maps.semos.city.FertileGrounds
+2018-07-26 11:16:51 INFO  [main      ] ZonesXMLLoader           ( 145) - Loading zone: int_kalavan_house_17
+2018-07-26 11:16:51 INFO  [main      ] ConfiguratorDescriptor   ( 103) - Configuring zone [int_kalavan_house_17] with: games.stendhal.server.core.config.zone.NoTeleportIn
+2018-07-26 11:16:51 INFO  [main      ] ConfiguratorDescriptor   ( 103) - Configuring zone [int_kalavan_house_17] with: games.stendhal.server.entity.mapstuff.chest.StoredChestConfigurator
+2018-07-26 11:16:51 INFO  [main      ] ConfiguratorDescriptor   ( 103) - Configuring zone [int_kalavan_house_17] with: games.stendhal.server.maps.semos.city.FertileGrounds
+2018-07-26 11:16:51 INFO  [main      ] ZonesXMLLoader           ( 145) - Loading zone: int_kalavan_house_18
+2018-07-26 11:16:51 INFO  [main      ] ConfiguratorDescriptor   ( 103) - Configuring zone [int_kalavan_house_18] with: games.stendhal.server.core.config.zone.NoTeleportIn
+2018-07-26 11:16:51 INFO  [main      ] ConfiguratorDescriptor   ( 103) - Configuring zone [int_kalavan_house_18] with: games.stendhal.server.entity.mapstuff.chest.StoredChestConfigurator
+2018-07-26 11:16:51 INFO  [main      ] ConfiguratorDescriptor   ( 103) - Configuring zone [int_kalavan_house_18] with: games.stendhal.server.maps.semos.city.FertileGrounds
+2018-07-26 11:16:51 INFO  [main      ] ZonesXMLLoader           ( 145) - Loading zone: int_kalavan_house_19
+2018-07-26 11:16:51 INFO  [main      ] ConfiguratorDescriptor   ( 103) - Configuring zone [int_kalavan_house_19] with: games.stendhal.server.core.config.zone.NoTeleportIn
+2018-07-26 11:16:51 INFO  [main      ] ConfiguratorDescriptor   ( 103) - Configuring zone [int_kalavan_house_19] with: games.stendhal.server.entity.mapstuff.chest.StoredChestConfigurator
+2018-07-26 11:16:51 INFO  [main      ] ConfiguratorDescriptor   ( 103) - Configuring zone [int_kalavan_house_19] with: games.stendhal.server.maps.semos.city.FertileGrounds
+2018-07-26 11:16:51 INFO  [main      ] ZonesXMLLoader           ( 145) - Loading zone: int_kalavan_house_20
+2018-07-26 11:16:51 INFO  [main      ] ConfiguratorDescriptor   ( 103) - Configuring zone [int_kalavan_house_20] with: games.stendhal.server.core.config.zone.NoTeleportIn
+2018-07-26 11:16:51 INFO  [main      ] ConfiguratorDescriptor   ( 103) - Configuring zone [int_kalavan_house_20] with: games.stendhal.server.entity.mapstuff.chest.StoredChestConfigurator
+2018-07-26 11:16:51 INFO  [main      ] ConfiguratorDescriptor   ( 103) - Configuring zone [int_kalavan_house_20] with: games.stendhal.server.maps.semos.city.FertileGrounds
+2018-07-26 11:16:51 INFO  [main      ] ZonesXMLLoader           ( 145) - Loading zone: int_kalavan_house_21
+2018-07-26 11:16:51 INFO  [main      ] ConfiguratorDescriptor   ( 103) - Configuring zone [int_kalavan_house_21] with: games.stendhal.server.core.config.zone.NoTeleportIn
+2018-07-26 11:16:51 INFO  [main      ] ConfiguratorDescriptor   ( 103) - Configuring zone [int_kalavan_house_21] with: games.stendhal.server.entity.mapstuff.chest.StoredChestConfigurator
+2018-07-26 11:16:51 INFO  [main      ] ConfiguratorDescriptor   ( 103) - Configuring zone [int_kalavan_house_21] with: games.stendhal.server.maps.semos.city.FertileGrounds
+2018-07-26 11:16:51 INFO  [main      ] ZonesXMLLoader           ( 145) - Loading zone: int_kalavan_house_22
+2018-07-26 11:16:51 INFO  [main      ] ConfiguratorDescriptor   ( 103) - Configuring zone [int_kalavan_house_22] with: games.stendhal.server.core.config.zone.NoTeleportIn
+2018-07-26 11:16:51 INFO  [main      ] ConfiguratorDescriptor   ( 103) - Configuring zone [int_kalavan_house_22] with: games.stendhal.server.entity.mapstuff.chest.StoredChestConfigurator
+2018-07-26 11:16:51 INFO  [main      ] ConfiguratorDescriptor   ( 103) - Configuring zone [int_kalavan_house_22] with: games.stendhal.server.maps.semos.city.FertileGrounds
+2018-07-26 11:16:51 INFO  [main      ] ZonesXMLLoader           ( 145) - Loading zone: int_kalavan_house_23
+2018-07-26 11:16:51 INFO  [main      ] ConfiguratorDescriptor   ( 103) - Configuring zone [int_kalavan_house_23] with: games.stendhal.server.core.config.zone.NoTeleportIn
+2018-07-26 11:16:51 INFO  [main      ] ConfiguratorDescriptor   ( 103) - Configuring zone [int_kalavan_house_23] with: games.stendhal.server.entity.mapstuff.chest.StoredChestConfigurator
+2018-07-26 11:16:51 INFO  [main      ] ConfiguratorDescriptor   ( 103) - Configuring zone [int_kalavan_house_23] with: games.stendhal.server.maps.semos.city.FertileGrounds
+2018-07-26 11:16:51 INFO  [main      ] ZonesXMLLoader           ( 145) - Loading zone: int_kalavan_house_24
+2018-07-26 11:16:51 INFO  [main      ] ConfiguratorDescriptor   ( 103) - Configuring zone [int_kalavan_house_24] with: games.stendhal.server.core.config.zone.NoTeleportIn
+2018-07-26 11:16:51 INFO  [main      ] ConfiguratorDescriptor   ( 103) - Configuring zone [int_kalavan_house_24] with: games.stendhal.server.entity.mapstuff.chest.StoredChestConfigurator
+2018-07-26 11:16:51 INFO  [main      ] ZonesXMLLoader           ( 145) - Loading zone: int_kalavan_house_25
+2018-07-26 11:16:51 INFO  [main      ] ConfiguratorDescriptor   ( 103) - Configuring zone [int_kalavan_house_25] with: games.stendhal.server.core.config.zone.NoTeleportIn
+2018-07-26 11:16:51 INFO  [main      ] ConfiguratorDescriptor   ( 103) - Configuring zone [int_kalavan_house_25] with: games.stendhal.server.entity.mapstuff.chest.StoredChestConfigurator
+2018-07-26 11:16:51 INFO  [main      ] ConfiguratorDescriptor   ( 103) - Configuring zone [int_kalavan_house_25] with: games.stendhal.server.maps.semos.city.FertileGrounds
+2018-07-26 11:16:51 INFO  [main      ] ZonesXMLLoader           ( 145) - Loading zone: 0_kalavan_city_gardens
+2018-07-26 11:16:51 INFO  [main      ] ConfiguratorDescriptor   ( 103) - Configuring zone [0_kalavan_city_gardens] with: games.stendhal.server.maps.kalavan.citygardens.GardenerNPC
+2018-07-26 11:16:51 INFO  [main      ] ConfiguratorDescriptor   ( 103) - Configuring zone [0_kalavan_city_gardens] with: games.stendhal.server.maps.kalavan.citygardens.IceCreamSellerNPC
+2018-07-26 11:16:51 INFO  [main      ] ConfiguratorDescriptor   ( 103) - Configuring zone [0_kalavan_city_gardens] with: games.stendhal.server.maps.kalavan.citygardens.LittleGirlNPC
+2018-07-26 11:16:51 INFO  [main      ] ConfiguratorDescriptor   ( 103) - Configuring zone [0_kalavan_city_gardens] with: games.stendhal.server.maps.kalavan.citygardens.MummyNPC
+2018-07-26 11:16:51 INFO  [main      ] ConfiguratorDescriptor   ( 103) - Configuring zone [0_kalavan_city_gardens] with: games.stendhal.server.maps.kalavan.citygardens.OracleNPC
+2018-07-26 11:16:51 INFO  [main      ] ZonesXMLLoader           ( 145) - Loading zone: int_kalavan_cottage_2
+2018-07-26 11:16:51 INFO  [main      ] ConfiguratorDescriptor   ( 103) - Configuring zone [int_kalavan_cottage_2] with: games.stendhal.server.maps.kalavan.cottage_2.ConfectionerApplePieNPC
+2018-07-26 11:16:51 INFO  [main      ] ConfiguratorDescriptor   ( 103) - Configuring zone [int_kalavan_cottage_2] with: games.stendhal.server.maps.kalavan.cottage_2.ConfectionerCherryPieNPC
+2018-07-26 11:16:51 INFO  [main      ] ZonesXMLLoader           ( 145) - Loading zone: int_kalavan_cottage
+2018-07-26 11:16:51 INFO  [main      ] ConfiguratorDescriptor   ( 103) - Configuring zone [int_kalavan_cottage] with: games.stendhal.server.maps.kalavan.cottage.HouseKeeperNPC
+2018-07-26 11:16:51 INFO  [main      ] ZonesXMLLoader           ( 145) - Loading zone: int_kalavan_greenhouse_1
+2018-07-26 11:16:51 INFO  [main      ] ZonesXMLLoader           ( 145) - Loading zone: int_kalavan_greenhouse_2
+2018-07-26 11:16:51 INFO  [main      ] ZonesXMLLoader           ( 145) - Loading zone: 0_kalavan_forest
+2018-07-26 11:16:51 INFO  [main      ] ZonesXMLLoader           ( 145) - Loading zone: 0_kalavan_forest_e
+2018-07-26 11:16:51 INFO  [main      ] ZonesXMLLoader           ( 145) - Loading zone: 0_kalavan_forest_e2
+2018-07-26 11:16:51 INFO  [main      ] ZonesXMLLoader           ( 145) - Loading zone: 7_kikareukin_clouds
+2018-07-26 11:16:51 INFO  [main      ] ConfiguratorDescriptor   ( 103) - Configuring zone [7_kikareukin_clouds] with: games.stendhal.server.core.config.zone.NoTeleportIn
+2018-07-26 11:16:51 INFO  [main      ] ZonesXMLLoader           ( 145) - Loading zone: 6_kikareukin_islands
+2018-07-26 11:16:51 INFO  [main      ] ConfiguratorDescriptor   ( 103) - Configuring zone [6_kikareukin_islands] with: games.stendhal.server.maps.kikareukin.islands.AddBalloonListener
+2018-07-26 11:16:51 INFO  [main      ] ZonesXMLLoader           ( 145) - Loading zone: 5_kikareukin_cave
+2018-07-26 11:16:51 INFO  [main      ] ZonesXMLLoader           ( 145) - Loading zone: 4_kikareukin_cave
+2018-07-26 11:16:51 INFO  [main      ] ZonesXMLLoader           ( 145) - Loading zone: 3_kikareukin_cave
+2018-07-26 11:16:51 INFO  [main      ] ZonesXMLLoader           ( 145) - Loading zone: 2_kikareukin_cave
+2018-07-26 11:16:51 INFO  [main      ] ZonesXMLLoader           ( 145) - Loading zone: 1_kikareukin_cave
+2018-07-26 11:16:51 INFO  [main      ] ZonesXMLLoader           ( 145) - Loading zone: 0_kirdneh_city
+2018-07-26 11:16:51 INFO  [main      ] ConfiguratorDescriptor   ( 103) - Configuring zone [0_kirdneh_city] with: games.stendhal.server.maps.kirdneh.city.GossipNPC
+2018-07-26 11:16:51 INFO  [main      ] ConfiguratorDescriptor   ( 103) - Configuring zone [0_kirdneh_city] with: games.stendhal.server.maps.kirdneh.city.MummyNPC
+2018-07-26 11:16:51 INFO  [main      ] ConfiguratorDescriptor   ( 103) - Configuring zone [0_kirdneh_city] with: games.stendhal.server.maps.kirdneh.city.LittleGirlNPC
+2018-07-26 11:16:51 INFO  [main      ] ConfiguratorDescriptor   ( 103) - Configuring zone [0_kirdneh_city] with: games.stendhal.server.maps.kirdneh.city.FlowerSellerNPC
+2018-07-26 11:16:51 INFO  [main      ] ConfiguratorDescriptor   ( 103) - Configuring zone [0_kirdneh_city] with: games.stendhal.server.maps.kirdneh.city.KirdnehArmorGuyNPC
+2018-07-26 11:16:51 INFO  [main      ] ConfiguratorDescriptor   ( 103) - Configuring zone [0_kirdneh_city] with: games.stendhal.server.maps.kirdneh.city.KirdnehFishyMarketNPC
+2018-07-26 11:16:51 INFO  [main      ] ZonesXMLLoader           ( 145) - Loading zone: int_kirdneh_house_26
+2018-07-26 11:16:51 INFO  [main      ] ConfiguratorDescriptor   ( 103) - Configuring zone [int_kirdneh_house_26] with: games.stendhal.server.core.config.zone.NoTeleportIn
+2018-07-26 11:16:51 INFO  [main      ] ConfiguratorDescriptor   ( 103) - Configuring zone [int_kirdneh_house_26] with: games.stendhal.server.entity.mapstuff.chest.StoredChestConfigurator
+2018-07-26 11:16:51 INFO  [main      ] ConfiguratorDescriptor   ( 103) - Configuring zone [int_kirdneh_house_26] with: games.stendhal.server.maps.semos.city.FertileGrounds
+2018-07-26 11:16:51 INFO  [main      ] ZonesXMLLoader           ( 145) - Loading zone: int_kirdneh_house_27
+2018-07-26 11:16:51 INFO  [main      ] ConfiguratorDescriptor   ( 103) - Configuring zone [int_kirdneh_house_27] with: games.stendhal.server.core.config.zone.NoTeleportIn
+2018-07-26 11:16:51 INFO  [main      ] ConfiguratorDescriptor   ( 103) - Configuring zone [int_kirdneh_house_27] with: games.stendhal.server.entity.mapstuff.chest.StoredChestConfigurator
+2018-07-26 11:16:51 INFO  [main      ] ConfiguratorDescriptor   ( 103) - Configuring zone [int_kirdneh_house_27] with: games.stendhal.server.maps.semos.city.FertileGrounds
+2018-07-26 11:16:51 INFO  [main      ] ZonesXMLLoader           ( 145) - Loading zone: int_kirdneh_house_28
+2018-07-26 11:16:51 INFO  [main      ] ConfiguratorDescriptor   ( 103) - Configuring zone [int_kirdneh_house_28] with: games.stendhal.server.core.config.zone.NoTeleportIn
+2018-07-26 11:16:51 INFO  [main      ] ConfiguratorDescriptor   ( 103) - Configuring zone [int_kirdneh_house_28] with: games.stendhal.server.entity.mapstuff.chest.StoredChestConfigurator
+2018-07-26 11:16:51 INFO  [main      ] ConfiguratorDescriptor   ( 103) - Configuring zone [int_kirdneh_house_28] with: games.stendhal.server.maps.semos.city.FertileGrounds
+2018-07-26 11:16:51 INFO  [main      ] ZonesXMLLoader           ( 145) - Loading zone: int_kirdneh_house_29
+2018-07-26 11:16:51 INFO  [main      ] ConfiguratorDescriptor   ( 103) - Configuring zone [int_kirdneh_house_29] with: games.stendhal.server.core.config.zone.NoTeleportIn
+2018-07-26 11:16:51 INFO  [main      ] ConfiguratorDescriptor   ( 103) - Configuring zone [int_kirdneh_house_29] with: games.stendhal.server.entity.mapstuff.chest.StoredChestConfigurator
+2018-07-26 11:16:51 INFO  [main      ] ConfiguratorDescriptor   ( 103) - Configuring zone [int_kirdneh_house_29] with: games.stendhal.server.maps.semos.city.FertileGrounds
+2018-07-26 11:16:51 INFO  [main      ] ZonesXMLLoader           ( 145) - Loading zone: int_kirdneh_house_30
+2018-07-26 11:16:51 INFO  [main      ] ConfiguratorDescriptor   ( 103) - Configuring zone [int_kirdneh_house_30] with: games.stendhal.server.core.config.zone.NoTeleportIn
+2018-07-26 11:16:51 INFO  [main      ] ConfiguratorDescriptor   ( 103) - Configuring zone [int_kirdneh_house_30] with: games.stendhal.server.entity.mapstuff.chest.StoredChestConfigurator
+2018-07-26 11:16:51 INFO  [main      ] ConfiguratorDescriptor   ( 103) - Configuring zone [int_kirdneh_house_30] with: games.stendhal.server.maps.semos.city.FertileGrounds
+2018-07-26 11:16:51 INFO  [main      ] ZonesXMLLoader           ( 145) - Loading zone: int_kirdneh_house_31
+2018-07-26 11:16:51 INFO  [main      ] ConfiguratorDescriptor   ( 103) - Configuring zone [int_kirdneh_house_31] with: games.stendhal.server.core.config.zone.NoTeleportIn
+2018-07-26 11:16:51 INFO  [main      ] ConfiguratorDescriptor   ( 103) - Configuring zone [int_kirdneh_house_31] with: games.stendhal.server.entity.mapstuff.chest.StoredChestConfigurator
+2018-07-26 11:16:51 INFO  [main      ] ConfiguratorDescriptor   ( 103) - Configuring zone [int_kirdneh_house_31] with: games.stendhal.server.maps.semos.city.FertileGrounds
+2018-07-26 11:16:51 INFO  [main      ] ZonesXMLLoader           ( 145) - Loading zone: int_kirdneh_house_32
+2018-07-26 11:16:51 INFO  [main      ] ConfiguratorDescriptor   ( 103) - Configuring zone [int_kirdneh_house_32] with: games.stendhal.server.core.config.zone.NoTeleportIn
+2018-07-26 11:16:51 INFO  [main      ] ConfiguratorDescriptor   ( 103) - Configuring zone [int_kirdneh_house_32] with: games.stendhal.server.entity.mapstuff.chest.StoredChestConfigurator
+2018-07-26 11:16:51 INFO  [main      ] ConfiguratorDescriptor   ( 103) - Configuring zone [int_kirdneh_house_32] with: games.stendhal.server.maps.semos.city.FertileGrounds
+2018-07-26 11:16:51 INFO  [main      ] ZonesXMLLoader           ( 145) - Loading zone: int_kirdneh_house_33
+2018-07-26 11:16:51 INFO  [main      ] ConfiguratorDescriptor   ( 103) - Configuring zone [int_kirdneh_house_33] with: games.stendhal.server.core.config.zone.NoTeleportIn
+2018-07-26 11:16:51 INFO  [main      ] ConfiguratorDescriptor   ( 103) - Configuring zone [int_kirdneh_house_33] with: games.stendhal.server.entity.mapstuff.chest.StoredChestConfigurator
+2018-07-26 11:16:51 INFO  [main      ] ConfiguratorDescriptor   ( 103) - Configuring zone [int_kirdneh_house_33] with: games.stendhal.server.maps.semos.city.FertileGrounds
+2018-07-26 11:16:51 INFO  [main      ] ZonesXMLLoader           ( 145) - Loading zone: int_kirdneh_house_34
+2018-07-26 11:16:51 INFO  [main      ] ConfiguratorDescriptor   ( 103) - Configuring zone [int_kirdneh_house_34] with: games.stendhal.server.core.config.zone.NoTeleportIn
+2018-07-26 11:16:51 INFO  [main      ] ConfiguratorDescriptor   ( 103) - Configuring zone [int_kirdneh_house_34] with: games.stendhal.server.entity.mapstuff.chest.StoredChestConfigurator
+2018-07-26 11:16:51 INFO  [main      ] ConfiguratorDescriptor   ( 103) - Configuring zone [int_kirdneh_house_34] with: games.stendhal.server.maps.semos.city.FertileGrounds
+2018-07-26 11:16:51 INFO  [main      ] ZonesXMLLoader           ( 145) - Loading zone: int_kirdneh_house_35
+2018-07-26 11:16:51 INFO  [main      ] ConfiguratorDescriptor   ( 103) - Configuring zone [int_kirdneh_house_35] with: games.stendhal.server.core.config.zone.NoTeleportIn
+2018-07-26 11:16:51 INFO  [main      ] ConfiguratorDescriptor   ( 103) - Configuring zone [int_kirdneh_house_35] with: games.stendhal.server.entity.mapstuff.chest.StoredChestConfigurator
+2018-07-26 11:16:51 INFO  [main      ] ConfiguratorDescriptor   ( 103) - Configuring zone [int_kirdneh_house_35] with: games.stendhal.server.maps.semos.city.FertileGrounds
+2018-07-26 11:16:51 INFO  [main      ] ZonesXMLLoader           ( 145) - Loading zone: int_kirdneh_house_36
+2018-07-26 11:16:51 INFO  [main      ] ConfiguratorDescriptor   ( 103) - Configuring zone [int_kirdneh_house_36] with: games.stendhal.server.core.config.zone.NoTeleportIn
+2018-07-26 11:16:51 INFO  [main      ] ConfiguratorDescriptor   ( 103) - Configuring zone [int_kirdneh_house_36] with: games.stendhal.server.entity.mapstuff.chest.StoredChestConfigurator
+2018-07-26 11:16:51 INFO  [main      ] ConfiguratorDescriptor   ( 103) - Configuring zone [int_kirdneh_house_36] with: games.stendhal.server.maps.semos.city.FertileGrounds
+2018-07-26 11:16:51 INFO  [main      ] ZonesXMLLoader           ( 145) - Loading zone: int_kirdneh_house_36_basement
+2018-07-26 11:16:51 INFO  [main      ] ConfiguratorDescriptor   ( 103) - Configuring zone [int_kirdneh_house_36_basement] with: games.stendhal.server.core.config.zone.NoTeleportIn
+2018-07-26 11:16:51 INFO  [main      ] ZonesXMLLoader           ( 145) - Loading zone: int_kirdneh_house_37
+2018-07-26 11:16:51 INFO  [main      ] ConfiguratorDescriptor   ( 103) - Configuring zone [int_kirdneh_house_37] with: games.stendhal.server.core.config.zone.NoTeleportIn
+2018-07-26 11:16:51 INFO  [main      ] ConfiguratorDescriptor   ( 103) - Configuring zone [int_kirdneh_house_37] with: games.stendhal.server.entity.mapstuff.chest.StoredChestConfigurator
+2018-07-26 11:16:51 INFO  [main      ] ConfiguratorDescriptor   ( 103) - Configuring zone [int_kirdneh_house_37] with: games.stendhal.server.maps.semos.city.FertileGrounds
+2018-07-26 11:16:51 INFO  [main      ] ZonesXMLLoader           ( 145) - Loading zone: int_kirdneh_house_37_basement
+2018-07-26 11:16:51 INFO  [main      ] ConfiguratorDescriptor   ( 103) - Configuring zone [int_kirdneh_house_37_basement] with: games.stendhal.server.core.config.zone.NoTeleportIn
+2018-07-26 11:16:51 INFO  [main      ] ZonesXMLLoader           ( 145) - Loading zone: int_kirdneh_house_38
+2018-07-26 11:16:51 INFO  [main      ] ConfiguratorDescriptor   ( 103) - Configuring zone [int_kirdneh_house_38] with: games.stendhal.server.core.config.zone.NoTeleportIn
+2018-07-26 11:16:51 INFO  [main      ] ConfiguratorDescriptor   ( 103) - Configuring zone [int_kirdneh_house_38] with: games.stendhal.server.entity.mapstuff.chest.StoredChestConfigurator
+2018-07-26 11:16:51 INFO  [main      ] ConfiguratorDescriptor   ( 103) - Configuring zone [int_kirdneh_house_38] with: games.stendhal.server.maps.semos.city.FertileGrounds
+2018-07-26 11:16:51 INFO  [main      ] ZonesXMLLoader           ( 145) - Loading zone: int_kirdneh_house_39
+2018-07-26 11:16:51 INFO  [main      ] ConfiguratorDescriptor   ( 103) - Configuring zone [int_kirdneh_house_39] with: games.stendhal.server.core.config.zone.NoTeleportIn
+2018-07-26 11:16:51 INFO  [main      ] ConfiguratorDescriptor   ( 103) - Configuring zone [int_kirdneh_house_39] with: games.stendhal.server.entity.mapstuff.chest.StoredChestConfigurator
+2018-07-26 11:16:51 INFO  [main      ] ConfiguratorDescriptor   ( 103) - Configuring zone [int_kirdneh_house_39] with: games.stendhal.server.maps.semos.city.FertileGrounds
+2018-07-26 11:16:51 INFO  [main      ] ZonesXMLLoader           ( 145) - Loading zone: int_kirdneh_house_40
+2018-07-26 11:16:51 INFO  [main      ] ConfiguratorDescriptor   ( 103) - Configuring zone [int_kirdneh_house_40] with: games.stendhal.server.core.config.zone.NoTeleportIn
+2018-07-26 11:16:51 INFO  [main      ] ConfiguratorDescriptor   ( 103) - Configuring zone [int_kirdneh_house_40] with: games.stendhal.server.entity.mapstuff.chest.StoredChestConfigurator
+2018-07-26 11:16:51 INFO  [main      ] ConfiguratorDescriptor   ( 103) - Configuring zone [int_kirdneh_house_40] with: games.stendhal.server.maps.semos.city.FertileGrounds
+2018-07-26 11:16:51 INFO  [main      ] ZonesXMLLoader           ( 145) - Loading zone: int_kirdneh_house_41
+2018-07-26 11:16:51 INFO  [main      ] ConfiguratorDescriptor   ( 103) - Configuring zone [int_kirdneh_house_41] with: games.stendhal.server.core.config.zone.NoTeleportIn
+2018-07-26 11:16:51 INFO  [main      ] ConfiguratorDescriptor   ( 103) - Configuring zone [int_kirdneh_house_41] with: games.stendhal.server.entity.mapstuff.chest.StoredChestConfigurator
+2018-07-26 11:16:51 INFO  [main      ] ConfiguratorDescriptor   ( 103) - Configuring zone [int_kirdneh_house_41] with: games.stendhal.server.maps.semos.city.FertileGrounds
+2018-07-26 11:16:51 INFO  [main      ] ZonesXMLLoader           ( 145) - Loading zone: int_kirdneh_house_42
+2018-07-26 11:16:51 INFO  [main      ] ConfiguratorDescriptor   ( 103) - Configuring zone [int_kirdneh_house_42] with: games.stendhal.server.core.config.zone.NoTeleportIn
+2018-07-26 11:16:51 INFO  [main      ] ConfiguratorDescriptor   ( 103) - Configuring zone [int_kirdneh_house_42] with: games.stendhal.server.entity.mapstuff.chest.StoredChestConfigurator
+2018-07-26 11:16:51 INFO  [main      ] ConfiguratorDescriptor   ( 103) - Configuring zone [int_kirdneh_house_42] with: games.stendhal.server.maps.semos.city.FertileGrounds
+2018-07-26 11:16:51 INFO  [main      ] ZonesXMLLoader           ( 145) - Loading zone: int_kirdneh_house_42_1
+2018-07-26 11:16:51 INFO  [main      ] ConfiguratorDescriptor   ( 103) - Configuring zone [int_kirdneh_house_42_1] with: games.stendhal.server.core.config.zone.NoTeleportIn
+2018-07-26 11:16:51 INFO  [main      ] ZonesXMLLoader           ( 145) - Loading zone: int_kirdneh_house_43
+2018-07-26 11:16:51 INFO  [main      ] ConfiguratorDescriptor   ( 103) - Configuring zone [int_kirdneh_house_43] with: games.stendhal.server.core.config.zone.NoTeleportIn
+2018-07-26 11:16:51 INFO  [main      ] ConfiguratorDescriptor   ( 103) - Configuring zone [int_kirdneh_house_43] with: games.stendhal.server.entity.mapstuff.chest.StoredChestConfigurator
+2018-07-26 11:16:51 INFO  [main      ] ConfiguratorDescriptor   ( 103) - Configuring zone [int_kirdneh_house_43] with: games.stendhal.server.maps.semos.city.FertileGrounds
+2018-07-26 11:16:51 INFO  [main      ] ZonesXMLLoader           ( 145) - Loading zone: int_kirdneh_house_44
+2018-07-26 11:16:51 INFO  [main      ] ConfiguratorDescriptor   ( 103) - Configuring zone [int_kirdneh_house_44] with: games.stendhal.server.core.config.zone.NoTeleportIn
+2018-07-26 11:16:51 INFO  [main      ] ConfiguratorDescriptor   ( 103) - Configuring zone [int_kirdneh_house_44] with: games.stendhal.server.entity.mapstuff.chest.StoredChestConfigurator
+2018-07-26 11:16:51 INFO  [main      ] ConfiguratorDescriptor   ( 103) - Configuring zone [int_kirdneh_house_44] with: games.stendhal.server.maps.semos.city.FertileGrounds
+2018-07-26 11:16:51 INFO  [main      ] ZonesXMLLoader           ( 145) - Loading zone: int_kirdneh_house_45
+2018-07-26 11:16:51 INFO  [main      ] ConfiguratorDescriptor   ( 103) - Configuring zone [int_kirdneh_house_45] with: games.stendhal.server.core.config.zone.NoTeleportIn
+2018-07-26 11:16:51 INFO  [main      ] ConfiguratorDescriptor   ( 103) - Configuring zone [int_kirdneh_house_45] with: games.stendhal.server.entity.mapstuff.chest.StoredChestConfigurator
+2018-07-26 11:16:51 INFO  [main      ] ConfiguratorDescriptor   ( 103) - Configuring zone [int_kirdneh_house_45] with: games.stendhal.server.maps.semos.city.FertileGrounds
+2018-07-26 11:16:52 INFO  [main      ] ZonesXMLLoader           ( 145) - Loading zone: int_kirdneh_house_46
+2018-07-26 11:16:52 INFO  [main      ] ConfiguratorDescriptor   ( 103) - Configuring zone [int_kirdneh_house_46] with: games.stendhal.server.core.config.zone.NoTeleportIn
+2018-07-26 11:16:52 INFO  [main      ] ConfiguratorDescriptor   ( 103) - Configuring zone [int_kirdneh_house_46] with: games.stendhal.server.entity.mapstuff.chest.StoredChestConfigurator
+2018-07-26 11:16:52 INFO  [main      ] ConfiguratorDescriptor   ( 103) - Configuring zone [int_kirdneh_house_46] with: games.stendhal.server.maps.semos.city.FertileGrounds
+2018-07-26 11:16:52 INFO  [main      ] ZonesXMLLoader           ( 145) - Loading zone: int_kirdneh_house_47
+2018-07-26 11:16:52 INFO  [main      ] ConfiguratorDescriptor   ( 103) - Configuring zone [int_kirdneh_house_47] with: games.stendhal.server.core.config.zone.NoTeleportIn
+2018-07-26 11:16:52 INFO  [main      ] ConfiguratorDescriptor   ( 103) - Configuring zone [int_kirdneh_house_47] with: games.stendhal.server.entity.mapstuff.chest.StoredChestConfigurator
+2018-07-26 11:16:52 INFO  [main      ] ConfiguratorDescriptor   ( 103) - Configuring zone [int_kirdneh_house_47] with: games.stendhal.server.maps.semos.city.FertileGrounds
+2018-07-26 11:16:52 INFO  [main      ] ZonesXMLLoader           ( 145) - Loading zone: int_kirdneh_house_48
+2018-07-26 11:16:52 INFO  [main      ] ConfiguratorDescriptor   ( 103) - Configuring zone [int_kirdneh_house_48] with: games.stendhal.server.core.config.zone.NoTeleportIn
+2018-07-26 11:16:52 INFO  [main      ] ConfiguratorDescriptor   ( 103) - Configuring zone [int_kirdneh_house_48] with: games.stendhal.server.entity.mapstuff.chest.StoredChestConfigurator
+2018-07-26 11:16:52 INFO  [main      ] ConfiguratorDescriptor   ( 103) - Configuring zone [int_kirdneh_house_48] with: games.stendhal.server.maps.semos.city.FertileGrounds
+2018-07-26 11:16:52 INFO  [main      ] ZonesXMLLoader           ( 145) - Loading zone: int_kirdneh_house_48_1
+2018-07-26 11:16:52 INFO  [main      ] ConfiguratorDescriptor   ( 103) - Configuring zone [int_kirdneh_house_48_1] with: games.stendhal.server.core.config.zone.NoTeleportIn
+2018-07-26 11:16:52 INFO  [main      ] ZonesXMLLoader           ( 145) - Loading zone: int_kirdneh_house_49
+2018-07-26 11:16:52 INFO  [main      ] ConfiguratorDescriptor   ( 103) - Configuring zone [int_kirdneh_house_49] with: games.stendhal.server.core.config.zone.NoTeleportIn
+2018-07-26 11:16:52 INFO  [main      ] ConfiguratorDescriptor   ( 103) - Configuring zone [int_kirdneh_house_49] with: games.stendhal.server.entity.mapstuff.chest.StoredChestConfigurator
+2018-07-26 11:16:52 INFO  [main      ] ConfiguratorDescriptor   ( 103) - Configuring zone [int_kirdneh_house_49] with: games.stendhal.server.maps.semos.city.FertileGrounds
+2018-07-26 11:16:52 INFO  [main      ] ZonesXMLLoader           ( 145) - Loading zone: int_kirdneh_house_49_1
+2018-07-26 11:16:52 INFO  [main      ] ConfiguratorDescriptor   ( 103) - Configuring zone [int_kirdneh_house_49_1] with: games.stendhal.server.core.config.zone.NoTeleportIn
+2018-07-26 11:16:52 INFO  [main      ] ZonesXMLLoader           ( 145) - Loading zone: int_kirdneh_inn
+2018-07-26 11:16:52 INFO  [main      ] ConfiguratorDescriptor   ( 103) - Configuring zone [int_kirdneh_inn] with: games.stendhal.server.maps.kirdneh.inn.HealerNPC
+2018-07-26 11:16:52 INFO  [main      ] ConfiguratorDescriptor   ( 103) - Configuring zone [int_kirdneh_inn] with: games.stendhal.server.maps.kirdneh.inn.BarmanNPC
+2018-07-26 11:16:52 INFO  [main      ] ConfiguratorDescriptor   ( 103) - Configuring zone [int_kirdneh_inn] with: games.stendhal.server.maps.kirdneh.inn.ItemsOnTable
+2018-07-26 11:16:52 INFO  [main      ] ZonesXMLLoader           ( 145) - Loading zone: int_kirdneh_townhall
+2018-07-26 11:16:52 INFO  [main      ] ZonesXMLLoader           ( 145) - Loading zone: int_kirdneh_townhall1
+2018-07-26 11:16:52 INFO  [main      ] ZonesXMLLoader           ( 145) - Loading zone: int_kirdneh_museum
+2018-07-26 11:16:52 INFO  [main      ] ConfiguratorDescriptor   ( 103) - Configuring zone [int_kirdneh_museum] with: games.stendhal.server.maps.kirdneh.museum.CuratorNPC
+2018-07-26 11:16:52 INFO  [main      ] ConfiguratorDescriptor   ( 103) - Configuring zone [int_kirdneh_museum] with: games.stendhal.server.maps.kirdneh.museum.WizardNPC
+2018-07-26 11:16:52 INFO  [main      ] ConfiguratorDescriptor   ( 103) - Configuring zone [int_kirdneh_museum] with: games.stendhal.server.maps.kirdneh.museum.ItemsOnTable
+2018-07-26 11:16:52 INFO  [main      ] ZonesXMLLoader           ( 145) - Loading zone: int_kirdneh_bank
+2018-07-26 11:16:52 INFO  [main      ] ZonesXMLLoader           ( 145) - Loading zone: 0_kirdneh_river_w
+2018-07-26 11:16:52 INFO  [main      ] ZonesXMLLoader           ( 145) - Loading zone: int_kirdneh_river_house_0
+2018-07-26 11:16:52 INFO  [main      ] ConfiguratorDescriptor   ( 103) - Configuring zone [int_kirdneh_river_house_0] with: games.stendhal.server.maps.kirdneh.river.RetiredTeacherNPC
+2018-07-26 11:16:52 INFO  [main      ] ZonesXMLLoader           ( 145) - Loading zone: int_kirdneh_river_house_1
+2018-07-26 11:16:52 INFO  [main      ] ZonesXMLLoader           ( 145) - Loading zone: -2_kirdneh_little_dungeon
+2018-07-26 11:16:52 INFO  [main      ] ZonesXMLLoader           ( 145) - Loading zone: 0_nalwor_forest_nw
+2018-07-26 11:16:52 INFO  [main      ] ZonesXMLLoader           ( 145) - Loading zone: 0_nalwor_forest_n
+2018-07-26 11:16:52 INFO  [main      ] ZonesXMLLoader           ( 145) - Loading zone: 0_nalwor_forest_ne
+2018-07-26 11:16:52 INFO  [main      ] ConfiguratorDescriptor   ( 103) - Configuring zone [0_nalwor_forest_ne] with: games.stendhal.server.maps.nalwor.forest.RedCrystalNPC
+2018-07-26 11:16:52 INFO  [main      ] ZonesXMLLoader           ( 145) - Loading zone: 0_nalwor_forest_n_e2
+2018-07-26 11:16:52 INFO  [main      ] ZonesXMLLoader           ( 145) - Loading zone: 0_nalwor_forest_w
+2018-07-26 11:16:52 INFO  [main      ] ConfiguratorDescriptor   ( 103) - Configuring zone [0_nalwor_forest_w] with: games.stendhal.server.maps.nalwor.forest.OracleNPC
+2018-07-26 11:16:52 INFO  [main      ] ZonesXMLLoader           ( 145) - Loading zone: int_nalwor_pottery
+2018-07-26 11:16:52 INFO  [main      ] ZonesXMLLoader           ( 145) - Loading zone: int_nalwor_library
+2018-07-26 11:16:52 INFO  [main      ] ZonesXMLLoader           ( 145) - Loading zone: int_nalwor_library_1
+2018-07-26 11:16:52 INFO  [main      ] ZonesXMLLoader           ( 145) - Loading zone: int_nalwor_weaponshop
+2018-07-26 11:16:52 INFO  [main      ] ConfiguratorDescriptor   ( 103) - Configuring zone [int_nalwor_weaponshop] with: games.stendhal.server.maps.nalwor.weaponshop.BuyerNPC
+2018-07-26 11:16:52 INFO  [main      ] ZonesXMLLoader           ( 145) - Loading zone: int_nalwor_flowershop
+2018-07-26 11:16:52 INFO  [main      ] ConfiguratorDescriptor   ( 103) - Configuring zone [int_nalwor_flowershop] with: games.stendhal.server.maps.nalwor.flowershop.FlowerGrowerNPC
+2018-07-26 11:16:52 INFO  [main      ] ZonesXMLLoader           ( 145) - Loading zone: int_nalwor_prison
+2018-07-26 11:16:52 INFO  [main      ] ZonesXMLLoader           ( 145) - Loading zone: int_nalwor_inn
+2018-07-26 11:16:52 INFO  [main      ] ZonesXMLLoader           ( 145) - Loading zone: int_nalwor_inn_1
+2018-07-26 11:16:52 INFO  [main      ] ZonesXMLLoader           ( 145) - Loading zone: int_nalwor_inn_basement
+2018-07-26 11:16:52 INFO  [main      ] ConfiguratorDescriptor   ( 103) - Configuring zone [int_nalwor_inn_basement] with: games.stendhal.server.maps.nalwor.basement.ArcheryDealerNPC
+2018-07-26 11:16:52 INFO  [main      ] ZonesXMLLoader           ( 145) - Loading zone: int_nalwor_postoffice
+2018-07-26 11:16:52 INFO  [main      ] ConfiguratorDescriptor   ( 103) - Configuring zone [int_nalwor_postoffice] with: games.stendhal.server.maps.nalwor.postoffice.PostNPC
+2018-07-26 11:16:52 INFO  [main      ] ZonesXMLLoader           ( 145) - Loading zone: int_nalwor_royal_hall
+2018-07-26 11:16:52 INFO  [main      ] ZonesXMLLoader           ( 145) - Loading zone: int_nalwor_royal_hall_1
+2018-07-26 11:16:52 INFO  [main      ] ConfiguratorDescriptor   ( 103) - Configuring zone [int_nalwor_royal_hall_1] with: games.stendhal.server.maps.nalwor.royal.MayorNPC
+2018-07-26 11:16:52 INFO  [main      ] ZonesXMLLoader           ( 145) - Loading zone: int_nalwor_secret_room
+2018-07-26 11:16:52 INFO  [main      ] ConfiguratorDescriptor   ( 103) - Configuring zone [int_nalwor_secret_room] with: games.stendhal.server.maps.nalwor.secretroom.DarkElvesCreatures
+2018-07-26 11:16:52 INFO  [main      ] ZonesXMLLoader           ( 145) - Loading zone: int_nalwor_house1
+2018-07-26 11:16:52 INFO  [main      ] ZonesXMLLoader           ( 145) - Loading zone: int_nalwor_house1_basement
+2018-07-26 11:16:52 INFO  [main      ] ZonesXMLLoader           ( 145) - Loading zone: int_nalwor_house2
+2018-07-26 11:16:52 INFO  [main      ] ZonesXMLLoader           ( 145) - Loading zone: int_nalwor_house3
+2018-07-26 11:16:52 INFO  [main      ] ZonesXMLLoader           ( 145) - Loading zone: int_nalwor_house4
+2018-07-26 11:16:52 INFO  [main      ] ZonesXMLLoader           ( 145) - Loading zone: int_nalwor_house4_1
+2018-07-26 11:16:52 INFO  [main      ] ZonesXMLLoader           ( 145) - Loading zone: int_nalwor_house4_2
+2018-07-26 11:16:52 INFO  [main      ] ZonesXMLLoader           ( 145) - Loading zone: int_nalwor_assassinhq_cellar
+2018-07-26 11:16:52 INFO  [main      ] ConfiguratorDescriptor   ( 103) - Configuring zone [int_nalwor_assassinhq_cellar] with: games.stendhal.server.maps.nalwor.assassinhq.ChiefFalatheenDishwasherNPC
+2018-07-26 11:16:52 INFO  [main      ] ZonesXMLLoader           ( 145) - Loading zone: int_nalwor_assassinhq_0
+2018-07-26 11:16:52 INFO  [main      ] ConfiguratorDescriptor   ( 103) - Configuring zone [int_nalwor_assassinhq_0] with: games.stendhal.server.maps.nalwor.assassinhq.PrincipalNPC
+2018-07-26 11:16:52 INFO  [main      ] ZonesXMLLoader           ( 145) - Loading zone: int_nalwor_assassinhq_1
+2018-07-26 11:16:52 INFO  [main      ] ConfiguratorDescriptor   ( 103) - Configuring zone [int_nalwor_assassinhq_1] with: games.stendhal.server.maps.nalwor.assassinhq.LilJohnnnnyNPC
+2018-07-26 11:16:52 INFO  [main      ] ConfiguratorDescriptor   ( 103) - Configuring zone [int_nalwor_assassinhq_1] with: games.stendhal.server.maps.nalwor.assassinhq.SchoolMarmNPC
+2018-07-26 11:16:52 INFO  [main      ] ZonesXMLLoader           ( 145) - Loading zone: int_nalwor_bank
+2018-07-26 11:16:52 INFO  [main      ] ConfiguratorDescriptor   ( 103) - Configuring zone [int_nalwor_bank] with: games.stendhal.server.maps.nalwor.bank.BankNPC
+2018-07-26 11:16:52 INFO  [main      ] ZonesXMLLoader           ( 145) - Loading zone: int_nalwor_bank_1
+2018-07-26 11:16:52 INFO  [main      ] ZonesXMLLoader           ( 145) - Loading zone: int_nalwor_tower_0
+2018-07-26 11:16:52 INFO  [main      ] ZonesXMLLoader           ( 145) - Loading zone: int_nalwor_tower_1
+2018-07-26 11:16:52 INFO  [main      ] ZonesXMLLoader           ( 145) - Loading zone: int_nalwor_tower_2
+2018-07-26 11:16:52 INFO  [main      ] ZonesXMLLoader           ( 145) - Loading zone: int_nalwor_tower_3
+2018-07-26 11:16:52 INFO  [main      ] ZonesXMLLoader           ( 145) - Loading zone: int_nalwor_tower_4
+2018-07-26 11:16:52 INFO  [main      ] ZonesXMLLoader           ( 145) - Loading zone: int_nalwor_tower_5
+2018-07-26 11:16:52 INFO  [main      ] ZonesXMLLoader           ( 145) - Loading zone: int_nalwor_tower_6
+2018-07-26 11:16:52 INFO  [main      ] ConfiguratorDescriptor   ( 103) - Configuring zone [int_nalwor_tower_6] with: games.stendhal.server.maps.nalwor.tower.PrincessNPC
+2018-07-26 11:16:52 INFO  [main      ] ZonesXMLLoader           ( 145) - Loading zone: int_nalwor_house_67
+2018-07-26 11:16:52 INFO  [main      ] ZonesXMLLoader           ( 145) - Loading zone: int_nalwor_house_68
+2018-07-26 11:16:52 INFO  [main      ] ZonesXMLLoader           ( 145) - Loading zone: int_nalwor_house_69
+2018-07-26 11:16:52 INFO  [main      ] ZonesXMLLoader           ( 145) - Loading zone: int_nalwor_house_70
+2018-07-26 11:16:52 INFO  [main      ] ZonesXMLLoader           ( 145) - Loading zone: 0_nalwor_city
+2018-07-26 11:16:52 INFO  [main      ] ConfiguratorDescriptor   ( 103) - Configuring zone [0_nalwor_city] with: games.stendhal.server.maps.nalwor.city.GuessKillsNPC
+2018-07-26 11:16:52 INFO  [main      ] ZonesXMLLoader           ( 145) - Loading zone: 0_nalwor_forest_e
+2018-07-26 11:16:52 INFO  [main      ] ZonesXMLLoader           ( 145) - Loading zone: 0_nalwor_forest_e2
+2018-07-26 11:16:52 INFO  [main      ] ZonesXMLLoader           ( 145) - Loading zone: 0_nalwor_river_sw
+2018-07-26 11:16:52 INFO  [main      ] ConfiguratorDescriptor   ( 103) - Configuring zone [0_nalwor_river_sw] with: games.stendhal.server.maps.nalwor.river.PinkCrystalNPC
+2018-07-26 11:16:52 INFO  [main      ] ZonesXMLLoader           ( 145) - Loading zone: 0_nalwor_river_s
+2018-07-26 11:16:52 INFO  [main      ] ZonesXMLLoader           ( 145) - Loading zone: 0_nalwor_river_se
+2018-07-26 11:16:52 INFO  [main      ] ZonesXMLLoader           ( 145) - Loading zone: 0_nalwor_river_s_e2
+2018-07-26 11:16:52 INFO  [main      ] ZonesXMLLoader           ( 145) - Loading zone: -1_nalwor_caves_w
+2018-07-26 11:16:52 INFO  [main      ] ZonesXMLLoader           ( 145) - Loading zone: -1_nalwor_caves
+2018-07-26 11:16:52 INFO  [main      ] ZonesXMLLoader           ( 145) - Loading zone: -1_nalwor_caves_e
+2018-07-26 11:16:52 INFO  [main      ] ConfiguratorDescriptor   ( 103) - Configuring zone [-1_nalwor_caves_e] with: games.stendhal.server.maps.nalwor.tunnel.DiscipleAssassinCreature
+2018-07-26 11:16:52 INFO  [main      ] ZonesXMLLoader           ( 145) - Loading zone: -1_nalwor_drows_tunnel_nw
+2018-07-26 11:16:52 INFO  [main      ] ZonesXMLLoader           ( 145) - Loading zone: -1_nalwor_drows_tunnel_n
+2018-07-26 11:16:52 INFO  [main      ] ConfiguratorDescriptor   ( 103) - Configuring zone [-1_nalwor_drows_tunnel_n] with: games.stendhal.server.maps.nalwor.tunnel.ThingCreature
+2018-07-26 11:16:52 INFO  [main      ] ConfiguratorDescriptor   ( 103) - Configuring zone [-1_nalwor_drows_tunnel_n] with: games.stendhal.server.maps.nalwor.tunnel.DrowCreatures
+2018-07-26 11:16:52 INFO  [main      ] ZonesXMLLoader           ( 145) - Loading zone: -1_nalwor_drows_tunnel_ne
+2018-07-26 11:16:52 INFO  [main      ] ZonesXMLLoader           ( 145) - Loading zone: -1_nalwor_drows_tunnel
+2018-07-26 11:16:52 INFO  [main      ] ZonesXMLLoader           ( 145) - Loading zone: -2_nalwor_drows_tunnel_nw
+2018-07-26 11:16:52 INFO  [main      ] ZonesXMLLoader           ( 145) - Loading zone: hell
+2018-07-26 11:16:52 INFO  [main      ] StendhalRPZone           (1751) - no match: hell
+2018-07-26 11:16:52 INFO  [main      ] ConfiguratorDescriptor   ( 103) - Configuring zone [hell] with: games.stendhal.server.core.config.zone.NoTeleport
+2018-07-26 11:16:52 INFO  [main      ] ConfiguratorDescriptor   ( 103) - Configuring zone [hell] with: games.stendhal.server.maps.nalwor.hell.ElementalsNPCs
+2018-07-26 11:16:52 INFO  [main      ] ConfiguratorDescriptor   ( 103) - Configuring zone [hell] with: games.stendhal.server.maps.nalwor.hell.ReaperNPC
+2018-07-26 11:16:52 INFO  [main      ] ConfiguratorDescriptor   ( 103) - Configuring zone [hell] with: games.stendhal.server.maps.nalwor.hell.Reaper2NPC
+2018-07-26 11:16:52 INFO  [main      ] ConfiguratorDescriptor   ( 103) - Configuring zone [hell] with: games.stendhal.server.maps.nalwor.hell.CaptiveNPC
+2018-07-26 11:16:52 INFO  [main      ] ConfiguratorDescriptor   ( 103) - Configuring zone [hell] with: games.stendhal.server.maps.nalwor.hell.HellTimer
+2018-07-26 11:16:52 INFO  [main      ] ZonesXMLLoader           ( 145) - Loading zone: int_hell_pit
+2018-07-26 11:16:52 INFO  [main      ] ConfiguratorDescriptor   ( 103) - Configuring zone [int_hell_pit] with: games.stendhal.server.core.config.zone.NoTeleport
+2018-07-26 11:16:52 INFO  [main      ] ConfiguratorDescriptor   ( 103) - Configuring zone [int_hell_pit] with: games.stendhal.server.maps.nalwor.hell.ReaperClones
+2018-07-26 11:16:52 INFO  [main      ] ZonesXMLLoader           ( 145) - Loading zone: 0_orril_mountain_n2_w2
+2018-07-26 11:16:52 INFO  [main      ] ZonesXMLLoader           ( 145) - Loading zone: 0_orril_mountain_n_w2
+2018-07-26 11:16:52 INFO  [main      ] ZonesXMLLoader           ( 145) - Loading zone: 0_orril_mountain_nw
+2018-07-26 11:16:52 INFO  [main      ] ZonesXMLLoader           ( 145) - Loading zone: 0_orril_forest_n
+2018-07-26 11:16:52 INFO  [main      ] ZonesXMLLoader           ( 145) - Loading zone: 0_orril_mountain_w2
+2018-07-26 11:16:52 INFO  [main      ] ZonesXMLLoader           ( 145) - Loading zone: 0_orril_mountain_w
+2018-07-26 11:16:52 INFO  [main      ] ZonesXMLLoader           ( 145) - Loading zone: 0_orril_castle
+2018-07-26 11:16:52 INFO  [main      ] ZonesXMLLoader           ( 145) - Loading zone: int_orril_castle_0
+2018-07-26 11:16:52 INFO  [main      ] ZonesXMLLoader           ( 145) - Loading zone: 0_orril_forest_e
+2018-07-26 11:16:52 INFO  [main      ] ZonesXMLLoader           ( 145) - Loading zone: 0_orril_river_s_w2
+2018-07-26 11:16:52 INFO  [main      ] ZonesXMLLoader           ( 145) - Loading zone: 0_orril_river_sw
+2018-07-26 11:16:52 INFO  [main      ] ZonesXMLLoader           ( 145) - Loading zone: 0_orril_river_s
+2018-07-26 11:16:52 INFO  [main      ] ConfiguratorDescriptor   ( 103) - Configuring zone [0_orril_river_s] with: games.stendhal.server.maps.orril.river.CampingGirlNPC
+2018-07-26 11:16:52 INFO  [main      ] ConfiguratorDescriptor   ( 103) - Configuring zone [0_orril_river_s] with: games.stendhal.server.maps.orril.river.GoldProspectorNPC
+2018-07-26 11:16:52 INFO  [main      ] ZonesXMLLoader           ( 145) - Loading zone: int_orril_jynath_house
+2018-07-26 11:16:52 INFO  [main      ] ConfiguratorDescriptor   ( 103) - Configuring zone [int_orril_jynath_house] with: games.stendhal.server.maps.orril.magician_house.WitchNPC
+2018-07-26 11:16:52 INFO  [main      ] ZonesXMLLoader           ( 145) - Loading zone: 0_orril_river_se
+2018-07-26 11:16:52 INFO  [main      ] ZonesXMLLoader           ( 145) - Loading zone: int_constantines_villa_entrance
+2018-07-26 11:16:52 INFO  [main      ] ZonesXMLLoader           ( 145) - Loading zone: int_constantines_villa_barracks
+2018-07-26 11:16:52 INFO  [main      ] ZonesXMLLoader           ( 145) - Loading zone: int_constantines_villa_livingroom
+2018-07-26 11:16:52 INFO  [main      ] ZonesXMLLoader           ( 145) - Loading zone: int_constantines_villa_library
+2018-07-26 11:16:52 INFO  [main      ] ZonesXMLLoader           ( 145) - Loading zone: -1_kotoch_entrance
+2018-07-26 11:16:52 INFO  [main      ] ZonesXMLLoader           ( 145) - Loading zone: -1_orril_mountain_w2
+2018-07-26 11:16:52 INFO  [main      ] ZonesXMLLoader           ( 145) - Loading zone: -1_orril_dungeon
+2018-07-26 11:16:52 INFO  [main      ] ZonesXMLLoader           ( 145) - Loading zone: -1_orril_castle_w
+2018-07-26 11:16:52 INFO  [main      ] ConfiguratorDescriptor   ( 103) - Configuring zone [-1_orril_castle_w] with: games.stendhal.server.maps.orril.castle.GreenDragonCreature
+2018-07-26 11:16:52 INFO  [main      ] ZonesXMLLoader           ( 145) - Loading zone: -1_orril_castle
+2018-07-26 11:16:52 INFO  [main      ] ZonesXMLLoader           ( 145) - Loading zone: -2_kotoch_entrance
+2018-07-26 11:16:52 INFO  [main      ] ConfiguratorDescriptor   ( 103) - Configuring zone [-2_kotoch_entrance] with: games.stendhal.server.maps.kotoch.OrcSamanNPC
+2018-07-26 11:16:52 INFO  [main      ] ZonesXMLLoader           ( 145) - Loading zone: -2_orril_dwarf_mine
+2018-07-26 11:16:52 INFO  [main      ] ConfiguratorDescriptor   ( 103) - Configuring zone [-2_orril_dwarf_mine] with: games.stendhal.server.maps.orril.dwarfmine.IronBuyerNPC
+2018-07-26 11:16:52 INFO  [main      ] ZonesXMLLoader           ( 145) - Loading zone: -2_orril_lich_palace
+2018-07-26 11:16:52 INFO  [main      ] ConfiguratorDescriptor   ( 103) - Configuring zone [-2_orril_lich_palace] with: games.stendhal.server.maps.orril.castle.DemonSkeletonCreature
+2018-07-26 11:16:52 INFO  [main      ] ZonesXMLLoader           ( 145) - Loading zone: -2_orril_dungeon
+2018-07-26 11:16:52 INFO  [main      ] ZonesXMLLoader           ( 145) - Loading zone: -2_orril_dungeon_e
+2018-07-26 11:16:52 INFO  [main      ] ConfiguratorDescriptor   ( 103) - Configuring zone [-2_orril_dungeon_e] with: games.stendhal.server.maps.orril.dungeon.DarkElfNPC
+2018-07-26 11:16:52 INFO  [main      ] ZonesXMLLoader           ( 145) - Loading zone: -3_kotoch_prison
+2018-07-26 11:16:52 INFO  [main      ] ZonesXMLLoader           ( 145) - Loading zone: -3_orril_dwarf_blacksmith
+2018-07-26 11:16:52 INFO  [main      ] ConfiguratorDescriptor   ( 103) - Configuring zone [-3_orril_dwarf_blacksmith] with: games.stendhal.server.maps.orril.dwarfmine.BlacksmithNPC
+2018-07-26 11:16:52 INFO  [main      ] ZonesXMLLoader           ( 145) - Loading zone: -3_orril_dungeon
+2018-07-26 11:16:52 INFO  [main      ] ConfiguratorDescriptor   ( 103) - Configuring zone [-3_orril_dungeon] with: games.stendhal.server.maps.orril.dungeon.GhostNPC
+2018-07-26 11:16:52 INFO  [main      ] ZonesXMLLoader           ( 145) - Loading zone: int_rat_house1
+2018-07-26 11:16:52 INFO  [main      ] ConfiguratorDescriptor   ( 103) - Configuring zone [int_rat_house1] with: games.stendhal.server.maps.ratcity.house1.OldRatWomanNPC
+2018-07-26 11:16:52 INFO  [main      ] ZonesXMLLoader           ( 145) - Loading zone: int_rat_hostel
+2018-07-26 11:16:52 INFO  [main      ] ZonesXMLLoader           ( 145) - Loading zone: int_rat_house2
+2018-07-26 11:16:52 INFO  [main      ] ZonesXMLLoader           ( 145) - Loading zone: int_rat_house3
+2018-07-26 11:16:52 INFO  [main      ] ZonesXMLLoader           ( 145) - Loading zone: int_rat_house4
+2018-07-26 11:16:52 INFO  [main      ] ZonesXMLLoader           ( 145) - Loading zone: int_rat_house5
+2018-07-26 11:16:52 INFO  [main      ] ZonesXMLLoader           ( 145) - Loading zone: int_rat_house6
+2018-07-26 11:16:52 INFO  [main      ] ZonesXMLLoader           ( 145) - Loading zone: int_rat_flower_shop
+2018-07-26 11:16:52 INFO  [main      ] ZonesXMLLoader           ( 145) - Loading zone: int_rat_library
+2018-07-26 11:16:52 INFO  [main      ] ZonesXMLLoader           ( 145) - Loading zone: int_rat_smith_shop
+2018-07-26 11:16:52 INFO  [main      ] ZonesXMLLoader           ( 145) - Loading zone: int_rat_house7
+2018-07-26 11:16:52 INFO  [main      ] ZonesXMLLoader           ( 145) - Loading zone: int_rat_bakery
+2018-07-26 11:16:52 INFO  [main      ] ConfiguratorDescriptor   ( 103) - Configuring zone [int_rat_bakery] with: games.stendhal.server.maps.ratcity.bakery.RatChefNPC
+2018-07-26 11:16:52 INFO  [main      ] ZonesXMLLoader           ( 145) - Loading zone: -4_orril_dungeon
+2018-07-26 11:16:52 INFO  [main      ] ConfiguratorDescriptor   ( 103) - Configuring zone [-4_orril_dungeon] with: games.stendhal.server.maps.orril.dungeon.RatChild1NPC
+2018-07-26 11:16:52 INFO  [main      ] ConfiguratorDescriptor   ( 103) - Configuring zone [-4_orril_dungeon] with: games.stendhal.server.maps.orril.dungeon.RatChild2NPC
+2018-07-26 11:16:52 INFO  [main      ] ConfiguratorDescriptor   ( 103) - Configuring zone [-4_orril_dungeon] with: games.stendhal.server.maps.orril.dungeon.RatChildBoy1NPC
+2018-07-26 11:16:52 INFO  [main      ] ConfiguratorDescriptor   ( 103) - Configuring zone [-4_orril_dungeon] with: games.stendhal.server.maps.orril.dungeon.RatChildBoy2NPC
+2018-07-26 11:16:52 INFO  [main      ] ZonesXMLLoader           ( 145) - Loading zone: -5_orril_dungeon
+2018-07-26 11:16:52 INFO  [main      ] ZonesXMLLoader           ( 145) - Loading zone: 0_semos_canyon
+2018-07-26 11:16:52 INFO  [main      ] ZonesXMLLoader           ( 145) - Loading zone: 0_semos_mountain_n_w4
+2018-07-26 11:16:52 INFO  [main      ] ConfiguratorDescriptor   ( 103) - Configuring zone [0_semos_mountain_n_w4] with: games.stendhal.server.maps.semos.mountain.YellowCrystalNPC
+2018-07-26 11:16:52 INFO  [main      ] ZonesXMLLoader           ( 145) - Loading zone: 0_semos_mountain_n2_w3
+2018-07-26 11:16:52 INFO  [main      ] ZonesXMLLoader           ( 145) - Loading zone: 0_semos_mountain_n2_w2
+2018-07-26 11:16:52 INFO  [main      ] ZonesXMLLoader           ( 145) - Loading zone: 0_semos_mountain_n2_w
+2018-07-26 11:16:52 INFO  [main      ] ZonesXMLLoader           ( 145) - Loading zone: int_apothecary_cabin
+2018-07-26 11:16:52 INFO  [main      ] ZonesXMLLoader           ( 145) - Loading zone: int_apothecary_lab
+2018-07-26 11:16:52 INFO  [main      ] ZonesXMLLoader           ( 145) - Loading zone: 0_semos_mountain_n2
+2018-07-26 11:16:52 INFO  [main      ] ZonesXMLLoader           ( 145) - Loading zone: int_semos_frank_house
+2018-07-26 11:16:53 INFO  [main      ] ZonesXMLLoader           ( 145) - Loading zone: 0_semos_mountain_n2_e
+2018-07-26 11:16:53 INFO  [main      ] ZonesXMLLoader           ( 145) - Loading zone: int_mithrilbourgh_stores
+2018-07-26 11:16:53 INFO  [main      ] ConfiguratorDescriptor   ( 103) - Configuring zone [int_mithrilbourgh_stores] with: games.stendhal.server.maps.mithrilbourgh.stores.BuyerNPC
+2018-07-26 11:16:53 INFO  [main      ] ZonesXMLLoader           ( 145) - Loading zone: int_mithrilbourgh_throne_room
+2018-07-26 11:16:53 INFO  [main      ] ConfiguratorDescriptor   ( 103) - Configuring zone [int_mithrilbourgh_throne_room] with: games.stendhal.server.maps.mithrilbourgh.throne_room.BuyerNPC
+2018-07-26 11:16:53 INFO  [main      ] ZonesXMLLoader           ( 145) - Loading zone: 0_semos_mountain_n2_e2
+2018-07-26 11:16:53 INFO  [main      ] ZonesXMLLoader           ( 145) - Loading zone: 0_semos_mountain_n_w3
+2018-07-26 11:16:53 INFO  [main      ] ZonesXMLLoader           ( 145) - Loading zone: 0_semos_mountain_n_w2
+2018-07-26 11:16:53 INFO  [main      ] ConfiguratorDescriptor   ( 103) - Configuring zone [0_semos_mountain_n_w2] with: games.stendhal.server.core.config.zone.NoTeleportIn
+2018-07-26 11:16:53 INFO  [main      ] ConfiguratorDescriptor   ( 103) - Configuring zone [0_semos_mountain_n_w2] with: games.stendhal.server.maps.semos.gnomevillage.GarbiddleNPC
+2018-07-26 11:16:53 INFO  [main      ] ZonesXMLLoader           ( 145) - Loading zone: int_semos_wizards_tower_basement
+2018-07-26 11:16:53 INFO  [main      ] ConfiguratorDescriptor   ( 103) - Configuring zone [int_semos_wizards_tower_basement] with: games.stendhal.server.maps.semos.wizardstower.WizardsGuardStatueNPC
+2018-07-26 11:16:53 INFO  [main      ] ZonesXMLLoader           ( 145) - Loading zone: int_semos_wizards_tower_1
+2018-07-26 11:16:53 INFO  [main      ] ConfiguratorDescriptor   ( 103) - Configuring zone [int_semos_wizards_tower_1] with: games.stendhal.server.core.config.zone.NoTeleportIn
+2018-07-26 11:16:53 INFO  [main      ] ConfiguratorDescriptor   ( 103) - Configuring zone [int_semos_wizards_tower_1] with: games.stendhal.server.maps.semos.wizardstower.FirstFloorCreatures
+2018-07-26 11:16:53 INFO  [main      ] ZonesXMLLoader           ( 145) - Loading zone: int_semos_wizards_tower_2
+2018-07-26 11:16:53 INFO  [main      ] ConfiguratorDescriptor   ( 103) - Configuring zone [int_semos_wizards_tower_2] with: games.stendhal.server.core.config.zone.NoTeleportIn
+2018-07-26 11:16:53 INFO  [main      ] ConfiguratorDescriptor   ( 103) - Configuring zone [int_semos_wizards_tower_2] with: games.stendhal.server.maps.semos.wizardstower.SecondFloorCreatures
+2018-07-26 11:16:53 INFO  [main      ] ZonesXMLLoader           ( 145) - Loading zone: int_semos_wizards_tower_3
+2018-07-26 11:16:53 INFO  [main      ] ConfiguratorDescriptor   ( 103) - Configuring zone [int_semos_wizards_tower_3] with: games.stendhal.server.core.config.zone.NoTeleportIn
+2018-07-26 11:16:53 INFO  [main      ] ConfiguratorDescriptor   ( 103) - Configuring zone [int_semos_wizards_tower_3] with: games.stendhal.server.maps.semos.wizardstower.ThirdFloorCreatures
+2018-07-26 11:16:53 INFO  [main      ] ZonesXMLLoader           ( 145) - Loading zone: int_semos_wizards_tower_4
+2018-07-26 11:16:53 INFO  [main      ] ConfiguratorDescriptor   ( 103) - Configuring zone [int_semos_wizards_tower_4] with: games.stendhal.server.core.config.zone.NoTeleportIn
+2018-07-26 11:16:53 INFO  [main      ] ConfiguratorDescriptor   ( 103) - Configuring zone [int_semos_wizards_tower_4] with: games.stendhal.server.maps.semos.wizardstower.FourthFloorCreatures
+2018-07-26 11:16:53 INFO  [main      ] ZonesXMLLoader           ( 145) - Loading zone: int_semos_wizards_tower_5
+2018-07-26 11:16:53 INFO  [main      ] ConfiguratorDescriptor   ( 103) - Configuring zone [int_semos_wizards_tower_5] with: games.stendhal.server.core.config.zone.NoTeleportIn
+2018-07-26 11:16:53 INFO  [main      ] ConfiguratorDescriptor   ( 103) - Configuring zone [int_semos_wizards_tower_5] with: games.stendhal.server.maps.semos.wizardstower.FifthFloorCreatures
+2018-07-26 11:16:53 INFO  [main      ] ZonesXMLLoader           ( 145) - Loading zone: int_semos_wizards_tower_6
+2018-07-26 11:16:53 INFO  [main      ] ConfiguratorDescriptor   ( 103) - Configuring zone [int_semos_wizards_tower_6] with: games.stendhal.server.core.config.zone.NoTeleportIn
+2018-07-26 11:16:53 INFO  [main      ] ConfiguratorDescriptor   ( 103) - Configuring zone [int_semos_wizards_tower_6] with: games.stendhal.server.maps.semos.wizardstower.SixthFloorCreatures
+2018-07-26 11:16:53 INFO  [main      ] ZonesXMLLoader           ( 145) - Loading zone: int_semos_wizards_tower_7
+2018-07-26 11:16:53 INFO  [main      ] ConfiguratorDescriptor   ( 103) - Configuring zone [int_semos_wizards_tower_7] with: games.stendhal.server.maps.semos.wizardstower.WizardsGuardStatueSpireNPC
+2018-07-26 11:16:53 INFO  [main      ] ZonesXMLLoader           ( 145) - Loading zone: int_semos_wizards_tower_8
+2018-07-26 11:16:53 INFO  [main      ] ConfiguratorDescriptor   ( 103) - Configuring zone [int_semos_wizards_tower_8] with: games.stendhal.server.maps.semos.wizardstower.RedFireWizardNPC
+2018-07-26 11:16:53 INFO  [main      ] ConfiguratorDescriptor   ( 103) - Configuring zone [int_semos_wizards_tower_8] with: games.stendhal.server.maps.semos.wizardstower.BlueIceSorceressNPC
+2018-07-26 11:16:53 INFO  [main      ] ConfiguratorDescriptor   ( 103) - Configuring zone [int_semos_wizards_tower_8] with: games.stendhal.server.maps.semos.wizardstower.OrientalAirWizardNPC
+2018-07-26 11:16:53 INFO  [main      ] ConfiguratorDescriptor   ( 103) - Configuring zone [int_semos_wizards_tower_8] with: games.stendhal.server.maps.semos.wizardstower.GreenNatureWizardNPC
+2018-07-26 11:16:53 INFO  [main      ] ZonesXMLLoader           ( 145) - Loading zone: int_semos_wizards_tower_9
+2018-07-26 11:16:53 INFO  [main      ] ConfiguratorDescriptor   ( 103) - Configuring zone [int_semos_wizards_tower_9] with: games.stendhal.server.maps.semos.wizardstower.BlackDeathWizardNPC
+2018-07-26 11:16:53 INFO  [main      ] ConfiguratorDescriptor   ( 103) - Configuring zone [int_semos_wizards_tower_9] with: games.stendhal.server.maps.semos.wizardstower.WhiteLifeSorceressNPC
+2018-07-26 11:16:53 INFO  [main      ] ConfiguratorDescriptor   ( 103) - Configuring zone [int_semos_wizards_tower_9] with: games.stendhal.server.maps.semos.wizardstower.BlueArchmageNPC
+2018-07-26 11:16:53 INFO  [main      ] ZonesXMLLoader           ( 145) - Loading zone: malleus_plain
+2018-07-26 11:16:53 INFO  [main      ] StendhalRPZone           (1751) - no match: malleus_plain
+2018-07-26 11:16:53 INFO  [main      ] ZonesXMLLoader           ( 145) - Loading zone: bone_pillar
+2018-07-26 11:16:53 INFO  [main      ] StendhalRPZone           (1751) - no match: bone_pillar
+2018-07-26 11:16:53 INFO  [main      ] ConfiguratorDescriptor   ( 103) - Configuring zone [bone_pillar] with: games.stendhal.server.maps.semos.wizardstower.RedDemonLordNPC
+2018-07-26 11:16:53 INFO  [main      ] ZonesXMLLoader           ( 145) - Loading zone: 0_semos_plains_n
+2018-07-26 11:16:53 INFO  [main      ] ConfiguratorDescriptor   ( 103) - Configuring zone [0_semos_plains_n] with: games.stendhal.server.maps.semos.plains.LittleBoyNPC
+2018-07-26 11:16:53 INFO  [main      ] ConfiguratorDescriptor   ( 103) - Configuring zone [0_semos_plains_n] with: games.stendhal.server.maps.semos.plains.AddPostmanListener
+2018-07-26 11:16:53 INFO  [main      ] ConfiguratorDescriptor   ( 103) - Configuring zone [0_semos_plains_n] with: games.stendhal.server.maps.semos.plains.ButterfliesNPC
+2018-07-26 11:16:53 INFO  [main      ] ConfiguratorDescriptor   ( 103) - Configuring zone [0_semos_plains_n] with: games.stendhal.server.maps.semos.city.FertileGrounds
+2018-07-26 11:16:53 INFO  [main      ] ZonesXMLLoader           ( 145) - Loading zone: 0_semos_plains_ne
+2018-07-26 11:16:53 INFO  [main      ] ConfiguratorDescriptor   ( 103) - Configuring zone [0_semos_plains_ne] with: games.stendhal.server.maps.semos.plains.MillerNPC
+2018-07-26 11:16:53 INFO  [main      ] ConfiguratorDescriptor   ( 103) - Configuring zone [0_semos_plains_ne] with: games.stendhal.server.maps.semos.plains.HoeingManNPC
+2018-07-26 11:16:53 INFO  [main      ] ZonesXMLLoader           ( 145) - Loading zone: 0_semos_plains_n_e2
+2018-07-26 11:16:53 INFO  [main      ] ZonesXMLLoader           ( 145) - Loading zone: 0_semos_mountain_n_e2
+2018-07-26 11:16:53 INFO  [main      ] ZonesXMLLoader           ( 145) - Loading zone: 0_semos_mountain_w2
+2018-07-26 11:16:53 INFO  [main      ] ZonesXMLLoader           ( 145) - Loading zone: 0_semos_plains_w
+2018-07-26 11:16:53 INFO  [main      ] ZonesXMLLoader           ( 145) - Loading zone: int_semos_guard_house
+2018-07-26 11:16:53 INFO  [main      ] ConfiguratorDescriptor   ( 103) - Configuring zone [int_semos_guard_house] with: games.stendhal.server.maps.semos.guardhouse.StarterNPC
+2018-07-26 11:16:53 INFO  [main      ] ConfiguratorDescriptor   ( 103) - Configuring zone [int_semos_guard_house] with: games.stendhal.server.maps.semos.guardhouse.RatsCreatures
+2018-07-26 11:16:53 INFO  [main      ] ZonesXMLLoader           ( 145) - Loading zone: int_semos_hostel
+2018-07-26 11:16:53 INFO  [main      ] ConfiguratorDescriptor   ( 103) - Configuring zone [int_semos_hostel] with: games.stendhal.server.maps.semos.hostel.KidsNPCs
+2018-07-26 11:16:53 INFO  [main      ] ConfiguratorDescriptor   ( 103) - Configuring zone [int_semos_hostel] with: games.stendhal.server.maps.semos.hostel.BoyNPC
+2018-07-26 11:16:53 INFO  [main      ] ZonesXMLLoader           ( 145) - Loading zone: 0_semos_village_w
+2018-07-26 11:16:53 INFO  [main      ] ConfiguratorDescriptor   ( 103) - Configuring zone [0_semos_village_w] with: games.stendhal.server.maps.semos.village.RatsCreatures
+2018-07-26 11:16:53 INFO  [main      ] ConfiguratorDescriptor   ( 103) - Configuring zone [0_semos_village_w] with: games.stendhal.server.maps.semos.village.SheepSellerNPC
+2018-07-26 11:16:54 INFO  [main      ] ZonesXMLLoader           ( 145) - Loading zone: 0_semos_city
+2018-07-26 11:16:54 INFO  [main      ] ConfiguratorDescriptor   ( 103) - Configuring zone [0_semos_city] with: games.stendhal.server.entity.mapstuff.office.StoredEntityMoveConfigurator
+2018-07-26 11:16:54 INFO  [main      ] ConfiguratorDescriptor   ( 103) - Configuring zone [0_semos_city] with: games.stendhal.server.entity.mapstuff.chest.StoredChestConfigurator
+2018-07-26 11:16:54 INFO  [main      ] ConfiguratorDescriptor   ( 103) - Configuring zone [0_semos_city] with: games.stendhal.server.maps.semos.city.GossipNPC
+2018-07-26 11:16:54 INFO  [main      ] ConfiguratorDescriptor   ( 103) - Configuring zone [0_semos_city] with: games.stendhal.server.maps.semos.city.GreeterNPC
+2018-07-26 11:16:54 INFO  [main      ] ConfiguratorDescriptor   ( 103) - Configuring zone [0_semos_city] with: games.stendhal.server.maps.semos.city.HealerNPC
+2018-07-26 11:16:54 INFO  [main      ] ConfiguratorDescriptor   ( 103) - Configuring zone [0_semos_city] with: games.stendhal.server.maps.semos.city.OracleNPC
+2018-07-26 11:16:54 INFO  [main      ] ConfiguratorDescriptor   ( 103) - Configuring zone [0_semos_city] with: games.stendhal.server.maps.semos.city.RetireeNPC
+2018-07-26 11:16:54 INFO  [main      ] ConfiguratorDescriptor   ( 103) - Configuring zone [0_semos_city] with: games.stendhal.server.maps.semos.city.SheepBuyerNPC
+2018-07-26 11:16:54 INFO  [main      ] ConfiguratorDescriptor   ( 103) - Configuring zone [0_semos_city] with: games.stendhal.server.maps.semos.city.SignLessorNPC
+2018-07-26 11:16:54 INFO  [main      ] ConfiguratorDescriptor   ( 107) - Configuring zone [0_semos_city] skipping: games.stendhal.server.maps.semos.city.MagicTeacherNPC
+2018-07-26 11:16:54 INFO  [main      ] ConfiguratorDescriptor   ( 103) - Configuring zone [0_semos_city] with: games.stendhal.server.maps.semos.city.PuppyNPC
+2018-07-26 11:16:54 INFO  [main      ] ZonesXMLLoader           ( 145) - Loading zone: int_semos_tavern_0
+2018-07-26 11:16:54 INFO  [main      ] ConfiguratorDescriptor   ( 103) - Configuring zone [int_semos_tavern_0] with: games.stendhal.server.maps.semos.tavern.BarMaidNPC
+2018-07-26 11:16:54 INFO  [main      ] ConfiguratorDescriptor   ( 103) - Configuring zone [int_semos_tavern_0] with: games.stendhal.server.maps.semos.tavern.TraderNPC
+2018-07-26 11:16:54 INFO  [main      ] ConfiguratorDescriptor   ( 103) - Configuring zone [int_semos_tavern_0] with: games.stendhal.server.maps.semos.tavern.DiceDealerNPC
+2018-07-26 11:16:54 INFO  [main      ] ConfiguratorDescriptor   ( 103) - Configuring zone [int_semos_tavern_0] with: games.stendhal.server.maps.semos.tavern.market.TradeCenterZoneConfigurator
+2018-07-26 11:16:54 INFO  [main      ] ZonesXMLLoader           ( 145) - Loading zone: int_semos_tavern_1
+2018-07-26 11:16:54 INFO  [main      ] ConfiguratorDescriptor   ( 103) - Configuring zone [int_semos_tavern_1] with: games.stendhal.server.maps.semos.tavern.RareWeaponsSellerNPC
+2018-07-26 11:16:54 INFO  [main      ] ConfiguratorDescriptor   ( 103) - Configuring zone [int_semos_tavern_1] with: games.stendhal.server.maps.semos.tavern.BowAndArrowSellerNPC
+2018-07-26 11:16:54 INFO  [main      ] ZonesXMLLoader           ( 145) - Loading zone: int_semos_temple
+2018-07-26 11:16:54 INFO  [main      ] ConfiguratorDescriptor   ( 103) - Configuring zone [int_semos_temple] with: games.stendhal.server.maps.semos.temple.HealerNPC
+2018-07-26 11:16:54 INFO  [main      ] ConfiguratorDescriptor   ( 103) - Configuring zone [int_semos_temple] with: games.stendhal.server.maps.semos.temple.TelepathNPC
+2018-07-26 11:16:54 INFO  [main      ] ZonesXMLLoader           ( 145) - Loading zone: int_semos_blacksmith
+2018-07-26 11:16:54 INFO  [main      ] ConfiguratorDescriptor   ( 103) - Configuring zone [int_semos_blacksmith] with: games.stendhal.server.maps.semos.blacksmith.BlacksmithNPC
+2018-07-26 11:16:54 INFO  [main      ] ConfiguratorDescriptor   ( 103) - Configuring zone [int_semos_blacksmith] with: games.stendhal.server.maps.semos.blacksmith.BlacksmithAssistantNPC
+2018-07-26 11:16:54 INFO  [main      ] ZonesXMLLoader           ( 145) - Loading zone: int_semos_library
+2018-07-26 11:16:54 INFO  [main      ] ConfiguratorDescriptor   ( 103) - Configuring zone [int_semos_library] with: games.stendhal.server.maps.semos.library.HistorianGeographerNPC
+2018-07-26 11:16:54 INFO  [main      ] ConfiguratorDescriptor   ( 103) - Configuring zone [int_semos_library] with: games.stendhal.server.maps.semos.library.LibrarianNPC
+2018-07-26 11:16:54 INFO  [main      ] ZonesXMLLoader           ( 145) - Loading zone: int_semos_storage_0
+2018-07-26 11:16:54 INFO  [main      ] ConfiguratorDescriptor   ( 103) - Configuring zone [int_semos_storage_0] with: games.stendhal.server.maps.semos.storage.HousewifeNPC
+2018-07-26 11:16:54 INFO  [main      ] ZonesXMLLoader           ( 145) - Loading zone: int_semos_storage_-1
+2018-07-26 11:16:54 INFO  [main      ] ZonesXMLLoader           ( 145) - Loading zone: int_semos_bank
+2018-07-26 11:16:54 INFO  [main      ] ConfiguratorDescriptor   ( 103) - Configuring zone [int_semos_bank] with: games.stendhal.server.core.config.zone.NoTeleportIn
+2018-07-26 11:16:54 INFO  [main      ] ConfiguratorDescriptor   ( 103) - Configuring zone [int_semos_bank] with: games.stendhal.server.maps.semos.bank.CustomerAdvisorNPC
+2018-07-26 11:16:54 INFO  [main      ] ZonesXMLLoader           ( 145) - Loading zone: int_semos_townhall
+2018-07-26 11:16:54 INFO  [main      ] ConfiguratorDescriptor   ( 103) - Configuring zone [int_semos_townhall] with: games.stendhal.server.maps.semos.townhall.MayorNPC
+2018-07-26 11:16:54 INFO  [main      ] ConfiguratorDescriptor   ( 103) - Configuring zone [int_semos_townhall] with: games.stendhal.server.maps.semos.townhall.DecencyAndMannersWardenNPC
+2018-07-26 11:16:54 INFO  [main      ] ZonesXMLLoader           ( 145) - Loading zone: int_semos_bakery
+2018-07-26 11:16:54 INFO  [main      ] ConfiguratorDescriptor   ( 103) - Configuring zone [int_semos_bakery] with: games.stendhal.server.maps.semos.bakery.ChefNPC
+2018-07-26 11:16:54 INFO  [main      ] ConfiguratorDescriptor   ( 103) - Configuring zone [int_semos_bakery] with: games.stendhal.server.maps.semos.bakery.ShopAssistantNPC
+2018-07-26 11:16:54 INFO  [main      ] ConfiguratorDescriptor   ( 103) - Configuring zone [int_semos_bakery] with: games.stendhal.server.maps.semos.bakery.ItemsOnTable
+2018-07-26 11:16:54 INFO  [main      ] ZonesXMLLoader           ( 145) - Loading zone: int_semos_house
+2018-07-26 11:16:54 INFO  [main      ] ConfiguratorDescriptor   ( 103) - Configuring zone [int_semos_house] with: games.stendhal.server.maps.semos.house.FlowerSellerNPC
+2018-07-26 11:16:54 INFO  [main      ] ConfiguratorDescriptor   ( 103) - Configuring zone [int_semos_house] with: games.stendhal.server.maps.semos.house.SpiritTrapperNPC
+2018-07-26 11:16:54 INFO  [main      ] ConfiguratorDescriptor   ( 103) - Configuring zone [int_semos_house] with: games.stendhal.server.maps.semos.house.AdminHelpNPC
+2018-07-26 11:16:54 INFO  [main      ] ZonesXMLLoader           ( 145) - Loading zone: 0_semos_road_e
+2018-07-26 11:16:54 INFO  [main      ] ConfiguratorDescriptor   ( 103) - Configuring zone [0_semos_road_e] with: games.stendhal.server.maps.semos.road.BoyGuardianNPC
+2018-07-26 11:16:54 INFO  [main      ] ZonesXMLLoader           ( 145) - Loading zone: int_semos_swanky_pad
+2018-07-26 11:16:54 INFO  [main      ] ConfiguratorDescriptor   ( 103) - Configuring zone [int_semos_swanky_pad] with: games.stendhal.server.maps.semos.pad.DealerNPC
+2018-07-26 11:16:54 INFO  [main      ] ZonesXMLLoader           ( 145) - Loading zone: 0_semos_road_se
+2018-07-26 11:16:54 INFO  [main      ] ZonesXMLLoader           ( 145) - Loading zone: 0_semos_plains_s
+2018-07-26 11:16:54 INFO  [main      ] ConfiguratorDescriptor   ( 103) - Configuring zone [0_semos_plains_s] with: games.stendhal.server.maps.semos.plains.ExperiencedWarriorNPC
+2018-07-26 11:16:54 INFO  [main      ] ZonesXMLLoader           ( 145) - Loading zone: 0_semos_forest_s
+2018-07-26 11:16:54 INFO  [main      ] ZonesXMLLoader           ( 145) - Loading zone: -1_semos_mine_n2_w2
+2018-07-26 11:16:54 INFO  [main      ] ZonesXMLLoader           ( 145) - Loading zone: -1_semos_mine_n2_e
+2018-07-26 11:16:54 INFO  [main      ] ZonesXMLLoader           ( 145) - Loading zone: -1_semos_mine_n2_e2
+2018-07-26 11:16:54 INFO  [main      ] ZonesXMLLoader           ( 145) - Loading zone: -1_semos_mine_n2
+2018-07-26 11:16:54 INFO  [main      ] ConfiguratorDescriptor   ( 103) - Configuring zone [-1_semos_mine_n2] with: games.stendhal.server.entity.mapstuff.block.BlockZoneConfigurator
+2018-07-26 11:16:54 INFO  [main      ] ConfiguratorDescriptor   ( 103) - Configuring zone [-1_semos_mine_n2] with: games.stendhal.server.entity.mapstuff.block.BlockZoneConfigurator
+2018-07-26 11:16:54 INFO  [main      ] ConfiguratorDescriptor   ( 103) - Configuring zone [-1_semos_mine_n2] with: games.stendhal.server.entity.mapstuff.block.BlockZoneConfigurator
+2018-07-26 11:16:54 INFO  [main      ] ConfiguratorDescriptor   ( 103) - Configuring zone [-1_semos_mine_n2] with: games.stendhal.server.entity.mapstuff.block.BlockZoneConfigurator
+2018-07-26 11:16:54 INFO  [main      ] ConfiguratorDescriptor   ( 103) - Configuring zone [-1_semos_mine_n2] with: games.stendhal.server.maps.semos.mines.DwarfGuardianNPC
+2018-07-26 11:16:54 INFO  [main      ] ConfiguratorDescriptor   ( 103) - Configuring zone [-1_semos_mine_n2] with: games.stendhal.server.maps.semos.mines.MinerNPC
+2018-07-26 11:16:54 INFO  [main      ] ZonesXMLLoader           ( 145) - Loading zone: -1_semos_mine_ne
+2018-07-26 11:16:54 INFO  [main      ] ZonesXMLLoader           ( 145) - Loading zone: -1_semos_mine_n_e2
+2018-07-26 11:16:54 INFO  [main      ] ZonesXMLLoader           ( 145) - Loading zone: int_wofol_house1
+2018-07-26 11:16:54 INFO  [main      ] ZonesXMLLoader           ( 145) - Loading zone: int_wofol_house2
+2018-07-26 11:16:54 INFO  [main      ] ZonesXMLLoader           ( 145) - Loading zone: int_wofol_house3
+2018-07-26 11:16:54 INFO  [main      ] ZonesXMLLoader           ( 145) - Loading zone: -1_semos_mine_n_w2
+2018-07-26 11:16:54 INFO  [main      ] ZonesXMLLoader           ( 145) - Loading zone: int_wofol_house4
+2018-07-26 11:16:54 INFO  [main      ] ConfiguratorDescriptor   ( 103) - Configuring zone [int_wofol_house4] with: games.stendhal.server.maps.wofol.house4.TraderNPC
+2018-07-26 11:16:54 INFO  [main      ] ZonesXMLLoader           ( 145) - Loading zone: int_wofol_house5
+2018-07-26 11:16:54 INFO  [main      ] ConfiguratorDescriptor   ( 103) - Configuring zone [int_wofol_house5] with: games.stendhal.server.maps.wofol.house5.GhostNPC
+2018-07-26 11:16:54 INFO  [main      ] ZonesXMLLoader           ( 145) - Loading zone: int_wofol_house7
+2018-07-26 11:16:54 INFO  [main      ] ZonesXMLLoader           ( 145) - Loading zone: int_wofol_blacksmith
+2018-07-26 11:16:54 INFO  [main      ] ConfiguratorDescriptor   ( 103) - Configuring zone [int_wofol_blacksmith] with: games.stendhal.server.maps.wofol.blacksmith.BlacksmithNPC
+2018-07-26 11:16:54 INFO  [main      ] ZonesXMLLoader           ( 145) - Loading zone: int_wofol_house8
+2018-07-26 11:16:54 INFO  [main      ] ZonesXMLLoader           ( 145) - Loading zone: int_wofol_house9
+2018-07-26 11:16:54 INFO  [main      ] ZonesXMLLoader           ( 145) - Loading zone: int_wofol_house6
+2018-07-26 11:16:54 INFO  [main      ] ZonesXMLLoader           ( 145) - Loading zone: int_wofol_house10
+2018-07-26 11:16:54 INFO  [main      ] ZonesXMLLoader           ( 145) - Loading zone: int_wofol_library_0
+2018-07-26 11:16:54 INFO  [main      ] ZonesXMLLoader           ( 145) - Loading zone: int_wofol_library_1
+2018-07-26 11:16:54 INFO  [main      ] ZonesXMLLoader           ( 145) - Loading zone: int_wofol_library_2
+2018-07-26 11:16:54 INFO  [main      ] ZonesXMLLoader           ( 145) - Loading zone: int_wofol_bar
+2018-07-26 11:16:54 INFO  [main      ] ConfiguratorDescriptor   ( 103) - Configuring zone [int_wofol_bar] with: games.stendhal.server.maps.wofol.bar.KoboldBarRegularNPC
+2018-07-26 11:16:54 INFO  [main      ] ConfiguratorDescriptor   ( 103) - Configuring zone [int_wofol_bar] with: games.stendhal.server.maps.wofol.bar.KoboldBarmaidNPC
+2018-07-26 11:16:54 INFO  [main      ] ZonesXMLLoader           ( 145) - Loading zone: int_wofol_bakery
+2018-07-26 11:16:54 INFO  [main      ] ConfiguratorDescriptor   ( 103) - Configuring zone [int_wofol_bakery] with: games.stendhal.server.maps.wofol.bakery.BakerNPC
+2018-07-26 11:16:54 INFO  [main      ] ZonesXMLLoader           ( 145) - Loading zone: int_wofol_townhall
+2018-07-26 11:16:54 INFO  [main      ] ZonesXMLLoader           ( 145) - Loading zone: int_wofol_warehouse
+2018-07-26 11:16:54 INFO  [main      ] ZonesXMLLoader           ( 145) - Loading zone: int_wofol_weaponshop
+2018-07-26 11:16:54 INFO  [main      ] ZonesXMLLoader           ( 145) - Loading zone: -1_semos_mine_nw
+2018-07-26 11:16:54 INFO  [main      ] ZonesXMLLoader           ( 145) - Loading zone: -1_semos_caves
+2018-07-26 11:16:54 INFO  [main      ] ConfiguratorDescriptor   ( 103) - Configuring zone [-1_semos_caves] with: games.stendhal.server.maps.semos.caves.BabyDragonSellerNPC
+2018-07-26 11:16:54 INFO  [main      ] ZonesXMLLoader           ( 145) - Loading zone: -1_kotoch_entrance_n
+2018-07-26 11:16:54 INFO  [main      ] ConfiguratorDescriptor   ( 103) - Configuring zone [-1_kotoch_entrance_n] with: games.stendhal.server.maps.kotoch.SmithNPC
+2018-07-26 11:16:54 INFO  [main      ] ZonesXMLLoader           ( 145) - Loading zone: -1_semos_dungeon
+2018-07-26 11:16:54 INFO  [main      ] ZonesXMLLoader           ( 145) - Loading zone: -1_semos_jail
+2018-07-26 11:16:54 INFO  [main      ] ConfiguratorDescriptor   ( 103) - Configuring zone [-1_semos_jail] with: games.stendhal.server.entity.player.Jail
+2018-07-26 11:16:54 INFO  [main      ] ConfiguratorDescriptor   ( 103) - Configuring zone [-1_semos_jail] with: games.stendhal.server.core.config.zone.NoTeleport
+2018-07-26 11:16:54 INFO  [main      ] ConfiguratorDescriptor   ( 103) - Configuring zone [-1_semos_jail] with: games.stendhal.server.maps.semos.jail.GuardNPC
+2018-07-26 11:16:54 INFO  [main      ] ConfiguratorDescriptor   ( 103) - Configuring zone [-1_semos_jail] with: games.stendhal.server.maps.semos.jail.InmateNPC
+2018-07-26 11:16:54 INFO  [main      ] ConfiguratorDescriptor   ( 103) - Configuring zone [-1_semos_jail] with: games.stendhal.server.core.config.zone.NoItemMove
+2018-07-26 11:16:54 INFO  [main      ] ZonesXMLLoader           ( 145) - Loading zone: -1_semos_catacombs_ne
+2018-07-26 11:16:54 INFO  [main      ] ZonesXMLLoader           ( 145) - Loading zone: -1_semos_catacombs_nw
+2018-07-26 11:16:54 INFO  [main      ] ZonesXMLLoader           ( 145) - Loading zone: -1_semos_catacombs_se
+2018-07-26 11:16:54 INFO  [main      ] ZonesXMLLoader           ( 145) - Loading zone: -1_semos_catacombs_sw
+2018-07-26 11:16:54 INFO  [main      ] ZonesXMLLoader           ( 145) - Loading zone: -1_semos_yeti_cave
+2018-07-26 11:16:54 INFO  [main      ] ConfiguratorDescriptor   ( 103) - Configuring zone [-1_semos_yeti_cave] with: games.stendhal.server.maps.semos.yeticave.MrYetiNPC
+2018-07-26 11:16:54 INFO  [main      ] ConfiguratorDescriptor   ( 103) - Configuring zone [-1_semos_yeti_cave] with: games.stendhal.server.maps.semos.yeticave.MrsYetiNPC
+2018-07-26 11:16:54 INFO  [main      ] ZonesXMLLoader           ( 145) - Loading zone: -2_semos_mine_n2_e
+2018-07-26 11:16:54 INFO  [main      ] ZonesXMLLoader           ( 145) - Loading zone: -2_semos_mine_n2_e2
+2018-07-26 11:16:54 INFO  [main      ] ZonesXMLLoader           ( 145) - Loading zone: -2_semos_mine_n2_e3
+2018-07-26 11:16:54 INFO  [main      ] ZonesXMLLoader           ( 145) - Loading zone: -2_semos_mine_ne
+2018-07-26 11:16:54 INFO  [main      ] ZonesXMLLoader           ( 145) - Loading zone: -2_semos_mine_n_e2
+2018-07-26 11:16:54 INFO  [main      ] ZonesXMLLoader           ( 145) - Loading zone: -2_semos_mine_n_e3
+2018-07-26 11:16:54 INFO  [main      ] ZonesXMLLoader           ( 145) - Loading zone: -2_semos_mine_e
+2018-07-26 11:16:54 INFO  [main      ] ZonesXMLLoader           ( 145) - Loading zone: -2_semos_mine_e2
+2018-07-26 11:16:54 INFO  [main      ] ZonesXMLLoader           ( 145) - Loading zone: -2_semos_mine_e3
+2018-07-26 11:16:54 INFO  [main      ] ZonesXMLLoader           ( 145) - Loading zone: -2_semos_mine_w2
+2018-07-26 11:16:54 INFO  [main      ] ConfiguratorDescriptor   ( 103) - Configuring zone [-2_semos_mine_w2] with: games.stendhal.server.maps.semos.mines.HighPriestNPC
+2018-07-26 11:16:54 INFO  [main      ] ZonesXMLLoader           ( 145) - Loading zone: -2_semos_dungeon
+2018-07-26 11:16:54 INFO  [main      ] ZonesXMLLoader           ( 145) - Loading zone: -2_semos_jail
+2018-07-26 11:16:54 INFO  [main      ] ConfiguratorDescriptor   ( 103) - Configuring zone [-2_semos_jail] with: games.stendhal.server.maps.semos.jail.JailKeeperNPC
+2018-07-26 11:16:54 INFO  [main      ] ConfiguratorDescriptor   ( 103) - Configuring zone [-2_semos_jail] with: games.stendhal.server.core.config.zone.NoItemMove
+2018-07-26 11:16:54 INFO  [main      ] ZonesXMLLoader           ( 145) - Loading zone: -3_semos_jail
+2018-07-26 11:16:54 INFO  [main      ] ConfiguratorDescriptor   ( 103) - Configuring zone [-3_semos_jail] with: games.stendhal.server.core.config.zone.NoMoveTo
+2018-07-26 11:16:54 INFO  [main      ] ConfiguratorDescriptor   ( 103) - Configuring zone [-3_semos_jail] with: games.stendhal.server.core.config.zone.NoItemMove
+2018-07-26 11:16:54 INFO  [main      ] ZonesXMLLoader           ( 145) - Loading zone: -2_semos_catacombs
+2018-07-26 11:16:54 INFO  [main      ] ZonesXMLLoader           ( 145) - Loading zone: -3_semos_dungeon
+2018-07-26 11:16:54 INFO  [main      ] ZonesXMLLoader           ( 145) - Loading zone: -3_semos_catacombs
+2018-07-26 11:16:54 INFO  [main      ] ConfiguratorDescriptor   ( 103) - Configuring zone [-3_semos_catacombs] with: games.stendhal.server.maps.semos.catacombs.VampireLordCreature
+2018-07-26 11:16:54 INFO  [main      ] ZonesXMLLoader           ( 145) - Loading zone: -4_semos_dungeon
+2018-07-26 11:16:54 INFO  [main      ] ConfiguratorDescriptor   ( 103) - Configuring zone [-4_semos_dungeon] with: games.stendhal.server.maps.semos.dungeon.SheepBuyerNPC
+2018-07-26 11:16:54 INFO  [main      ] ZonesXMLLoader           ( 145) - Loading zone: -5_kanmararn_entrance
+2018-07-26 11:16:54 INFO  [main      ] ZonesXMLLoader           ( 145) - Loading zone: -6_kanmararn_city
+2018-07-26 11:16:54 INFO  [main      ] ConfiguratorDescriptor   ( 103) - Configuring zone [-6_kanmararn_city] with: games.stendhal.server.maps.semos.kanmararn.CowardSoldierNPC
+2018-07-26 11:16:54 INFO  [main      ] ConfiguratorDescriptor   ( 103) - Configuring zone [-6_kanmararn_city] with: games.stendhal.server.maps.semos.kanmararn.SergeantNPC
+2018-07-26 11:16:54 INFO  [main      ] ZonesXMLLoader           ( 145) - Loading zone: -7_kanmararn_prison
+2018-07-26 11:16:54 INFO  [main      ] ConfiguratorDescriptor   ( 103) - Configuring zone [-7_kanmararn_prison] with: games.stendhal.server.maps.semos.kanmararn.DwarfGuardNPC
+2018-07-26 11:16:55 INFO  [main      ] ConfiguratorDescriptor   ( 103) - Configuring zone [-7_kanmararn_prison] with: games.stendhal.server.maps.semos.kanmararn.DuergarKingCreature
+2018-07-26 11:16:55 INFO  [main      ] ZonesXMLLoader           ( 145) - Loading zone: 1_dreamscape
+2018-07-26 11:16:55 INFO  [main      ] ConfiguratorDescriptor   ( 103) - Configuring zone [1_dreamscape] with: games.stendhal.server.core.config.zone.NoTeleportIn
+2018-07-26 11:16:55 INFO  [main      ] ZonesXMLLoader           ( 145) - Loading zone: int_afterlife
+2018-07-26 11:16:55 INFO  [main      ] ZonesXMLLoader           ( 145) - Loading zone: int_admin_playground
+2018-07-26 11:16:55 INFO  [main      ] ZonesXMLLoader           ( 145) - Loading zone: int_abstract_server_down
+2018-07-26 11:16:55 INFO  [main      ] ConfiguratorDescriptor   ( 103) - Configuring zone [int_abstract_server_down] with: games.stendhal.server.core.config.zone.NoTeleport
+2018-07-26 11:16:55 INFO  [main      ] ConfiguratorDescriptor   ( 103) - Configuring zone [int_abstract_server_down] with: games.stendhal.server.core.config.zone.NoItemMove
+2018-07-26 11:16:55 INFO  [main      ] ZonesXMLLoader           ( 145) - Loading zone: int_abstract_admin_investigation
+2018-07-26 11:16:55 INFO  [main      ] ConfiguratorDescriptor   ( 103) - Configuring zone [int_abstract_admin_investigation] with: games.stendhal.server.core.config.zone.NoTeleport
+2018-07-26 11:16:55 INFO  [main      ] ZonesXMLLoader           ( 145) - Loading zone: int_testing_grid
+2018-07-26 11:16:55 INFO  [main      ] ZonesXMLLoader           ( 145) - Loading zone: int_vault
+2018-07-26 11:16:55 INFO  [main      ] ZonesXMLLoader           ( 145) - Loading zone: int_adventure_island
+2018-07-26 11:16:55 INFO  [main      ] ZonesXMLLoader           ( 145) - Loading zone: int_pathfinding
+2018-07-26 11:16:55 INFO  [main      ] ConfiguratorDescriptor   ( 103) - Configuring zone [int_pathfinding] with: games.stendhal.server.maps.FeaturesTestArea
+2018-07-26 11:16:55 INFO  [main      ] StendhalRPRuleProcessor  ( 151) - Running Stendhal server VERSION 1.27
+2018-07-26 11:16:55 INFO  [main      ] StendhalQuestSystem      ( 238) - Loading Quest: AdosDeathmatch
+2018-07-26 11:16:55 INFO  [main      ] StendhalQuestSystem      ( 238) - Loading Quest: AmazonPrincess
+2018-07-26 11:16:55 INFO  [main      ] StendhalQuestSystem      ( 238) - Loading Quest: ArmorForDagobert
+2018-07-26 11:16:55 INFO  [main      ] StendhalQuestSystem      ( 238) - Loading Quest: BalloonForBobby
+2018-07-26 11:16:55 INFO  [main      ] StendhalQuestSystem      ( 238) - Loading Quest: Blackjack
+2018-07-26 11:16:55 INFO  [main      ] StendhalQuestSystem      ( 238) - Loading Quest: BowsForOuchit
+2018-07-26 11:16:55 INFO  [main      ] StendhalQuestSystem      ( 238) - Loading Quest: Campfire
+2018-07-26 11:16:55 INFO  [main      ] StendhalQuestSystem      ( 238) - Loading Quest: ChocolateForElisabeth
+2018-07-26 11:16:55 INFO  [main      ] StendhalQuestSystem      ( 238) - Loading Quest: CleanAthorsUnderground
+2018-07-26 11:16:55 INFO  [main      ] StendhalQuestSystem      ( 238) - Loading Quest: CleanStorageSpace
+2018-07-26 11:16:55 INFO  [main      ] StendhalQuestSystem      ( 238) - Loading Quest: CloakCollector
+2018-07-26 11:16:55 INFO  [main      ] StendhalQuestSystem      ( 238) - Loading Quest: CloakCollector2
+2018-07-26 11:16:55 INFO  [main      ] StendhalQuestSystem      ( 238) - Loading Quest: CloaksForBario
+2018-07-26 11:16:55 INFO  [main      ] StendhalQuestSystem      ( 238) - Loading Quest: ClubOfThorns
+2018-07-26 11:16:55 INFO  [main      ] StendhalQuestSystem      ( 238) - Loading Quest: CoalForHaunchy
+2018-07-26 11:16:55 INFO  [main      ] StendhalQuestSystem      ( 238) - Loading Quest: Coded Message from Finn Farmer
+2018-07-26 11:16:55 INFO  [main      ] StendhalQuestSystem      ( 238) - Loading Quest: CrownForTheWannaBeKing
+2018-07-26 11:16:55 INFO  [main      ] StendhalQuestSystem      ( 238) - Loading Quest: DailyItemQuest
+2018-07-26 11:16:55 INFO  [main      ] StendhalQuestSystem      ( 238) - Loading Quest: DailyMonsterQuest
+2018-07-26 11:16:55 INFO  [main      ] StendhalQuestSystem      ( 238) - Loading Quest: DiceGambling
+2018-07-26 11:16:55 INFO  [main      ] StendhalQuestSystem      ( 238) - Loading Quest: DragonLair
+2018-07-26 11:16:55 INFO  [main      ] StendhalQuestSystem      ( 238) - Loading Quest: ElfPrincess
+2018-07-26 11:16:55 INFO  [main      ] StendhalQuestSystem      ( 238) - Loading Quest: ElvishArmor
+2018-07-26 11:16:55 INFO  [main      ] StendhalQuestSystem      ( 238) - Loading Quest: EmotionCrystals
+2018-07-26 11:16:55 INFO  [main      ] StendhalQuestSystem      ( 238) - Loading Quest: FindGhosts
+2018-07-26 11:16:55 INFO  [main      ] StendhalQuestSystem      ( 238) - Loading Quest: FindJefsMom
+2018-07-26 11:16:55 INFO  [main      ] StendhalQuestSystem      ( 238) - Loading Quest: FindRatChildren
+2018-07-26 11:16:55 INFO  [main      ] StendhalQuestSystem      ( 238) - Loading Quest: FishermansLicenseQuiz
+2018-07-26 11:16:55 INFO  [main      ] StendhalQuestSystem      ( 238) - Loading Quest: FishermansLicenseCollector
+2018-07-26 11:16:55 INFO  [main      ] StendhalQuestSystem      ( 238) - Loading Quest: FishSoup
+2018-07-26 11:16:55 INFO  [main      ] StendhalQuestSystem      ( 238) - Loading Quest: Fish Soup For Hughie
+2018-07-26 11:16:55 INFO  [main      ] StendhalQuestSystem      ( 238) - Loading Quest: FruitsForCoralia
+2018-07-26 11:16:55 INFO  [main      ] StendhalQuestSystem      ( 238) - Loading Quest: GuessKills
+2018-07-26 11:16:55 INFO  [main      ] StendhalQuestSystem      ( 238) - Loading Quest: HatForMonogenes
+2018-07-26 11:16:55 INFO  [main      ] StendhalQuestSystem      ( 238) - Loading Quest: HelpTomi
+2018-07-26 11:16:55 INFO  [main      ] StendhalQuestSystem      ( 238) - Loading Quest: HelpMrsYeti
+2018-07-26 11:16:55 INFO  [main      ] StendhalQuestSystem      ( 238) - Loading Quest: Help with the Harvest
+2018-07-26 11:16:55 INFO  [main      ] StendhalQuestSystem      ( 238) - Loading Quest: HerbsForCarmen
+2018-07-26 11:16:55 INFO  [main      ] StendhalQuestSystem      ( 238) - Loading Quest: HouseBuying
+2018-07-26 11:16:55 INFO  [main      ] StendhalQuestSystem      ( 238) - Loading Quest: HungryJoshua
+2018-07-26 11:16:55 INFO  [main      ] StendhalQuestSystem      ( 238) - Loading Quest: IcecreamForAnnie
+2018-07-26 11:16:55 INFO  [main      ] StendhalQuestSystem      ( 238) - Loading Quest: ImperialPrincess
+2018-07-26 11:16:55 INFO  [main      ] StendhalQuestSystem      ( 238) - Loading Quest: JailedBarbarian
+2018-07-26 11:16:55 INFO  [main      ] StendhalQuestSystem      ( 238) - Loading Quest: JailedDwarf
+2018-07-26 11:16:55 INFO  [main      ] StendhalQuestSystem      ( 238) - Loading Quest: LearnAboutKarma
+2018-07-26 11:16:55 INFO  [main      ] StendhalQuestSystem      ( 238) - Loading Quest: LearnAboutOrbs
+2018-07-26 11:16:55 INFO  [main      ] StendhalQuestSystem      ( 238) - Loading Quest: LookBookforCeryl
+2018-07-26 11:16:55 INFO  [main      ] StendhalQuestSystem      ( 238) - Loading Quest: LookUpQuote
+2018-07-26 11:16:55 INFO  [main      ] StendhalQuestSystem      ( 238) - Loading Quest: KanmararnSoldiers
+2018-07-26 11:16:55 INFO  [main      ] StendhalQuestSystem      ( 238) - Loading Quest: KillDarkElves
+2018-07-26 11:16:55 INFO  [main      ] StendhalQuestSystem      ( 238) - Loading Quest: KillDhohrNuggetcutter
+2018-07-26 11:16:55 INFO  [main      ] StendhalQuestSystem      ( 238) - Loading Quest: KillEnemyArmy
+2018-07-26 11:16:55 INFO  [main      ] StendhalQuestSystem      ( 238) - Loading Quest: KillGnomes
+2018-07-26 11:16:55 INFO  [main      ] StendhalQuestSystem      ( 238) - Loading Quest: KillMonks
+2018-07-26 11:16:55 INFO  [main      ] StendhalQuestSystem      ( 238) - Loading Quest: KillSpiders
+2018-07-26 11:16:55 INFO  [main      ] StendhalQuestSystem      ( 238) - Loading Quest: KoboldishTorcibud
+2018-07-26 11:16:55 INFO  [main      ] StendhalQuestSystem      ( 238) - Loading Quest: Marriage
+2018-07-26 11:16:55 INFO  [main      ] StendhalQuestSystem      ( 238) - Loading Quest: Maze
+2018-07-26 11:16:55 INFO  [main      ] StendhalQuestSystem      ( 238) - Loading Quest: McPeglegIOU
+2018-07-26 11:16:55 INFO  [main      ] StendhalQuestSystem      ( 238) - Loading Quest: MeetBunny
+2018-07-26 11:16:55 INFO  [main      ] StendhalQuestSystem      ( 238) - Loading Quest: MedicineForTad
+2018-07-26 11:16:55 INFO  [main      ] StendhalQuestSystem      ( 238) - Loading Quest: MeetHackim
+2018-07-26 11:16:55 INFO  [main      ] StendhalQuestSystem      ( 238) - Loading Quest: MeetIo
+2018-07-26 11:16:55 INFO  [main      ] StendhalQuestSystem      ( 238) - Loading Quest: MeetKetteh
+2018-07-26 11:16:55 INFO  [main      ] StendhalQuestSystem      ( 238) - Loading Quest: MeetMarieHenri
+2018-07-26 11:16:55 INFO  [main      ] StendhalQuestSystem      ( 238) - Loading Quest: MeetMonogenes
+2018-07-26 11:16:55 INFO  [main      ] StendhalQuestSystem      ( 238) - Loading Quest: MeetSanta
+2018-07-26 11:16:55 INFO  [main      ] StendhalQuestSystem      ( 238) - Loading Quest: MeetZynn
+2018-07-26 11:16:55 INFO  [main      ] StendhalQuestSystem      ( 238) - Loading Quest: MithrilCloak
+2018-07-26 11:16:55 INFO  [main      ] StendhalQuestSystem      ( 238) - Loading Quest: MixtureForOrtiv
+2018-07-26 11:16:55 INFO  [main      ] StendhalQuestSystem      ( 238) - Loading Quest: NewsFromHackim
+2018-07-26 11:16:55 INFO  [main      ] StendhalQuestSystem      ( 238) - Loading Quest: ObsidianKnife
+2018-07-26 11:16:55 INFO  [main      ] StendhalQuestSystem      ( 238) - Loading Quest: PizzaDelivery
+2018-07-26 11:16:55 INFO  [main      ] StendhalQuestSystem      ( 238) - Loading Quest: PlinksToy
+2018-07-26 11:16:55 INFO  [main      ] StendhalQuestSystem      ( 238) - Loading Quest: RainbowBeans
+2018-07-26 11:16:55 INFO  [main      ] StendhalQuestSystem      ( 238) - Loading Quest: RestockFlowerShop
+2018-07-26 11:16:55 INFO  [main      ] StendhalQuestSystem      ( 238) - Loading Quest: ReverseArrow
+2018-07-26 11:16:55 INFO  [main      ] StendhalQuestSystem      ( 238) - Loading Quest: RingMaker
+2018-07-26 11:16:55 INFO  [main      ] StendhalQuestSystem      ( 238) - Loading Quest: TheSadScientist
+2018-07-26 11:16:55 INFO  [main      ] StendhalQuestSystem      ( 238) - Loading Quest: DivingLicenseQuiz
+2018-07-26 11:16:55 INFO  [main      ] StendhalQuestSystem      ( 238) - Loading Quest: Sheep Growing for Nishiya
+2018-07-26 11:16:55 WARN  [main      ] SolveRiddles$Riddles     ( 138) - /data/conf/riddles.xml not found. Using /data/conf/riddles-example.xml
+2018-07-26 11:16:55 INFO  [main      ] StendhalQuestSystem      ( 238) - Loading Quest: SolveRiddles
+2018-07-26 11:16:55 INFO  [main      ] StendhalQuestSystem      ( 238) - Loading Quest: SevenCherubs
+2018-07-26 11:16:55 INFO  [main      ] StendhalQuestSystem      ( 238) - Loading Quest: Snowballs
+2018-07-26 11:16:55 INFO  [main      ] StendhalQuestSystem      ( 238) - Loading Quest: Soup
+2018-07-26 11:16:55 INFO  [main      ] StendhalQuestSystem      ( 238) - Loading Quest: StuffForBaldemar
+2018-07-26 11:16:55 INFO  [main      ] StendhalQuestSystem      ( 238) - Loading Quest: StuffForVulcanus
+2018-07-26 11:16:55 INFO  [main      ] StendhalQuestSystem      ( 238) - Loading Quest: SuntanCreamForZara
+2018-07-26 11:16:55 INFO  [main      ] StendhalQuestSystem      ( 238) - Loading Quest: SuppliesForPhalk
+2018-07-26 11:16:55 INFO  [main      ] StendhalQuestSystem      ( 238) - Loading Quest: TakeGoldforGrafindle
+2018-07-26 11:16:55 INFO  [main      ] StendhalQuestSystem      ( 238) - Loading Quest: ThePiedPiper
+2018-07-26 11:16:55 INFO  [main      ] StendhalQuestSystem      ( 238) - Loading Quest: ToysCollector
+2018-07-26 11:16:55 INFO  [main      ] StendhalQuestSystem      ( 238) - Loading Quest: TrapsForKlaas
+2018-07-26 11:16:55 INFO  [main      ] StendhalQuestSystem      ( 238) - Loading Quest: UltimateCollector
+2018-07-26 11:16:55 INFO  [main      ] StendhalQuestSystem      ( 238) - Loading Quest: VampireSword
+2018-07-26 11:16:55 INFO  [main      ] StendhalQuestSystem      ( 238) - Loading Quest: WaterForXhiphin
+2018-07-26 11:16:55 INFO  [main      ] StendhalQuestSystem      ( 238) - Loading Quest: WeaponsCollector
+2018-07-26 11:16:55 INFO  [main      ] StendhalQuestSystem      ( 238) - Loading Quest: WeaponsCollector2
+2018-07-26 11:16:55 INFO  [main      ] StendhalQuestSystem      ( 238) - Loading Quest: WeeklyItemQuest
+2018-07-26 11:16:55 INFO  [main      ] StendhalQuestSystem      ( 238) - Loading Quest: WizardBank
+2018-07-26 11:16:55 INFO  [main      ] StendhalQuestSystem      ( 238) - Loading Quest: ZekielsPracticalTest
+2018-07-26 11:16:55 INFO  [main      ] StendhalQuestSystem      ( 238) - Loading Quest: ZooFood
+2018-07-26 11:16:55 INFO  [main      ] StendhalQuestSystem      ( 238) - Loading Quest: MeetStarter
+2018-07-26 11:16:55 INFO  [main      ] StendhalQuestSystem      ( 238) - Loading Quest: PaperChase
+2018-07-26 11:16:55 INFO  [main      ] StendhalQuestSystem      ( 238) - Loading Quest: SemosMineTownRevivalWeeks
+2018-07-26 11:16:56 INFO  [main      ] StendhalQuestSystem      ( 238) - Loading Quest: SemosUweQuest
+2018-07-26 11:16:56 INFO  [main      ] StendhalQuestSystem      ( 238) - Loading Quest: ManageUnsolvableTask
+2018-07-26 11:16:56 INFO  [main      ] StendhalRPRuleProcessor  ( 177) - No server extensions configured in ini file.
+2018-07-26 11:16:56 INFO  [main      ] marauroad                ( 122) - marauroa 3.9.5 is up and running... (startup time: 13.3 s)
+2018-07-26 11:16:56 INFO  [marauroad ] Statistics               ( 122) - Total/Used memory: 107008/89637
+2018-07-26 11:16:59 WARN  [mmandQueue] StendhalRPZone           (1670) [RPServerManager: DumpZonesCommand []] - no match: malleus_plain
+2018-07-26 11:16:59 WARN  [mmandQueue] StendhalRPZone           (1670) [RPServerManager: DumpZonesCommand []] - no match: bone_pillar
+2018-07-26 11:17:00 INFO  [mmandQueue] UpdateSearchIndexCommand (  45) [RPServerManager: games.stendhal.server.core.engine.dbcommand.UpdateSearchIndexCommand@6b1cf36e] - Completed dumping of search index in 148 milliseconds.
+2018-07-26 11:17:56 INFO  [marauroad ] Statistics               ( 122) - Total/Used memory: 106496/86277
+2018-07-26 11:18:56 INFO  [marauroad ] Statistics               ( 122) - Total/Used memory: 106496/77533
+2018-07-26 11:19:56 INFO  [marauroad ] Statistics               ( 122) - Total/Used memory: 106496/98311
+2018-07-26 11:20:11 WARN  [verManager] SourceObject             ( 316) Player [abcdef, -1424385949] Attributes of Class(): [targetslot=bag][sourceid=67][baseobject=69][baseitem=0][zoneid=0_semos_village_w][source_path=[69	content	0\]][type=equip][baseslot=content][targetobject=67][target_path=[67	uwebag\]]- tried to equip an entity into disallowed slot: class games.stendhal.server.entity.item.Money; equip rejected
+2018-07-26 11:20:14 WARN  [verManager] SourceObject             ( 316) Player [abcdef, -1424385949] Attributes of Class(): [targetslot=bag][sourceid=67][baseobject=69][baseitem=0][zoneid=0_semos_village_w][source_path=[69	content	0\]][type=equip][baseslot=content][targetobject=67][target_path=[67	uwebag\]]- tried to equip an entity into disallowed slot: class games.stendhal.server.entity.item.Money; equip rejected
+2018-07-26 11:20:15 WARN  [verManager] SourceObject             ( 316) Player [abcdef, -1424385949] Attributes of Class(): [targetslot=bag][sourceid=67][baseobject=69][baseitem=0][zoneid=0_semos_village_w][source_path=[69	content	0\]][type=equip][baseslot=content][targetobject=67][target_path=[67	uwebag\]]- tried to equip an entity into disallowed slot: class games.stendhal.server.entity.item.Money; equip rejected
+2018-07-26 11:20:15 WARN  [verManager] SourceObject             ( 316) Player [abcdef, -1424385949] Attributes of Class(): [targetslot=bag][sourceid=67][baseobject=69][baseitem=0][zoneid=0_semos_village_w][source_path=[69	content	0\]][type=equip][baseslot=content][targetobject=67][target_path=[67	uwebag\]]- tried to equip an entity into disallowed slot: class games.stendhal.server.entity.item.Money; equip rejected
+2018-07-26 11:20:16 WARN  [verManager] SourceObject             ( 316) Player [abcdef, -1424385949] Attributes of Class(): [targetslot=bag][sourceid=67][baseobject=69][baseitem=0][zoneid=0_semos_village_w][source_path=[69	content	0\]][type=equip][baseslot=content][targetobject=67][target_path=[67	uwebag\]]- tried to equip an entity into disallowed slot: class games.stendhal.server.entity.item.Money; equip rejected
+2018-07-26 11:20:16 WARN  [verManager] SourceObject             ( 316) Player [abcdef, -1424385949] Attributes of Class(): [targetslot=bag][sourceid=67][baseobject=69][baseitem=0][zoneid=0_semos_village_w][source_path=[69	content	0\]][type=equip][baseslot=content][targetobject=67][target_path=[67	uwebag\]]- tried to equip an entity into disallowed slot: class games.stendhal.server.entity.item.Money; equip rejected
+2018-07-26 11:20:17 WARN  [verManager] SourceObject             ( 316) Player [abcdef, -1424385949] Attributes of Class(): [targetslot=bag][sourceid=67][baseobject=69][baseitem=0][zoneid=0_semos_village_w][source_path=[69	content	0\]][type=equip][baseslot=content][targetobject=67][target_path=[67	uwebag\]]- tried to equip an entity into disallowed slot: class games.stendhal.server.entity.item.Money; equip rejected
+2018-07-26 11:20:18 WARN  [verManager] SourceObject             ( 316) Player [abcdef, -1424385949] Attributes of Class(): [targetslot=bag][sourceid=67][baseobject=69][baseitem=0][zoneid=0_semos_village_w][source_path=[69	content	0\]][type=equip][baseslot=content][targetobject=67][target_path=[67	uwebag\]]- tried to equip an entity into disallowed slot: class games.stendhal.server.entity.item.Money; equip rejected
+2018-07-26 11:20:56 INFO  [marauroad ] Statistics               ( 122) - Total/Used memory: 123392/88529
+2018-07-26 11:21:23 WARN  [verManager] SourceObject             ( 316) Player [abcdef, -1424385949] Attributes of Class(): [targetslot=uwebag][sourceid=67][zone=0_semos_village_w][baseobject=67][baseitem=12][zoneid=0_semos_village_w][source_path=[67	bag	12\]][type=equip][baseslot=bag][targetobject=67][target_path=[67	uwebag\]]- tried to equip an entity into disallowed slot: class games.stendhal.server.entity.item.Money; equip rejected
+2018-07-26 11:21:30 WARN  [verManager] SourceObject             ( 316) Player [abcdef, -1424385949] Attributes of Class(): [targetslot=uwebag][sourceid=67][zone=0_semos_village_w][baseobject=67][baseitem=13][zoneid=0_semos_village_w][source_path=[67	rhand	13\]][type=equip][baseslot=rhand][targetobject=67][target_path=[67	uwebag\]]- tried to equip an entity into disallowed slot: class games.stendhal.server.entity.item.Item; equip rejected
+2018-07-26 11:21:56 INFO  [marauroad ] Statistics               ( 122) - Total/Used memory: 123392/84701
+2018-07-26 11:21:57 WARN  [verManager] SourceObject             ( 316) Player [abcdef, -1424385949] Attributes of Class(): [targetslot=uwebag][sourceid=67][zone=0_semos_village_w][baseobject=73][baseitem=0][zoneid=0_semos_village_w][source_path=[73	content	0\]][type=equip][baseslot=content][targetobject=67][target_path=[67	uwebag\]]- tried to equip an entity into disallowed slot: class games.stendhal.server.entity.item.Money; equip rejected
+2018-07-26 11:22:51 WARN  [verManager] SourceObject             ( 316) Player [abcdef, -1424385949] Attributes of Class(): [targetslot=uwebag][sourceid=13][zone=int_semos_guard_house][baseobject=16][baseitem=1][zoneid=int_semos_guard_house][source_path=[16	content	1\]][type=equip][baseslot=content][targetobject=13][target_path=[13	uwebag\]]- tried to equip an entity into disallowed slot: class games.stendhal.server.entity.item.Money; equip rejected
+2018-07-26 11:22:56 INFO  [marauroad ] Statistics               ( 122) - Total/Used memory: 124416/76988
+2018-07-26 11:23:56 INFO  [marauroad ] Statistics               ( 122) - Total/Used memory: 124416/92606
+2018-07-26 11:24:56 INFO  [marauroad ] Statistics               ( 122) - Total/Used memory: 124416/79275
+2018-07-26 11:25:56 INFO  [marauroad ] Statistics               ( 122) - Total/Used memory: 124416/94181
+2018-07-26 11:26:23 INFO  [verManager] TeleporterBehaviour      ( 174) - Cannot place teleporting NPC Rose Leigh at 0_nalwor_forest_w 4 72
+2018-07-26 11:26:56 INFO  [marauroad ] Statistics               ( 122) - Total/Used memory: 122368/87170
+2018-07-26 11:27:56 INFO  [marauroad ] Statistics               ( 122) - Total/Used memory: 123392/74768
+2018-07-26 11:28:56 INFO  [marauroad ] Statistics               ( 122) - Total/Used memory: 123392/88821
+2018-07-26 11:29:56 INFO  [marauroad ] Statistics               ( 122) - Total/Used memory: 121344/76344
+2018-07-26 11:30:56 INFO  [marauroad ] Statistics               ( 122) - Total/Used memory: 121344/91180
+2018-07-26 11:31:56 INFO  [marauroad ] Statistics               ( 122) - Total/Used memory: 121856/81993
+2018-07-26 11:32:56 INFO  [marauroad ] Statistics               ( 122) - Total/Used memory: 121856/97615
+2018-07-26 11:33:56 INFO  [marauroad ] Statistics               ( 122) - Total/Used memory: 119808/86351
+2018-07-26 11:34:56 INFO  [marauroad ] Statistics               ( 122) - Total/Used memory: 119808/79000
+2018-07-26 11:35:31 INFO  [verManager] TeleporterBehaviour      ( 174) - Cannot place teleporting NPC Mizuno at 0_ados_swamp 100 31
+2018-07-26 11:35:31 INFO  [verManager] TeleporterBehaviour      ( 174) - Cannot place teleporting NPC Rose Leigh at 0_ados_city_n2 63 82
+2018-07-26 11:35:31 INFO  [verManager] TeleporterBehaviour      ( 174) - Cannot place teleporting NPC Rose Leigh at 0_ados_rock_w 101 93
+2018-07-26 11:35:56 INFO  [marauroad ] Statistics               ( 122) - Total/Used memory: 119808/93914
+2018-07-26 11:36:57 INFO  [marauroad ] Statistics               ( 122) - Total/Used memory: 117760/85734
+2018-07-26 11:37:57 INFO  [marauroad ] Statistics               ( 122) - Total/Used memory: 116224/81581
+2018-07-26 11:38:57 INFO  [marauroad ] Statistics               ( 122) - Total/Used memory: 116224/96189
+2018-07-26 11:39:57 INFO  [marauroad ] Statistics               ( 122) - Total/Used memory: 116736/91794
+2018-07-26 11:40:57 INFO  [marauroad ] Statistics               ( 122) - Total/Used memory: 116736/79310
+2018-07-26 11:41:57 INFO  [marauroad ] Statistics               ( 122) - Total/Used memory: 116736/79221
+2018-07-26 11:42:57 INFO  [marauroad ] Statistics               ( 122) - Total/Used memory: 115712/79516
+2018-07-26 11:43:57 INFO  [marauroad ] Statistics               ( 122) - Total/Used memory: 109056/79656
+2018-07-26 11:44:57 INFO  [marauroad ] Statistics               ( 122) - Total/Used memory: 114688/79506
+2018-07-26 11:45:57 INFO  [marauroad ] Statistics               ( 122) - Total/Used memory: 114688/93647
+2018-07-26 11:46:57 INFO  [marauroad ] Statistics               ( 122) - Total/Used memory: 113664/79057
+2018-07-26 11:47:57 INFO  [marauroad ] Statistics               ( 122) - Total/Used memory: 113664/93568
+2018-07-26 11:48:57 INFO  [marauroad ] Statistics               ( 122) - Total/Used memory: 114176/93364
+2018-07-26 11:49:14 INFO  [verManager] TeleporterBehaviour      ( 174) - Cannot place teleporting NPC Rose Leigh at 0_semos_mountain_n2_w2 44 91
+2018-07-26 11:49:14 INFO  [verManager] TeleporterBehaviour      ( 174) - Cannot place teleporting NPC Rose Leigh at 0_ados_forest_w2 26 100
+2018-07-26 11:49:14 INFO  [verManager] TeleporterBehaviour      ( 174) - Cannot place teleporting NPC Rose Leigh at 0_fado_forest 78 2
+2018-07-26 11:49:14 INFO  [verManager] TeleporterBehaviour      ( 174) - Cannot place teleporting NPC Rose Leigh at 0_kalavan_forest_e2 38 67
+2018-07-26 11:49:57 INFO  [marauroad ] Statistics               ( 122) - Total/Used memory: 114176/82296
+2018-07-26 11:50:57 INFO  [marauroad ] Statistics               ( 122) - Total/Used memory: 114176/82020
+2018-07-26 11:51:57 INFO  [marauroad ] Statistics               ( 122) - Total/Used memory: 114176/81175
+2018-07-26 11:52:57 INFO  [marauroad ] Statistics               ( 122) - Total/Used memory: 114176/80413
+2018-07-26 11:53:57 INFO  [marauroad ] Statistics               ( 122) - Total/Used memory: 114176/86216
+2018-07-26 11:54:57 INFO  [marauroad ] Statistics               ( 122) - Total/Used memory: 113152/85554
+2018-07-26 11:55:57 INFO  [marauroad ] Statistics               ( 122) - Total/Used memory: 113664/84892
+2018-07-26 11:56:57 INFO  [marauroad ] Statistics               ( 122) - Total/Used memory: 113664/84418
+2018-07-26 11:57:57 INFO  [marauroad ] Statistics               ( 122) - Total/Used memory: 103936/84091
+2018-07-26 11:58:22 INFO  [verManager] TeleporterBehaviour      ( 174) - Cannot place teleporting NPC Mizuno at 0_ados_city_s 114 99
+2018-07-26 11:58:57 INFO  [marauroad ] Statistics               ( 122) - Total/Used memory: 112128/87506
+2018-07-26 11:59:57 INFO  [marauroad ] Statistics               ( 122) - Total/Used memory: 112640/87165
+2018-07-26 12:00:57 INFO  [marauroad ] Statistics               ( 122) - Total/Used memory: 111616/87138
+2018-07-26 12:01:32 WARN  [Thread-4  ] marauroad                ( 207) - User requesting shutdown
+2018-07-26 12:01:32 WARN  [verManager] NIONetworkConnectionManager( 207) - NetworkServerManager interrupted. Finishing network layer.
+2018-07-26 12:01:32 INFO  [Thread-4  ] GameServerManager        ( 122) - STORING (abcdef) :Player [abcdef, -1424385949]
+2018-07-26 12:01:32 INFO  [Thread-4  ] GameServerManager        ( 122) - GAME Disconnecting /127.0.0.1:51196
+2018-07-26 12:01:33 INFO  [Thread-4  ] marauroad                ( 122) - Shutdown completed. See you later!
+2018-07-26 18:02:52 ERROR [main      ] DatabaseFactory          (  67) - Failed to initialize database
+java.lang.RuntimeException: marauroa.server.db.DatabaseConnectionException: Unable to create a connection to: jdbc:mysql://localhost:8889/marauroa127?useUnicode=yes&characterEncoding=UTF-8
+	at marauroa.server.db.AdapterFactory.create(AdapterFactory.java:92)
+	at marauroa.server.db.TransactionPool.createMinimumDBTransactions(TransactionPool.java:91)
+	at marauroa.server.db.TransactionPool.beginWork(TransactionPool.java:115)
+	at marauroa.server.game.db.DatabaseFactory.initializeDatabaseSchema(DatabaseFactory.java:76)
+	at marauroa.server.game.db.DatabaseFactory.internalInit(DatabaseFactory.java:65)
+	at marauroa.server.game.db.DatabaseFactory.initializeDatabase(DatabaseFactory.java:53)
+	at marauroa.server.marauroad.init(marauroad.java:321)
+	at marauroa.server.marauroad.main(marauroad.java:199)
+	at games.stendhal.server.StendhalServer.main(StendhalServer.java:61)
+Caused by: marauroa.server.db.DatabaseConnectionException: Unable to create a connection to: jdbc:mysql://localhost:8889/marauroa127?useUnicode=yes&characterEncoding=UTF-8
+	at marauroa.server.db.adapter.AbstractDatabaseAdapter.<init>(AbstractDatabaseAdapter.java:57)
+	at marauroa.server.db.adapter.MySQLDatabaseAdapter.<init>(MySQLDatabaseAdapter.java:44)
+	at marauroa.server.db.AdapterFactory.internalCreate(AdapterFactory.java:60)
+	at marauroa.server.db.AdapterFactory.create(AdapterFactory.java:79)
+	... 8 more
+Caused by: com.mysql.jdbc.exceptions.jdbc4.CommunicationsException: Communications link failure
+
+Last packet sent to the server was 0 ms ago.
+	at sun.reflect.NativeConstructorAccessorImpl.newInstance0(Native Method)
+	at sun.reflect.NativeConstructorAccessorImpl.newInstance(NativeConstructorAccessorImpl.java:62)
+	at sun.reflect.DelegatingConstructorAccessorImpl.newInstance(DelegatingConstructorAccessorImpl.java:45)
+	at java.lang.reflect.Constructor.newInstance(Constructor.java:423)
+	at com.mysql.jdbc.Util.handleNewInstance(Util.java:406)
+	at com.mysql.jdbc.SQLError.createCommunicationsException(SQLError.java:1074)
+	at com.mysql.jdbc.ConnectionImpl.createNewIO(ConnectionImpl.java:2104)
+	at com.mysql.jdbc.ConnectionImpl.<init>(ConnectionImpl.java:729)
+	at com.mysql.jdbc.JDBC4Connection.<init>(JDBC4Connection.java:46)
+	at sun.reflect.NativeConstructorAccessorImpl.newInstance0(Native Method)
+	at sun.reflect.NativeConstructorAccessorImpl.newInstance(NativeConstructorAccessorImpl.java:62)
+	at sun.reflect.DelegatingConstructorAccessorImpl.newInstance(DelegatingConstructorAccessorImpl.java:45)
+	at java.lang.reflect.Constructor.newInstance(Constructor.java:423)
+	at com.mysql.jdbc.Util.handleNewInstance(Util.java:406)
+	at com.mysql.jdbc.ConnectionImpl.getInstance(ConnectionImpl.java:302)
+	at com.mysql.jdbc.NonRegisteringDriver.connect(NonRegisteringDriver.java:283)
+	at java.sql.DriverManager.getConnection(DriverManager.java:664)
+	at java.sql.DriverManager.getConnection(DriverManager.java:208)
+	at marauroa.server.db.adapter.AbstractDatabaseAdapter.createConnection(AbstractDatabaseAdapter.java:102)
+	at marauroa.server.db.adapter.MySQLDatabaseAdapter.createConnection(MySQLDatabaseAdapter.java:59)
+	at marauroa.server.db.adapter.AbstractDatabaseAdapter.<init>(AbstractDatabaseAdapter.java:54)
+	... 11 more
+Caused by: java.net.ConnectException: Connection refused (Connection refused)
+	at java.net.PlainSocketImpl.socketConnect(Native Method)
+	at java.net.AbstractPlainSocketImpl.doConnect(AbstractPlainSocketImpl.java:350)
+	at java.net.AbstractPlainSocketImpl.connectToAddress(AbstractPlainSocketImpl.java:206)
+	at java.net.AbstractPlainSocketImpl.connect(AbstractPlainSocketImpl.java:188)
+	at java.net.SocksSocketImpl.connect(SocksSocketImpl.java:392)
+	at java.net.Socket.connect(Socket.java:589)
+	at java.net.Socket.connect(Socket.java:538)
+	at java.net.Socket.<init>(Socket.java:434)
+	at java.net.Socket.<init>(Socket.java:244)
+	at com.mysql.jdbc.StandardSocketFactory.connect(StandardSocketFactory.java:256)
+	at com.mysql.jdbc.MysqlIO.<init>(MysqlIO.java:276)
+	at com.mysql.jdbc.ConnectionImpl.createNewIO(ConnectionImpl.java:2027)
+	... 25 more

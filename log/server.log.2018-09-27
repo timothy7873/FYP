@@ -1,0 +1,8 @@
+2018-09-27 14:30:04 WARN  [verManager] RPServerManager          ( 207) - Turn duration overflow by 1734 ms:  28 287 295 1999 1999 2003 2003 2014 2025 2025 2025 2025
+2018-09-27 14:30:13 INFO  [marauroad ] Statistics               ( 122) - Total/Used memory: 121856/76412
+2018-09-27 14:31:13 INFO  [marauroad ] Statistics               ( 122) - Total/Used memory: 122880/81656
+2018-09-27 14:32:13 INFO  [marauroad ] Statistics               ( 122) - Total/Used memory: 116736/86438
+2018-09-27 14:33:13 INFO  [marauroad ] Statistics               ( 122) - Total/Used memory: 118272/76902
+2018-09-27 14:33:36 INFO  [verManager] TeleporterBehaviour      ( 174) - Cannot place teleporting NPC Mizuno at 0_ados_wall_n2 86 103
+2018-09-27 14:33:36 INFO  [verManager] TeleporterBehaviour      ( 174) - Cannot place teleporting NPC Mizuno at 0_ados_outside_w 70 111
+2018-09-27 14:33:36 INFO  [verManager] TeleporterBehaviour      ( 174) - Cannot place teleporting NPC Rose Leigh at 0_semos_mountain_n2_e 40 47

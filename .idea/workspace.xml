@@ -1,0 +1,716 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="ChangeListManager">
+    <list default="true" id="dfe4109c-6421-488a-bab6-30ce5c2a5c4d" name="Default" comment="" />
+    <ignored path="$PROJECT_DIR$/bin/" />
+    <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
+    <option name="SHOW_DIALOG" value="false" />
+    <option name="HIGHLIGHT_CONFLICTS" value="true" />
+    <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
+    <option name="LAST_RESOLUTION" value="IGNORE" />
+  </component>
+  <component name="FUSProjectUsageTrigger">
+    <session id="646207771">
+      <usages-collector id="statistics.lifecycle.project">
+        <counts>
+          <entry key="project.closed" value="12" />
+          <entry key="project.open.time.10" value="1" />
+          <entry key="project.open.time.12" value="3" />
+          <entry key="project.open.time.13" value="2" />
+          <entry key="project.open.time.14" value="1" />
+          <entry key="project.open.time.19" value="1" />
+          <entry key="project.open.time.2" value="1" />
+          <entry key="project.open.time.9" value="3" />
+          <entry key="project.opened" value="12" />
+        </counts>
+      </usages-collector>
+      <usages-collector id="statistics.file.extensions.open">
+        <counts>
+          <entry key="class" value="2" />
+          <entry key="java" value="40" />
+          <entry key="png" value="6" />
+          <entry key="xml" value="1" />
+        </counts>
+      </usages-collector>
+      <usages-collector id="statistics.file.types.open">
+        <counts>
+          <entry key="CLASS" value="2" />
+          <entry key="Image" value="6" />
+          <entry key="JAVA" value="40" />
+          <entry key="XML" value="1" />
+        </counts>
+      </usages-collector>
+      <usages-collector id="statistics.file.extensions.edit">
+        <counts>
+          <entry key="java" value="17" />
+        </counts>
+      </usages-collector>
+      <usages-collector id="statistics.file.types.edit">
+        <counts>
+          <entry key="JAVA" value="17" />
+        </counts>
+      </usages-collector>
+    </session>
+  </component>
+  <component name="FileEditorManager">
+    <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
+      <file pinned="false" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/data/sprites/examine/UweQuestionWrong.png">
+          <provider selected="true" editor-type-id="images" />
+        </entry>
+      </file>
+    </leaf>
+  </component>
+  <component name="FindInProjectRecents">
+    <findStrings>
+      <find>welcom</find>
+      <find>never</find>
+      <find>welcomeMessage</find>
+      <find>event</find>
+      <find>equipOrPutOnGround</find>
+      <find>sack</find>
+      <find>slot</find>
+      <find>hasslot</find>
+      <find>get</find>
+      <find>respawn</find>
+      <find>carry</find>
+      <find>startQuiz</find>
+      <find>getCurrentSpecies</find>
+      <find>putNextFishOnTable</find>
+      <find>cleanUpTable</find>
+      <find>generateRPCla</find>
+      <find>player</find>
+      <find>generateRPClass</find>
+      <find>kills</find>
+      <find>register</find>
+    </findStrings>
+  </component>
+  <component name="IdeDocumentHistory">
+    <option name="CHANGED_PATHS">
+      <list>
+        <option value="$PROJECT_DIR$/src/games/stendhal/server/maps/semos/tavern/BarMaidNPC.java" />
+        <option value="$PROJECT_DIR$/src/games/stendhal/server/core/events/TutorialNotifier.java" />
+        <option value="$PROJECT_DIR$/src/games/stendhal/server/core/engine/StendhalRPRuleProcessor.java" />
+        <option value="$PROJECT_DIR$/data/conf/log4j.properties" />
+        <option value="$PROJECT_DIR$/src/games/stendhal/server/entity/mapstuff/sign/QuestionSign.java" />
+        <option value="$PROJECT_DIR$/src/games/stendhal/server/core/engine/SingletonRepository.java" />
+        <option value="$PROJECT_DIR$/src/games/stendhal/server/maps/semos/wizardstower/WhiteLifeSorceressNPC.java" />
+        <option value="$PROJECT_DIR$/src/games/stendhal/client/gui/uwebag/UweBags.java" />
+        <option value="$PROJECT_DIR$/src/games/stendhal/client/actions/DropAction.java" />
+        <option value="$PROJECT_DIR$/src/games/stendhal/server/maps/quests/FishermansLicenseQuiz.java" />
+        <option value="$PROJECT_DIR$/src/games/stendhal/server/entity/player/PlayerRPClass.java" />
+        <option value="$PROJECT_DIR$/src/games/stendhal/server/core/rp/StendhalQuestSystem.java" />
+      </list>
+    </option>
+  </component>
+  <component name="JsBuildToolGruntFileManager" detection-done="true" sorting="DEFINITION_ORDER" />
+  <component name="JsBuildToolPackageJson" detection-done="true" sorting="DEFINITION_ORDER" />
+  <component name="JsFlowSettings">
+    <service-enabled>true</service-enabled>
+    <exe-path />
+    <other-services-enabled>true</other-services-enabled>
+    <auto-save>true</auto-save>
+  </component>
+  <component name="JsGulpfileManager">
+    <detection-done>true</detection-done>
+    <sorting>DEFINITION_ORDER</sorting>
+  </component>
+  <component name="ProjectFrameBounds" extendedState="6">
+    <option name="width" value="1440" />
+    <option name="height" value="900" />
+  </component>
+  <component name="ProjectInspectionProfilesVisibleTreeState">
+    <entry key="Project Default">
+      <profile-state>
+        <expanded-state>
+          <State>
+            <id />
+          </State>
+          <State>
+            <id>Android &gt; Lint &gt; Correctness</id>
+          </State>
+          <State>
+            <id>Android &gt; Lint &gt; Correctness &gt; Messages</id>
+          </State>
+          <State>
+            <id>Android &gt; Lint &gt; Internationalization</id>
+          </State>
+          <State>
+            <id>Android &gt; Lint &gt; Usability</id>
+          </State>
+          <State>
+            <id>Android Lint for Kotlin</id>
+          </State>
+          <State>
+            <id>CSS</id>
+          </State>
+          <State>
+            <id>Code style issuesJava</id>
+          </State>
+          <State>
+            <id>Declaration redundancyJava</id>
+          </State>
+          <State>
+            <id>General</id>
+          </State>
+          <State>
+            <id>Inheritance issuesJava</id>
+          </State>
+          <State>
+            <id>Java</id>
+          </State>
+          <State>
+            <id>Java 5Java language level migration aidsJava</id>
+          </State>
+          <State>
+            <id>Java language level migration aidsJava</id>
+          </State>
+          <State>
+            <id>Kotlin Android</id>
+          </State>
+          <State>
+            <id>Plugin DevKit</id>
+          </State>
+          <State>
+            <id>Reflective access issuesJava</id>
+          </State>
+        </expanded-state>
+      </profile-state>
+    </entry>
+  </component>
+  <component name="ProjectView">
+    <navigator proportions="" version="1">
+      <foldersAlwaysOnTop value="true" />
+    </navigator>
+    <panes>
+      <pane id="ProjectPane">
+        <subPane>
+          <expand>
+            <path>
+              <item name="stendhal-1.27" type="b2602c69:ProjectViewProjectNode" />
+              <item name="stendhal-1.27" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="stendhal-1.27" type="b2602c69:ProjectViewProjectNode" />
+              <item name="stendhal-1.27" type="462c0819:PsiDirectoryNode" />
+              <item name="data" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="stendhal-1.27" type="b2602c69:ProjectViewProjectNode" />
+              <item name="stendhal-1.27" type="462c0819:PsiDirectoryNode" />
+              <item name="src" type="462c0819:PsiDirectoryNode" />
+            </path>
+          </expand>
+          <select />
+        </subPane>
+      </pane>
+      <pane id="PackagesPane" />
+      <pane id="AndroidView" />
+      <pane id="Scope" />
+    </panes>
+  </component>
+  <component name="PropertiesComponent">
+    <property name="SearchEverywhereHistoryKey" value="UweQuestionWrong.png&#9;FILE&#9;file:///Users/lcshum/stendhal-src/stendhal-1.27/data/sprites/examine/UweQuestionWrong.png&#10;ForQuestCondition&#9;PSI&#9;JAVA://games.stendhal.server.entity.npc.condition.KilledForQuestCondition&#10;StendhalServerExtension&#9;PSI&#9;JAVA://games.stendhal.server.extension.StendhalServerExtension&#10;StendhalRPRuleProcessor&#9;FILE&#9;file:///Users/lcshum/stendhal-src/stendhal-1.27/src/games/stendhal/server/core/engine/StendhalRPRuleProcessor.java&#10;ImageViewPanel&#9;PSI&#9;JAVA://games.stendhal.client.gui.imageviewer.ImageViewPanel&#10;RPEventImageViewer&#9;PSI&#9;JAVA://games.stendhal.client.gui.imageviewer.RPEventImageViewer&#10;exam&#9;PSI&#9;JAVA://games.stendhal.client.events.ExamineEvent&#10;ExamineChatAction&#9;PSI&#9;JAVA://games.stendhal.server.entity.npc.action.ExamineChatAction&#10;exa&#9;PSI&#9;JAVA://games.stendhal.server.entity.npc.action.ExamineChatAction&#10;load&#9;FILE&#9;file:///Users/lcshum/stendhal-src/stendhal-1.27/src/games/stendhal/server/core/config/ItemsXMLLoader.java&#10;StendhalQuestSystem.java&#9;FILE&#9;file:///Users/lcshum/stendhal-src/stendhal-1.27/src/games/stendhal/server/core/rp/StendhalQuestSystem.java&#10;=.png&#9;FILE&#9;file:///Users/lcshum/stendhal-src/stendhal-1.27/data/sprites/items/symbols/=.png&#10;StendhalRPZone&#9;PSI&#9;JAVA://games.stendhal.server.core.engine.StendhalRPZone&#10;carry&#9;PSI&#9;JAVA://games.stendhal.server.entity.slot.Slots#CARRYING&#10;RPSlot&#9;PSI&#9;JAVA://marauroa.common.game.RPSlot&#10;GameServerManager&#9;PSI&#9;JAVA://marauroa.server.game.GameServerManager&#10;PlayerRPClass&#9;FILE&#9;file:///Users/lcshum/stendhal-src/stendhal-1.27/src/games/stendhal/server/entity/player/PlayerRPClass.java&#10;kil&#9;PSI&#9;JAVA://games.stendhal.server.maps.quests.KillBlordroughs&#10;Player&#9;FILE&#9;file:///Users/lcshum/stendhal-src/stendhal-1.27/src/games/stendhal/server/entity/player/Player.java&#10;generateRPClass&#9;PSI&#9;JAVA://games.stendhal.server.entity.Entity#generateRPClass&#10;setKeyedSlot&#9;PSI&#9;JAVA://games.stendhal.server.entity.player.Player#setKeyedSlot&#10;uweQues&#9;FILE&#9;file:///Users/lcshum/stendhal-src/stendhal-1.27/data/sprites/examine/UweQuestion.png&#10;startquiz&#9;PSI&#9;JAVA://games.stendhal.server.maps.quests.FishermansLicenseQuiz#startQuiz&#10;fish&#9;PSI&#9;JAVA://games.stendhal.server.maps.quests.FishermansLicenseQuiz&#10;items&#9;PSI&#9;JAVA://games.stendhal.server.entity.npc.action.StartRecordingRandomItemCollectionAction#items&#10;scroll&#9;PSI&#9;JAVA://games.stendhal.client.gui.ScrollerPanel#scrollingStarted&#10;StendhalQuestSystem&#9;PSI&#9;JAVA://games.stendhal.server.core.rp.StendhalQuestSystem&#10;symbols&#9;FILE&#9;file:///Users/lcshum/stendhal-src/stendhal-1.27/data/sprites/items/symbols&#10;symb&#9;FILE&#9;file:///Users/lcshum/stendhal-src/stendhal-1.27/data/conf/items/symbols.xml&#10;EquipmentActionValidator&#9;PSI&#9;JAVA://games.stendhal.server.core.rp.equipping.validator.EquipmentActionValidator&#10;uwe&#9;PSI&#9;JAVA://games.stendhal.server.entity.slot.UwePlayerTradeSlot&#10;equipable&#9;PSI&#9;JAVA://games.stendhal.server.entity.item.ItemTest#testSetEquipableSlots&#10;harve&#9;PSI&#9;JAVA://games.stendhal.server.maps.quests.HelpWithTheHarvest&#10;TradingController&#9;PSI&#9;JAVA://games.stendhal.client.gui.trade.TradingController&#10;onChangedRemoved&#9;PSI&#9;JAVA://games.stendhal.client.listener.RPObjectChangeListener#onSlotChangedRemoved&#10;keyring&#9;FILE&#9;file:///Users/lcshum/stendhal-src/stendhal-1.27/src/games/stendhal/server/entity/slot/PlayerKeyringSlot.java&#10;drop&#9;PSI&#9;JAVA://games.stendhal.client.actions.DropAction&#10;respawn&#9;PSI&#9;JAVA://games.stendhal.server.entity.creature.Creature#respawnTime&#10;uwebag&#9;PSI&#9;JAVA://games.stendhal.client.entity.UweBag&#10;creatures.xml&#9;FILE&#9;file:///Users/lcshum/stendhal-src/stendhal-1.27/data/conf/creatures.xml&#10;FileInputStream&#9;PSI&#9;JAVA://com.sun.deploy.util.SyncFileAccess#TYPE_FILE_INPUT_STREAM&#10; but you cannot equip the&#9;null&#9;null&#10;creature&#9;PSI&#9;JAVA://games.stendhal.client.entity.Creature&#10;t carry&#9;PSI&#9;JAVA://sun.misc.FDBigInteger#multAndCarryBy10&#10;uwebags&#9;PSI&#9;JAVA://games.stendhal.client.gui.uwebag.UweBags&#10;get (&#9;null&#9;null&#10;getFeature&#9;PSI&#9;JAVA://games.stendhal.server.entity.player.Player#getFeature&#10;SlotName&#9;PSI&#9;JAVA://games.stendhal.server.maps.quests.captureflag.CaptureFlagQuest#SLOT_NAME&#10;slot&#9;PSI&#9;JAVA://games.stendhal.server.entity.slot.SlotNameInList&#10;user&#9;PSI&#9;JAVA://games.stendhal.client.gui.UserInterface" />
+    <property name="WebServerToolWindowFactoryState" value="false" />
+    <property name="com.android.tools.idea.instantapp.provision.ProvisionBeforeRunTaskProvider.myTimeStamp" value="1535191644939" />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$" />
+    <property name="nodejs_interpreter_path.stuck_in_default_project" value="undefined stuck path" />
+    <property name="settings.editor.selected.configurable" value="preferences.editor" />
+  </component>
+  <component name="RecentsManager">
+    <key name="CopyFile.RECENT_KEYS">
+      <recent name="$PROJECT_DIR$/data/sprites/examine" />
+    </key>
+  </component>
+  <component name="RunDashboard">
+    <option name="ruleStates">
+      <list>
+        <RuleState>
+          <option name="name" value="ConfigurationTypeDashboardGroupingRule" />
+        </RuleState>
+        <RuleState>
+          <option name="name" value="StatusDashboardGroupingRule" />
+        </RuleState>
+      </list>
+    </option>
+  </component>
+  <component name="RunManager">
+    <configuration default="true" type="Applet" factoryName="Applet">
+      <option name="POLICY_FILE" value="$APPLICATION_HOME_DIR$/bin/appletviewer.policy" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration default="true" type="Application" factoryName="Application">
+      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration default="true" type="JUnit" factoryName="JUnit">
+      <option name="WORKING_DIRECTORY" value="%MODULE_WORKING_DIR%" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration default="true" type="TestNG" factoryName="TestNG">
+      <option name="WORKING_DIRECTORY" value="%MODULE_WORKING_DIR%" />
+      <properties />
+      <listeners />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+  </component>
+  <component name="TaskManager">
+    <task active="true" id="Default" summary="Default task">
+      <changelist id="dfe4109c-6421-488a-bab6-30ce5c2a5c4d" name="Default" comment="" />
+      <created>1529138301039</created>
+      <option name="number" value="Default" />
+      <option name="presentableId" value="Default" />
+      <updated>1529138301039</updated>
+      <workItem from="1529138302689" duration="2075000" />
+      <workItem from="1529220614110" duration="362000" />
+      <workItem from="1529224116295" duration="555000" />
+      <workItem from="1529283738653" duration="921000" />
+      <workItem from="1529286419269" duration="276000" />
+      <workItem from="1529291848904" duration="840000" />
+      <workItem from="1529294072634" duration="1267000" />
+      <workItem from="1529301254075" duration="185000" />
+      <workItem from="1529570259270" duration="58000" />
+      <workItem from="1529570377869" duration="2140000" />
+      <workItem from="1529592944021" duration="278000" />
+      <workItem from="1529712318093" duration="481000" />
+      <workItem from="1529715557882" duration="2626000" />
+      <workItem from="1529725444142" duration="752000" />
+      <workItem from="1529804409200" duration="1395000" />
+      <workItem from="1529824455477" duration="1997000" />
+      <workItem from="1530334003935" duration="207000" />
+      <workItem from="1530334235206" duration="1551000" />
+      <workItem from="1530433646116" duration="1834000" />
+      <workItem from="1530436871574" duration="895000" />
+      <workItem from="1530493765031" duration="454000" />
+      <workItem from="1530518752323" duration="1139000" />
+      <workItem from="1530579863274" duration="592000" />
+      <workItem from="1530610724682" duration="1093000" />
+      <workItem from="1530671161327" duration="419000" />
+      <workItem from="1530959746705" duration="915000" />
+      <workItem from="1530974025881" duration="198000" />
+      <workItem from="1531007815281" duration="1812000" />
+      <workItem from="1531030837201" duration="2080000" />
+      <workItem from="1532681462315" duration="1439000" />
+      <workItem from="1532962538913" duration="1256000" />
+      <workItem from="1532998700385" duration="207000" />
+      <workItem from="1534139428472" duration="20000" />
+      <workItem from="1534139472770" duration="1198000" />
+      <workItem from="1534151430975" duration="16000" />
+      <workItem from="1534151474508" duration="1190000" />
+      <workItem from="1534158914692" duration="629000" />
+      <workItem from="1534227285829" duration="1276000" />
+      <workItem from="1534500570898" duration="211000" />
+      <workItem from="1535191550316" duration="209000" />
+      <workItem from="1535249421854" duration="238000" />
+      <workItem from="1535551985444" duration="367000" />
+    </task>
+    <servers />
+  </component>
+  <component name="TimeTrackingManager">
+    <option name="totallyTimeSpent" value="37653000" />
+  </component>
+  <component name="ToolWindowManager">
+    <frame x="0" y="0" width="1440" height="900" extended-state="6" />
+    <layout>
+      <window_info active="true" content_ui="combo" id="Project" order="0" visible="true" weight="0.3769671" />
+      <window_info id="Structure" order="1" side_tool="true" weight="0.25" />
+      <window_info id="Learn" order="2" weight="0.3297568" />
+      <window_info id="Image Layers" order="3" />
+      <window_info id="Designer" order="4" />
+      <window_info id="UI Designer" order="5" />
+      <window_info id="Capture Tool" order="6" />
+      <window_info id="Favorites" order="7" side_tool="true" />
+      <window_info anchor="bottom" id="Message" order="0" />
+      <window_info anchor="bottom" id="Find" order="1" />
+      <window_info anchor="bottom" id="Run" order="2" />
+      <window_info anchor="bottom" id="Debug" order="3" weight="0.4" />
+      <window_info anchor="bottom" id="Cvs" order="4" weight="0.25" />
+      <window_info anchor="bottom" id="Inspection" order="5" weight="0.4" />
+      <window_info anchor="bottom" id="TODO" order="6" />
+      <window_info anchor="bottom" id="Version Control" order="7" show_stripe_button="false" />
+      <window_info anchor="bottom" id="Terminal" order="8" visible="true" weight="0.32920793" />
+      <window_info anchor="bottom" id="Event Log" order="9" side_tool="true" />
+      <window_info anchor="bottom" id="Database Changes" order="10" show_stripe_button="false" />
+      <window_info anchor="right" id="Commander" order="0" weight="0.4" />
+      <window_info anchor="right" id="Ant Build" order="1" weight="0.25" />
+      <window_info anchor="right" content_ui="combo" id="Hierarchy" order="2" weight="0.25" />
+      <window_info anchor="right" id="Palette" order="3" />
+      <window_info anchor="right" id="Capture Analysis" order="4" />
+      <window_info anchor="right" id="Theme Preview" order="5" />
+      <window_info anchor="right" id="Database" order="6" />
+      <window_info anchor="right" id="Palette&#9;" order="7" />
+      <window_info anchor="right" id="Maven Projects" order="8" />
+    </layout>
+  </component>
+  <component name="TypeScriptGeneratedFilesManager">
+    <option name="version" value="1" />
+  </component>
+  <component name="VcsContentAnnotationSettings">
+    <option name="myLimit" value="2678400000" />
+  </component>
+  <component name="editorHistoryManager">
+    <entry file="file://$PROJECT_DIR$/src/games/stendhal/client/gui/ScrolledViewport.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="525">
+          <caret line="52" column="25" selection-start-line="52" selection-start-column="15" selection-end-line="52" selection-end-column="25" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/games/stendhal/client/gui/ScrollerPanel.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="261">
+          <caret line="130" column="50" lean-forward="true" selection-start-line="130" selection-start-column="50" selection-end-line="130" selection-end-column="50" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/games/stendhal/server/entity/npc/action/StartRecordingRandomItemCollectionAction.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="255">
+          <caret line="43" column="39" selection-start-line="43" selection-start-column="39" selection-end-line="43" selection-end-column="39" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/data/sprites/examine/UweQuestion.png">
+      <provider selected="true" editor-type-id="images" />
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/games/stendhal/server/maps/quests/FishermansLicenseQuiz.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="135">
+          <caret line="118" column="31" selection-start-line="118" selection-start-column="12" selection-end-line="118" selection-end-column="31" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/data/sprites/examine/arandula.png">
+      <provider selected="true" editor-type-id="images" />
+    </entry>
+    <entry file="file://$PROJECT_DIR$/data/sprites/examine/dark-elves-wanted.png">
+      <provider selected="true" editor-type-id="images" />
+    </entry>
+    <entry file="file://$PROJECT_DIR$/data/sprites/examine/map-ados-city.png">
+      <provider selected="true" editor-type-id="images" />
+    </entry>
+    <entry file="file://$PROJECT_DIR$/data/sprites/examine/wizards-parchment.png">
+      <provider selected="true" editor-type-id="images" />
+    </entry>
+    <entry file="file://$PROJECT_DIR$/data/conf/creatures/angel.xml">
+      <provider selected="true" editor-type-id="text-editor" />
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/games/stendhal/client/actions/IgnoreAction.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="-372">
+          <caret line="20" column="6" selection-start-line="20" selection-start-column="6" selection-end-line="20" selection-end-column="6" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/games/stendhal/client/actions/WhereAction.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="55">
+          <caret line="21" column="6" selection-start-line="21" selection-start-column="6" selection-end-line="21" selection-end-column="6" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/games/stendhal/client/entity/Creature.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="-757">
+          <caret line="21" column="18" lean-forward="true" selection-start-line="21" selection-start-column="13" selection-end-line="21" selection-end-column="21" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/games/stendhal/client/entity/NPC.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="-1098">
+          <caret line="19" column="13" selection-start-line="19" selection-start-column="13" selection-end-line="19" selection-end-column="13" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/games/stendhal/common/constants/Events.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="-201">
+          <caret line="17" column="19" selection-start-line="17" selection-start-column="19" selection-end-line="17" selection-end-column="19" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/games/stendhal/common/constants/Actions.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="109">
+          <caret line="20" column="19" selection-start-line="20" selection-start-column="19" selection-end-line="20" selection-end-column="19" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/games/stendhal/common/constants/Common.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="135">
+          <caret line="19" column="13" selection-start-line="19" selection-start-column="13" selection-end-line="19" selection-end-column="13" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/games/stendhal/common/constants/Nature.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="25">
+          <caret line="23" column="12" selection-start-line="23" selection-start-column="12" selection-end-line="23" selection-end-column="12" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/games/stendhal/common/constants/SkinColor.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="-854">
+          <caret line="21" column="12" selection-start-line="21" selection-start-column="12" selection-end-line="21" selection-end-column="12" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/games/stendhal/common/constants/SoundLayer.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="-48">
+          <caret line="18" column="12" selection-start-line="18" selection-start-column="12" selection-end-line="18" selection-end-column="12" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/games/stendhal/common/constants/Testing.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="-33">
+          <caret line="18" column="13" selection-start-line="18" selection-start-column="13" selection-end-line="18" selection-end-column="13" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/games/stendhal/common/filter/CollectionFilter.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="-141">
+          <caret line="24" column="13" selection-start-line="24" selection-start-column="13" selection-end-line="24" selection-end-column="13" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/games/stendhal/server/actions/attack/AttackAction.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="-33">
+          <caret line="28" column="13" selection-start-line="28" selection-start-column="13" selection-end-line="28" selection-end-column="13" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/games/stendhal/server/core/config/annotations/Dev.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="-309">
+          <caret line="24" column="18" selection-start-line="24" selection-start-column="18" selection-end-line="24" selection-end-column="18" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/games/stendhal/client/entity/Player.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="255">
+          <caret line="19" column="13" selection-start-line="19" selection-start-column="13" selection-end-line="19" selection-end-column="13" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/games/stendhal/server/entity/Entity.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="1076">
+          <caret line="107" column="23" selection-start-line="107" selection-start-column="23" selection-end-line="107" selection-end-column="23" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/games/stendhal/server/maps/quests/KillBlordroughs.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="166">
+          <caret line="61" column="14" selection-start-line="61" selection-start-column="14" selection-end-line="61" selection-end-column="14" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/games/stendhal/server/core/config/annotations/ServerModeUtil.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="90">
+          <caret line="6" column="22" selection-start-line="6" selection-start-column="22" selection-end-line="6" selection-end-column="22" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="jar://$PROJECT_DIR$/libs/marauroa-client-only-3.9.4.jar!/marauroa/common/game/RPSlot.class">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="85">
+          <caret line="17" column="56" selection-start-line="17" selection-start-column="52" selection-end-line="17" selection-end-column="56" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="jar://$PROJECT_DIR$/libs/marauroa.jar!/marauroa/server/game/GameServerManager.class">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="105">
+          <caret line="8" column="67" selection-start-line="8" selection-start-column="4" selection-end-line="8" selection-end-column="67" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/games/stendhal/server/entity/player/PlayerRPClass.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="-75">
+          <caret line="25" column="26" selection-start-line="25" selection-start-column="13" selection-end-line="25" selection-end-column="26" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/games/stendhal/server/entity/player/Player.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="462">
+          <caret line="164" column="25" selection-start-line="164" selection-start-column="12" selection-end-line="164" selection-end-column="25" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/games/stendhal/server/core/engine/RPClassGenerator.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="462">
+          <caret line="196" column="18" selection-start-line="196" selection-start-column="12" selection-end-line="196" selection-end-column="18" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/games/stendhal/server/core/engine/ChatMessage.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="45">
+          <caret line="14" column="13" selection-start-line="14" selection-start-column="13" selection-end-line="14" selection-end-column="13" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/games/stendhal/server/core/config/factory/ConfigurableFactoryHelper.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="180">
+          <caret line="17" column="13" selection-start-line="17" selection-start-column="13" selection-end-line="17" selection-end-column="13" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/games/stendhal/server/core/config/factory/ConfigurableFactoryContext.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="120">
+          <caret line="19" column="13" selection-start-line="19" selection-start-column="13" selection-end-line="19" selection-end-column="13" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/games/stendhal/server/core/config/factory/ConfigurableFactory.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="105">
+          <caret line="11" column="17" selection-start-line="11" selection-start-column="17" selection-end-line="11" selection-end-column="17" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/games/stendhal/server/core/config/annotations/TestServerOnly.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="180">
+          <caret line="17" column="18" selection-start-line="17" selection-start-column="18" selection-end-line="17" selection-end-column="18" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/data/sprites/items/symbols/=.png">
+      <provider selected="true" editor-type-id="images" />
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/games/stendhal/server/core/rp/StendhalQuestSystem.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="128">
+          <caret line="200" column="14" selection-start-line="200" selection-start-column="14" selection-end-line="200" selection-end-column="14" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/games/stendhal/server/core/engine/StendhalRPZone.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="120">
+          <caret line="74" column="40" selection-start-line="74" selection-start-column="40" selection-end-line="74" selection-end-column="40" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/games/stendhal/server/entity/slot/Slots.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="252">
+          <caret line="35" column="7" selection-start-line="35" selection-start-column="7" selection-end-line="35" selection-end-column="7" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/games/stendhal/server/core/config/ItemsXMLLoader.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="85">
+          <caret line="36" column="33" selection-start-line="36" selection-start-column="33" selection-end-line="36" selection-end-column="33" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/games/stendhal/server/entity/npc/action/ExamineChatAction.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="816">
+          <caret line="71" column="9" selection-start-line="71" selection-start-column="9" selection-end-line="71" selection-end-column="9" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/games/stendhal/client/events/ExamineEvent.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="272">
+          <caret line="29" column="26" selection-start-line="29" selection-start-column="8" selection-end-line="29" selection-end-column="26" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/games/stendhal/client/gui/imageviewer/RPEventImageViewer.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="833">
+          <caret line="67" column="47" selection-start-line="67" selection-start-column="33" selection-end-line="67" selection-end-column="47" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/games/stendhal/client/gui/imageviewer/ImageViewPanel.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="307">
+          <caret line="63" column="27" selection-start-line="63" selection-start-column="27" selection-end-line="63" selection-end-column="27" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/games/stendhal/server/core/engine/StendhalRPRuleProcessor.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="884">
+          <caret line="63" column="42" selection-start-line="63" selection-start-column="34" selection-end-line="63" selection-end-column="42" />
+          <folding>
+            <element signature="e#0#24204#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/games/stendhal/server/extension/StendhalServerExtension.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="153">
+          <caret line="22" column="30" selection-start-line="22" selection-start-column="30" selection-end-line="22" selection-end-column="30" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/games/stendhal/server/entity/npc/condition/KilledForQuestCondition.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="306">
+          <caret line="41" column="36" selection-start-line="41" selection-start-column="13" selection-end-line="41" selection-end-column="36" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/data/sprites/examine/UweQuestionWrong.png">
+      <provider selected="true" editor-type-id="images" />
+    </entry>
+  </component>
+  <component name="masterDetails">
+    <states>
+      <state key="ProjectJDKs.UI">
+        <settings>
+          <last-edited>1.8</last-edited>
+          <splitter-proportions>
+            <option name="proportions">
+              <list>
+                <option value="0.2" />
+              </list>
+            </option>
+          </splitter-proportions>
+        </settings>
+      </state>
+      <state key="ScopeChooserConfigurable.UI">
+        <settings>
+          <splitter-proportions>
+            <option name="proportions">
+              <list>
+                <option value="0.2" />
+              </list>
+            </option>
+          </splitter-proportions>
+        </settings>
+      </state>
+    </states>
+  </component>
+</project>

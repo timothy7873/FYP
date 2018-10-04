@@ -1,0 +1,74 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<items xmlns="stendhal" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+	xsi:schemaLocation="stendhal ../items.xsd ">
+ <item name="=">
+    <type class="symbols" subclass="=" tileid="-1"/>
+    <description>This is assignment symbol</description>
+    <implementation class-name="games.stendhal.server.entity.item.uwe.Symbol"/>
+    <attributes>
+      <def value="1"/>
+      <amount value="20" />
+			<frequency value="12" />
+			<quantity value="2" />
+			<regen value="3" />
+      <menu value="MenuLabel|Use"/>
+       
+    </attributes>
+    <weight value="1.0"/>
+    <value value="7"/>
+    <equipable>
+    
+    
+      <slot name="ground"/>
+      <slot name="content"/>
+      <slot name="cloak"/>
+      <slot name="lhand"/>
+      
+      <slot name="bag"/>
+      <slot name="uwebag"/>
+      <slot name="trade"/>
+    </equipable>
+  </item>
+  
+  
+  <item name="==">
+    <type class="symbols" subclass="==" tileid="-1"/>
+    <description>This is a comparison operator for primitive type</description>
+    <implementation class-name="games.stendhal.server.entity.item.Item"/>
+    <attributes>
+      <def value="1"/>
+    </attributes>
+    <weight value="1.0"/>
+    <value value="7"/>
+    <equipable>
+      <slot name="ground"/>
+      <slot name="content"/>
+      <slot name="cloak"/>
+      <slot name="bag"/>
+      <slot name="trade"/>
+    </equipable>
+  </item>
+  
+  <item name="equals">
+    <type class="symbols" subclass="equals" tileid="-1"/>
+    <description>This is a comparison operator for string type</description>
+    <implementation class-name="games.stendhal.server.entity.item.Item"/>
+    <attributes>
+      <def value="1"/>
+    </attributes>
+    <weight value="1.0"/>
+    <value value="7"/>
+    <equipable>
+      <slot name="ground"/>
+      <slot name="content"/>
+      <slot name="cloak"/>
+      <slot name="bag"/>
+      <slot name="trade"/>
+    </equipable>
+  </item>
+  
+
+ 
+  
+   
+</items>
