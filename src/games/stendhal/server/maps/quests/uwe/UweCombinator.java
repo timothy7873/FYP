@@ -60,13 +60,17 @@ public class UweCombinator implements LoadableContent{
 
 	private void addDialog() {
 
-		npc.add(ConversationStates.IDLE, ConversationPhrases.GREETING_MESSAGES, null, ConversationStates.ATTENDING,
-				"I am Combinator. I can #combine items for you. ", null);
+		npc.add(ConversationStates.IDLE, 
+				ConversationPhrases.GREETING_MESSAGES, 
+				null, 
+				ConversationStates.ATTENDING,
+				"I am Combinator. I can #combine items for you. ", 
+				null);
 		npc.add(ConversationStates.ATTENDING,
 				Arrays.asList("combine","combinator","com","c"),
 				null, 
 				ConversationStates.ATTENDING, 
-				"Enjoy! ",
+				"Combination complete, enjoy! ",
 				//null
 				new CombinatorAction(npc, corpse)
 		);

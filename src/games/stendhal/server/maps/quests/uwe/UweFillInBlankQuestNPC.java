@@ -7,22 +7,28 @@ import games.stendhal.server.core.engine.SingletonRepository;
 import games.stendhal.server.core.engine.StendhalRPZone;
 import games.stendhal.server.entity.CollisionAction;
 import games.stendhal.server.entity.item.CombinatorCorpse;
+import games.stendhal.server.entity.npc.ChatCondition;
 import games.stendhal.server.entity.npc.ConversationPhrases;
 import games.stendhal.server.entity.npc.ConversationStates;
 import games.stendhal.server.entity.npc.NPCList;
 import games.stendhal.server.entity.npc.SpeakerNPC;
 import games.stendhal.server.entity.npc.action.CombinatorAction;
+import games.stendhal.server.entity.npc.condition.QuestNotStartedCondition;
 
 public class UweFillInBlankQuestNPC implements LoadableContent{
 	private String npcName = "UweFillInBlankQuestNPC";
 	private SpeakerNPC npc;
 	
+	private ChatCondition questDoing;
+	
 	public UweFillInBlankQuestNPC()
 	{
-
+		
 	}
 
-	private void buildConditions() {
+	private void buildConditions() 
+	{
+		questDoing = new QuestNotStartedCondition(npcName);
 	}
 
 	final StendhalRPZone zone = SingletonRepository.getRPWorld().getZone("int_semos_guard_house");
@@ -54,21 +60,17 @@ public class UweFillInBlankQuestNPC implements LoadableContent{
 
 	private void addDialog() {
 
-		npc.add(ConversationStates.IDLE, ConversationPhrases.GREETING_MESSAGES, null, ConversationStates.ATTENDING,
-				"I am sample fill in blank quest NPC, I can provide sample quest for you. ", null);
-//		npc.add(ConversationStates.ATTENDING,
-//				Arrays.asList("combine","combinator","com","c"),
-//				null, 
-//				ConversationStates.ATTENDING, 
-//				"Enjoy! ",
-//				//null
-//				new CombinatorAction(npc, corpse)
-//		);
+		npc.add(ConversationStates.IDLE, 
+				ConversationPhrases.GREETING_MESSAGES, 
+				null, 
+				ConversationStates.ATTENDING,
+				"I am a sample of fill in blank quest NPC, I can provide sample #quest for you. ", 
+				null);
 		npc.add(ConversationStates.ATTENDING, 
 				ConversationPhrases.QUEST_MESSAGES, 
-				neverAnswer,
+				questDoing,
 				ConversationStates.ATTENDING, 
-				"I need to complete some programming #questions. Can you help me?", 
+				"There is one #question available for you. ", 
 				null);
 		
 		npc.addJob("I can provide quest for you to complete. ");
