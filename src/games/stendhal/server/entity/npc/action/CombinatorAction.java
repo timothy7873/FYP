@@ -8,8 +8,11 @@ import org.apache.log4j.Logger;
 
 import games.stendhal.common.parser.Sentence;
 import games.stendhal.server.entity.npc.ChatAction;
+import games.stendhal.server.core.engine.SingletonRepository;
 import games.stendhal.server.core.engine.StendhalRPRuleProcessor;
+import games.stendhal.server.core.rule.EntityManager;
 import games.stendhal.server.entity.PassiveEntity;
+import games.stendhal.server.entity.creature.impl.DropItem;
 import games.stendhal.server.entity.item.CombinatorCorpse;
 import games.stendhal.server.entity.item.Corpse;
 import games.stendhal.server.entity.item.Item;
@@ -21,29 +24,31 @@ import games.stendhal.server.events.ExamineEvent;
 public class CombinatorAction implements ChatAction{
 	private static final Logger logger = Logger.getLogger(StendhalRPRuleProcessor.class);
 	
+	private final EntityManager em = SingletonRepository.getEntityManager();
 	private SpeakerNPC npc;
 	private CombinatorCorpse corpse;
-	private String[][] combinationList;
+	private static final String[][] COMBINATION_LIST= 
+		{
+			{"club","club","club of thorns"},
+			{"club of thorns","club","golden hammer"}
+		};
 	
 	public CombinatorAction(SpeakerNPC npc, CombinatorCorpse corpse) {
 		this.npc=npc;
 		this.corpse=corpse;
-		
-		combinationList=new String[1][2];
-		combinationList[0][0]="club";
-		combinationList[0][1]="club";
 	}
 	
 	private PassiveEntity combine(PassiveEntity item1, PassiveEntity item2)
 	{
 		//if(true)return (PassiveEntity)new Item("a","b","c",null);
-		for(int row=0;row<combinationList.length;row++)
+		for(int row=0;row<COMBINATION_LIST.length;row++)
 		{
-			if(combinationList[row][0].equals(item1.getName()) &&
-					combinationList[row][1].equals(item2.getName()))
+			if(COMBINATION_LIST[row][0].equals(item1.getName()) &&
+					COMBINATION_LIST[row][1].equals(item2.getName()))
 			{
 				//return;
-				return (PassiveEntity)new Item("a","b","c",null);
+				return (PassiveEntity)em.getItem(COMBINATION_LIST[row][2]);
+				//return (PassiveEntity)new Item("a","b","c",null);
 			}
 		}
 		//return (PassiveEntity)new Item("a","b","c",null);
@@ -58,20 +63,26 @@ public class CombinatorAction implements ChatAction{
 		if(items.size()==0)
 			return;
 		PassiveEntity comItem=items.getFirst();
+		items.removeFirst();
 		logger.error("club name: "+comItem.getName());
 		logger.error("items size: "+items.size());
-		for(int i=1;i<items.size();i++)
+		
+		while(items.size()>0)
 		{
-			comItem=combine(comItem,items.get(i));
+			comItem=combine(comItem,items.getFirst());
 			if(comItem==null)
 				break;
-			//corpse.getSlot().add(comItem);
-			logger.error("loop index: "+i);
+			items.removeFirst();
 		}
 		logger.error("combine name: "+comItem.getName());
 		
 		corpse.getSlot().clear();
 		corpse.getSlot().add(comItem);
+		while(items.size()>0)
+		{
+			corpse.getSlot().add(items.getFirst());
+			items.removeFirst();
+		}
 		corpse.notifyWorldAboutChanges();
 	}
 

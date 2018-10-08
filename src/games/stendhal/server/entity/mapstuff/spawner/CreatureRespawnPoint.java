@@ -185,7 +185,6 @@ public class CreatureRespawnPoint implements TurnListener {
 	 * @return the amount of turns calculated
 	 */
 	protected int calculateNextRespawnTurn() {
-		//return MIN_RESPAWN_TIME;
 		return MathHelper.clamp(Rand.randExponential(respawnTime), MIN_RESPAWN_TIME, MAX_RESPAWN_TIME);
 	}
 

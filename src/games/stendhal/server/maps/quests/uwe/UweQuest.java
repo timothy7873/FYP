@@ -16,7 +16,6 @@ import java.util.ArrayList;
 import java.util.LinkedList;
 import java.util.List;
 
-import games.stendhal.server.entity.item.Corpse;
 import games.stendhal.server.entity.player.Player;
 import games.stendhal.server.maps.Region;
 import games.stendhal.server.maps.quests.AbstractQuest;
@@ -49,7 +48,6 @@ public class UweQuest extends AbstractQuest {
 		
 
 		content.add(new UweDataNPC());
-		content.add(new UweTimothy());
 
 		content.add(new UweComparisionNPC());
 
@@ -57,10 +55,10 @@ public class UweQuest extends AbstractQuest {
 		content.add(new UweDog()); 
 		
 		content.add(new UweCreature());
-		content.add(new UweCombinator());
-		
 
 		content.add(new UweConstantNPC());
+		
+		content.add(new UweCombinator());
 		
 //		content.add(new DadNPC());
 //		content.add(new SoldierNPCs());

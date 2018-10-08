@@ -154,7 +154,7 @@ public class Corpse extends PassiveEntity implements EquipListener {
 	 */
 	public Corpse(final String clazz, final int x, final int y) {
 		setRPClass("corpse");
-		put("type", "corpse1");
+		put("type", "corpse");
 
 		setEntityClass(clazz);
 
@@ -164,9 +164,6 @@ public class Corpse extends PassiveEntity implements EquipListener {
 		// default to player corpse image
 		put(ATTR_IMAGE, "player");
 		put(ATTR_HARMLESS_IMAGE, "harmless_player");
-		
-		//put(ATTR_NAME,"abc");
-		
 		setResistance(calculateResistance());
 
 		final RPSlot slot = new LootableSlot(this);
