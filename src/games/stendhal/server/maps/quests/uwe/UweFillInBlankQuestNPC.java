@@ -13,22 +13,33 @@ import games.stendhal.server.entity.npc.ConversationStates;
 import games.stendhal.server.entity.npc.NPCList;
 import games.stendhal.server.entity.npc.SpeakerNPC;
 import games.stendhal.server.entity.npc.action.CombinatorAction;
+import games.stendhal.server.entity.npc.action.IncreaseKarmaAction;
+import games.stendhal.server.entity.npc.action.IncreaseXPAction;
+import games.stendhal.server.entity.npc.action.MultipleActions;
+import games.stendhal.server.entity.npc.action.QuestCompleteAction;
+import games.stendhal.server.entity.npc.action.QuestStartAction;
+import games.stendhal.server.entity.npc.action.RemoveItemAction;
+import games.stendhal.server.entity.npc.condition.AndCondition;
 import games.stendhal.server.entity.npc.condition.QuestNotStartedCondition;
+import games.stendhal.server.entity.npc.condition.QuestStartedCondition;
+import games.stendhal.server.entity.npc.condition.HasItemCondition;
 
 public class UweFillInBlankQuestNPC implements LoadableContent{
 	private String npcName = "UweFillInBlankQuestNPC";
+	private String questName="UweFillInBlankQuestNPC";
 	private SpeakerNPC npc;
 	
-	private ChatCondition questDoing;
+	private String question;
 	
 	public UweFillInBlankQuestNPC()
 	{
-		
+		question="What is the entry of a Java program? \n"+
+				"public static void ____(String[] args)";
 	}
 
 	private void buildConditions() 
 	{
-		questDoing = new QuestNotStartedCondition(npcName);
+
 	}
 
 	final StendhalRPZone zone = SingletonRepository.getRPWorld().getZone("int_semos_guard_house");
@@ -68,13 +79,36 @@ public class UweFillInBlankQuestNPC implements LoadableContent{
 				null);
 		npc.add(ConversationStates.ATTENDING, 
 				ConversationPhrases.QUEST_MESSAGES, 
-				questDoing,
+				new QuestNotStartedCondition(questName),
 				ConversationStates.ATTENDING, 
-				"There is one #question available for you. ", 
-				null);
+				question, 
+				new QuestStartAction(questName));
+		npc.add(ConversationStates.ATTENDING, 
+				ConversationPhrases.QUEST_MESSAGES, 
+				new AndCondition(
+						new QuestStartedCondition(questName), 
+						new HasItemCondition("club")),
+				ConversationStates.ATTENDING, 
+				"Quest complete! ", 
+				new MultipleActions(
+					new IncreaseKarmaAction(10), 
+			        new IncreaseXPAction(25),
+			        new RemoveItemAction("club"),
+			        new QuestCompleteAction(questName)
+					)
+				);
+		npc.add(ConversationStates.ATTENDING, 
+				ConversationPhrases.QUEST_MESSAGES, 
+				new AndCondition(
+						new QuestStartedCondition(questName), 
+						new HasItemCondition("club", true)),
+				ConversationStates.ATTENDING, 
+				"You haven't collect the correct answer! \n"+question, 
+				null
+				);
 		
 		npc.addJob("I can provide quest for you to complete. ");
-		npc.addQuest("I don't have any quests for you, I am a combinator! ");
+		//npc.addQuest("I don't have any quests for you, I am a combinator! ");
 		npc.addGoodbye("Have fun!");
 	}
 
@@ -99,7 +133,7 @@ public class UweFillInBlankQuestNPC implements LoadableContent{
 	public void addToWorld() {
 		//removeNPC(npcName);
 
-		//buildConditions();
+		buildConditions();
 		
 		createNPC();
 		addDialog();

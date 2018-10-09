@@ -74,7 +74,7 @@ public class UweCreature implements LoadableContent {
 		EntityManager em = SingletonRepository.getEntityManager();
 		Creature tRat = em.getCreature("rat");
 		Creature tCreature = new ItemGuardCreature(tRat, "=");
-		tCreature.addDropItem("golden key", 100, 2);
+		//tCreature.addDropItem("golden key", 100, 2);
 		CreatureRespawnPoint tPoint=new CreatureRespawnPoint(tZone, 10, 10, tCreature, 1);
 		tPoint.setRespawnTime(0);
 		tZone.add(tPoint);

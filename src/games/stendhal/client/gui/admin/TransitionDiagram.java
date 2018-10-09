@@ -62,7 +62,7 @@ public class TransitionDiagram {
 				dotPath = "dot";
 			}
 			
-	//		 dotPath="/usr/local/bin/dot";
+			 dotPath="/usr/local/bin/dot";
 			
 			// execute
 			final Process p = Runtime.getRuntime().exec(
