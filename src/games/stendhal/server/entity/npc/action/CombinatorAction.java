@@ -22,16 +22,30 @@ import games.stendhal.server.entity.player.Player;
 import games.stendhal.server.events.ExamineEvent;
 
 public class CombinatorAction implements ChatAction{
+	private static class CombinationList
+	{
+		private static final String[][] COMBINATION_LIST= 
+		{
+				{"club","club","club of thorns"},
+				{"club of thorns","club","golden hammer"}
+		};
+		
+		public String[] get(int index)
+		{
+			return COMBINATION_LIST[index];
+		}
+		public int size()
+		{
+			return COMBINATION_LIST.length;
+		}
+	};
+	
 	private static final Logger logger = Logger.getLogger(StendhalRPRuleProcessor.class);
 	
 	private final EntityManager em = SingletonRepository.getEntityManager();
 	private SpeakerNPC npc;
 	private CombinatorCorpse corpse;
-	private static final String[][] COMBINATION_LIST= 
-		{
-			{"club","club","club of thorns"},
-			{"club of thorns","club","golden hammer"}
-		};
+	private static CombinationList combinationList= new CombinationList();
 	
 	public CombinatorAction(SpeakerNPC npc, CombinatorCorpse corpse) {
 		this.npc=npc;
@@ -41,17 +55,15 @@ public class CombinatorAction implements ChatAction{
 	private PassiveEntity combine(PassiveEntity item1, PassiveEntity item2)
 	{
 		//if(true)return (PassiveEntity)new Item("a","b","c",null);
-		for(int row=0;row<COMBINATION_LIST.length;row++)
+		for(int i=0;i<combinationList.size();i++)
 		{
-			if(COMBINATION_LIST[row][0].equals(item1.getName()) &&
-					COMBINATION_LIST[row][1].equals(item2.getName()))
+			String[] row=combinationList.get(i);
+			if(row[0].equals(item1.getName()) &&
+					row[1].equals(item2.getName()))
 			{
-				//return;
-				return (PassiveEntity)em.getItem(COMBINATION_LIST[row][2]);
-				//return (PassiveEntity)new Item("a","b","c",null);
+				return (PassiveEntity)em.getItem(row[2]);
 			}
 		}
-		//return (PassiveEntity)new Item("a","b","c",null);
 		return null;
 	}
 
