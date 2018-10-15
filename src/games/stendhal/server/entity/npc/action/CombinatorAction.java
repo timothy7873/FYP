@@ -16,6 +16,7 @@ import games.stendhal.server.entity.creature.impl.DropItem;
 import games.stendhal.server.entity.item.CombinatorCorpse;
 import games.stendhal.server.entity.item.Corpse;
 import games.stendhal.server.entity.item.Item;
+import games.stendhal.server.entity.item.UweItemManager;
 import games.stendhal.server.entity.npc.EventRaiser;
 import games.stendhal.server.entity.npc.SpeakerNPC;
 import games.stendhal.server.entity.player.Player;
@@ -26,8 +27,9 @@ public class CombinatorAction implements ChatAction{
 	{
 		private static final String[][] COMBINATION_LIST= 
 		{
-				{"club","club","club of thorns"},
-				{"club of thorns","club","golden hammer"}
+				//{"club","club","club of thorns"},
+				//{"club of thorns","club","golden hammer"},
+				{"void","main","void main"}
 		};
 		
 		public String[] get(int index)
@@ -54,14 +56,17 @@ public class CombinatorAction implements ChatAction{
 	
 	private PassiveEntity combine(PassiveEntity item1, PassiveEntity item2)
 	{
-		//if(true)return (PassiveEntity)new Item("a","b","c",null);
+		
 		for(int i=0;i<combinationList.size();i++)
 		{
 			String[] row=combinationList.get(i);
 			if(row[0].equals(item1.getName()) &&
 					row[1].equals(item2.getName()))
 			{
-				return (PassiveEntity)em.getItem(row[2]);
+				if(UweItemManager.isCodeItem((Item)item1))
+					return UweItemManager.createCodeItem(row[2]);
+				else
+					return em.getItem(row[2]);
 			}
 		}
 		return null;
@@ -76,8 +81,8 @@ public class CombinatorAction implements ChatAction{
 			return;
 		PassiveEntity comItem=items.getFirst();
 		items.removeFirst();
-		logger.error("club name: "+comItem.getName());
-		logger.error("items size: "+items.size());
+		//logger.error("club name: "+comItem.getName());
+		//logger.error("items size: "+items.size());
 		
 		while(items.size()>0)
 		{
@@ -86,7 +91,7 @@ public class CombinatorAction implements ChatAction{
 				break;
 			items.removeFirst();
 		}
-		logger.error("combine name: "+comItem.getName());
+		//logger.error("combine name: "+comItem.getName());
 		
 		corpse.getSlot().clear();
 		corpse.getSlot().add(comItem);

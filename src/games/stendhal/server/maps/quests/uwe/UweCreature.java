@@ -4,7 +4,10 @@ import java.util.Arrays;
 import java.util.LinkedList;
 import java.util.List;
 
+import org.apache.log4j.Logger;
+
 import games.stendhal.server.core.engine.SingletonRepository;
+import games.stendhal.server.core.engine.StendhalRPRuleProcessor;
 import games.stendhal.server.core.engine.StendhalRPZone;
 import games.stendhal.server.core.events.UseListener;
 import games.stendhal.server.core.rule.EntityManager;
@@ -13,7 +16,9 @@ import games.stendhal.server.entity.RPEntity;
 import games.stendhal.server.entity.creature.AttackableCreature;
 import games.stendhal.server.entity.creature.Creature;
 import games.stendhal.server.entity.creature.ItemGuardCreature;
+import games.stendhal.server.entity.creature.UweQuestCreature;
 import games.stendhal.server.entity.item.Item;
+import games.stendhal.server.entity.item.UweItemManager;
 import games.stendhal.server.entity.mapstuff.spawner.CreatureRespawnPoint;
 import games.stendhal.server.entity.npc.PassiveNPC;
 
@@ -21,11 +26,15 @@ public class UweCreature implements LoadableContent {
 
 	final StendhalRPZone zone = SingletonRepository.getRPWorld().getZone("int_semos_guard_house");
 	private final EntityManager em = SingletonRepository.getEntityManager();
+	private static final Logger logger = Logger.getLogger(StendhalRPRuleProcessor.class);
 
 	@Override
 	public void addToWorld() {
 		// TODO Auto-generated method stub
 		createCreature();
+		createCreature();
+		//createCreature();
+		//createCreature();
 	}
 
 	@Override
@@ -63,29 +72,24 @@ public class UweCreature implements LoadableContent {
 		
 		
 		//timothy
-//		StendhalRPZone tZone = SingletonRepository.getRPWorld().getZone("0_semos_village_w");
-//		Creature tRat = em.getCreature("rat");
-//		//rat.addDropItem("golden key", 100, 2);
-//		Creature tCreature = new ItemGuardCreature(tRat, "=");
-//		CreatureRespawnPoint tPoint=new CreatureRespawnPoint(tZone, 18, 37, tCreature, 1);
-//		tZone.add(tPoint);
-		
 		StendhalRPZone tZone = SingletonRepository.getRPWorld().getZone("int_semos_guard_house");
 		EntityManager em = SingletonRepository.getEntityManager();
 		Creature tRat = em.getCreature("rat");
-		Creature tCreature = new ItemGuardCreature(tRat, "=");
-		tCreature.addDropItem("golden key", 100, 2);
+		//Creature tCreature = new ItemGuardCreature(tRat, "=");
+		//Creature tCreature=tRat;
+		UweQuestCreature tCreature=new UweQuestCreature(tRat);
+		//tCreature.addDropItem("golden key", 100, 2);
+
+		tCreature.addDropItem(UweItemManager.createCodeItem("void"),100);
+		tCreature.addDropItem(UweItemManager.createCodeItem("main"),100);
+		//tCreature.addDropItem(em.getItem("club"),100);
+		//tCreature.addDropItem("club",100,1);
+		//tCreature.addDropItem(em.getItem("club"));
 		CreatureRespawnPoint tPoint=new CreatureRespawnPoint(tZone, 10, 10, tCreature, 1);
 		tPoint.setRespawnTime(0);
 		tZone.add(tPoint);
 		
-		tZone = SingletonRepository.getRPWorld().getZone("int_semos_guard_house");
-		tRat = em.getCreature("rat");
-		//rat.addDropItem("golden key", 100, 2);
-		tCreature = new ItemGuardCreature(tRat, "=");
-		tPoint=new CreatureRespawnPoint(tZone, 5, 5, tCreature, 1);
-		tPoint.setRespawnTime(0);
-		tZone.add(tPoint);
+		tPoint.spawnNow();
 	}
 
 }

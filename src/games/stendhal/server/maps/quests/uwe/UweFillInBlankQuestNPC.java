@@ -30,16 +30,18 @@ public class UweFillInBlankQuestNPC implements LoadableContent{
 	private SpeakerNPC npc;
 	
 	private String question;
+	private String answerItemName;
 	
 	public UweFillInBlankQuestNPC()
 	{
 		question="What is the entry of a Java program? \n"+
-				"public static void ____(String[] args)";
+				"public static ____ ____(String[] args)";
+		answerItemName="void main";
 	}
 
 	private void buildConditions() 
 	{
-
+		
 	}
 
 	final StendhalRPZone zone = SingletonRepository.getRPWorld().getZone("int_semos_guard_house");
@@ -71,41 +73,82 @@ public class UweFillInBlankQuestNPC implements LoadableContent{
 
 	private void addDialog() {
 
+		//hi
 		npc.add(ConversationStates.IDLE, 
 				ConversationPhrases.GREETING_MESSAGES, 
 				null, 
 				ConversationStates.ATTENDING,
-				"I am a sample of fill in blank quest NPC, I can provide sample #quest for you. ", 
+				"\nI am a quest NPC of fill in the blank, I can provide fill in the blank #quest for you.", 
 				null);
+		//quest
 		npc.add(ConversationStates.ATTENDING, 
 				ConversationPhrases.QUEST_MESSAGES, 
 				new QuestNotStartedCondition(questName),
-				ConversationStates.ATTENDING, 
-				question, 
-				new QuestStartAction(questName));
+				ConversationStates.INFORMATION_1, 
+				"\nI have many incompleted function that requires a serial of codes to fill in.\n"+
+						"You can kill rats in this room to collect code items and combine them into one by UweCombinator.\n"+
+						"Then you can submit the correct combined code item of quests to me!\n"+
+						"If you do not know the answer, you can also ask for #help!\n"+
+						"Are you ready to #start the quest?\n", 
+				null);
 		npc.add(ConversationStates.ATTENDING, 
 				ConversationPhrases.QUEST_MESSAGES, 
+				new QuestStartedCondition(questName),
+				ConversationStates.INFORMATION_2, 
+				"\nI find out that you have received a quest before by the record.\n"+
+						"Let me remind you the question first:\n"+
+						question+"\n\n"+
+						"Do you want to #submit your answer code item now?", 
+				null
+				);
+		
+		//submit
+		npc.add(ConversationStates.INFORMATION_2, 
+				Arrays.asList("submit","s"), 
 				new AndCondition(
 						new QuestStartedCondition(questName), 
-						new HasItemCondition("club")),
-				ConversationStates.ATTENDING, 
-				"Quest complete! ", 
+						new HasItemCondition(answerItemName)),
+				ConversationStates.IDLE, 
+				"Congradulation! Your answer is correct! Quest is completed! Enjoy your reward!", 
 				new MultipleActions(
 					new IncreaseKarmaAction(10), 
 			        new IncreaseXPAction(25),
-			        new RemoveItemAction("club"),
+			        new RemoveItemAction(answerItemName),
 			        new QuestCompleteAction(questName)
 					)
 				);
-		npc.add(ConversationStates.ATTENDING, 
-				ConversationPhrases.QUEST_MESSAGES, 
+		npc.add(ConversationStates.INFORMATION_2, 
+				Arrays.asList("submit","s"), 
 				new AndCondition(
 						new QuestStartedCondition(questName), 
-						new HasItemCondition("club", true)),
-				ConversationStates.ATTENDING, 
-				"You haven't collect the correct answer! \n"+question, 
+						new HasItemCondition(answerItemName, true)),
+				ConversationStates.IDLE, 
+				"\nYou have not collect the correct code item! Try harder.\n"+
+						"If you really can't find the answer, you may ask for #help!\nGood Luck!", 
 				null
 				);
+		//start
+		npc.add(ConversationStates.INFORMATION_1, 
+				Arrays.asList("start","s"), 
+				new QuestNotStartedCondition(questName),
+				ConversationStates.IDLE, 
+				"\n"+question+"\n"+
+						"Please go get the correct code item and come back to submit.\nGood Luck!", 
+				new QuestStartAction(questName));
+		//help
+		npc.add(ConversationStates.INFORMATION_1, 
+				Arrays.asList("help","h"), 
+				new QuestStartedCondition(questName),
+				ConversationStates.IDLE, 
+				"You can go find UweHelper to ask for some hints! He is good at programming! \nHave fun!", 
+				new QuestStartAction(questName+"_help"));
+		npc.add(ConversationStates.INFORMATION_1, 
+				Arrays.asList("help","h"), 
+				new QuestNotStartedCondition(questName),
+				ConversationStates.INFORMATION_1, 
+				"I don't think you need help now as I don't find you have received quest before.\n"+
+						"Do you want to #start a quest?\n", 
+				null);
 		
 		npc.addJob("I can provide quest for you to complete. ");
 		//npc.addQuest("I don't have any quests for you, I am a combinator! ");
@@ -133,8 +176,6 @@ public class UweFillInBlankQuestNPC implements LoadableContent{
 	public void addToWorld() {
 		//removeNPC(npcName);
 
-		buildConditions();
-		
 		createNPC();
 		addDialog();
 		buildConditions();

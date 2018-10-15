@@ -2,6 +2,7 @@
 <items xmlns="stendhal" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
     xsi:schemaLocation="stendhal ../items.xsd ">
   
+  
   <item name="fierywater">
     <type class="drink" subclass="fierywater" tileid="-1"/>
     <description>You see a bottle of fierywater. Do not drink it pure, you would evaporate!</description>
