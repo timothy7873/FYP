@@ -1,0 +1,31 @@
+2018-10-20 00:01:12 INFO  [marauroad ] Statistics               ( 122) - Total/Used memory: 102912/87093
+2018-10-20 00:08:37 INFO  [marauroad ] Statistics               ( 122) - Total/Used memory: 102912/98133
+2018-10-20 00:12:42 INFO  [marauroad ] Statistics               ( 122) - Total/Used memory: 102912/94524
+2018-10-20 00:13:22 INFO  [verManager] TeleporterBehaviour      ( 174) - Cannot place teleporting NPC Rose Leigh at 0_nalwor_river_se 57 121
+2018-10-20 00:16:52 INFO  [marauroad ] Statistics               ( 122) - Total/Used memory: 102912/99207
+2018-10-20 00:21:02 INFO  [marauroad ] Statistics               ( 122) - Total/Used memory: 102912/94853
+2018-10-20 00:25:08 INFO  [marauroad ] Statistics               ( 122) - Total/Used memory: 102912/91111
+2018-10-20 00:29:18 INFO  [marauroad ] Statistics               ( 122) - Total/Used memory: 102912/87466
+2018-10-20 00:38:33 INFO  [marauroad ] Statistics               ( 122) - Total/Used memory: 102912/98211
+2018-10-20 00:52:30 INFO  [verManager] TeleporterBehaviour      ( 174) - Cannot place teleporting NPC Rose Leigh at 0_kalavan_forest 122 36
+2018-10-20 01:00:28 INFO  [marauroad ] Statistics               ( 122) - Total/Used memory: 102912/88625
+2018-10-20 01:16:54 INFO  [marauroad ] Statistics               ( 122) - Total/Used memory: 102912/85280
+2018-10-20 01:23:26 INFO  [marauroad ] Statistics               ( 122) - Total/Used memory: 102912/96271
+2018-10-20 04:54:54 INFO  [marauroad ] Statistics               ( 122) - Total/Used memory: 102912/92529
+2018-10-20 04:54:55 WARN  [verManager] RPServerManager          ( 207) - Turn duration overflow by 1698 ms:  13 16 16 1909 1909 1909 1909 1979 1997 1997 1997 1997
+2018-10-20 21:51:37 INFO  [marauroad ] Statistics               ( 122) - Total/Used memory: 102912/98871
+2018-10-20 21:51:37 WARN  [verManager] RPServerManager          ( 207) - Turn duration overflow by 2034 ms:  0 0 0 2182 2182 2182 2182 2220 2335 2335 2335 2335
+2018-10-20 21:52:04 INFO  [verManager] TeleporterBehaviour      ( 174) - Cannot place teleporting NPC Rose Leigh at 0_orril_forest_n 101 37
+2018-10-20 21:52:04 INFO  [verManager] TeleporterBehaviour      ( 174) - Cannot place teleporting NPC Mizuno at 0_ados_swamp 7 88
+2018-10-20 21:52:30 INFO  [marauroad ] Statistics               ( 122) - Total/Used memory: 102912/96448
+2018-10-20 21:53:30 INFO  [marauroad ] Statistics               ( 122) - Total/Used memory: 102912/93126
+2018-10-20 21:54:30 INFO  [marauroad ] Statistics               ( 122) - Total/Used memory: 102912/89782
+2018-10-20 21:55:30 INFO  [marauroad ] Statistics               ( 122) - Total/Used memory: 102912/86499
+2018-10-20 21:56:30 INFO  [marauroad ] Statistics               ( 122) - Total/Used memory: 102912/97413
+2018-10-20 21:57:30 INFO  [marauroad ] Statistics               ( 122) - Total/Used memory: 102912/95976
+2018-10-20 21:58:30 INFO  [marauroad ] Statistics               ( 122) - Total/Used memory: 102912/92465
+2018-10-20 21:59:30 INFO  [marauroad ] Statistics               ( 122) - Total/Used memory: 102912/89023
+2018-10-20 22:00:30 INFO  [marauroad ] Statistics               ( 122) - Total/Used memory: 102912/85703
+2018-10-20 22:01:30 INFO  [marauroad ] Statistics               ( 122) - Total/Used memory: 102912/97072
+2018-10-20 22:02:30 INFO  [marauroad ] Statistics               ( 122) - Total/Used memory: 102912/93854
+2018-10-20 22:03:30 INFO  [marauroad ] Statistics               ( 122) - Total/Used memory: 102912/90467
