@@ -31,12 +31,14 @@ public class UweFillInBlankQuestNPC implements LoadableContent{
 	
 	private String question;
 	private String answerItemName;
+	private String ending;
 	
 	public UweFillInBlankQuestNPC()
 	{
 		question="What is the entry of a Java program? \n"+
 				"public static ____ ____(String[] args)";
 		answerItemName="void main";
+		ending="";
 	}
 
 	private void buildConditions() 
@@ -114,7 +116,8 @@ public class UweFillInBlankQuestNPC implements LoadableContent{
 					new IncreaseKarmaAction(10), 
 			        new IncreaseXPAction(25),
 			        new RemoveItemAction(answerItemName),
-			        new QuestCompleteAction(questName)
+			        new QuestCompleteAction(questName),
+			        new QuestCompleteAction(questName+"_help")
 					)
 				);
 		npc.add(ConversationStates.INFORMATION_2, 
@@ -122,9 +125,9 @@ public class UweFillInBlankQuestNPC implements LoadableContent{
 				new AndCondition(
 						new QuestStartedCondition(questName), 
 						new HasItemCondition(answerItemName, true)),
-				ConversationStates.IDLE, 
+				ConversationStates.INFORMATION_2, 
 				"\nYou have not collect the correct code item! Try harder.\n"+
-						"If you really can't find the answer, you may ask for #help!\nGood Luck!", 
+						"If you really can't find the answer, you may ask for #help!\n", 
 				null
 				);
 		//start
@@ -132,7 +135,7 @@ public class UweFillInBlankQuestNPC implements LoadableContent{
 				Arrays.asList("start","s"), 
 				new QuestNotStartedCondition(questName),
 				ConversationStates.IDLE, 
-				"\n"+question+"\n"+
+				"\n"+question+"\n\n"+
 						"Please go get the correct code item and come back to submit.\nGood Luck!", 
 				new QuestStartAction(questName));
 		//help
@@ -146,9 +149,15 @@ public class UweFillInBlankQuestNPC implements LoadableContent{
 				Arrays.asList("help","h"), 
 				new QuestNotStartedCondition(questName),
 				ConversationStates.INFORMATION_1, 
-				"I don't think you need help now as I don't find you have received quest before.\n"+
+				"\nI don't think you need help now as I don't find you have received quest before.\n"+
 						"Do you want to #start a quest?\n", 
 				null);
+		npc.add(ConversationStates.INFORMATION_2, 
+				Arrays.asList("help","h"), 
+				new QuestStartedCondition(questName),
+				ConversationStates.IDLE, 
+				"You can go find UweHelper to ask for some hints! He is good at programming! \nHave fun!", 
+				new QuestStartAction(questName+"_help"));
 		
 		npc.addJob("I can provide quest for you to complete. ");
 		//npc.addQuest("I don't have any quests for you, I am a combinator! ");

@@ -1,5 +1,7 @@
 package games.stendhal.server.maps.quests.uwe;
 
+import java.util.Arrays;
+
 import games.stendhal.common.Direction;
 import games.stendhal.server.core.engine.SingletonRepository;
 import games.stendhal.server.core.engine.StendhalRPZone;
@@ -8,10 +10,12 @@ import games.stendhal.server.entity.npc.ConversationPhrases;
 import games.stendhal.server.entity.npc.ConversationStates;
 import games.stendhal.server.entity.npc.NPCList;
 import games.stendhal.server.entity.npc.SpeakerNPC;
+import games.stendhal.server.entity.npc.condition.QuestStartedCondition;
 
 public class UweHelper implements LoadableContent{
 	private String npcName = "UweHelper";
 	private SpeakerNPC npc;
+	private String helpQuestName="UweFillInBlankQuestNPC_help";
 	
 	private final StendhalRPZone zone = SingletonRepository.getRPWorld().getZone("int_semos_guard_house");
 	
@@ -59,6 +63,19 @@ public class UweHelper implements LoadableContent{
 				"\nI am a quest helper, I can provide #hints of quest for you.", 
 				null);
 		//hints
+		npc.add(ConversationStates.ATTENDING, 
+				Arrays.asList("hints","hint","h"), 
+				new QuestStartedCondition(helpQuestName), 
+				ConversationStates.ATTENDING,
+				"\nThe entry of Java does not require return value.\n"+
+						"Also, entry in java means the #main function.\n", 
+				null);
+		npc.add(ConversationStates.ATTENDING, 
+				Arrays.asList("hints","hint","h"), 
+				null, 
+				ConversationStates.ATTENDING,
+				"\nI don't have any hints for your current quest!\n", 
+				null);
 	}
 	private void removeNPC(String name) {
 		npc = NPCList.get().get(name);

@@ -16,6 +16,7 @@ public class QuestCompleteAction implements ChatAction{
 	@Override
 	public void fire(final Player player, final Sentence sentence, final EventRaiser npc)
 	{
-		player.removeQuest(questName);
+		if(player.hasQuest(questName))
+			player.removeQuest(questName);
 	}
 }
