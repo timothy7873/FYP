@@ -12,9 +12,9 @@ public class FlowIncQuestWindow extends InternalManagedWindow{
 	 */
 	private static final long serialVersionUID = -1331241549198527966L;
 
-	public FlowIncQuestWindow(FlowIncQuestViewPanel vp)
+	public FlowIncQuestWindow(FlowIncQuestViewPanel vp,String title)
 	{
-		super("FlowIncQuest","Function code");
+		super("FlowIncQuest",title);
 		
 		vp.prepare();
 		setContent(vp);

@@ -1,28 +1,26 @@
-<?xml version="1.0" encoding="UTF-8"?>
-<statistics time="1540282287">
-  <uptime value="4101.067"/>
-  <memory total="104448" used="88950"/>
-<attrib name="Transfer content" value="1" />
-<attrib name="Transfer content cache" value="8" />
-<attrib name="Bytes recv" value="9161" />
-<attrib name="Killed rat" value="11" />
-<attrib name="Actions look" value="5" />
-<attrib name="Bytes send" value="1472995" />
+<?xml version="1.0" encoding="GBK"?>
+<statistics time="1540311369">
+  <uptime value="371.528"/>
+  <memory total="104960" used="86979"/>
+<attrib name="Transfer content" value="2" />
+<attrib name="Transfer content cache" value="16" />
+<attrib name="Bytes recv" value="3180" />
+<attrib name="Killed rat" value="1" />
+<attrib name="Bytes send" value="130888" />
 <attrib name="Players logged" value="1" />
-<attrib name="Perceptions SYNC" value="1" />
-<attrib name="Message send" value="12561" />
+<attrib name="Perceptions SYNC" value="2" />
+<attrib name="Message send" value="1051" />
 <attrib name="Players online" value="0" />
-<attrib name="Players login" value="1" />
-<attrib name="Tranfer content size" value="146" />
-<attrib name="Actions stop" value="2" />
+<attrib name="Players login" value="2" />
+<attrib name="Tranfer content size" value="292" />
+<attrib name="Actions stop" value="1" />
 <attrib name="Players logout" value="0" />
-<attrib name="Actions added" value="29" />
+<attrib name="Actions added" value="30" />
 <attrib name="Players timeout" value="0" />
-<attrib name="Message recv" value="439" />
-<attrib name="Objects now" value="11262" />
-<attrib name="Actions invalid" value="7" />
+<attrib name="Message recv" value="70" />
+<attrib name="Objects now" value="8581" />
+<attrib name="Actions invalid" value="6" />
 <attrib name="Ips online" value="1" />
-<attrib name="Perceptions DELTA" value="13325" />
-<attrib name="Actions equip" value="5" />
-<attrib name="Actions move" value="10" />
+<attrib name="Perceptions DELTA" value="1145" />
+<attrib name="Actions move" value="23" />
 </statistics>

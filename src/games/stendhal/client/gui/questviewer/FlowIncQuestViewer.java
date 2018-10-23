@@ -4,10 +4,20 @@ import marauroa.common.game.RPEvent;
 
 public class FlowIncQuestViewer {
 	private String code;
+	private String title;
 	
 	public FlowIncQuestViewer(final RPEvent e)
 	{
-		code="123";
+		code="";
+		title="";
+		
+		if (e.has("code")) {
+			code = e.get("code");
+		}
+		if (e.has("title")) {
+			title = e.get("title");
+		}
+
 		view();
 	}
 	public static void viewQuest(final RPEvent e) {
@@ -16,6 +26,6 @@ public class FlowIncQuestViewer {
 	public void view()
 	{
 		FlowIncQuestViewPanel vp=new FlowIncQuestViewPanel(code);
-		new FlowIncQuestWindow(vp);
+		new FlowIncQuestWindow(vp,title);
 	}
 }

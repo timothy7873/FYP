@@ -183,7 +183,7 @@ public class UweDataNPC implements LoadableContent {
 
 		buildConditions();
 		createNPC();
-		createNPC1();
+		//createNPC1();
 
 		addDialog();
 	}

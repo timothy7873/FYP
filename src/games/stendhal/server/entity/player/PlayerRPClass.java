@@ -150,8 +150,9 @@ public class PlayerRPClass {
 		
 		player.addRPEvent("show_question_list", Definition.PRIVATE);
 		
-		//ny timothy
+		//by timothy
 		player.addRPEvent("test", Definition.PRIVATE);
+		player.addRPEvent("flow_inc_quest", Definition.PRIVATE);
 
 
 		player.addRPEvent(Events.VIEW_CHANGE, Definition.PRIVATE);

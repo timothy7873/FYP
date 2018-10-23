@@ -126,6 +126,11 @@ class EventFactory {
 			//event = new ExamineEvent();
 			event=new TestEvent();
 		}
+		else if(name.equals("flow_inc_quest"))
+		{
+			//event = new ExamineEvent();
+			event=new TestEvent();
+		}
 
 		if (event != null) {
 			event.init(entity, rpevent);
