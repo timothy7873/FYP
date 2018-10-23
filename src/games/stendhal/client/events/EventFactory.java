@@ -123,7 +123,8 @@ class EventFactory {
 		//by timothy
 		else if(name.equals("test"))
 		{
-			event = new ExamineEvent();
+			//event = new ExamineEvent();
+			event=new TestEvent();
 		}
 
 		if (event != null) {
