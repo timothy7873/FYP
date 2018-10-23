@@ -74,6 +74,7 @@ import games.stendhal.server.events.ProgressStatusEvent;
 import games.stendhal.server.events.ReachedAchievementEvent;
 import games.stendhal.server.events.ShowItemListEvent;
 import games.stendhal.server.events.SoundEvent;
+import games.stendhal.server.events.TestEvent;
 import games.stendhal.server.events.TextEvent;
 import games.stendhal.server.events.TradeStateChangeEvent;
 import games.stendhal.server.events.TransitionGraphEvent;
@@ -100,6 +101,11 @@ public class RPClassGenerator {
 
 		if (!RPClass.hasRPClass("entity")) {
 			Entity.generateRPClass();
+		}
+		
+		//by timothy
+		if (!RPClass.hasRPClass("test")) {
+			TestEvent.generateRPClass();
 		}
 
 		// Entity sub-classes

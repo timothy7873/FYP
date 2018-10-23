@@ -120,6 +120,11 @@ class EventFactory {
 		}  else if (name.equals(Events.GLOBAL_VISUAL)) {
 			event = new GlobalVisualEffectEvent();
 		}
+		//by timothy
+		else if(name.equals("test"))
+		{
+			event = new ExamineEvent();
+		}
 
 		if (event != null) {
 			event.init(entity, rpevent);

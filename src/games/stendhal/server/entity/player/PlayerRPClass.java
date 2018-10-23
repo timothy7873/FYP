@@ -149,6 +149,9 @@ public class PlayerRPClass {
 		player.addRPEvent("show_item_list", Definition.PRIVATE);
 		
 		player.addRPEvent("show_question_list", Definition.PRIVATE);
+		
+		//ny timothy
+		player.addRPEvent("test", Definition.PRIVATE);
 
 
 		player.addRPEvent(Events.VIEW_CHANGE, Definition.PRIVATE);
