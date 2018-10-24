@@ -3,15 +3,12 @@ package games.stendhal.client.gui.questviewer;
 import java.awt.BorderLayout;
 import java.awt.Button;
 import java.awt.Component;
-import java.awt.Frame;
 import java.awt.event.ActionEvent;
 import java.awt.event.ActionListener;
 
 import javax.swing.JComponent;
-import javax.swing.JFrame;
 import javax.swing.JLabel;
 import javax.swing.JOptionPane;
-import javax.swing.SwingUtilities;
 
 public class FlowIncQuestViewPanel extends JComponent{
 	
