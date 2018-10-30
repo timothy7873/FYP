@@ -1,9 +1,9 @@
 package games.stendhal.client.events;
 
 import games.stendhal.client.entity.Entity;
-import games.stendhal.client.gui.questviewer.FlowIncQuestViewPanel;
-import games.stendhal.client.gui.questviewer.FlowIncQuestViewer;
-import games.stendhal.client.gui.questviewer.FlowIncQuestWindow;
+import games.stendhal.client.gui.UweFlowIncQuestViewPanel;
+import games.stendhal.client.gui.UweFlowIncQuestViewer;
+import games.stendhal.client.gui.UweFlowIncQuestWindow;
 
 
 class TestEvent extends Event<Entity> {
@@ -14,7 +14,7 @@ class TestEvent extends Event<Entity> {
 	public void execute() {
 		//RPEventImageViewer.viewImage(event);
 		
-		FlowIncQuestViewer.viewQuest(event);
+		UweFlowIncQuestViewer.viewQuest(event);
 
 		
 	}

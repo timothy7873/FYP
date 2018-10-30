@@ -317,6 +317,10 @@ class SourceObject extends MoveableObject {
 			return false;
 		}
 
+		if(!dest.isValid())
+			return false;
+		if(!dest.preCheck(item, player))
+			return false;
 		if (!dest.isValid() || !dest.preCheck(item, player)) {
 			// no extra logger warning needed here as each is inside the methods called above, where necessary
 			return false;

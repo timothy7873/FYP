@@ -1,4 +1,7 @@
-/games/
-/utilities/
+/.DS_Store
 /conf/
 /data/
+/findbugs-excludes.xml
+/games/
+/layout/
+/utilities/

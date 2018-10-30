@@ -15,9 +15,19 @@ public class UweFlowIncQuestNPC implements LoadableContent{
 	
 	private String npcName = "UweFlowIncQuestNPC";
 	private final StendhalRPZone zone = SingletonRepository.getRPWorld().getZone("int_semos_guard_house");
+	private String code;
 	
 	private SpeakerNPC npc;
 	
+	public UweFlowIncQuestNPC()
+	{
+		code="public class test {\n"+
+				"\tpublic static void main(String[] args){\n"+
+				"\t\tint x=12;\n"+
+				"\t\tSystem.out.println(\"x\");\n"+
+				"\t}\n"+
+				"}";
+	}
 	
 	@Override
 	public void addToWorld() {
@@ -66,7 +76,7 @@ public class UweFlowIncQuestNPC implements LoadableContent{
 				null,
 				ConversationStates.ATTENDING, 
 				null, 
-				new FireEventChatAction(new FlowIncQuestEvent("code123","title")));
+				new FireEventChatAction(new FlowIncQuestEvent(code,"Flow incorrect quest")));
 		//bye
 		npc.addGoodbye("Have fun!");
 		

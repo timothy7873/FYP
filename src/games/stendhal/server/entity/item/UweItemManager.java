@@ -30,6 +30,7 @@ public class UweItemManager {
 		List<String> slots=new LinkedList<String>();
 		slots.add("bag");
 		slots.add("uwebag");
+		slots.add("uwequest");
 		slots.add("ground");
 		slots.add("content");
 		slots.add("trade");

@@ -146,7 +146,7 @@ public class PlayerTransformer implements Transformer {
 
 		// load items
 		final String[] slotsItems = {  "bag", "rhand", "lhand", "head", "armor",
-				"legs", "feet", "finger", "cloak", "back", "belt", "keyring", "trade","uwebag", };
+				"legs", "feet", "finger", "cloak", "back", "belt", "keyring", "trade","uwebag","uwequest" };
 
 		try {
 			for (final String slotName : slotsItems) {
@@ -163,6 +163,10 @@ public class PlayerTransformer implements Transformer {
 				else if (slotName.equals("uwebag")) {
 					newSlot = new UwePlayerTradeSlot(slotName);
 				}
+				else if (slotName.equals("uwequest")) {
+					newSlot = new UwePlayerTradeSlot(slotName);
+				}
+				
 				
 				else {
 					newSlot = new PlayerSlot(slotName);

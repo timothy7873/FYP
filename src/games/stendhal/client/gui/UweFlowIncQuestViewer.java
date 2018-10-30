@@ -1,12 +1,12 @@
-package games.stendhal.client.gui.questviewer;
+package games.stendhal.client.gui;
 
 import marauroa.common.game.RPEvent;
 
-public class FlowIncQuestViewer {
+public class UweFlowIncQuestViewer {
 	private String code;
 	private String title;
 	
-	public FlowIncQuestViewer(final RPEvent e)
+	public UweFlowIncQuestViewer(final RPEvent e)
 	{
 		code="";
 		title="";
@@ -21,11 +21,11 @@ public class FlowIncQuestViewer {
 		view();
 	}
 	public static void viewQuest(final RPEvent e) {
-		new FlowIncQuestViewer(e);
+		new UweFlowIncQuestViewer(e);
 	}
 	public void view()
 	{
-		FlowIncQuestViewPanel vp=new FlowIncQuestViewPanel(code);
-		new FlowIncQuestWindow(vp,title);
+		UweFlowIncQuestViewPanel vp=new UweFlowIncQuestViewPanel(code);
+		new UweFlowIncQuestWindow(vp,title);
 	}
 }

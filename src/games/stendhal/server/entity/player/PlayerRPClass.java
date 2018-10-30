@@ -130,6 +130,7 @@ public class PlayerRPClass {
 		player.addRPSlot("trade", 4);
 
 		player.addRPSlot("uwebag", 9, Definition.PRIVATE);
+		player.addRPSlot("uwequest", 1, Definition.PRIVATE);
 
 		
 		// The guild name

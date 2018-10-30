@@ -184,7 +184,7 @@ public abstract class UpdateConverter {
     	final String[] slotsNormal = { "bag", "rhand", "lhand", "head", "armor",
     			"legs", "feet", "finger", "cloak", "bank", "bank_ados",
     			"zaras_chest_ados", "bank_fado", "bank_nalwor", "spells",
-    			"keyring", "trade", "uwebag" };
+    			"keyring", "trade", "uwebag", "uwequest" };
 
     	final String[] slotsSpecial = { "!quests", "!kills", "!buddy", "!ignore",
     			"!visited", "skills", "!tutorial", "!meets"};

@@ -1,18 +1,15 @@
-package games.stendhal.client.gui.questviewer;
+package games.stendhal.client.gui;
 
 import javax.swing.SwingUtilities;
 
-import games.stendhal.client.gui.InternalManagedWindow;
-import games.stendhal.client.gui.j2DClient;
-
-public class FlowIncQuestWindow extends InternalManagedWindow{
+public class UweFlowIncQuestWindow extends InternalManagedWindow{
 	
 	/**
 	 * 
 	 */
 	private static final long serialVersionUID = -1331241549198527966L;
 
-	public FlowIncQuestWindow(FlowIncQuestViewPanel vp,String title)
+	public UweFlowIncQuestWindow(UweFlowIncQuestViewPanel vp,String title)
 	{
 		super("FlowIncQuest",title);
 		
@@ -22,7 +19,7 @@ public class FlowIncQuestWindow extends InternalManagedWindow{
 		SwingUtilities.invokeLater(new Runnable() {
 			@Override
 			public void run() {
-				j2DClient.get().addWindow(FlowIncQuestWindow.this);
+				j2DClient.get().addWindow(UweFlowIncQuestWindow.this);
 				center();
 				getParent().validate();
 			}
