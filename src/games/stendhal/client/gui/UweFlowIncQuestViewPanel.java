@@ -25,17 +25,25 @@ import javax.swing.Spring;
 import javax.swing.SpringLayout;
 import javax.swing.SwingUtilities;
 
+import games.stendhal.client.GameObjects;
+import games.stendhal.client.entity.ContentChangeListener;
+import games.stendhal.client.entity.IEntity;
 import games.stendhal.client.entity.User;
 import games.stendhal.client.entity.factory.EntityMap;
 import layout.SpringUtilities;
+import marauroa.common.game.RPObject;
+import marauroa.common.game.RPObject.ID;
+import marauroa.common.game.RPSlot;
 
-public class UweFlowIncQuestViewPanel extends JComponent{
-	
+public class UweFlowIncQuestViewPanel extends JComponent implements ContentChangeListener{
 	/**
 	 * 
 	 */
 	private static final long serialVersionUID = 6327842553901572328L;
 	private String code;
+	private ItemPanel panel;
+	private String slotName="uwequest";
+	private IEntity parent;
 	
 	public UweFlowIncQuestViewPanel(String code)
 	{
@@ -43,6 +51,8 @@ public class UweFlowIncQuestViewPanel extends JComponent{
 		
 		setLayout(new BorderLayout(2,2));
 		setOpaque(true);
+		
+		parent=User.get();
 	}
 	public void prepare()
 	{
@@ -80,7 +90,7 @@ public class UweFlowIncQuestViewPanel extends JComponent{
 			if(c instanceof JTextField)
 				setWidth(c,maxWidth);
 		}
-		ItemPanel panel = new ItemPanel(null, null);
+		panel = new ItemPanel(null, null);
 		panel.setItemNumber(0);
 		add(panel);
 		setX(panel,5);
@@ -88,9 +98,11 @@ public class UweFlowIncQuestViewPanel extends JComponent{
 		setWidth(panel,50);
 		setHeight(panel,50);
 		panel.setAcceptedTypes(EntityMap.getClass("item", null, null));
-		panel.setParent(User.get());
-		panel.setName("uwequest");
+		panel.setParent(parent);
+		panel.setName(slotName);
 //		panel.setInspector(inspector);
+		parent.addContentChangeListener(this);
+		contentAdded(parent.getSlot(slotName));
 		
 		setWindowSize(maxWidth+5+50+5+5, 5+lines.length*50+5+50+5);
 		
@@ -137,6 +149,39 @@ public class UweFlowIncQuestViewPanel extends JComponent{
 		layout.getConstraints(this).setConstraint(SpringLayout.SOUTH, Spring.constant(h));
 	}
 	
+	public void contentAdded(RPSlot added)
+	{
+		if (!slotName.equals(added.getName()))
+			return;//not our slot
+		
+		RPObject obj=added.getFirst();//one item only
+		
+		ID id = obj.getID();
+		IEntity entity = panel.getEntity();
+		if (entity != null && id.equals(entity.getRPObject().getID()))
+			return;// Changed rather than added.
+		
+		IEntity real_entity = GameObjects.getInstance().get(obj);
+		panel.setEntity(real_entity);
+		return;
+	}
+	
+	
+	public void contentRemoved(RPSlot removed)
+	{
+		if (!slotName.equals(removed.getName()))
+			return;//not our slot
+		
+		RPObject obj=removed.getFirst();//first only
+		ID id = obj.getID();
+		IEntity entity = panel.getEntity();
+		if (entity != null && id.equals(entity.getRPObject().getID())) {
+			if (obj.size() == 1) {
+				// The object was removed
+				panel.setEntity(null);
+			}
+		}
+	}
 	
 	private class UweFlowIncQuestBtnActionListener implements ActionListener
 	{
@@ -160,5 +205,6 @@ public class UweFlowIncQuestViewPanel extends JComponent{
 			}
 		}
 	}
+	
 	
 }
