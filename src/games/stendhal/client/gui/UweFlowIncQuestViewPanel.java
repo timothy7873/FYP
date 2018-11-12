@@ -53,7 +53,7 @@ public class UweFlowIncQuestViewPanel extends JComponent implements ContentChang
 	private String [] lines;
 	private String[] ans;
 	private String out,exp;
-	private List<ItemPanel> panels;
+	private List<UweItemPanel> panels;
 	private String slotName="uwequest";
 	private IEntity parent;
 	private final int CODEHEIGHT=25;
@@ -72,7 +72,7 @@ public class UweFlowIncQuestViewPanel extends JComponent implements ContentChang
 		
 		parent=User.get();
 		firstBtnHandler=new FirstStageBtnHandler(this);
-		panel=new ArrayList<ItemPanel>)();
+		panels=new ArrayList<UweItemPanel>();
 	}
 	public void buildFirstStage()
 	{
@@ -210,7 +210,7 @@ public class UweFlowIncQuestViewPanel extends JComponent implements ContentChang
 				setHeight(box,50);
 				
 				//add item container
-				ItemPanel panel = new ItemPanel(null, null);
+				UweItemPanel panel = new UweItemPanel(null, null);
 				panel.setItemNumber(panels.size());
 				add(panel);
 				setX(panel,10);//ori=5
@@ -333,63 +333,85 @@ public class UweFlowIncQuestViewPanel extends JComponent implements ContentChang
 	public String[] getAns() {return ans;}
 	
 	//Content change listener
-	public void contentAdded(RPSlot slot)
+	public void contentAdded(RPSlot added)
 	{
-		
-		
 		//handle slot
-		if (!slotName.equals(slot.getName()))
+		if (!slotName.equals(added.getName()))
 			return;//not our slot
 		
-		for(RPObject obj:slot)
+		for(RPObject obj:added)
 		{
 			if(obj==null)
 				continue;
 			
+			boolean noNeed=false;
 			ID id = obj.getID();
-			for(ItemPanel panel: panels)
+			for(UweItemPanel panel: panels)
 			{
 				IEntity entity = panel.getEntity();
 				if (entity != null && id.equals(entity.getRPObject().getID()))
-					break;// Changed rather than added.
-				
-				
+					noNeed=true;// Changed rather than added.
 			}
+			if(noNeed)
+				continue;
+			
+			IEntity entity = GameObjects.getInstance().get(obj);
+			UweItemPanel.lastDraggedTarget.setEntity(entity);
 		}
 		
-		RPObject obj=added.getFirst();//one item only
-		if(obj==null)
-			return;//no item added
-		
-		ID id = obj.getID();
-		IEntity entity = panel.getEntity();
-		if (entity != null && id.equals(entity.getRPObject().getID()))
-			return;// Changed rather than added.
-		
-		IEntity real_entity = GameObjects.getInstance().get(obj);
-		panel.setEntity(real_entity);
 		
 		
-		//handle code
-		int index=(getY(panel)-5-5)/50;
-		Component[] c=getComponents();
-		for(int i=0;i<c.length;i++)
-		{
-			if(c[i] instanceof JTextField && c[i].getName().equals(""+index))
-			{
-				JTextField box=(JTextField)c[i];
-				String tabs="";
-				for(int pos=0;pos<box.getText().length() && box.getText().charAt(pos)=='\t';pos++)
-					tabs+="\t";
-				box.setText(tabs+obj.get("name"));
-			}
-		}
+//		
+//		RPObject obj=added.getFirst();//one item only
+//		if(obj==null)
+//			return;//no item added
+//		
+//		ID id = obj.getID();
+//		IEntity entity = panel.getEntity();
+//		if (entity != null && id.equals(entity.getRPObject().getID()))
+//			return;// Changed rather than added.
+//		
+//		IEntity real_entity = GameObjects.getInstance().get(obj);
+//		panel.setEntity(real_entity);
+//		
+//		
+//		//handle code
+//		int index=(getY(panel)-5-5)/50;
+//		Component[] c=getComponents();
+//		for(int i=0;i<c.length;i++)
+//		{
+//			if(c[i] instanceof JTextField && c[i].getName().equals(""+index))
+//			{
+//				JTextField box=(JTextField)c[i];
+//				String tabs="";
+//				for(int pos=0;pos<box.getText().length() && box.getText().charAt(pos)=='\t';pos++)
+//					tabs+="\t";
+//				box.setText(tabs+obj.get("name"));
+//			}
+//		}
 	}
 	public void contentRemoved(RPSlot removed)
 	{
-//		if (!slotName.equals(removed.getName()))
-//			return;//not our slot
-//		
+		if (!slotName.equals(removed.getName()))
+			return;//not our slot
+		
+		for (RPObject obj : removed)
+		{
+			ID id = obj.getID();
+			for (ItemPanel panel : panels)
+			{
+				IEntity entity = panel.getEntity();
+				if (entity != null && id.equals(entity.getRPObject().getID())) {
+					if (obj.size() == 1) {
+						// The object was removed
+						panel.setEntity(null);
+					}
+				}
+			}
+			
+		}
+		
+		
 //		RPObject obj=removed.getFirst();//first only
 //		ID id = obj.getID();
 //		IEntity entity = panel.getEntity();
@@ -399,6 +421,9 @@ public class UweFlowIncQuestViewPanel extends JComponent implements ContentChang
 //				panel.setEntity(null);
 //			}
 //		}
+		
+		
+		
 //		
 //		
 //		//handle code
