@@ -6,7 +6,7 @@ import games.stendhal.client.entity.IEntity;
 import games.stendhal.client.sprite.Sprite;
 
 public class UweItemPanel extends ItemPanel{
-	public static UweItemPanel lastDraggedTarget=null;
+	public static UweItemPanel curDraggedTarget=null;
 	
 	public UweItemPanel(final String slotName, final Sprite placeholder)
 	{
@@ -15,7 +15,9 @@ public class UweItemPanel extends ItemPanel{
 	
 	public void dropEntity(IEntity entity, int amount, Point point)
 	{
-		lastDraggedTarget=this;
+		if(curDraggedTarget!=null)
+			return;//request reversed, last drag didn't finished
+		curDraggedTarget=this;
 		super.dropEntity(entity, amount, point);
 	}
 }

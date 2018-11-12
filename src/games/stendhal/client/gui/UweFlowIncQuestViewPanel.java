@@ -189,6 +189,7 @@ public class UweFlowIncQuestViewPanel extends JComponent implements ContentChang
 		lastY=getY(codeHeading)+getHeight(codeHeading);
 		
 		//add code body & panels
+		Font f=new Font("arial",Font.PLAIN,12);
 		int maxWidth=getWidth(codeHeading);
 		for(int i=0;i<lines.length;i++)
 		{
@@ -199,6 +200,8 @@ public class UweFlowIncQuestViewPanel extends JComponent implements ContentChang
 			box.setEditable(false);
 			box.setText(line);
 			box.setName("line"+i);
+			box.setFont(f);
+			box.setForeground(Color.BLACK);
 			add(box);
 			setX(box,5+50+5);
 			setY(box,lastY+5);
@@ -207,6 +210,9 @@ public class UweFlowIncQuestViewPanel extends JComponent implements ContentChang
 				setHeight(box,CODEHEIGHT);
 			else
 			{
+				Map attr=f.getAttributes();
+				attr.put(TextAttribute.STRIKETHROUGH, TextAttribute.STRIKETHROUGH_ON);
+				box.setFont(new Font(attr));
 				setHeight(box,50);
 				
 				//add item container
@@ -285,17 +291,17 @@ public class UweFlowIncQuestViewPanel extends JComponent implements ContentChang
 		setY(submit,lastY+10);
 		
 		
-		//format all btn and box text
-		Font f=new Font("arial",Font.PLAIN,12);
-		Component[] coms=this.getComponents();
-		for(int i=0;i<coms.length;i++)
-		{
-			if(coms[i] instanceof Button || coms[i] instanceof JTextField)
-			{
-				coms[i].setFont(f);//format
-				coms[i].setForeground(Color.BLACK);//color
-			}
-		}
+//		//format all btn and box text
+//		Font f=new Font("arial",Font.PLAIN,12);
+//		Component[] coms=this.getComponents();
+//		for(int i=0;i<coms.length;i++)
+//		{
+//			if(coms[i] instanceof Button || coms[i] instanceof JTextField)
+//			{
+//				coms[i].setFont(f);//format
+//				coms[i].setForeground(Color.BLACK);//color
+//			}
+//		}
 
 		//setWindowSize(maxWidth+5+50+5+5, getY(submit)+getHeight(submit)+5);
 		setWindowSize(0,0);
@@ -356,7 +362,7 @@ public class UweFlowIncQuestViewPanel extends JComponent implements ContentChang
 				continue;
 			
 			IEntity entity = GameObjects.getInstance().get(obj);
-			UweItemPanel.lastDraggedTarget.setEntity(entity);
+			UweItemPanel.curDraggedTarget.setEntity(entity);
 		}
 		
 		

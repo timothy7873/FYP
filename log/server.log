@@ -345,3 +345,48 @@
 2018-11-13 04:22:40 INFO  [marauroad ] Statistics               ( 122) - Total/Used memory: 110080/107442
 2018-11-13 04:23:40 INFO  [marauroad ] Statistics               ( 122) - Total/Used memory: 110080/101993
 2018-11-13 04:24:40 INFO  [marauroad ] Statistics               ( 122) - Total/Used memory: 110080/96465
+2018-11-13 04:25:40 INFO  [marauroad ] Statistics               ( 122) - Total/Used memory: 110080/91027
+2018-11-13 04:26:40 INFO  [marauroad ] Statistics               ( 122) - Total/Used memory: 110080/106824
+2018-11-13 04:27:40 INFO  [marauroad ] Statistics               ( 122) - Total/Used memory: 110080/101206
+2018-11-13 04:28:40 INFO  [marauroad ] Statistics               ( 122) - Total/Used memory: 110080/95850
+2018-11-13 04:29:40 INFO  [marauroad ] Statistics               ( 122) - Total/Used memory: 110080/89769
+2018-11-13 04:30:04 INFO  [verManager] TeleporterBehaviour      ( 174) - Cannot place teleporting NPC Rose Leigh at 0_ados_wall_s 79 8
+2018-11-13 04:30:40 INFO  [marauroad ] Statistics               ( 122) - Total/Used memory: 110080/106045
+2018-11-13 04:31:40 INFO  [marauroad ] Statistics               ( 122) - Total/Used memory: 110080/100635
+2018-11-13 04:32:40 INFO  [marauroad ] Statistics               ( 122) - Total/Used memory: 110080/95319
+2018-11-13 04:32:59 WARN  [verManager] SourceObject             ( 316) Player [abcdef, -1424385949] Attributes of Class(): [targetslot=keyring][sourceid=44][zone=int_semos_guard_house][baseobject=44][baseitem=19][zoneid=int_semos_guard_house][source_path=[44	uwebag	19\]][type=equip][baseslot=uwebag][targetobject=44][target_path=[44	keyring\]]- tried to equip an entity into disallowed slot: class games.stendhal.server.entity.item.Item; equip rejected
+2018-11-13 04:33:40 INFO  [marauroad ] Statistics               ( 122) - Total/Used memory: 110080/89361
+2018-11-13 04:34:35 INFO  [verManager] TeleporterBehaviour      ( 174) - Cannot place teleporting NPC Rose Leigh at 0_ados_outside_nw 100 20
+2018-11-13 04:34:40 INFO  [marauroad ] Statistics               ( 122) - Total/Used memory: 110080/105611
+2018-11-13 04:35:40 INFO  [marauroad ] Statistics               ( 122) - Total/Used memory: 110080/100012
+2018-11-13 04:36:40 INFO  [marauroad ] Statistics               ( 122) - Total/Used memory: 110080/94046
+2018-11-13 04:37:40 INFO  [marauroad ] Statistics               ( 122) - Total/Used memory: 110080/88510
+2018-11-13 04:38:40 INFO  [marauroad ] Statistics               ( 122) - Total/Used memory: 110080/104050
+2018-11-13 04:39:05 INFO  [verManager] TeleporterBehaviour      ( 174) - Cannot place teleporting NPC Mizuno at 0_ados_wall_s 4 18
+2018-11-13 04:39:40 INFO  [marauroad ] Statistics               ( 122) - Total/Used memory: 110080/100349
+2018-11-13 04:40:40 INFO  [marauroad ] Statistics               ( 122) - Total/Used memory: 110080/94568
+2018-11-13 04:41:40 INFO  [marauroad ] Statistics               ( 122) - Total/Used memory: 110080/89388
+2018-11-13 04:42:40 INFO  [marauroad ] Statistics               ( 122) - Total/Used memory: 110080/105175
+2018-11-13 04:43:40 INFO  [marauroad ] Statistics               ( 122) - Total/Used memory: 110080/88115
+2018-11-13 04:44:40 INFO  [marauroad ] Statistics               ( 122) - Total/Used memory: 110080/103947
+2018-11-13 04:45:40 INFO  [marauroad ] Statistics               ( 122) - Total/Used memory: 109568/98413
+2018-11-13 04:46:40 INFO  [marauroad ] Statistics               ( 122) - Total/Used memory: 109568/92808
+2018-11-13 04:47:06 INFO  [verManager] LogoutHandler            ( 122) - Logging out correctly channel: /127.0.0.1:49811
+2018-11-13 04:47:07 INFO  [NioServer ] NIONetworkConnectionManager( 122) - NET Disconnecting /127.0.0.1:49811
+2018-11-13 04:47:07 INFO  [NioServer ] GameServerManager        ( 122) - GAME Disconnecting /127.0.0.1:49811
+2018-11-13 04:47:16 WARN  [mmandQueue] PlayerTransformer        ( 372) [GameServerManager: LoadCharacterCommand [username=abcdef, character=abcdef]] - Cannot restore 1 main on login of abcdef because this item was removed from items.xml
+2018-11-13 04:47:16 WARN  [mmandQueue] PlayerTransformer        ( 372) [GameServerManager: LoadCharacterCommand [username=abcdef, character=abcdef]] - Cannot restore 1 void on login of abcdef because this item was removed from items.xml
+2018-11-13 04:47:40 INFO  [marauroad ] Statistics               ( 122) - Total/Used memory: 109568/92510
+2018-11-13 04:47:55 INFO  [NioServer ] NIONetworkConnectionManager( 122) - NET Disconnecting /127.0.0.1:49872
+2018-11-13 04:47:55 INFO  [NioServer ] GameServerManager        ( 122) - GAME Disconnecting /127.0.0.1:49872
+2018-11-13 04:48:06 INFO  [verManager] TeleporterBehaviour      ( 174) - Cannot place teleporting NPC Mizuno at 0_ados_city_s 9 27
+2018-11-13 04:48:06 INFO  [verManager] TeleporterBehaviour      ( 174) - Cannot place teleporting NPC Mizuno at 0_ados_outside_w 121 16
+2018-11-13 04:48:06 INFO  [verManager] TeleporterBehaviour      ( 174) - Cannot place teleporting NPC Mizuno at 0_ados_city_s 66 48
+2018-11-13 04:48:40 INFO  [marauroad ] Statistics               ( 122) - Total/Used memory: 109568/105299
+2018-11-13 04:49:40 INFO  [marauroad ] Statistics               ( 122) - Total/Used memory: 110080/94374
+2018-11-13 04:50:40 INFO  [marauroad ] Statistics               ( 122) - Total/Used memory: 110080/104986
+2018-11-13 04:51:28 WARN  [mmandQueue] PlayerTransformer        ( 372) [GameServerManager: LoadCharacterCommand [username=abcdef, character=abcdef]] - Cannot restore 1 main on login of abcdef because this item was removed from items.xml
+2018-11-13 04:51:28 WARN  [mmandQueue] PlayerTransformer        ( 372) [GameServerManager: LoadCharacterCommand [username=abcdef, character=abcdef]] - Cannot restore 1 void on login of abcdef because this item was removed from items.xml
+2018-11-13 04:51:40 INFO  [marauroad ] Statistics               ( 122) - Total/Used memory: 110080/100008
+2018-11-13 04:52:40 INFO  [marauroad ] Statistics               ( 122) - Total/Used memory: 110080/100120
+2018-11-13 04:53:40 INFO  [marauroad ] Statistics               ( 122) - Total/Used memory: 110080/94626
