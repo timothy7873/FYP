@@ -390,3 +390,41 @@
 2018-11-13 04:51:40 INFO  [marauroad ] Statistics               ( 122) - Total/Used memory: 110080/100008
 2018-11-13 04:52:40 INFO  [marauroad ] Statistics               ( 122) - Total/Used memory: 110080/100120
 2018-11-13 04:53:40 INFO  [marauroad ] Statistics               ( 122) - Total/Used memory: 110080/94626
+2018-11-13 04:54:40 INFO  [marauroad ] Statistics               ( 122) - Total/Used memory: 110080/88663
+2018-11-13 04:55:40 INFO  [marauroad ] Statistics               ( 122) - Total/Used memory: 110080/104344
+2018-11-13 04:56:40 INFO  [marauroad ] Statistics               ( 122) - Total/Used memory: 110080/99003
+2018-11-13 04:57:40 INFO  [marauroad ] Statistics               ( 122) - Total/Used memory: 110080/94502
+2018-11-13 04:58:40 INFO  [marauroad ] Statistics               ( 122) - Total/Used memory: 109568/89098
+2018-11-13 04:59:40 INFO  [marauroad ] Statistics               ( 122) - Total/Used memory: 109568/104439
+2018-11-13 05:00:40 INFO  [marauroad ] Statistics               ( 122) - Total/Used memory: 110080/99430
+2018-11-13 05:01:37 INFO  [verManager] TeleporterBehaviour      ( 174) - Cannot place teleporting NPC Rose Leigh at 0_ados_coast_s 6 63
+2018-11-13 05:01:37 INFO  [verManager] TeleporterBehaviour      ( 174) - Cannot place teleporting NPC Rose Leigh at 0_ados_wall 4 102
+2018-11-13 05:01:40 INFO  [marauroad ] Statistics               ( 122) - Total/Used memory: 110080/96477
+2018-11-13 05:02:40 INFO  [marauroad ] Statistics               ( 122) - Total/Used memory: 110080/91129
+2018-11-13 05:03:40 INFO  [marauroad ] Statistics               ( 122) - Total/Used memory: 110080/106937
+2018-11-13 05:04:40 INFO  [marauroad ] Statistics               ( 122) - Total/Used memory: 110080/101833
+2018-11-13 05:05:40 INFO  [marauroad ] Statistics               ( 122) - Total/Used memory: 110080/96554
+2018-11-13 05:06:08 INFO  [verManager] TeleporterBehaviour      ( 174) - Cannot place teleporting NPC Rose Leigh at 0_ados_coast_s 97 95
+2018-11-13 05:06:08 INFO  [verManager] TeleporterBehaviour      ( 174) - Cannot place teleporting NPC Rose Leigh at 0_amazon_island_sw 122 62
+2018-11-13 05:06:08 INFO  [verManager] TeleporterBehaviour      ( 174) - Cannot place teleporting NPC Rose Leigh at 0_orril_river_s 95 119
+2018-11-13 05:06:08 INFO  [verManager] TeleporterBehaviour      ( 174) - Cannot place teleporting NPC Rose Leigh at 0_amazon_island_sw 113 118
+2018-11-13 05:06:40 INFO  [marauroad ] Statistics               ( 122) - Total/Used memory: 110080/95294
+2018-11-13 05:07:40 INFO  [marauroad ] Statistics               ( 122) - Total/Used memory: 109056/89932
+2018-11-13 05:08:40 INFO  [marauroad ] Statistics               ( 122) - Total/Used memory: 109056/105870
+2018-11-13 05:09:40 INFO  [marauroad ] Statistics               ( 122) - Total/Used memory: 109568/100651
+2018-11-13 05:10:40 INFO  [marauroad ] Statistics               ( 122) - Total/Used memory: 109568/95732
+2018-11-13 05:11:40 INFO  [marauroad ] Statistics               ( 122) - Total/Used memory: 109568/91165
+2018-11-13 05:12:40 INFO  [marauroad ] Statistics               ( 122) - Total/Used memory: 109568/107017
+2018-11-13 05:13:40 INFO  [marauroad ] Statistics               ( 122) - Total/Used memory: 109568/101484
+2018-11-13 05:14:40 INFO  [marauroad ] Statistics               ( 122) - Total/Used memory: 109568/96186
+2018-11-13 05:15:09 INFO  [verManager] TeleporterBehaviour      ( 174) - Cannot place teleporting NPC Mizuno at 0_ados_city_s 3 72
+2018-11-13 05:15:09 INFO  [verManager] TeleporterBehaviour      ( 174) - Cannot place teleporting NPC Rose Leigh at 0_ados_city_n2 52 107
+2018-11-13 05:15:40 INFO  [marauroad ] Statistics               ( 122) - Total/Used memory: 109568/91596
+2018-11-13 05:16:40 INFO  [marauroad ] Statistics               ( 122) - Total/Used memory: 109568/107048
+2018-11-13 05:17:40 INFO  [marauroad ] Statistics               ( 122) - Total/Used memory: 109568/102032
+2018-11-13 05:18:35 INFO  [verManager] LogoutHandler            ( 122) - Logging out correctly channel: /127.0.0.1:49881
+2018-11-13 05:18:36 INFO  [NioServer ] NIONetworkConnectionManager( 122) - NET Disconnecting /127.0.0.1:49881
+2018-11-13 05:18:36 INFO  [NioServer ] GameServerManager        ( 122) - GAME Disconnecting /127.0.0.1:49881
+2018-11-13 05:18:40 INFO  [marauroad ] Statistics               ( 122) - Total/Used memory: 109568/96594
+2018-11-13 05:18:43 WARN  [mmandQueue] PlayerTransformer        ( 372) [GameServerManager: LoadCharacterCommand [username=abcdef, character=abcdef]] - Cannot restore 1 main on login of abcdef because this item was removed from items.xml
+2018-11-13 05:18:43 WARN  [mmandQueue] PlayerTransformer        ( 372) [GameServerManager: LoadCharacterCommand [username=abcdef, character=abcdef]] - Cannot restore 1 void on login of abcdef because this item was removed from items.xml

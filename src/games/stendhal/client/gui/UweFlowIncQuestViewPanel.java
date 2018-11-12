@@ -345,26 +345,58 @@ public class UweFlowIncQuestViewPanel extends JComponent implements ContentChang
 		if (!slotName.equals(added.getName()))
 			return;//not our slot
 		
-		for(RPObject obj:added)
+		//there suppose to be only one item added once
+		RPObject obj=added.getFirst();
+		if(obj==null)
+			return;
+		ID id = obj.getID();
+		for(UweItemPanel panel: panels)
 		{
-			if(obj==null)
-				continue;
-			
-			boolean noNeed=false;
-			ID id = obj.getID();
-			for(UweItemPanel panel: panels)
-			{
-				IEntity entity = panel.getEntity();
-				if (entity != null && id.equals(entity.getRPObject().getID()))
-					noNeed=true;// Changed rather than added.
-			}
-			if(noNeed)
-				continue;
-			
-			IEntity entity = GameObjects.getInstance().get(obj);
-			UweItemPanel.curDraggedTarget.setEntity(entity);
+			IEntity entity = panel.getEntity();
+			if (entity != null && id.equals(entity.getRPObject().getID()))
+				return;// Changed rather than added.
 		}
 		
+		IEntity entity = GameObjects.getInstance().get(obj);
+		UweItemPanel.curDraggedTarget.setEntity(entity);
+		UweItemPanel.curDraggedTarget=null;
+		
+		//handle code
+		int index=(getY(panel)-5-5)/50;
+		Component[] c=getComponents();
+		for(int i=0;i<c.length;i++)
+		{
+			if(c[i] instanceof JTextField && c[i].getName().equals(""+index))
+			{
+				JTextField box=(JTextField)c[i];
+				String tabs="";
+				for(int pos=0;pos<box.getText().length() && box.getText().charAt(pos)=='\t';pos++)
+					tabs+="\t";
+				box.setText(tabs+obj.get("name"));
+			}
+		}
+		
+		
+//		for(RPObject obj:added)
+//		{
+//			if(obj==null)
+//				continue;
+//			
+//			boolean noNeed=false;
+//			ID id = obj.getID();
+//			for(UweItemPanel panel: panels)
+//			{
+//				IEntity entity = panel.getEntity();
+//				if (entity != null && id.equals(entity.getRPObject().getID()))
+//					noNeed=true;// Changed rather than added.
+//			}
+//			if(noNeed)
+//				continue;
+//			
+//			IEntity entity = GameObjects.getInstance().get(obj);
+//			UweItemPanel.curDraggedTarget.setEntity(entity);
+//		}
+//		UweItemPanel.curDraggedTarget=null;
 		
 		
 //		
