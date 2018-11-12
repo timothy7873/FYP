@@ -32,7 +32,7 @@ public class UweItemManager {
 		slots.add("uwebag");
 		slots.add("uwequest");
 		slots.add("ground");
-		slots.add("content");
+		//slots.add("content");
 		slots.add("trade");
 		
 		result.setEquipableSlots(slots);

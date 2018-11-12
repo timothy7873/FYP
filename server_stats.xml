@@ -1,28 +1,28 @@
 <?xml version="1.0" encoding="GBK"?>
-<statistics time="1541888612">
-  <uptime value="1090.077"/>
-  <memory total="116736" used="75589"/>
-<attrib name="Transfer content" value="1" />
-<attrib name="Transfer content cache" value="8" />
-<attrib name="Bytes recv" value="4003" />
-<attrib name="Killed rat" value="3" />
-<attrib name="Bytes send" value="380076" />
+<statistics time="1542054160">
+  <uptime value="19883.415"/>
+  <memory total="110080" used="107442"/>
+<attrib name="Transfer content" value="24" />
+<attrib name="Transfer content cache" value="192" />
+<attrib name="Bytes recv" value="44488" />
+<attrib name="Killed rat" value="68" />
+<attrib name="Actions look" value="1" />
+<attrib name="Bytes send" value="7097519" />
+<attrib name="Players invalid login" value="1" />
 <attrib name="Players logged" value="1" />
-<attrib name="Perceptions SYNC" value="1" />
-<attrib name="Message send" value="3278" />
+<attrib name="Perceptions SYNC" value="24" />
+<attrib name="Message send" value="59911" />
 <attrib name="Players online" value="0" />
-<attrib name="Players login" value="1" />
-<attrib name="Tranfer content size" value="130" />
-<attrib name="Actions stop" value="1" />
-<attrib name="Players logout" value="0" />
-<attrib name="Actions added" value="16" />
+<attrib name="Players login" value="24" />
+<attrib name="Tranfer content size" value="3488" />
+<attrib name="Players logout" value="3" />
+<attrib name="Actions added" value="78" />
 <attrib name="Players timeout" value="0" />
-<attrib name="Message recv" value="129" />
-<attrib name="Objects now" value="10595" />
-<attrib name="Actions invalid" value="3" />
-<attrib name="Actions reorder" value="6" />
+<attrib name="Message recv" value="2143" />
+<attrib name="Objects now" value="11340" />
+<attrib name="Actions invalid" value="74" />
+<attrib name="Actions reorder" value="1" />
 <attrib name="Ips online" value="1" />
-<attrib name="Perceptions DELTA" value="3591" />
-<attrib name="Actions move" value="2" />
-<attrib name="Actions equip" value="4" />
+<attrib name="Perceptions DELTA" value="64236" />
+<attrib name="Actions equip" value="2" />
 </statistics>

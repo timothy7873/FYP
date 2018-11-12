@@ -44,7 +44,6 @@
       <slot name="bag"/>
       <slot name="trade"/>
       <slot name="uwebag"/>
-      <slot name="uwequest"/>
       
     </equipable>
   </item>
