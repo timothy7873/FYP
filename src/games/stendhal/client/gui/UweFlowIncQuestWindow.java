@@ -13,6 +13,7 @@ public class UweFlowIncQuestWindow extends InternalManagedWindow{
 	{
 		super("FlowIncQuest",title);
 		
+		vp.setWindow(this);
 		vp.prepare();
 		setContent(vp);
 		

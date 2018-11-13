@@ -9,11 +9,13 @@ import java.awt.Dimension;
 import java.awt.Font;
 import java.awt.Frame;
 import java.awt.GridLayout;
+import java.awt.Insets;
 import java.awt.Label;
 import java.awt.event.ActionEvent;
 import java.awt.event.ActionListener;
 import java.awt.font.TextAttribute;
 import java.util.ArrayList;
+import java.util.HashMap;
 import java.util.List;
 import java.util.Map;
 
@@ -40,20 +42,22 @@ import games.stendhal.client.entity.ContentChangeListener;
 import games.stendhal.client.entity.IEntity;
 import games.stendhal.client.entity.User;
 import games.stendhal.client.entity.factory.EntityMap;
+import games.stendhal.client.gui.InternalWindow.CloseListener;
 import layout.SpringUtilities;
 import marauroa.common.game.RPObject;
 import marauroa.common.game.RPObject.ID;
 import marauroa.common.game.RPSlot;
 
-public class UweFlowIncQuestViewPanel extends JComponent implements ContentChangeListener{
+public class UweFlowIncQuestViewPanel extends JComponent implements ContentChangeListener,CloseListener{
 	/**
 	 * 
 	 */
 	private static final long serialVersionUID = 6327842553901572328L;
+	private InternalManagedWindow window=null;
 	private String [] lines;
 	private String[] ans;
 	private String out,exp;
-	private List<UweItemPanel> panels;
+	private Map<UweItemPanel,Integer> panels;
 	private String slotName="uwequest";
 	private IEntity parent;
 	private final int CODEHEIGHT=25;
@@ -72,8 +76,19 @@ public class UweFlowIncQuestViewPanel extends JComponent implements ContentChang
 		
 		parent=User.get();
 		firstBtnHandler=new FirstStageBtnHandler(this);
-		panels=new ArrayList<UweItemPanel>();
+		secondBtnHandler=new SecondStageBtnHandler(this);
+		panels=new HashMap<UweItemPanel,Integer>();
 	}
+	public void setWindow(InternalManagedWindow window)
+	{
+		this.window=window;
+		window.addCloseListener(this);
+	}
+	public void windowClosed(InternalWindow window) {
+		// TODO Auto-generated method stub
+		parent.removeContentChangeListener(this);
+	}
+	
 	public void buildFirstStage()
 	{
 		int codeAreaY;
@@ -218,6 +233,7 @@ public class UweFlowIncQuestViewPanel extends JComponent implements ContentChang
 				//add item container
 				UweItemPanel panel = new UweItemPanel(null, null);
 				panel.setItemNumber(panels.size());
+				//panel.("line"+i);
 				add(panel);
 				setX(panel,10);//ori=5
 				setY(panel,getY(box)+5);
@@ -227,9 +243,9 @@ public class UweFlowIncQuestViewPanel extends JComponent implements ContentChang
 				panel.setParent(parent);
 				panel.setName(slotName);
 				parent.addContentChangeListener(this);
-				contentAdded(parent.getSlot(slotName));
+				//contentAdded(parent.getSlot(slotName));
 				
-				panels.add(panel);
+				panels.put(panel, i);
 			}
 			
 			lastY=getY(box)+getHeight(box);
@@ -289,28 +305,31 @@ public class UweFlowIncQuestViewPanel extends JComponent implements ContentChang
 		setHeight(submit,30);
 		setX(submit,getX(expBody)+getWidth(expBody)-getWidth(submit));
 		setY(submit,lastY+10);
-		
-		
-//		//format all btn and box text
-//		Font f=new Font("arial",Font.PLAIN,12);
-//		Component[] coms=this.getComponents();
-//		for(int i=0;i<coms.length;i++)
-//		{
-//			if(coms[i] instanceof Button || coms[i] instanceof JTextField)
-//			{
-//				coms[i].setFont(f);//format
-//				coms[i].setForeground(Color.BLACK);//color
-//			}
-//		}
 
-		//setWindowSize(maxWidth+5+50+5+5, getY(submit)+getHeight(submit)+5);
-		setWindowSize(0,0);
-		this.resize(new Dimension(0,0));
+		Insets in=window.getInsets();
+		setWindowSize(getX(submit)+getWidth(submit)+5, getY(submit)+getHeight(submit)+5);
+		//window.resize(new Dimension(maxWidth+5+50+5+5, getY(submit)+getHeight(submit)+5));
+		window.setSize(getX(submit)+getWidth(submit)+5, getY(submit)+getHeight(submit)+5);
+		
+		Dimension size=this.getSize();
+		Dimension size1=window.getSize();
+		Dimension size2=new Dimension(getX(submit)+getWidth(submit)+5, getY(submit)+getHeight(submit)+5);
+//		window.setSize((int)(size.getWidth()*2-size1.getWidth()), 
+//				size1.);
+		//window.setPreferredSize(new Dimension(getX(submit)+getWidth(submit)+5, getY(submit)+getHeight(submit)+5));
+		
+		
 		
 		//update dialog
 		validate();
 		revalidate();
 		repaint();
+		window.validate();
+		window.revalidate();
+		window.repaint();
+		window.getParent().validate();
+		window.getParent().revalidate();
+		window.getParent().repaint();
 	}
 	public void prepare()
 	{
@@ -330,8 +349,7 @@ public class UweFlowIncQuestViewPanel extends JComponent implements ContentChang
 	private void setWindowSize(int w, int h)
 	{
 		SpringLayout layout=(SpringLayout)getLayout();
-		
-		Constraints cs=layout.getConstraints(this);
+
 		layout.getConstraints(this).setConstraint(SpringLayout.EAST, Spring.constant(w));
 		layout.getConstraints(this).setConstraint(SpringLayout.SOUTH, Spring.constant(h));
 	}
@@ -345,12 +363,16 @@ public class UweFlowIncQuestViewPanel extends JComponent implements ContentChang
 		if (!slotName.equals(added.getName()))
 			return;//not our slot
 		
+		//invalid request
+		if(UweItemPanel.curDraggedTarget==null)
+			return;
+		
 		//there suppose to be only one item added once
 		RPObject obj=added.getFirst();
 		if(obj==null)
 			return;
 		ID id = obj.getID();
-		for(UweItemPanel panel: panels)
+		for(UweItemPanel panel: panels.keySet())
 		{
 			IEntity entity = panel.getEntity();
 			if (entity != null && id.equals(entity.getRPObject().getID()))
@@ -359,74 +381,37 @@ public class UweFlowIncQuestViewPanel extends JComponent implements ContentChang
 		
 		IEntity entity = GameObjects.getInstance().get(obj);
 		UweItemPanel.curDraggedTarget.setEntity(entity);
-		UweItemPanel.curDraggedTarget=null;
+		
 		
 		//handle code
-		int index=(getY(panel)-5-5)/50;
+		if(!(panels.get(UweItemPanel.curDraggedTarget) instanceof Integer))
+		{
+			UweItemPanel.curDraggedTarget=null;
+			return;
+		}
+		String name="line"+((Integer)panels.get(UweItemPanel.curDraggedTarget)).intValue();
 		Component[] c=getComponents();
 		for(int i=0;i<c.length;i++)
 		{
-			if(c[i] instanceof JTextField && c[i].getName().equals(""+index))
+			if(c[i].getName()==null)
+				continue;
+			if(c[i] instanceof JTextField && c[i].getName().equals(name))
 			{
 				JTextField box=(JTextField)c[i];
+				
 				String tabs="";
 				for(int pos=0;pos<box.getText().length() && box.getText().charAt(pos)=='\t';pos++)
 					tabs+="\t";
 				box.setText(tabs+obj.get("name"));
+				
+				box.setFont(new Font("arial",Font.BOLD,12));
+				break;
 			}
 		}
 		
+		UweItemPanel.curDraggedTarget=null;
 		
-//		for(RPObject obj:added)
-//		{
-//			if(obj==null)
-//				continue;
-//			
-//			boolean noNeed=false;
-//			ID id = obj.getID();
-//			for(UweItemPanel panel: panels)
-//			{
-//				IEntity entity = panel.getEntity();
-//				if (entity != null && id.equals(entity.getRPObject().getID()))
-//					noNeed=true;// Changed rather than added.
-//			}
-//			if(noNeed)
-//				continue;
-//			
-//			IEntity entity = GameObjects.getInstance().get(obj);
-//			UweItemPanel.curDraggedTarget.setEntity(entity);
-//		}
-//		UweItemPanel.curDraggedTarget=null;
-		
-		
-//		
-//		RPObject obj=added.getFirst();//one item only
-//		if(obj==null)
-//			return;//no item added
-//		
-//		ID id = obj.getID();
-//		IEntity entity = panel.getEntity();
-//		if (entity != null && id.equals(entity.getRPObject().getID()))
-//			return;// Changed rather than added.
-//		
-//		IEntity real_entity = GameObjects.getInstance().get(obj);
-//		panel.setEntity(real_entity);
-//		
-//		
-//		//handle code
-//		int index=(getY(panel)-5-5)/50;
-//		Component[] c=getComponents();
-//		for(int i=0;i<c.length;i++)
-//		{
-//			if(c[i] instanceof JTextField && c[i].getName().equals(""+index))
-//			{
-//				JTextField box=(JTextField)c[i];
-//				String tabs="";
-//				for(int pos=0;pos<box.getText().length() && box.getText().charAt(pos)=='\t';pos++)
-//					tabs+="\t";
-//				box.setText(tabs+obj.get("name"));
-//			}
-//		}
+
 	}
 	public void contentRemoved(RPSlot removed)
 	{
@@ -436,45 +421,39 @@ public class UweFlowIncQuestViewPanel extends JComponent implements ContentChang
 		for (RPObject obj : removed)
 		{
 			ID id = obj.getID();
-			for (ItemPanel panel : panels)
+			for (ItemPanel panel : panels.keySet())
 			{
 				IEntity entity = panel.getEntity();
 				if (entity != null && id.equals(entity.getRPObject().getID())) {
 					if (obj.size() == 1) {
 						// The object was removed
 						panel.setEntity(null);
+						
+						int index=panels.get(panel);
+						String name="line"+index;
+						Component[] coms=getComponents();
+						for(Component c:coms)
+						{
+							if(c.getName()==null)
+								continue;
+							if(c instanceof JTextField && c.getName().equals(name))
+							{
+								JTextField text=(JTextField)c;
+								text.setText(lines[index]);
+								
+								Font f=new Font("arial",Font.PLAIN,12);
+								Map attr=f.getAttributes();
+								attr.put(TextAttribute.STRIKETHROUGH, TextAttribute.STRIKETHROUGH_ON);
+								text.setFont(new Font(attr));
+							}
+						}
+						
 					}
 				}
 			}
 			
 		}
 		
-		
-//		RPObject obj=removed.getFirst();//first only
-//		ID id = obj.getID();
-//		IEntity entity = panel.getEntity();
-//		if (entity != null && id.equals(entity.getRPObject().getID())) {
-//			if (obj.size() == 1) {
-//				// The object was removed
-//				panel.setEntity(null);
-//			}
-//		}
-		
-		
-		
-//		
-//		
-//		//handle code
-//		int index=(getY(panel)-5-5)/50;
-//		Component[] c=getComponents();
-//		for(int i=0;i<c.length;i++)
-//		{
-//			if(c[i] instanceof JTextField && c[i].getName().equals(""+index))
-//			{
-//				JTextField box=(JTextField)c[i];
-//				box.setText(lines[index]);
-//			}
-//		}
 	}
 
 
@@ -614,7 +593,15 @@ public class UweFlowIncQuestViewPanel extends JComponent implements ContentChang
 		
 		public void actionPerformed(ActionEvent e)
 		{
+			if(!(e.getSource() instanceof Button))
+				return;
+			
+			Button btn=(Button)e.getSource();
+			if(!btn.getName().equals("submit"))
+				return;
+			
 			
 		}
 	}
+
 }
