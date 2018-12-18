@@ -192,6 +192,8 @@ public final class Actions {
 	public final static String AUTOWALK = "autowalk";
 	/* Property indicating player is using continuous movement. */
 	public final static String MOVE_CONTINUOUS = "move.continuous";
+	
+	public final static String UWEFLOWINCQUESTSUBMIT = "UweFlowIncQuestSubmit";
 
 	private Actions() {
 		// hide constructor

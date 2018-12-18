@@ -37,6 +37,7 @@ import javax.swing.text.DefaultStyledDocument;
 import javax.swing.text.SimpleAttributeSet;
 import javax.swing.text.StyleConstants;
 
+import games.stendhal.client.ClientSingletonRepository;
 import games.stendhal.client.GameObjects;
 import games.stendhal.client.entity.ContentChangeListener;
 import games.stendhal.client.entity.IEntity;
@@ -44,6 +45,7 @@ import games.stendhal.client.entity.User;
 import games.stendhal.client.entity.factory.EntityMap;
 import games.stendhal.client.gui.InternalWindow.CloseListener;
 import layout.SpringUtilities;
+import marauroa.common.game.RPAction;
 import marauroa.common.game.RPObject;
 import marauroa.common.game.RPObject.ID;
 import marauroa.common.game.RPSlot;
@@ -594,7 +596,10 @@ public class UweFlowIncQuestViewPanel extends JComponent implements ContentChang
 			if(!btn.getName().equals("submit"))
 				return;
 			
-			
+			RPAction action = new RPAction();
+			action.put("ans", "");
+			ClientSingletonRepository.getClientFramework().send(action);
+
 		}
 	}
 
