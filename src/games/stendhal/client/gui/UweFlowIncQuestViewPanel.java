@@ -306,19 +306,11 @@ public class UweFlowIncQuestViewPanel extends JComponent implements ContentChang
 		setX(submit,getX(expBody)+getWidth(expBody)-getWidth(submit));
 		setY(submit,lastY+10);
 
+		int w=getX(submit)+getWidth(submit)+5+5;
+		int h=getY(submit)+getHeight(submit)+5+5;
 		Insets in=window.getInsets();
-		setWindowSize(getX(submit)+getWidth(submit)+5, getY(submit)+getHeight(submit)+5);
-		//window.resize(new Dimension(maxWidth+5+50+5+5, getY(submit)+getHeight(submit)+5));
-		window.setSize(getX(submit)+getWidth(submit)+5, getY(submit)+getHeight(submit)+5);
-		
-		Dimension size=this.getSize();
-		Dimension size1=window.getSize();
-		Dimension size2=new Dimension(getX(submit)+getWidth(submit)+5, getY(submit)+getHeight(submit)+5);
-//		window.setSize((int)(size.getWidth()*2-size1.getWidth()), 
-//				size1.);
-		//window.setPreferredSize(new Dimension(getX(submit)+getWidth(submit)+5, getY(submit)+getHeight(submit)+5));
-		
-		
+		h+=window.getTitlebar().getHeight();
+		window.setSize(w, h);
 		
 		//update dialog
 		validate();
@@ -330,6 +322,7 @@ public class UweFlowIncQuestViewPanel extends JComponent implements ContentChang
 		window.getParent().validate();
 		window.getParent().revalidate();
 		window.getParent().repaint();
+		
 	}
 	public void prepare()
 	{
@@ -580,6 +573,7 @@ public class UweFlowIncQuestViewPanel extends JComponent implements ContentChang
 			self.validate();
 			self.revalidate();
 			self.repaint();
+			
 		}
 	}
 	

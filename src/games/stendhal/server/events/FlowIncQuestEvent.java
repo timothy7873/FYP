@@ -2,6 +2,8 @@ package games.stendhal.server.events;
 
 import org.apache.log4j.Logger;
 
+import games.stendhal.server.maps.quests.uwe.UweFlowIncQuestNPC;
+import games.stendhal.server.maps.quests.uwe.UweFlowIncQuestNPC.Question;
 import marauroa.common.game.Definition;
 import marauroa.common.game.RPClass;
 import marauroa.common.game.RPEvent;
@@ -48,6 +50,23 @@ public class FlowIncQuestEvent extends RPEvent {
 	 * @param title title of image viewer
 	 * @param caption text to display along the image
 	 */
+	public FlowIncQuestEvent(String title) {
+		super(RPCLASS_NAME);
+		
+		String code,ans,out,exp;
+		Question q=UweFlowIncQuestNPC.getRandomQuestion();
+		code=q.code;
+		ans=q.ans;
+		out=q.out;
+		exp=q.exp;
+
+		super.put(CODE, code);
+		super.put(ANS, ans);
+		
+		super.put(OUT, out);
+		super.put(EXP, exp);
+		super.put(TITLE, title);
+	}
 	public FlowIncQuestEvent(String code, String ans, String out, String exp, String title) {
 		super(RPCLASS_NAME);
 

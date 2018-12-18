@@ -1,5 +1,19 @@
 package games.stendhal.server.maps.quests.uwe;
 
+import java.io.BufferedReader;
+import java.io.IOException;
+import java.io.InputStream;
+import java.io.InputStreamReader;
+import java.io.Reader;
+import java.net.MalformedURLException;
+import java.net.URL;
+import java.nio.charset.Charset;
+
+import org.json.simple.JSONArray;
+import org.json.simple.JSONObject;
+import org.json.simple.parser.JSONParser;
+import org.json.simple.parser.ParseException;
+
 import games.stendhal.common.Direction;
 import games.stendhal.server.core.engine.SingletonRepository;
 import games.stendhal.server.core.engine.StendhalRPZone;
@@ -19,6 +33,40 @@ public class UweFlowIncQuestNPC implements LoadableContent{
 	
 	private SpeakerNPC npc;
 	
+	
+	public static class Question
+	{
+		public String code,ans,out,exp;
+		public Question(String code, String ans, String out, String exp)
+		{this.code=code;this.ans=ans;this.out=out;this.exp=exp;}
+	}
+	public static Question getRandomQuestion()
+	{
+		try
+		{
+			URL url = new URL("http://localhost/FYP/outputQuestion.php?questionType=logicerror");
+			InputStream is = url.openStream();
+			BufferedReader rd = new BufferedReader(new InputStreamReader(is, Charset.forName("UTF-8")));
+			
+			StringBuilder sb = new StringBuilder();
+		    int cp;
+			while ((cp = rd.read()) != -1) {
+			      sb.append((char) cp);
+		    }
+			
+			String jsonText = sb.toString();
+			JSONObject json = (JSONObject)new JSONParser().parse(jsonText);
+			JSONArray json1=(JSONArray)json.get("code");
+			
+			return new Question((String)((JSONArray)json.get("code")).get(0),(String)((JSONArray)json.get("code")).get(0),
+					(String)((JSONArray)json.get("code")).get(0),(String)((JSONArray)json.get("code")).get(0));
+		}
+		catch(Exception e)
+		{
+			e.printStackTrace();
+		}
+		return null;
+	}
 	public UweFlowIncQuestNPC()
 	{
 		code="public class test {\n"+
@@ -84,7 +132,9 @@ public class UweFlowIncQuestNPC implements LoadableContent{
 				null,
 				ConversationStates.ATTENDING, 
 				null, 
-				new FireEventChatAction(new FlowIncQuestEvent(code,ans,out,exp,"Flow incorrect quest")));
+				//new FireEventChatAction(new FlowIncQuestEvent(code,ans,out,exp,"Flow incorrect quest"))
+				new FireEventChatAction(new FlowIncQuestEvent("Flow incorrect quest"))
+				);
 		//bye
 		npc.addGoodbye("Have fun!");
 		

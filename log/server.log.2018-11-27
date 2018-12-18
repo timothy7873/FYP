@@ -1,0 +1,48 @@
+2018-11-27 14:13:45 INFO  [marauroad ] Statistics               ( 122) - Total/Used memory: 110080/88410
+2018-11-27 14:13:45 ERROR [mmandQueue] DBCommandQueueBackgroundThread(  67) [marauroad: LogStatisticsCommand [frozenNow=marauroa.server.game.Statistics$Variables@5f3eded0]] - com.mysql.jdbc.exceptions.jdbc4.CommunicationsException: Communications link failure
+
+Last packet sent to the server was 28 ms ago.
+com.mysql.jdbc.exceptions.jdbc4.CommunicationsException: Communications link failure
+
+Last packet sent to the server was 28 ms ago.
+	at sun.reflect.NativeConstructorAccessorImpl.newInstance0(Native Method)
+	at sun.reflect.NativeConstructorAccessorImpl.newInstance(Unknown Source)
+	at sun.reflect.DelegatingConstructorAccessorImpl.newInstance(Unknown Source)
+	at java.lang.reflect.Constructor.newInstance(Unknown Source)
+	at com.mysql.jdbc.Util.handleNewInstance(Util.java:406)
+	at com.mysql.jdbc.SQLError.createCommunicationsException(SQLError.java:1074)
+	at com.mysql.jdbc.MysqlIO.reuseAndReadPacket(MysqlIO.java:2873)
+	at com.mysql.jdbc.MysqlIO.reuseAndReadPacket(MysqlIO.java:2763)
+	at com.mysql.jdbc.MysqlIO.checkErrorPacket(MysqlIO.java:3299)
+	at com.mysql.jdbc.MysqlIO.sendCommand(MysqlIO.java:1837)
+	at com.mysql.jdbc.MysqlIO.sqlQueryDirect(MysqlIO.java:1961)
+	at com.mysql.jdbc.ConnectionImpl.execSQL(ConnectionImpl.java:2537)
+	at com.mysql.jdbc.ConnectionImpl.execSQL(ConnectionImpl.java:2466)
+	at com.mysql.jdbc.StatementImpl.execute(StatementImpl.java:735)
+	at marauroa.server.db.adapter.AbstractDatabaseAdapter.execute(AbstractDatabaseAdapter.java:136)
+	at marauroa.server.db.DBTransaction.execute(DBTransaction.java:172)
+	at marauroa.server.game.db.StatisticsDAO.addStatisticsEvent(StatisticsDAO.java:52)
+	at marauroa.server.game.dbcommand.LogStatisticsCommand.execute(LogStatisticsCommand.java:42)
+	at marauroa.server.db.command.DBCommandQueueBackgroundThread.executeDBAction(DBCommandQueueBackgroundThread.java:103)
+	at marauroa.server.db.command.DBCommandQueueBackgroundThread.processCommand(DBCommandQueueBackgroundThread.java:75)
+	at marauroa.server.db.command.DBCommandQueueBackgroundThread.run(DBCommandQueueBackgroundThread.java:49)
+	at java.lang.Thread.run(Unknown Source)
+Caused by: java.net.SocketException: Software caused connection abort: recv failed
+	at java.net.SocketInputStream.socketRead0(Native Method)
+	at java.net.SocketInputStream.socketRead(Unknown Source)
+	at java.net.SocketInputStream.read(Unknown Source)
+	at java.net.SocketInputStream.read(Unknown Source)
+	at com.mysql.jdbc.util.ReadAheadInputStream.fill(ReadAheadInputStream.java:113)
+	at com.mysql.jdbc.util.ReadAheadInputStream.readFromUnderlyingStreamIfNecessary(ReadAheadInputStream.java:160)
+	at com.mysql.jdbc.util.ReadAheadInputStream.read(ReadAheadInputStream.java:188)
+	at com.mysql.jdbc.MysqlIO.readFully(MysqlIO.java:2329)
+	at com.mysql.jdbc.MysqlIO.reuseAndReadPacket(MysqlIO.java:2774)
+	... 15 more
+2018-11-27 14:13:45 WARN  [mmandQueue] TransactionPool          ( 207) [marauroad: LogStatisticsCommand [frozenNow=marauroa.server.game.Statistics$Variables@5f3eded0]] - Killing dead transaction marauroa.server.db.DBTransaction@1c3a4799.
+2018-11-27 14:13:45 WARN  [mmandQueue] TransactionPool          ( 207) [marauroad: LogStatisticsCommand [frozenNow=marauroa.server.game.Statistics$Variables@5f3eded0]] - Killing dead transaction marauroa.server.db.DBTransaction@2c039ac6.
+2018-11-27 14:13:45 WARN  [mmandQueue] TransactionPool          ( 207) [marauroad: LogStatisticsCommand [frozenNow=marauroa.server.game.Statistics$Variables@5f3eded0]] - Killing dead transaction marauroa.server.db.DBTransaction@6bf256fa.
+2018-11-27 14:13:45 WARN  [mmandQueue] DBCommandQueueBackgroundThread( 207) [marauroad: LogStatisticsCommand [frozenNow=marauroa.server.game.Statistics$Variables@5f3eded0]] - Retrying DBCommand [marauroad: LogStatisticsCommand [frozenNow=marauroa.server.game.Statistics$Variables@5f3eded0]]
+2018-11-27 14:13:46 INFO  [mmandQueue] AbstractDatabaseAdapter  ( 122) [marauroad: LogStatisticsCommand [frozenNow=marauroa.server.game.Statistics$Variables@5f3eded0]] - Connected to jdbc:mysql://localhost/marauroa127a?useUnicode=yes&characterEncoding=UTF-8: MySQL 5.6.34-log with driver MySQL-AB JDBC Driver mysql-connector-java-5.1.5 ( Revision: ${svn.Revision} )
+2018-11-27 14:13:46 INFO  [mmandQueue] AbstractDatabaseAdapter  ( 122) [marauroad: LogStatisticsCommand [frozenNow=marauroa.server.game.Statistics$Variables@5f3eded0]] - Connected to jdbc:mysql://localhost/marauroa127a?useUnicode=yes&characterEncoding=UTF-8: MySQL 5.6.34-log with driver MySQL-AB JDBC Driver mysql-connector-java-5.1.5 ( Revision: ${svn.Revision} )
+2018-11-27 14:13:46 INFO  [mmandQueue] AbstractDatabaseAdapter  ( 122) [marauroad: LogStatisticsCommand [frozenNow=marauroa.server.game.Statistics$Variables@5f3eded0]] - Connected to jdbc:mysql://localhost/marauroa127a?useUnicode=yes&characterEncoding=UTF-8: MySQL 5.6.34-log with driver MySQL-AB JDBC Driver mysql-connector-java-5.1.5 ( Revision: ${svn.Revision} )
+2018-11-27 14:13:46 INFO  [mmandQueue] AbstractDatabaseAdapter  ( 122) [marauroad: LogStatisticsCommand [frozenNow=marauroa.server.game.Statistics$Variables@5f3eded0]] - Connected to jdbc:mysql://localhost/marauroa127a?useUnicode=yes&characterEncoding=UTF-8: MySQL 5.6.34-log with driver MySQL-AB JDBC Driver mysql-connector-java-5.1.5 ( Revision: ${svn.Revision} )
