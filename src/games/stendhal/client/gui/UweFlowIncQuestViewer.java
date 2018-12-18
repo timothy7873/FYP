@@ -5,7 +5,7 @@ import marauroa.common.game.RPEvent;
 public class UweFlowIncQuestViewer {
 	private String[] code;
 	private String[] ans;
-	private String out,exp;
+	private String out,exp,spliter;
 	private String title;
 	
 	public UweFlowIncQuestViewer(final RPEvent e)
@@ -22,13 +22,17 @@ public class UweFlowIncQuestViewer {
 		if (e.has("exp")) {
 			exp = e.get("exp");
 		}
+		spliter="\n";
+		if (e.has("spliter")) {
+			spliter = e.get("spliter");
+		}
 		
 		code=null;
 		if(e.has("code"))
-			code=e.get("code").split("\n");
+			code=e.get("code").split(spliter);
 		ans=null;
 		if(e.has("ans"))
-			ans=e.get("ans").split("\n");
+			ans=e.get("ans").split(spliter);
 		
 
 		view();

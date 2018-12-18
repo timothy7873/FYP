@@ -37,11 +37,13 @@ public class UweFlowIncQuestNPC implements LoadableContent{
 	public static class Question
 	{
 		public String code,ans,out,exp;
-		public Question(String code, String ans, String out, String exp)
-		{this.code=code;this.ans=ans;this.out=out;this.exp=exp;}
+		public String spliter;
+		public Question(String code, String ans, String out, String exp,String spliter)
+		{this.code=code;this.ans=ans;this.out=out;this.exp=exp;this.spliter=spliter;}
 	}
 	public static Question getRandomQuestion()
 	{
+		String spliter="-t-";
 		try
 		{
 			URL url = new URL("http://localhost/FYP/outputQuestion.php?questionType=logicerror");
@@ -56,10 +58,32 @@ public class UweFlowIncQuestNPC implements LoadableContent{
 			
 			String jsonText = sb.toString();
 			JSONObject json = (JSONObject)new JSONParser().parse(jsonText);
-			JSONArray json1=(JSONArray)json.get("code");
+
 			
-			return new Question((String)((JSONArray)json.get("code")).get(0),(String)((JSONArray)json.get("code")).get(0),
-					(String)((JSONArray)json.get("code")).get(0),(String)((JSONArray)json.get("code")).get(0));
+			String code="",ans="",out="",exp="";
+			
+			JSONArray codeJson=(JSONArray)json.get("code");
+			if(codeJson.size()>0)
+				code+=codeJson.get(0);
+			for(int i=1;i<codeJson.size();i++)
+			{
+				code+=spliter+codeJson.get(i);
+			}
+			
+			JSONArray ansJson=(JSONArray)json.get("answer");
+			if(ansJson.size()>0)
+				ans+=ansJson.get(0);
+			for(int i=1;i<ansJson.size();i++)
+			{
+				ans+=spliter+ansJson.get(i);
+			}
+			
+			JSONArray outJson=(JSONArray)json.get("currentOutput");
+			out=(String)outJson.get(0);
+			JSONArray expJson=(JSONArray)json.get("expectOutput");
+			exp=(String)expJson.get(0);
+			
+			return new Question(code,ans,out,exp,spliter);
 		}
 		catch(Exception e)
 		{
