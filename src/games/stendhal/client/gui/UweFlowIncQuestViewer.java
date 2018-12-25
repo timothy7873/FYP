@@ -1,12 +1,15 @@
 package games.stendhal.client.gui;
 
+import Util.Quest.*;
+import games.stendhal.client.entity.User;
 import marauroa.common.game.RPEvent;
 
 public class UweFlowIncQuestViewer {
 	private String[] code;
 	private String[] ans;
-	private String out,exp,spliter;
-	private String title;
+	private String out,exp;
+	private String title,type;
+	private Reward[] rewards;
 	
 	public UweFlowIncQuestViewer(final RPEvent e)
 	{
@@ -14,27 +17,25 @@ public class UweFlowIncQuestViewer {
 		if (e.has("title")) {
 			title = e.get("title");
 		}
-		out="";
-		if (e.has("out")) {
-			out = e.get("out");
-		}
-		exp="";
-		if (e.has("exp")) {
-			exp = e.get("exp");
-		}
-		spliter="\n";
-		if (e.has("spliter")) {
-			spliter = e.get("spliter");
+		type="";
+		if (e.has("type")) {
+			type = e.get("type");
 		}
 		
-		code=null;
-		if(e.has("code"))
-			code=e.get("code").split(spliter);
-		ans=null;
-		if(e.has("ans"))
-			ans=e.get("ans").split(spliter);
+		FlowIncQuest q=null;
+		QuestGetter getter=new HardcodeQuestGetter();
+		if(type.equals("logical"))
+		{
+			User.get();
+			q=getter.getLogicalQuestion(User.getCharacterName());
+		}
 		
-
+		code=q.code.split("\n");
+		ans=q.ans.split("\n");
+		out=q.out;
+		exp=q.exp;
+		rewards=q.reward;
+		
 		view();
 	}
 	public static void viewQuest(final RPEvent e) {
@@ -42,7 +43,8 @@ public class UweFlowIncQuestViewer {
 	}
 	public void view()
 	{
-		UweFlowIncQuestViewPanel vp=new UweFlowIncQuestViewPanel(code,ans,out,exp);
+		UweFlowIncQuestViewPanel vp=new UweFlowIncQuestViewPanel(code,ans,out,exp,rewards);
 		new UweFlowIncQuestWindow(vp,title);
 	}
+	
 }

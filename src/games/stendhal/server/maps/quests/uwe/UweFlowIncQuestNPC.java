@@ -23,91 +23,17 @@ import games.stendhal.server.entity.npc.ConversationStates;
 import games.stendhal.server.entity.npc.NPCList;
 import games.stendhal.server.entity.npc.SpeakerNPC;
 import games.stendhal.server.entity.npc.action.FireEventChatAction;
-import games.stendhal.server.events.FlowIncQuestEvent;
+import games.stendhal.server.events.UweFlowIncQuestEvent;
 
 public class UweFlowIncQuestNPC implements LoadableContent{
 	
 	private String npcName = "UweFlowIncQuestNPC";
 	private final StendhalRPZone zone = SingletonRepository.getRPWorld().getZone("int_semos_guard_house");
-	private String code,ans,out,exp;
 	
 	private SpeakerNPC npc;
 	
-	
-	public static class Question
-	{
-		public String code,ans,out,exp;
-		public String spliter;
-		public Question(String code, String ans, String out, String exp,String spliter)
-		{this.code=code;this.ans=ans;this.out=out;this.exp=exp;this.spliter=spliter;}
-	}
-	public static Question getRandomQuestion()
-	{
-		String spliter="-t-";
-		try
-		{
-			URL url = new URL("http://localhost/FYP/outputQuestion.php?questionType=logicerror");
-			InputStream is = url.openStream();
-			BufferedReader rd = new BufferedReader(new InputStreamReader(is, Charset.forName("UTF-8")));
-			
-			StringBuilder sb = new StringBuilder();
-		    int cp;
-			while ((cp = rd.read()) != -1) {
-			      sb.append((char) cp);
-		    }
-			
-			String jsonText = sb.toString();
-			JSONObject json = (JSONObject)new JSONParser().parse(jsonText);
-
-			
-			String code="",ans="",out="",exp="";
-			
-			JSONArray codeJson=(JSONArray)json.get("code");
-			if(codeJson.size()>0)
-				code+=codeJson.get(0);
-			for(int i=1;i<codeJson.size();i++)
-			{
-				code+=spliter+codeJson.get(i);
-			}
-			
-			JSONArray ansJson=(JSONArray)json.get("answer");
-			if(ansJson.size()>0)
-				ans+=ansJson.get(0);
-			for(int i=1;i<ansJson.size();i++)
-			{
-				ans+=spliter+ansJson.get(i);
-			}
-			
-			JSONArray outJson=(JSONArray)json.get("currentOutput");
-			out=(String)outJson.get(0);
-			JSONArray expJson=(JSONArray)json.get("expectOutput");
-			exp=(String)expJson.get(0);
-			
-			return new Question(code,ans,out,exp,spliter);
-		}
-		catch(Exception e)
-		{
-			e.printStackTrace();
-		}
-		return null;
-	}
 	public UweFlowIncQuestNPC()
-	{
-		code="public class test {\n"+
-				"\tpublic static void main(String[] args){\n"+
-				"\t\tint x=12;\n"+
-				"\t\tSystem.out.println(\"x\");\n"+
-				"\t}\n"+
-				"}";
-		ans="public class test {\n"+
-				"\tpublic static void main(String[] args){\n"+
-				"\t\tint x=12;\n"+
-				"\t\tSystem.out.println(x);\n"+
-				"\t}\n"+
-				"}";
-		out="x";
-		exp="12";
-	}
+	{}
 	
 	@Override
 	public void addToWorld() {
@@ -156,8 +82,7 @@ public class UweFlowIncQuestNPC implements LoadableContent{
 				null,
 				ConversationStates.ATTENDING, 
 				null, 
-				//new FireEventChatAction(new FlowIncQuestEvent(code,ans,out,exp,"Flow incorrect quest"))
-				new FireEventChatAction(new FlowIncQuestEvent("Flow incorrect quest"))
+				new FireEventChatAction(new UweFlowIncQuestEvent("logical", "Logical error fixing quest"))
 				);
 		//bye
 		npc.addGoodbye("Have fun!");

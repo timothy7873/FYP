@@ -80,8 +80,11 @@ public class UweCreature implements LoadableContent {
 		UweQuestCreature tCreature=new UweQuestCreature(tRat);
 		//tCreature.addDropItem("golden key", 100, 2);
 
-		tCreature.addDropItem(UweItemManager.createCodeItem("void"),100);
-		tCreature.addDropItem(UweItemManager.createCodeItem("main"),100);
+//		tCreature.addDropItem(UweItemManager.createCodeItem("void"),100);
+//		tCreature.addDropItem(UweItemManager.createCodeItem("main"),100);
+		tCreature.addDropItem(UweItemManager.createCodeItem("System.out.println(x)"),100);
+		tCreature.addDropItem(UweItemManager.createCodeItem(";"),100);
+		
 		//tCreature.addDropItem(em.getItem("club"),100);
 		//tCreature.addDropItem("club",100,1);
 		//tCreature.addDropItem(em.getItem("club"));

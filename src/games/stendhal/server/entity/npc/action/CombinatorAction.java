@@ -56,6 +56,10 @@ public class CombinatorAction implements ChatAction{
 	
 	private PassiveEntity combine(PassiveEntity item1, PassiveEntity item2)
 	{
+		if(UweItemManager.isCodeItem((Item)item1))
+		{
+			return UweItemManager.createCodeItem(item1.get("name")+item2.get("name"));
+		}
 		
 		for(int i=0;i<combinationList.size();i++)
 		{
@@ -63,10 +67,7 @@ public class CombinatorAction implements ChatAction{
 			if(row[0].equals(item1.getName()) &&
 					row[1].equals(item2.getName()))
 			{
-				if(UweItemManager.isCodeItem((Item)item1))
-					return UweItemManager.createCodeItem(row[2]);
-				else
-					return em.getItem(row[2]);
+				return em.getItem(row[2]);
 			}
 		}
 		return null;

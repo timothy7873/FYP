@@ -348,7 +348,8 @@ public class PlayerTransformer implements Transformer {
 		player.removeSlot(slot.getName());
 		player.addSlot(newSlot);
 
-		ItemTransformer transformer = new ItemTransformer();
+		//ItemTransformer transformer = new ItemTransformer();
+		ItemTransformer transformer = new UweItemTransformer();
 		for (final RPObject rpobject : objects) {
 			try {
 				// remove admin items the player does not deserve

@@ -6,7 +6,7 @@ import games.stendhal.client.gui.UweFlowIncQuestViewer;
 import games.stendhal.client.gui.UweFlowIncQuestWindow;
 
 
-class TestEvent extends Event<Entity> {
+class UweFlowIncQuestEvent extends Event<Entity> {
 	/**
 	 * executes the event
 	 */

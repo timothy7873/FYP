@@ -62,6 +62,8 @@ public class UweQuest extends AbstractQuest {
 		content.add(new UweFillInBlankQuestNPC());
 		content.add(new UweHelper());
 		content.add(new UweFlowIncQuestNPC());
+		content.add(new UweQuestOneNPC());
+		content.add(new UweJavaTestNPC());
 		
 //		content.add(new DadNPC());
 //		content.add(new SoldierNPCs());

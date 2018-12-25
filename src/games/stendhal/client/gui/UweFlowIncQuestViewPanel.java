@@ -1,42 +1,32 @@
 package games.stendhal.client.gui;
 //package games.stendhal.client.gui;
 
+import java.awt.AWTEvent;
 import java.awt.BorderLayout;
 import java.awt.Button;
 import java.awt.Color;
 import java.awt.Component;
 import java.awt.Dimension;
+import java.awt.Event;
 import java.awt.Font;
-import java.awt.Frame;
-import java.awt.GridLayout;
 import java.awt.Insets;
-import java.awt.Label;
+import java.awt.Window;
 import java.awt.event.ActionEvent;
 import java.awt.event.ActionListener;
+import java.awt.event.WindowEvent;
 import java.awt.font.TextAttribute;
-import java.util.ArrayList;
 import java.util.HashMap;
-import java.util.List;
 import java.util.Map;
 
-import javax.swing.BoxLayout;
-import javax.swing.JButton;
 import javax.swing.JComponent;
-import javax.swing.JFrame;
 import javax.swing.JLabel;
 import javax.swing.JOptionPane;
-import javax.swing.JTextArea;
 import javax.swing.JTextField;
-import javax.swing.JTextPane;
 import javax.swing.Spring;
 import javax.swing.SpringLayout;
-import javax.swing.SpringLayout.Constraints;
 import javax.swing.SwingUtilities;
-import javax.swing.text.BadLocationException;
-import javax.swing.text.DefaultStyledDocument;
-import javax.swing.text.SimpleAttributeSet;
-import javax.swing.text.StyleConstants;
 
+import Util.Quest.*;
 import games.stendhal.client.ClientSingletonRepository;
 import games.stendhal.client.GameObjects;
 import games.stendhal.client.entity.ContentChangeListener;
@@ -44,7 +34,6 @@ import games.stendhal.client.entity.IEntity;
 import games.stendhal.client.entity.User;
 import games.stendhal.client.entity.factory.EntityMap;
 import games.stendhal.client.gui.InternalWindow.CloseListener;
-import layout.SpringUtilities;
 import marauroa.common.game.RPAction;
 import marauroa.common.game.RPObject;
 import marauroa.common.game.RPObject.ID;
@@ -59,6 +48,7 @@ public class UweFlowIncQuestViewPanel extends JComponent implements ContentChang
 	private String [] lines;
 	private String[] ans;
 	private String out,exp;
+	private Reward[] rewards;
 	private Map<UweItemPanel,Integer> panels;
 	private String slotName="uwequest";
 	private IEntity parent;
@@ -66,12 +56,13 @@ public class UweFlowIncQuestViewPanel extends JComponent implements ContentChang
 	private FirstStageBtnHandler firstBtnHandler;
 	private SecondStageBtnHandler secondBtnHandler;
 
-	public UweFlowIncQuestViewPanel(String[] lines,String[] ans,String out,String exp)
+	public UweFlowIncQuestViewPanel(String[] lines,String[] ans,String out, String exp, Reward[] rewards)
 	{
 		this.lines=lines;
 		this.ans=ans;
 		this.out=out;
 		this.exp=exp;
+		this.rewards=rewards;
 		
 		setLayout(new BorderLayout(2,2));
 		setOpaque(true);
@@ -194,6 +185,7 @@ public class UweFlowIncQuestViewPanel extends JComponent implements ContentChang
 		setWindowSize(maxWidth+5+50+5+5, getY(submit)+getHeight(submit)+5);
 	}
 	public void buildSecondStage()
+
 	{
 		int lastY=0;
 		
@@ -350,6 +342,7 @@ public class UweFlowIncQuestViewPanel extends JComponent implements ContentChang
 	}
 	
 	public String[] getAns() {return ans;}
+	public Reward[] getRewards() {return rewards;}
 	
 	//Content change listener
 	public void contentAdded(RPSlot added)
@@ -596,9 +589,75 @@ public class UweFlowIncQuestViewPanel extends JComponent implements ContentChang
 			if(!btn.getName().equals("submit"))
 				return;
 			
-			RPAction action = new RPAction();
-			action.put("ans", "");
-			ClientSingletonRepository.getClientFramework().send(action);
+			boolean allCorrect=true;
+			
+			String[] ans=self.getAns();
+			Component[] coms=self.getComponents();
+			for(int i=0;i<coms.length;i++)
+			{
+				if(coms[i] instanceof JTextField)
+				{
+					JTextField text=(JTextField)coms[i];
+					
+					//get index
+					int index=-1;
+					if(text.getName()==null)//sometimes null
+						continue;
+					if(text.getName().length()<=4)//check if name so short, 100% not start with "line"
+						continue;
+					if(!text.getName().substring(0, 4).equals("line"))//check if start with "line"
+						continue;
+					try {index=Integer.parseInt(text.getName().substring(4));}//convert to int
+					catch(Exception ex) {continue;}
+					if(index>=ans.length)//check if index out of bounds
+						continue;
+					
+					
+					if(!ans[index].replaceAll("\t", "").equals(text.getText().replaceAll("\t", "")))
+					{
+						allCorrect=false;
+						break;
+					}
+				}
+
+			}
+			if(allCorrect)
+			{
+				//tell correct
+				//send reward
+				//send destroy code item
+				//close window
+				
+				JOptionPane.showMessageDialog(null, "Correct!", "Quest", JOptionPane.INFORMATION_MESSAGE);;
+				
+				String items="";
+				int exp=0;
+				double karma=0;
+				Reward[] rewards=self.getRewards();
+				for(int i=0;i<rewards.length;i++)
+				{
+					if(rewards[i].itemName!=null)
+						items+=rewards[i].itemName+","+rewards[i].count+";";
+					exp+=rewards[i].exp;
+					karma+=0;
+				}
+				
+				RPAction action = new RPAction();
+				action.put("type", "UweFlowIncQuestSubmit");
+				action.put("items", items);
+				action.put("exp", exp);
+				action.put("karma", karma);
+				ClientSingletonRepository.getClientFramework().send(action);
+				
+				
+				self.window.closeButton.doClick();
+			}
+			else
+			{
+				JOptionPane.showMessageDialog(null, "Your codes are not correct, please retry!", "Quest", JOptionPane.INFORMATION_MESSAGE);;
+			}
+			
+			
 
 		}
 	}

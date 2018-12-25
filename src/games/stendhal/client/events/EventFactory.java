@@ -124,12 +124,17 @@ class EventFactory {
 		else if(name.equals("test"))
 		{
 			//event = new ExamineEvent();
-			event=new TestEvent();
+			//event=new UweFlowIncQuestEvent();
 		}
 		else if(name.equals("flow_inc_quest"))
 		{
 			//event = new ExamineEvent();
-			event=new TestEvent();
+			event=new UweFlowIncQuestEvent();
+		}
+		else if(name.equals("yes_no_test"))
+		{
+			//event = new ExamineEvent();
+			event=new UweFlowIncQuestEvent();
 		}
 
 		if (event != null) {

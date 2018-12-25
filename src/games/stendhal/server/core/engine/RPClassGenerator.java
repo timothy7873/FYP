@@ -62,7 +62,8 @@ import games.stendhal.server.events.AttackEvent;
 import games.stendhal.server.events.BuddyLoginEvent;
 import games.stendhal.server.events.BuddyLogoutEvent;
 import games.stendhal.server.events.ExamineEvent;
-import games.stendhal.server.events.FlowIncQuestEvent;
+import games.stendhal.server.events.UweFlowIncQuestEvent;
+import games.stendhal.server.events.UweYesNoTestEvent;
 import games.stendhal.server.events.GlobalVisualEffectEvent;
 import games.stendhal.server.events.GroupChangeEvent;
 import games.stendhal.server.events.GroupInviteEvent;
@@ -109,7 +110,10 @@ public class RPClassGenerator {
 			TestEvent.generateRPClass();
 		}
 		if (!RPClass.hasRPClass("flow_inc_quest")) {
-			FlowIncQuestEvent.generateRPClass();
+			UweFlowIncQuestEvent.generateRPClass();
+		}
+		if (!RPClass.hasRPClass("yes_no_test")) {
+			UweYesNoTestEvent.generateRPClass();
 		}
 
 		// Entity sub-classes

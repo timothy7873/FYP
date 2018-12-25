@@ -128,6 +128,8 @@ public class CommandCenter {
 		WhoAction.register();
 		register("info", new InfoAction());
 		register("markscroll", new MarkScrollAction());
+		
+		UweFlowIncQuestSubmitAction.register();
 	}
 
 	/**
