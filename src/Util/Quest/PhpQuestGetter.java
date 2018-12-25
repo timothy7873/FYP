@@ -58,5 +58,5 @@ public class PhpQuestGetter implements QuestGetter{
 		return null;
 	}
 	
-
+	public YesNoTest[] getYesNoTests(String subject) {return null;}
 }

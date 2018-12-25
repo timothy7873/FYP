@@ -34,4 +34,8 @@ public class HardcodeQuestGetter implements QuestGetter{
 	{
 		return new TraceQuest();
 	}
+	public YesNoTest[] getYesNoTests(String subject)
+	{
+		return new YesNoTest[] {new YesNoTest("Is java a program language?",true)};
+	}
 }

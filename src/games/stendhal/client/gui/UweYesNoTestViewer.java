@@ -1,11 +1,15 @@
 package games.stendhal.client.gui;
 
+import Util.Quest.HardcodeQuestGetter;
+import Util.Quest.QuestGetter;
+import Util.Quest.YesNoTest;
 import marauroa.common.game.RPEvent;
 
 public class UweYesNoTestViewer {
 	private String subject;
 	private String title;
-	private ;
+	private String[] question;
+	private boolean[] ans;
 	
 	public UweYesNoTestViewer(final RPEvent e)
 	{
@@ -18,6 +22,16 @@ public class UweYesNoTestViewer {
 			title = e.get("title");
 		}
 		
+		QuestGetter qg=new HardcodeQuestGetter();
+		YesNoTest[] qs=qg.getYesNoTests(subject);
+		question=new String[qs.length];
+		ans=new boolean[qs.length];
+		for(int i=0;i<qs.length;i++)
+		{
+			question[i]=qs[i].question;
+			ans[i]=qs[i].ans;
+		}
+		
 		view();
 	}
 	
@@ -26,7 +40,7 @@ public class UweYesNoTestViewer {
 	}
 	public void view()
 	{
-		UweYesNoTestViewerViewPanel vp=new UweYesNoTestViewerViewPanel();
+		UweYesNoTestViewerViewPanel vp=new UweYesNoTestViewerViewPanel(question,ans);
 		new UweYesNoTestWindow(vp,title);
 	}
 }
