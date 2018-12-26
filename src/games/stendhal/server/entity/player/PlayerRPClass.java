@@ -131,6 +131,8 @@ public class PlayerRPClass {
 
 		player.addRPSlot("uwebag", 9, Definition.PRIVATE);
 		player.addRPSlot("uwequest", 1, Definition.PRIVATE);
+		for(int i=0;i<10;i++)
+			player.addRPSlot("uwepopup"+i, 1, Definition.PRIVATE);
 
 		
 		// The guild name

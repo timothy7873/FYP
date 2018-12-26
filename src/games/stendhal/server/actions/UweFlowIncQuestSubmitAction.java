@@ -47,9 +47,15 @@ public class UweFlowIncQuestSubmitAction implements ActionListener{
 		player.updateItemAtkDef();
 		player.update();
 		player.notifyWorldAboutChanges();
+
+		for(int i=0;;i++)
+		{
+			RPSlot submition=player.getSlot("uwepopup"+i);
+			if(submition==null)
+				break;
+			submition.clear();
+		}
 		
-		RPSlot submition=player.getSlot("uwequest");
-		submition.clear();
 	}
 
 	public static void register() {

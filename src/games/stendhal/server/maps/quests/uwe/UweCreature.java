@@ -84,6 +84,7 @@ public class UweCreature implements LoadableContent {
 //		tCreature.addDropItem(UweItemManager.createCodeItem("main"),100);
 		tCreature.addDropItem(UweItemManager.createCodeItem("System.out.println(x)"),100);
 		tCreature.addDropItem(UweItemManager.createCodeItem(";"),100);
+		tCreature.addDropItem(UweItemManager.createCodeItem("int x=12;"),100);
 		
 		//tCreature.addDropItem(em.getItem("club"),100);
 		//tCreature.addDropItem("club",100,1);

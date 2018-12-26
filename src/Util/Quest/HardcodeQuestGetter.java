@@ -9,7 +9,7 @@ public class HardcodeQuestGetter implements QuestGetter{
 		
 		code="public class test {\n"+
 				"\tpublic static void main(String[] args){\n"+
-				"\t\tint x=12;\n"+
+				"\t\tint x=11;\n"+
 				"\t\tSystem.out.println(\"x\");\n"+
 				"\t}\n"+
 				"}";
@@ -36,6 +36,6 @@ public class HardcodeQuestGetter implements QuestGetter{
 	}
 	public YesNoTest[] getYesNoTests(String subject)
 	{
-		return new YesNoTest[] {new YesNoTest("Is java a program language?",true)};
+		return new YesNoTest[] {new YesNoTest("Is java a program language?",true),new YesNoTest("Is java a script language?",false)};
 	}
 }

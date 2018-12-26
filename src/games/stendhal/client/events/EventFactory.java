@@ -134,7 +134,7 @@ class EventFactory {
 		else if(name.equals("yes_no_test"))
 		{
 			//event = new ExamineEvent();
-			event=new UweFlowIncQuestEvent();
+			event=new UweYesNoTestEvent();
 		}
 
 		if (event != null) {

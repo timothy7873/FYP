@@ -50,7 +50,8 @@ public class UweFlowIncQuestViewPanel extends JComponent implements ContentChang
 	private String out,exp;
 	private Reward[] rewards;
 	private Map<UweItemPanel,Integer> panels;
-	private String slotName="uwequest";
+	private String slotName="uwepopup";
+	private int usedSlot=0;
 	private IEntity parent;
 	private final int CODEHEIGHT=25;
 	private FirstStageBtnHandler firstBtnHandler;
@@ -235,7 +236,8 @@ public class UweFlowIncQuestViewPanel extends JComponent implements ContentChang
 				setHeight(panel,50);
 				panel.setAcceptedTypes(EntityMap.getClass("item", null, null));
 				panel.setParent(parent);
-				panel.setName(slotName);
+				panel.setName(slotName+usedSlot);
+				usedSlot++;
 				parent.addContentChangeListener(this);
 				//contentAdded(parent.getSlot(slotName));
 				
@@ -348,7 +350,7 @@ public class UweFlowIncQuestViewPanel extends JComponent implements ContentChang
 	public void contentAdded(RPSlot added)
 	{
 		//handle slot
-		if (!slotName.equals(added.getName()))
+		if (!added.getName().substring(0, slotName.length()).equals(slotName))
 			return;//not our slot
 		
 		//invalid request

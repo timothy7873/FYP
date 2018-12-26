@@ -59,25 +59,25 @@ public class UweQuestOneNPC implements LoadableContent{
 				Arrays.asList("fix","f"), 
 				null, 
 				ConversationStates.INFORMATION_1, 
-				"Are you familar with java code? #Yes/#No/#A bit", 
+				"Are you familar with java code? #Yes/ #No/ #A #bit", 
 				null);
 		npc.add(ConversationStates.INFORMATION_1, 
 				Arrays.asList("Yes","yes","y"), 
 				null, 
 				ConversationStates.ATTENDING, 
-				"Please go find UweFlowIncQuestNPC and get the quest about java code", 
+				"Please go find #UweFlowIncQuestNPC and get the quest about java code", 
 				null);
 		npc.add(ConversationStates.INFORMATION_1, 
 				Arrays.asList("No","no","n"), 
 				null, 
 				ConversationStates.ATTENDING, 
-				"Please visit http://www.google.com/ to find resources to learn java", 
+				"Please visit #http://www.google.com/ to find resources to learn java", 
 				null);
 		npc.add(ConversationStates.INFORMATION_1, 
 				Arrays.asList("A bit","a bit","Abit","abit","ab","a"), 
 				null, 
 				ConversationStates.ATTENDING, 
-				"Please go find UweJavaTestNPC for testing of java", 
+				"Please go find #UweJavaTestNPC for testing of java", 
 				null);
 		//bye
 		npc.addGoodbye("Have fun!");

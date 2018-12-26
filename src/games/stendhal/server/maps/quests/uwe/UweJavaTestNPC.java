@@ -15,7 +15,7 @@ import games.stendhal.server.events.UweYesNoTestEvent;
 
 public class UweJavaTestNPC implements LoadableContent{
 	
-	private String npcName = "UweQuestOne";
+	private String npcName = "UweJavaTest";
 	private final StendhalRPZone zone = SingletonRepository.getRPWorld().getZone("int_semos_guard_house");
 	
 	private SpeakerNPC npc;

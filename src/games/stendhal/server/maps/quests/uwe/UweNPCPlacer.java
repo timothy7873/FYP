@@ -25,7 +25,7 @@ import games.stendhal.server.maps.quests.AbstractQuest;
  * <p>Creates a special version of Susi's father in a nearby house.
  * <p>Puts a sign by the tower to say why it is shut.
  */
-public class UweQuest extends AbstractQuest {
+public class UweNPCPlacer extends AbstractQuest {
 
 	public static final String QUEST_NAME = "SemosUweQuest";
 	private static final String QUEST_SLOT = "semos_uwe_quest";

@@ -4,22 +4,26 @@ import java.awt.BorderLayout;
 import java.awt.Button;
 import java.awt.Component;
 import java.awt.Dimension;
+import java.awt.event.ActionEvent;
+import java.awt.event.ActionListener;
 
 import javax.swing.JComponent;
+import javax.swing.JOptionPane;
 import javax.swing.JTextField;
 import javax.swing.Spring;
 import javax.swing.SpringLayout;
 
-import games.stendhal.client.entity.ContentChangeListener;
 import games.stendhal.client.gui.InternalWindow.CloseListener;
-import marauroa.common.game.RPSlot;
 
 public class UweYesNoTestViewerViewPanel extends JComponent implements CloseListener{
 	private static final long serialVersionUID = 6327842553901572328L;
 	private InternalManagedWindow window=null;
 	private String[] question;
 	private boolean[] ans;
-	private int qindex;
+	private JTextField textbox;
+	public int qindex;
+	
+	private BtnHandler btnHandler;
 	
 	public UweYesNoTestViewerViewPanel(String[] question, boolean[] ans)
 	{
@@ -30,6 +34,8 @@ public class UweYesNoTestViewerViewPanel extends JComponent implements CloseList
 		setOpaque(true);
 		
 		qindex=0;
+		btnHandler=new BtnHandler(this);
+		textbox=null;
 	}
 	public void setWindow(InternalManagedWindow window)
 	{
@@ -50,36 +56,39 @@ public class UweYesNoTestViewerViewPanel extends JComponent implements CloseList
 	}
 	private void buildView()
 	{
-		JTextField box=new JTextField();
-		box.setEditable(false);
-		add(box);
-		setX(box,5+50+5);
-		setY(box,codeAreaY+5+CODEHEIGHT*i);
-		setWidth(box,CODEHEIGHT);
-		setHeight(box,CODEHEIGHT);
+		JTextField text=new JTextField();
+		text.setEditable(false);
+		add(text);
+		setX(text,5);
+		setY(text,5);
+		setWidth(text,200);
+		setHeight(text,70);
+		textbox=text;
 		
-		Button btn=new Button("Yes");
-		btn.setPreferredSize(new Dimension(50,CODEHEIGHT));
-		btn.setName("line"+i);
-		btn.addActionListener(firstBtnHandler);
-		add(btn);
-		setX(btn,5);
-		setY(btn,codeAreaY+5+CODEHEIGHT*i);
+		Button btn1=new Button("Yes");
+		btn1.setPreferredSize(new Dimension(70,30));
+		btn1.setName("yes");
+		btn1.addActionListener(btnHandler);
+		add(btn1);
+		setX(btn1,getX(text));
+		setY(btn1,getY(text)+getHeight(text)+5);
 		
-		Button btn=new Button("No");
-		btn.setPreferredSize(new Dimension(50,CODEHEIGHT));
-		btn.setName("line"+i);
-		btn.addActionListener(firstBtnHandler);
-		add(btn);
-		setX(btn,5);
-		setY(btn,codeAreaY+5+CODEHEIGHT*i);
+		Button btn2=new Button("No");
+		btn2.setPreferredSize(new Dimension(70,30));
+		btn2.setName("no");
+		btn2.addActionListener(btnHandler);
+		add(btn2);
+		setX(btn2,getX(btn1)+getWidth(btn1)+5);
+		setY(btn2,getY(btn1));
+		
+		setWindowSize(getX(text)+getWidth(text)+5, getY(btn2)+getHeight(btn2)+5);
 	}
 	private void refreshView()
 	{
-		if(question==null || ans==null || question.length!=ans.length || qindex>=question.length)
+		if(question==null || ans==null || question.length!=ans.length || qindex>=question.length || textbox==null)
 			return;
 		
-		
+		textbox.setText(question[qindex]);
 	}
 	
 	private void setX(Component c, int x){((SpringLayout)getLayout()).getConstraints(c).setX(Spring.constant(x));}
@@ -97,5 +106,37 @@ public class UweYesNoTestViewerViewPanel extends JComponent implements CloseList
 		layout.getConstraints(this).setConstraint(SpringLayout.EAST, Spring.constant(w));
 		layout.getConstraints(this).setConstraint(SpringLayout.SOUTH, Spring.constant(h));
 	}
-
+	
+	private class BtnHandler implements ActionListener
+	{
+		private UweYesNoTestViewerViewPanel self;
+		
+		public BtnHandler(UweYesNoTestViewerViewPanel self)
+		{
+			this.self=self;
+		}
+		public void actionPerformed(ActionEvent e)
+		{
+			Button curBtn=(Button)e.getSource();
+			
+			boolean cor=ans[qindex];
+			boolean my=curBtn.getName().equals("yes");
+			String msg="";
+			
+			if(cor==my)
+				msg="You are right!";
+			else
+				msg="No you are wrong!";
+			JOptionPane.showMessageDialog(null,msg,"Result",JOptionPane.INFORMATION_MESSAGE);
+			
+			qindex++;
+			if(qindex>=ans.length)
+			{
+				JOptionPane.showMessageDialog(null, "You have done the test and you suppose to be ready for the quest about java.", "Done", JOptionPane.INFORMATION_MESSAGE);
+				self.window.closeButton.doClick();
+			}
+			else
+				refreshView();
+		}
+	}
 }
