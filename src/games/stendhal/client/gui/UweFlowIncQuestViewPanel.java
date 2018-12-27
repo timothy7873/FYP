@@ -10,6 +10,7 @@ import java.awt.Dimension;
 import java.awt.Event;
 import java.awt.Font;
 import java.awt.Insets;
+import java.awt.Point;
 import java.awt.Window;
 import java.awt.event.ActionEvent;
 import java.awt.event.ActionListener;
@@ -80,27 +81,30 @@ public class UweFlowIncQuestViewPanel extends JComponent implements ContentChang
 	}
 	public void windowClosed(InternalWindow window) {
 		// TODO Auto-generated method stub
-		RPAction action = new RPAction();
-		action.put("type", "UweReturnItem");
-		ClientSingletonRepository.getClientFramework().send(action);
 
+//		ItemPanel panel=new ItemPanel(null,null);
+//		panel.setItemNumber(0);
+//		panel.setAcceptedTypes(EntityMap.getClass("item", null, null));
+//		panel.setName("bag");
+//		
 //		RPSlot bag=User.get().getSlot("bag");
 //		for(int i=0;i<10;i++)
 //		{
-//			RPSlot popup=User.get().getSlot("uwepopup"+i);
+//			UweItemPanel pop=panels.("uwepopup"+i);
 //			
-//			RPObject item=popup.getFirst();
+//			
+//			RPSlot slot=User.get().getSlot("uwepopup"+i);
+//			RPObject item=slot.getFirst();
 //			if(item==null)
 //				continue;
-//			
-//			if(bag.isFull())
+//			if(!bag.isFull())
 //			{
-//				
+//				panel.dropEntity(item, -1, new Point());
 //			}
-//			else
-//				bag.add(item);
-//			popup.clear();
+//			
 //		}
+		//panel.setParent(parent);
+		//panel.setName(slotName+usedSlot);
 		
 		parent.removeContentChangeListener(this);
 	}
