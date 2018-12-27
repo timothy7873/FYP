@@ -80,6 +80,28 @@ public class UweFlowIncQuestViewPanel extends JComponent implements ContentChang
 	}
 	public void windowClosed(InternalWindow window) {
 		// TODO Auto-generated method stub
+		RPAction action = new RPAction();
+		action.put("type", "UweReturnItem");
+		ClientSingletonRepository.getClientFramework().send(action);
+
+//		RPSlot bag=User.get().getSlot("bag");
+//		for(int i=0;i<10;i++)
+//		{
+//			RPSlot popup=User.get().getSlot("uwepopup"+i);
+//			
+//			RPObject item=popup.getFirst();
+//			if(item==null)
+//				continue;
+//			
+//			if(bag.isFull())
+//			{
+//				
+//			}
+//			else
+//				bag.add(item);
+//			popup.clear();
+//		}
+		
 		parent.removeContentChangeListener(this);
 	}
 	
@@ -350,7 +372,8 @@ public class UweFlowIncQuestViewPanel extends JComponent implements ContentChang
 	public void contentAdded(RPSlot added)
 	{
 		//handle slot
-		if (!added.getName().substring(0, slotName.length()).equals(slotName))
+		if (added.getName().length()<=slotName.length() ||
+				!added.getName().substring(0, slotName.length()).equals(slotName))
 			return;//not our slot
 		
 		//invalid request
@@ -405,7 +428,8 @@ public class UweFlowIncQuestViewPanel extends JComponent implements ContentChang
 	}
 	public void contentRemoved(RPSlot removed)
 	{
-		if (!slotName.equals(removed.getName()))
+		if (removed.getName().length()<=slotName.length() ||
+				!removed.getName().substring(0, slotName.length()).equals(slotName))
 			return;//not our slot
 		
 		for (RPObject obj : removed)

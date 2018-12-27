@@ -15,8 +15,8 @@ public class UweItemPanel extends ItemPanel{
 	
 	public void dropEntity(IEntity entity, int amount, Point point)
 	{
-		if(curDraggedTarget!=null)
-			return;//request reversed, last drag didn't finished
+//		if(curDraggedTarget!=null)
+//			return;//request reversed, last drag didn't finished
 		curDraggedTarget=this;
 		super.dropEntity(entity, amount, point);
 	}

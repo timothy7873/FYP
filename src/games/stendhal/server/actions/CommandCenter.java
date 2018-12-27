@@ -130,6 +130,7 @@ public class CommandCenter {
 		register("markscroll", new MarkScrollAction());
 		
 		UweFlowIncQuestSubmitAction.register();
+		UweReturnItemAction.register();
 	}
 
 	/**
