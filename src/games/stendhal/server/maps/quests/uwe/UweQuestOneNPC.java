@@ -10,6 +10,14 @@ import games.stendhal.server.entity.npc.ConversationStates;
 import games.stendhal.server.entity.npc.NPCList;
 import games.stendhal.server.entity.npc.SpeakerNPC;
 import games.stendhal.server.entity.npc.action.FireEventChatAction;
+import games.stendhal.server.entity.npc.action.SetQuestAction;
+import games.stendhal.server.entity.npc.action.UweRemoveQuestAction;
+import games.stendhal.server.entity.npc.action.UweStartQuestAction;
+import games.stendhal.server.entity.npc.condition.AndCondition;
+import games.stendhal.server.entity.npc.condition.NotCondition;
+import games.stendhal.server.entity.npc.condition.OrCondition;
+import games.stendhal.server.entity.npc.condition.QuestCompletedCondition;
+import games.stendhal.server.entity.npc.condition.QuestInStateCondition;
 import games.stendhal.server.entity.npc.condition.QuestNotStartedCondition;
 import games.stendhal.server.entity.npc.condition.QuestStartedCondition;
 import games.stendhal.server.events.UweFlowIncQuestEvent;
@@ -55,11 +63,14 @@ public class UweQuestOneNPC implements LoadableContent{
 				null, 
 				ConversationStates.ATTENDING,
 				"\nI am a quest one NPC, I can provide #quest for you.", 
-				null);
+				new UweStartQuestAction(npcName, "blank"));
 		//quest
 		npc.add(ConversationStates.ATTENDING, 
-				Arrays.asList("fix","f"), 
-				new QuestNotStartedCondition(npcName), 
+				Arrays.asList("quest","q"), 
+				new OrCondition(
+						new QuestNotStartedCondition(npcName), 
+						new QuestInStateCondition(npcName, "done"), 
+						new QuestInStateCondition(npcName, "blank")), 
 				ConversationStates.INFORMATION_1, 
 				"Are you familar with java code? #Yes/ #No/ #A #bit", 
 				null);
@@ -68,7 +79,7 @@ public class UweQuestOneNPC implements LoadableContent{
 				null, 
 				ConversationStates.ATTENDING, 
 				"Please go find #UweFlowIncQuestNPC and get the quest about java code", 
-				null);
+				new SetQuestAction(npcName, "started"));
 		npc.add(ConversationStates.INFORMATION_1, 
 				Arrays.asList("No","no","n"), 
 				null, 
@@ -83,10 +94,17 @@ public class UweQuestOneNPC implements LoadableContent{
 				null);
 		
 		npc.add(ConversationStates.ATTENDING, 
-				Arrays.asList("fix","f"), 
-				new QuestStartedCondition(npcName), 
-				ConversationStates.INFORMATION_2, 
-				"Are you familar with java code? #Yes/ #No/ #A #bit", 
+				Arrays.asList("quest","q"), 
+				new AndCondition(new QuestStartedCondition(npcName), new QuestInStateCondition(npcName, "done")), 
+				ConversationStates.ATTENDING, 
+				"Good job, you have complete the previous quest\nLet me give you some bonus reward\nWe are welcome if you want more #quest", 
+				new SetQuestAction(npcName, "done"));
+		
+		npc.add(ConversationStates.ATTENDING, 
+				Arrays.asList("quest","q"), 
+				new AndCondition(new QuestStartedCondition(npcName), new NotCondition(new QuestInStateCondition(npcName, "done"))), 
+				ConversationStates.ATTENDING, 
+				"Please go find #UweJavaTestNPC for testing of java", 
 				null);
 		//bye
 		npc.addGoodbye("Have fun!");

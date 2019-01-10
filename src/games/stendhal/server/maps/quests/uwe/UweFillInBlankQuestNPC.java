@@ -16,7 +16,7 @@ import games.stendhal.server.entity.npc.action.CombinatorAction;
 import games.stendhal.server.entity.npc.action.IncreaseKarmaAction;
 import games.stendhal.server.entity.npc.action.IncreaseXPAction;
 import games.stendhal.server.entity.npc.action.MultipleActions;
-import games.stendhal.server.entity.npc.action.QuestCompleteAction;
+import games.stendhal.server.entity.npc.action.UweRemoveQuestAction;
 import games.stendhal.server.entity.npc.action.QuestStartAction;
 import games.stendhal.server.entity.npc.action.RemoveItemAction;
 import games.stendhal.server.entity.npc.condition.AndCondition;
@@ -116,8 +116,8 @@ public class UweFillInBlankQuestNPC implements LoadableContent{
 					new IncreaseKarmaAction(10), 
 			        new IncreaseXPAction(25),
 			        new RemoveItemAction(answerItemName),
-			        new QuestCompleteAction(questName),
-			        new QuestCompleteAction(questName+"_help")
+			        new UweRemoveQuestAction(questName),
+			        new UweRemoveQuestAction(questName+"_help")
 					)
 				);
 		npc.add(ConversationStates.INFORMATION_2, 

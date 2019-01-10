@@ -5,10 +5,10 @@ import games.stendhal.server.entity.npc.ChatAction;
 import games.stendhal.server.entity.npc.EventRaiser;
 import games.stendhal.server.entity.player.Player;
 
-public class QuestCompleteAction implements ChatAction{
+public class UweRemoveQuestAction implements ChatAction{
 	private String questName;
 	
-	public QuestCompleteAction(String questName)
+	public UweRemoveQuestAction(String questName)
 	{
 		this.questName=questName;
 	}
