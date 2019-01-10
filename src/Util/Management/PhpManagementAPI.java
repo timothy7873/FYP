@@ -1,4 +1,4 @@
-package Util.Quest;
+package Util.Management;
 
 import java.io.BufferedReader;
 import java.io.InputStream;
@@ -10,28 +10,20 @@ import org.json.simple.JSONArray;
 import org.json.simple.JSONObject;
 import org.json.simple.parser.JSONParser;
 
-public class PhpQuestGetter implements QuestGetter{
-	public FlowIncQuest getLogicalQuestion(String user)
+public class PhpManagementAPI implements ManagementAPI{
+	public FlowIncQuest getLogicalQuestion(String npcId, String user)
 	{
 		String url="";
 		JSONObject json=getJson(url);
 		
 		return new FlowIncQuest();
 	}
-	public FlowIncQuest getSyntaxQuestion(String user)
-	{
-		String url="";
-		JSONObject json=getJson(url);
-		
-		return new FlowIncQuest();
-	}
-	public TraceQuest getTraceQuestion(String user)
-	{
-		String url="";
-		JSONObject json=getJson(url);
-		
-		return new TraceQuest();
-	}
+	public FlowIncQuest getSyntaxQuestion(String npcId, String user) {return null;}
+	public TraceQuest getTraceQuestion(String npcId, String user) {return null;}
+	public YesNoTest[] getYesNoTests(String subject) {return null;}
+	public QuestHint getHint(String npcId, String user) {return null;}
+	public void setQuestStatus(String npcId, String user, String status) {}
+	public void stopTimeCount(String npcId, String user) {}
 	
 	private JSONObject getJson(String urlStr)
 	{
@@ -57,6 +49,6 @@ public class PhpQuestGetter implements QuestGetter{
 		
 		return null;
 	}
-	
-	public YesNoTest[] getYesNoTests(String subject) {return null;}
+
+
 }

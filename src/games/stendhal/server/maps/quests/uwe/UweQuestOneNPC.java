@@ -10,11 +10,13 @@ import games.stendhal.server.entity.npc.ConversationStates;
 import games.stendhal.server.entity.npc.NPCList;
 import games.stendhal.server.entity.npc.SpeakerNPC;
 import games.stendhal.server.entity.npc.action.FireEventChatAction;
+import games.stendhal.server.entity.npc.condition.QuestNotStartedCondition;
+import games.stendhal.server.entity.npc.condition.QuestStartedCondition;
 import games.stendhal.server.events.UweFlowIncQuestEvent;
 
 public class UweQuestOneNPC implements LoadableContent{
 	
-	private String npcName = "UweQuestOne";
+	public static String npcName = "UweQuestOne";
 	private final StendhalRPZone zone = SingletonRepository.getRPWorld().getZone("int_semos_guard_house");
 	
 	private SpeakerNPC npc;
@@ -52,12 +54,12 @@ public class UweQuestOneNPC implements LoadableContent{
 				ConversationPhrases.GREETING_MESSAGES, 
 				null, 
 				ConversationStates.ATTENDING,
-				"\nI am a quest one NPC, I have problems that need you to #fix.", 
+				"\nI am a quest one NPC, I can provide #quest for you.", 
 				null);
 		//quest
 		npc.add(ConversationStates.ATTENDING, 
 				Arrays.asList("fix","f"), 
-				null, 
+				new QuestNotStartedCondition(npcName), 
 				ConversationStates.INFORMATION_1, 
 				"Are you familar with java code? #Yes/ #No/ #A #bit", 
 				null);
@@ -78,6 +80,13 @@ public class UweQuestOneNPC implements LoadableContent{
 				null, 
 				ConversationStates.ATTENDING, 
 				"Please go find #UweJavaTestNPC for testing of java", 
+				null);
+		
+		npc.add(ConversationStates.ATTENDING, 
+				Arrays.asList("fix","f"), 
+				new QuestStartedCondition(npcName), 
+				ConversationStates.INFORMATION_2, 
+				"Are you familar with java code? #Yes/ #No/ #A #bit", 
 				null);
 		//bye
 		npc.addGoodbye("Have fun!");

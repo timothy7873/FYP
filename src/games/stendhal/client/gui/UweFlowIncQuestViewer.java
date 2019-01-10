@@ -1,6 +1,6 @@
 package games.stendhal.client.gui;
 
-import Util.Quest.*;
+import Util.Management.*;
 import games.stendhal.client.entity.User;
 import marauroa.common.game.RPEvent;
 
@@ -8,7 +8,7 @@ public class UweFlowIncQuestViewer {
 	private String[] code;
 	private String[] ans;
 	private String out,exp;
-	private String title,type;
+	private String title,type,npcId;
 	private Reward[] rewards;
 	
 	public UweFlowIncQuestViewer(final RPEvent e)
@@ -21,13 +21,16 @@ public class UweFlowIncQuestViewer {
 		if (e.has("type")) {
 			type = e.get("type");
 		}
+		npcId="";
+		if (e.has("npcId")) {
+			npcId = e.get("npcId");
+		}
 		
 		FlowIncQuest q=null;
-		QuestGetter getter=new HardcodeQuestGetter();
+		ManagementAPI getter=new HardcodeManagementAPI();
 		if(type.equals("logical"))
 		{
-			User.get();
-			q=getter.getLogicalQuestion(User.getCharacterName());
+			q=getter.getLogicalQuestion(npcId, User.getCharacterName());
 		}
 		
 		code=q.code.split("\n");

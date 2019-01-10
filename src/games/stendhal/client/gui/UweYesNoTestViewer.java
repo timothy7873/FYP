@@ -1,8 +1,8 @@
 package games.stendhal.client.gui;
 
-import Util.Quest.HardcodeQuestGetter;
-import Util.Quest.QuestGetter;
-import Util.Quest.YesNoTest;
+import Util.Management.HardcodeManagementAPI;
+import Util.Management.ManagementAPI;
+import Util.Management.YesNoTest;
 import marauroa.common.game.RPEvent;
 
 public class UweYesNoTestViewer {
@@ -22,7 +22,7 @@ public class UweYesNoTestViewer {
 			title = e.get("title");
 		}
 		
-		QuestGetter qg=new HardcodeQuestGetter();
+		ManagementAPI qg=new HardcodeManagementAPI();
 		YesNoTest[] qs=qg.getYesNoTests(subject);
 		question=new String[qs.length];
 		ans=new boolean[qs.length];

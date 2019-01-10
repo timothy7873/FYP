@@ -23,17 +23,21 @@ import games.stendhal.server.entity.npc.ConversationStates;
 import games.stendhal.server.entity.npc.NPCList;
 import games.stendhal.server.entity.npc.SpeakerNPC;
 import games.stendhal.server.entity.npc.action.FireEventChatAction;
+import games.stendhal.server.entity.npc.condition.QuestNotStartedCondition;
+import games.stendhal.server.entity.npc.condition.QuestStartedCondition;
 import games.stendhal.server.events.UweFlowIncQuestEvent;
 
 public class UweFlowIncQuestNPC implements LoadableContent{
-	
 	private String npcName = "UweFlowIncQuestNPC";
 	private final StendhalRPZone zone = SingletonRepository.getRPWorld().getZone("int_semos_guard_house");
 	
+	private String leaderNpc;
 	private SpeakerNPC npc;
 	
-	public UweFlowIncQuestNPC()
-	{}
+	public UweFlowIncQuestNPC(String leaderNpc)
+	{
+		this.leaderNpc=leaderNpc;
+	}
 	
 	@Override
 	public void addToWorld() {
@@ -74,7 +78,13 @@ public class UweFlowIncQuestNPC implements LoadableContent{
 				ConversationPhrases.GREETING_MESSAGES, 
 				null, 
 				ConversationStates.ATTENDING,
-				"\nI am a quest NPC of flow incorrect, I can provide #quest for you.", 
+				"\nI am a quest NPC of flow incorrect, I have p.", 
+				null);
+		npc.add(ConversationStates.IDLE, 
+				ConversationPhrases.GREETING_MESSAGES, 
+				null, 
+				ConversationStates.ATTENDING,
+				"\nI am a quest NPC of flow incorrect, I have p.", 
 				null);
 		//quest
 		npc.add(ConversationStates.ATTENDING, 
@@ -82,8 +92,10 @@ public class UweFlowIncQuestNPC implements LoadableContent{
 				null,
 				ConversationStates.ATTENDING, 
 				null, 
-				new FireEventChatAction(new UweFlowIncQuestEvent("logical", "Logical error fixing quest"))
+				new FireEventChatAction(new UweFlowIncQuestEvent("logical", "Logical error fixing quest", npcName))
 				);
+		
+		
 		//bye
 		npc.addGoodbye("Have fun!");
 		

@@ -1,4 +1,4 @@
-package Util.Quest;
+package Util.Management;
 
 public class Reward {
 	public String itemName;
