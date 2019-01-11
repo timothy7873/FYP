@@ -1,6 +1,8 @@
 package games.stendhal.server.maps.quests.uwe;
 import java.util.Arrays;
 
+import Util.Management.HardcodeManagementAPI;
+import Util.Management.ManagementAPI;
 import games.stendhal.common.Direction;
 import games.stendhal.server.core.engine.SingletonRepository;
 import games.stendhal.server.core.engine.StendhalRPZone;
@@ -9,18 +11,12 @@ import games.stendhal.server.entity.npc.ConversationPhrases;
 import games.stendhal.server.entity.npc.ConversationStates;
 import games.stendhal.server.entity.npc.NPCList;
 import games.stendhal.server.entity.npc.SpeakerNPC;
-import games.stendhal.server.entity.npc.action.FireEventChatAction;
 import games.stendhal.server.entity.npc.action.SetQuestAction;
-import games.stendhal.server.entity.npc.action.UweRemoveQuestAction;
+import games.stendhal.server.entity.npc.action.UweProvideHintAction;
 import games.stendhal.server.entity.npc.action.UweStartQuestAction;
 import games.stendhal.server.entity.npc.condition.AndCondition;
-import games.stendhal.server.entity.npc.condition.NotCondition;
-import games.stendhal.server.entity.npc.condition.OrCondition;
-import games.stendhal.server.entity.npc.condition.QuestCompletedCondition;
 import games.stendhal.server.entity.npc.condition.QuestInStateCondition;
-import games.stendhal.server.entity.npc.condition.QuestNotStartedCondition;
 import games.stendhal.server.entity.npc.condition.QuestStartedCondition;
-import games.stendhal.server.events.UweFlowIncQuestEvent;
 
 public class UweQuestOneNPC implements LoadableContent{
 	
@@ -65,11 +61,11 @@ public class UweQuestOneNPC implements LoadableContent{
 				"\nI am a quest one NPC, I can provide #quest for you.", 
 				new UweStartQuestAction(npcName, "blank"));
 		//quest
+		//quest blank
 		npc.add(ConversationStates.ATTENDING, 
 				Arrays.asList("quest","q"), 
-				new OrCondition(
-						new QuestNotStartedCondition(npcName), 
-						new QuestInStateCondition(npcName, "done"), 
+				new AndCondition(
+						new QuestStartedCondition(npcName), 
 						new QuestInStateCondition(npcName, "blank")), 
 				ConversationStates.INFORMATION_1, 
 				"Are you familar with java code? #Yes/ #No/ #A #bit", 
@@ -90,22 +86,43 @@ public class UweQuestOneNPC implements LoadableContent{
 				Arrays.asList("A bit","a bit","Abit","abit","ab","a"), 
 				null, 
 				ConversationStates.ATTENDING, 
-				"Please go find #UweJavaTestNPC for testing of java", 
+				"Please go find #UweJavaTestNPC to practise java", 
 				null);
 		
+		//quest done
 		npc.add(ConversationStates.ATTENDING, 
 				Arrays.asList("quest","q"), 
-				new AndCondition(new QuestStartedCondition(npcName), new QuestInStateCondition(npcName, "done")), 
+				new AndCondition(
+						new QuestStartedCondition(npcName), 
+						new QuestInStateCondition(npcName, "done")), 
 				ConversationStates.ATTENDING, 
 				"Good job, you have complete the previous quest\nLet me give you some bonus reward\nWe are welcome if you want more #quest", 
-				new SetQuestAction(npcName, "done"));
+				new SetQuestAction(npcName, "blank"));
 		
+		//quest doing
 		npc.add(ConversationStates.ATTENDING, 
 				Arrays.asList("quest","q"), 
-				new AndCondition(new QuestStartedCondition(npcName), new NotCondition(new QuestInStateCondition(npcName, "done"))), 
+				new AndCondition(
+						new QuestStartedCondition(npcName), 
+						new QuestInStateCondition(npcName, "started")), 
 				ConversationStates.ATTENDING, 
-				"Please go find #UweJavaTestNPC for testing of java", 
+				"Please go find #UweFlowIncQuestNPC and get the quest about java code", 
 				null);
+		npc.add(ConversationStates.ATTENDING, 
+				Arrays.asList("quest","q"), 
+				new AndCondition(
+						new QuestStartedCondition(npcName), 
+						new QuestInStateCondition(npcName, "read")), 
+				ConversationStates.INFORMATION_2, 
+				"Oh you came back, if you think the quest is too hard, we can provide some #hints to you", 
+				null);
+		npc.add(ConversationStates.INFORMATION_2, 
+				Arrays.asList("hints","hint","h"), 
+				null, 
+				ConversationStates.ATTENDING, 
+				null, 
+				new UweProvideHintAction(npc));
+		
 		//bye
 		npc.addGoodbye("Have fun!");
 		

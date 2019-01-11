@@ -10,7 +10,7 @@ import org.json.simple.JSONArray;
 import org.json.simple.JSONObject;
 import org.json.simple.parser.JSONParser;
 
-public class PhpManagementAPI implements ManagementAPI{
+public class PhpManagementAPI extends ManagementAPI{
 	public FlowIncQuest getLogicalQuestion(String npcId, String user)
 	{
 		String url="";

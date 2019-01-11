@@ -23,16 +23,24 @@ import games.stendhal.server.entity.npc.ConversationStates;
 import games.stendhal.server.entity.npc.NPCList;
 import games.stendhal.server.entity.npc.SpeakerNPC;
 import games.stendhal.server.entity.npc.action.FireEventChatAction;
+import games.stendhal.server.entity.npc.action.MultipleActions;
+import games.stendhal.server.entity.npc.action.SetQuestAction;
+import games.stendhal.server.entity.npc.condition.AndCondition;
+import games.stendhal.server.entity.npc.condition.NotCondition;
+import games.stendhal.server.entity.npc.condition.OrCondition;
+import games.stendhal.server.entity.npc.condition.QuestInStateCondition;
+import games.stendhal.server.entity.npc.condition.QuestNotStartedCondition;
+import games.stendhal.server.entity.npc.condition.QuestStartedCondition;
 import games.stendhal.server.events.UweFlowIncQuestEvent;
 
-public class UweFlowIncQuestNPC implements LoadableContent{
-	private String npcName = "UweFlowIncQuestNPC";
+public class UweLogicalErrorQuestNPC implements LoadableContent{
+	private String npcName = "UweLogicalErrorQuestNPC";
 	private final StendhalRPZone zone = SingletonRepository.getRPWorld().getZone("int_semos_guard_house");
 	
 	private String leaderNpc;
 	private SpeakerNPC npc;
 	
-	public UweFlowIncQuestNPC(String leaderNpc)
+	public UweLogicalErrorQuestNPC(String leaderNpc)
 	{
 		this.leaderNpc=leaderNpc;
 	}
@@ -76,22 +84,31 @@ public class UweFlowIncQuestNPC implements LoadableContent{
 				ConversationPhrases.GREETING_MESSAGES, 
 				null, 
 				ConversationStates.ATTENDING,
-				"\nI am a quest NPC of flow incorrect, I have p.", 
-				null);
-		npc.add(ConversationStates.IDLE, 
-				ConversationPhrases.GREETING_MESSAGES, 
-				null, 
-				ConversationStates.ATTENDING,
-				"\nI am a quest NPC of flow incorrect, I have p.", 
+				"\nI am a quest NPC of flow incorrect, are you looking for #quest?.", 
 				null);
 		//quest
 		npc.add(ConversationStates.ATTENDING, 
 				ConversationPhrases.QUEST_MESSAGES, 
-				null,
+				new AndCondition(
+						new QuestStartedCondition(leaderNpc), 
+						new OrCondition(
+								new QuestInStateCondition(leaderNpc, "start"), 
+								new QuestInStateCondition(leaderNpc, "read"))),
 				ConversationStates.ATTENDING, 
-				null, 
-				new FireEventChatAction(new UweFlowIncQuestEvent("logical", "Logical error fixing quest", npcName))
+				"Please help me fix the code", 
+				new MultipleActions(
+						new SetQuestAction(leaderNpc, "read"),
+						new FireEventChatAction(new UweFlowIncQuestEvent("logical", "Logical error fixing quest", npcName)))
 				);
+		npc.add(ConversationStates.ATTENDING, 
+				ConversationPhrases.QUEST_MESSAGES, 
+				new OrCondition(
+						new QuestNotStartedCondition(leaderNpc),
+						new QuestInStateCondition(leaderNpc, "blank"), 
+						new QuestInStateCondition(leaderNpc, "done")),
+				ConversationStates.ATTENDING, 
+				"Oh i have no quest in here currently", 
+				null);
 		
 		
 		//bye

@@ -2,7 +2,7 @@ package games.stendhal.server.events;
 
 import org.apache.log4j.Logger;
 
-import games.stendhal.server.maps.quests.uwe.UweFlowIncQuestNPC;
+import games.stendhal.server.maps.quests.uwe.*;
 import marauroa.common.game.Definition;
 import marauroa.common.game.RPClass;
 import marauroa.common.game.RPEvent;

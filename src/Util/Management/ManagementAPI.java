@@ -1,11 +1,13 @@
 package Util.Management;
 
-public interface ManagementAPI {
-	public FlowIncQuest getLogicalQuestion(String npcId, String user);
-	public FlowIncQuest getSyntaxQuestion(String npcId, String user);
-	public TraceQuest getTraceQuestion(String npcId, String user);
-	public YesNoTest[] getYesNoTests(String subject);
-	public QuestHint getHint(String npcId, String user);
-	public void setQuestStatus(String npcId, String user, String status);
-	public void stopTimeCount(String npcId, String user);
+public abstract class ManagementAPI {
+	public static ManagementAPI api=new HardcodeManagementAPI();
+	
+	public abstract FlowIncQuest getLogicalQuestion(String npcId, String user);
+	public abstract FlowIncQuest getSyntaxQuestion(String npcId, String user);
+	public abstract TraceQuest getTraceQuestion(String npcId, String user);
+	public abstract YesNoTest[] getYesNoTests(String subject);
+	public abstract QuestHint getHint(String npcId, String user);
+	public abstract void setQuestStatus(String npcId, String user, String status);
+	public abstract void stopTimeCount(String npcId, String user);
 }

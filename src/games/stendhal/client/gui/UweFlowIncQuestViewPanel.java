@@ -1,20 +1,15 @@
 package games.stendhal.client.gui;
 //package games.stendhal.client.gui;
 
-import java.awt.AWTEvent;
 import java.awt.BorderLayout;
 import java.awt.Button;
 import java.awt.Color;
 import java.awt.Component;
 import java.awt.Dimension;
-import java.awt.Event;
 import java.awt.Font;
 import java.awt.Insets;
-import java.awt.Point;
-import java.awt.Window;
 import java.awt.event.ActionEvent;
 import java.awt.event.ActionListener;
-import java.awt.event.WindowEvent;
 import java.awt.font.TextAttribute;
 import java.util.HashMap;
 import java.util.Map;
@@ -25,7 +20,6 @@ import javax.swing.JOptionPane;
 import javax.swing.JTextField;
 import javax.swing.Spring;
 import javax.swing.SpringLayout;
-import javax.swing.SwingUtilities;
 
 import Util.Management.*;
 import games.stendhal.client.ClientSingletonRepository;
@@ -50,6 +44,8 @@ public class UweFlowIncQuestViewPanel extends JComponent implements ContentChang
 	private String[] ans;
 	private String out,exp;
 	private Reward[] rewards;
+	private String npcId;
+	private String type;
 	private Map<UweItemPanel,Integer> panels;
 	private String slotName="uwepopup";
 	private int usedSlot=0;
@@ -58,13 +54,15 @@ public class UweFlowIncQuestViewPanel extends JComponent implements ContentChang
 	private FirstStageBtnHandler firstBtnHandler;
 	private SecondStageBtnHandler secondBtnHandler;
 
-	public UweFlowIncQuestViewPanel(String[] lines,String[] ans,String out, String exp, Reward[] rewards)
+	public UweFlowIncQuestViewPanel(String[] lines,String[] ans,String out, String exp, Reward[] rewards, String npcId, String type)
 	{
 		this.lines=lines;
 		this.ans=ans;
 		this.out=out;
 		this.exp=exp;
 		this.rewards=rewards;
+		this.npcId=npcId;
+		this.type=type;
 		
 		setLayout(new BorderLayout(2,2));
 		setOpaque(true);
@@ -673,10 +671,9 @@ public class UweFlowIncQuestViewPanel extends JComponent implements ContentChang
 				}
 				
 				RPAction action = new RPAction();
-				action.put("type", "UweFlowIncQuestSubmit");
-				action.put("items", items);
-				action.put("exp", exp);
-				action.put("karma", karma);
+				action.put("type", "UweQuestSubmit");
+				action.put("npcId", npcId);
+				action.put("questType", type);
 				ClientSingletonRepository.getClientFramework().send(action);
 				
 				

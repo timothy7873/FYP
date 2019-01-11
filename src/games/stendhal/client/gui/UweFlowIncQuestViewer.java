@@ -27,7 +27,7 @@ public class UweFlowIncQuestViewer {
 		}
 		
 		FlowIncQuest q=null;
-		ManagementAPI getter=new HardcodeManagementAPI();
+		ManagementAPI getter=ManagementAPI.api;
 		if(type.equals("logical"))
 		{
 			q=getter.getLogicalQuestion(npcId, User.getCharacterName());
@@ -46,7 +46,7 @@ public class UweFlowIncQuestViewer {
 	}
 	public void view()
 	{
-		UweFlowIncQuestViewPanel vp=new UweFlowIncQuestViewPanel(code,ans,out,exp,rewards);
+		UweFlowIncQuestViewPanel vp=new UweFlowIncQuestViewPanel(code,ans,out,exp,rewards,npcId,type);
 		new UweFlowIncQuestWindow(vp,title);
 	}
 	

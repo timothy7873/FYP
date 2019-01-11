@@ -129,7 +129,7 @@ public class CommandCenter {
 		register("info", new InfoAction());
 		register("markscroll", new MarkScrollAction());
 		
-		UweFlowIncQuestSubmitAction.register();
+		UweQuestSubmitAction.register();
 		UweReturnItemAction.register();
 	}
 

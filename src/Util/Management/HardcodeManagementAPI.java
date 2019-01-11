@@ -5,7 +5,7 @@ import java.util.List;
 
 import org.json.simple.JSONObject;
 
-public class HardcodeManagementAPI implements ManagementAPI{
+public class HardcodeManagementAPI extends ManagementAPI{
 	private static List hints;
 	
 	public HardcodeManagementAPI()
@@ -34,7 +34,7 @@ public class HardcodeManagementAPI implements ManagementAPI{
 		out="x";
 		exp="12";
 		
-		Reward[] rewards= {new Reward(null,null,10,10),new Reward("club","1",0,0)};
+		Reward[] rewards= {new Reward(null,0,10,10),new Reward("club",1,0,0)};
 		
 		return new FlowIncQuest(code,out,exp,ans,rewards);
 	}
