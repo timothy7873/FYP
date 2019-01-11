@@ -21,6 +21,9 @@ public class UweProvideHintAction implements ChatAction{
 	{
 		QuestHint h=ManagementAPI.api.getHint(npc.getName(), player.getName());
 		if(h!=null)
-			npc.say(h.hint);
+			npc.say("Here is the hint for your current quest: "+"#"+h.hint.replaceAll(" ", " #").replaceAll("\n", "\n#"));
+		else
+			npc.say("There is no more hints for your current quest");
+		npc.say("Good luck! See you next time");
 	}
 }

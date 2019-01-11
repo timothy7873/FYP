@@ -47,9 +47,9 @@ public class UweNPCPlacer extends AbstractQuest {
 		content.add(new UweQuestMakerNPC());
 		
 
-		content.add(new UweDataNPC());
+		//content.add(new UweDataNPC());
 
-		content.add(new UweComparisionNPC());
+		//content.add(new UweComparisionNPC());
 
 		content.add(new UweGuider());
 		content.add(new UweDog()); 
@@ -59,8 +59,8 @@ public class UweNPCPlacer extends AbstractQuest {
 		content.add(new UweConstantNPC());
 		
 		content.add(new UweCombinator());
-		content.add(new UweFillInBlankQuestNPC());
-		content.add(new UweHelper());
+		//content.add(new UweFillInBlankQuestNPC());
+		//content.add(new UweHelper());
 		
 		//Set one
 		content.add(new UweQuestOneNPC());

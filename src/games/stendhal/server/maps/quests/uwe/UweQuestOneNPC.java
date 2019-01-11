@@ -119,7 +119,7 @@ public class UweQuestOneNPC implements LoadableContent{
 		npc.add(ConversationStates.INFORMATION_2, 
 				Arrays.asList("hints","hint","h"), 
 				null, 
-				ConversationStates.ATTENDING, 
+				ConversationStates.IDLE, 
 				null, 
 				new UweProvideHintAction(npc));
 		

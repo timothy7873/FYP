@@ -92,13 +92,13 @@ public class UweLogicalErrorQuestNPC implements LoadableContent{
 				new AndCondition(
 						new QuestStartedCondition(leaderNpc), 
 						new OrCondition(
-								new QuestInStateCondition(leaderNpc, "start"), 
+								new QuestInStateCondition(leaderNpc, "started"), 
 								new QuestInStateCondition(leaderNpc, "read"))),
 				ConversationStates.ATTENDING, 
 				"Please help me fix the code", 
 				new MultipleActions(
 						new SetQuestAction(leaderNpc, "read"),
-						new FireEventChatAction(new UweFlowIncQuestEvent("logical", "Logical error fixing quest", npcName)))
+						new FireEventChatAction(new UweFlowIncQuestEvent("logical", "Logical error fixing quest", leaderNpc)))
 				);
 		npc.add(ConversationStates.ATTENDING, 
 				ConversationPhrases.QUEST_MESSAGES, 

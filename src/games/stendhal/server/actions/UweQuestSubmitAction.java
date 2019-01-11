@@ -22,13 +22,14 @@ public class UweQuestSubmitAction implements ActionListener{
 		// TODO Auto-generated method stub
 		EntityManager em = SingletonRepository.getEntityManager();
 		RPSlot slot=player.getSlot("bag");
+		String npcId=action.get("npcId");
 		
 		//get reward
 		List rewards=new LinkedList();
-		String type=action.get("type");
-		if(type.equals("logical"))
+		String questType=action.get("questType");
+		if(questType.equals("logical"))
 		{
-			rewards.addAll(Arrays.asList(ManagementAPI.api.getLogicalQuestion(action.get("npcId"), player.getName()).reward));
+			rewards.addAll(Arrays.asList(ManagementAPI.api.getLogicalQuestion(npcId, player.getName()).reward));
 		}
 		
 		//add item
@@ -53,10 +54,6 @@ public class UweQuestSubmitAction implements ActionListener{
 		for(int i=0;i<rewards.size();i++)
 			karma+=((Reward)rewards.get(i)).karma;
 		player.addKarma(karma);
-		
-		player.updateItemAtkDef();
-		player.update();
-		player.notifyWorldAboutChanges();
 
 		for(int i=0;;i++)
 		{
@@ -65,6 +62,12 @@ public class UweQuestSubmitAction implements ActionListener{
 				break;
 			submition.clear();
 		}
+		
+		player.setQuest(npcId, "done");
+		
+		player.updateItemAtkDef();
+		player.update();
+		player.notifyWorldAboutChanges();
 		
 	}
 
