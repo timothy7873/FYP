@@ -10,10 +10,21 @@ import org.json.simple.JSONArray;
 import org.json.simple.JSONObject;
 import org.json.simple.parser.JSONParser;
 
+import Util.Url.QueryString;
+
 public class PhpManagementAPI extends ManagementAPI{
+	private String url;
+	
+	public PhpManagementAPI(String url)
+	{
+		this.url=url;
+	}
+	
 	public FlowIncQuest getLogicalQuestion(String npcId, String user)
 	{
-		String url="";
+		QueryString str = new QueryString();
+		
+		//str.add("", value);
 		JSONObject json=getJson(url);
 		
 		return new FlowIncQuest();
