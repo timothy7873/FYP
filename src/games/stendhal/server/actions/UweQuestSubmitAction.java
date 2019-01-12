@@ -11,6 +11,7 @@ import Util.Management.Reward;
 import games.stendhal.server.core.engine.SingletonRepository;
 import games.stendhal.server.core.rule.EntityManager;
 import games.stendhal.server.entity.item.Item;
+import games.stendhal.server.entity.item.StackableItem;
 import games.stendhal.server.entity.player.Player;
 import marauroa.common.game.RPAction;
 import marauroa.common.game.RPSlot;
@@ -54,7 +55,16 @@ public class UweQuestSubmitAction implements ActionListener{
 		for(int i=0;i<rewards.size();i++)
 			karma+=((Reward)rewards.get(i)).karma;
 		player.addKarma(karma);
+		
+		//add money
+		int money=0;
+		for(int i=0;i<rewards.size();i++)
+			money+=((Reward)rewards.get(i)).money;
+		StackableItem moneyItem = (StackableItem)SingletonRepository.getEntityManager().getItem("money");
+		moneyItem.setQuantity(money);
+		player.equipOrPutOnGround(moneyItem);
 
+		//clear submitted item
 		for(int i=0;;i++)
 		{
 			RPSlot submition=player.getSlot("uwepopup"+i);
@@ -62,7 +72,6 @@ public class UweQuestSubmitAction implements ActionListener{
 				break;
 			submition.clear();
 		}
-		
 		player.setQuest(npcId, "done");
 		
 		player.updateItemAtkDef();
