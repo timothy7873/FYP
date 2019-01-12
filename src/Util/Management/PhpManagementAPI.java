@@ -5,6 +5,8 @@ import java.io.InputStream;
 import java.io.InputStreamReader;
 import java.net.URL;
 import java.nio.charset.Charset;
+import java.util.LinkedList;
+import java.util.List;
 
 import org.json.simple.JSONObject;
 import org.json.simple.parser.JSONParser;
@@ -33,8 +35,10 @@ public class PhpManagementAPI extends ManagementAPI{
 		String exp=(String)json.get("expout");
 		String ans=(String)json.get("answer");
 		
-		Reward[] rewards=new Reward[] {};
-		return new FlowIncQuest();
+		
+		List<Reward> rewards=new LinkedList();
+		json.get("reward");
+		return new FlowIncQuest(code, out, exp, ans);
 	}
 	public FlowIncQuest getSyntaxQuestion(String npcId, String user) {return null;}
 	public TraceQuest getTraceQuestion(String npcId, String user) {return null;}
