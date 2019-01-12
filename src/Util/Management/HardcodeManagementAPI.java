@@ -34,7 +34,7 @@ public class HardcodeManagementAPI extends ManagementAPI{
 		out="x";
 		exp="12";
 		
-		Reward[] rewards= {new Reward(null,0,10,10),new Reward("club",1,0,0)};
+		Reward[] rewards= {new Reward(null,0,10,10,10),new Reward("club",1,0,0,10)};
 		
 		return new FlowIncQuest(code,out,exp,ans,rewards);
 	}

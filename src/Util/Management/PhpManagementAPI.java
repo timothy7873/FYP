@@ -6,27 +6,34 @@ import java.io.InputStreamReader;
 import java.net.URL;
 import java.nio.charset.Charset;
 
-import org.json.simple.JSONArray;
 import org.json.simple.JSONObject;
 import org.json.simple.parser.JSONParser;
 
 import Util.Url.QueryString;
 
 public class PhpManagementAPI extends ManagementAPI{
-	private String url;
+	private String site;
 	
-	public PhpManagementAPI(String url)
+	public PhpManagementAPI(String site)
 	{
-		this.url=url;
+		this.site=site;
 	}
 	
 	public FlowIncQuest getLogicalQuestion(String npcId, String user)
 	{
-		QueryString str = new QueryString();
+		QueryString qry = new QueryString();
 		
-		//str.add("", value);
-		JSONObject json=getJson(url);
+		qry.add("npcId", npcId);
+		qry.add("characterName", user);
+		qry.add("questType", "Logical error");
+		JSONObject json=getJson(site+"outputQuestion.php?"+qry);
 		
+		String code=(String)json.get("code");
+		String out=(String)json.get("curout");
+		String exp=(String)json.get("expout");
+		String ans=(String)json.get("answer");
+		
+		Reward[] rewards=new Reward[] {};
 		return new FlowIncQuest();
 	}
 	public FlowIncQuest getSyntaxQuestion(String npcId, String user) {return null;}
