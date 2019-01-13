@@ -104,6 +104,9 @@ public class UweFlowIncQuestViewPanel extends JComponent implements ContentChang
 		//panel.setParent(parent);
 		//panel.setName(slotName+usedSlot);
 		
+		//call api to stop timer
+		ManagementAPI.api.stopTimeCount(npcId, User.getCharacterName());
+		
 		parent.removeContentChangeListener(this);
 	}
 	
@@ -675,7 +678,6 @@ public class UweFlowIncQuestViewPanel extends JComponent implements ContentChang
 				action.put("npcId", npcId);
 				action.put("questType", type);
 				ClientSingletonRepository.getClientFramework().send(action);
-				
 				
 				self.window.closeButton.doClick();
 			}

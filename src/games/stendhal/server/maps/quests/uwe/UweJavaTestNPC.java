@@ -19,8 +19,12 @@ public class UweJavaTestNPC implements LoadableContent{
 	private final StendhalRPZone zone = SingletonRepository.getRPWorld().getZone("int_semos_guard_house");
 	
 	private SpeakerNPC npc;
+	private String leaderNpc;
 	
-	public UweJavaTestNPC(){}
+	public UweJavaTestNPC(String leaderNpc)
+	{
+		this.leaderNpc=leaderNpc;
+	}
 	
 	@Override
 	public void addToWorld() {
@@ -59,9 +63,9 @@ public class UweJavaTestNPC implements LoadableContent{
 		npc.add(ConversationStates.ATTENDING, 
 				Arrays.asList("test","t"), 
 				null, 
-				ConversationStates.INFORMATION_1, 
+				ConversationStates.ATTENDING, 
 				"", 
-				new FireEventChatAction(new UweYesNoTestEvent("java","Java test"))
+				new FireEventChatAction(new UweYesNoTestEvent(leaderNpc,"Java test"))
 				);
 		//bye
 		npc.addGoodbye("Have fun!");

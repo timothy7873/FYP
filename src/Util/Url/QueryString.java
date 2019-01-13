@@ -13,8 +13,9 @@ public class QueryString {
 	  }
 
 	  public void add(String name, String value) {
-	    query += "&";
-	    encode(name, value);
+		  if(query!="")
+			  query += "&";
+		  encode(name, value);
 	  }
 
 	  private void encode(String name, String value) {

@@ -65,7 +65,7 @@ public class UweNPCPlacer extends AbstractQuest {
 		//Set one
 		content.add(new UweQuestOneNPC());
 		content.add(new UweLogicalErrorQuestNPC(UweQuestOneNPC.npcName));
-		content.add(new UweJavaTestNPC());
+		content.add(new UweJavaTestNPC(UweQuestOneNPC.npcName));
 		
 //		content.add(new DadNPC());
 //		content.add(new SoldierNPCs());

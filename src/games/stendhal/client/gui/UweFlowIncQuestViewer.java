@@ -27,10 +27,9 @@ public class UweFlowIncQuestViewer {
 		}
 		
 		FlowIncQuest q=null;
-		ManagementAPI getter=ManagementAPI.api;
 		if(type.equals("logical"))
 		{
-			q=getter.getLogicalQuestion(npcId, User.getCharacterName());
+			q=ManagementAPI.api.getLogicalQuestion(npcId, User.getCharacterName());
 		}
 		
 		code=q.code.split("\n");

@@ -6,24 +6,23 @@ import Util.Management.YesNoTest;
 import marauroa.common.game.RPEvent;
 
 public class UweYesNoTestViewer {
-	private String subject;
+	private String npcId;
 	private String title;
 	private String[] question;
 	private boolean[] ans;
 	
 	public UweYesNoTestViewer(final RPEvent e)
 	{
-		subject="";
-		if (e.has("subject")) {
-			subject = e.get("subject");
+		npcId="";
+		if (e.has("npcId")) {
+			npcId = e.get("npcId");
 		}
 		title="";
 		if (e.has("title")) {
 			title = e.get("title");
 		}
 		
-		ManagementAPI qg=new HardcodeManagementAPI();
-		YesNoTest[] qs=qg.getYesNoTests(subject);
+		YesNoTest[] qs=ManagementAPI.api.getYesNoTests(npcId);
 		question=new String[qs.length];
 		ans=new boolean[qs.length];
 		for(int i=0;i<qs.length;i++)

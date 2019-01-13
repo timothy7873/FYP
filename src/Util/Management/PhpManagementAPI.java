@@ -28,13 +28,27 @@ public class PhpManagementAPI extends ManagementAPI{
 		
 		qry.add("npcId", npcId);
 		qry.add("characterName", user);
-		qry.add("questType", "Logical error");
+		qry.add("questType", "Logic error");
 		JSONObject json=getJson(site+"outputQuestion.php?"+qry);
 		
-		String code=(String)json.get("code");
-		String curout=(String)json.get("curout");
-		String expout=(String)json.get("expout");
-		String ans=(String)json.get("answer");
+		JSONArray codes=(JSONArray)json.get("code");
+		JSONArray curouts=(JSONArray)json.get("curout");
+		JSONArray expouts=(JSONArray)json.get("expout");
+		JSONArray anss=(JSONArray)json.get("answer");
+		
+		String code="",curout="",expout="",ans="";
+		for(int i=0;i<codes.size();i++)
+			code+=codes.get(i)+"\n";
+		for(int i=0;i<curouts.size();i++)
+			curout+=curouts.get(i)+"\n";
+		for(int i=0;i<expouts.size();i++)
+			expout+=expouts.get(i)+"\n";
+		for(int i=0;i<anss.size();i++)
+			ans+=anss.get(i)+"\n";
+		code=code.substring(0,code.length()-1);
+		curout=curout.substring(0,curout.length()-1);
+		expout=expout.substring(0,expout.length()-1);
+		ans=ans.substring(0,ans.length()-1);
 		
 		JSONObject reward=(JSONObject)json.get("reward");
 		int exp=Integer.parseInt((String)reward.get("experience"));
@@ -46,11 +60,13 @@ public class PhpManagementAPI extends ManagementAPI{
 		rewards.add(new Reward(null,0,exp,karma,money));
 		for(int i=0;i<items.size();i++)
 		{
-			String item=(String)items.get(i);
-			int qty=(int)items.get(i);
-			rewards.add(new Reward(item,qty,0,0,0));
+			JSONObject item=(JSONObject)items.get(i);
+			String itemName=(String)item.get("itemName");
+			int qty=Integer.parseInt((String)item.get("qty"));
+			rewards.add(new Reward(itemName,qty,0,0,0));
 		}
-		return new FlowIncQuest(code, curout, expout, ans, (Reward[])rewards.toArray());
+		
+		return new FlowIncQuest(code, curout, expout, ans, (Reward[])rewards.toArray(new Reward[0]));
 	}
 	public FlowIncQuest getSyntaxQuestion(String npcId, String user) {return null;}
 	public TraceQuest getTraceQuestion(String npcId, String user) {return null;}
@@ -61,16 +77,16 @@ public class PhpManagementAPI extends ManagementAPI{
 		QueryString qry = new QueryString();
 		
 		qry.add("npcId", npcId);
-		JSONArray json=(JSONArray)(Object)getJson(site+"getyesnotest.php?"+qry);
+		JSONArray json=getJsonArray(site+"getyesnotest.php?"+qry);
 		for(int i=0;i<json.size();i++)
 		{
 			JSONObject test=(JSONObject)json.get(i);
 			String question=(String)test.get("question");
-			boolean ans=(String)test.get("yes")=="1";
+			boolean ans=((String)test.get("yes")).equals("1");
 			result.add(new YesNoTest(question, ans));
 		}
 		
-		return (YesNoTest[])result.toArray();
+		return (YesNoTest[])result.toArray(new YesNoTest[0]);
 	}
 	public QuestHint getHint(String npcId, String user) 
 	{
@@ -78,10 +94,10 @@ public class PhpManagementAPI extends ManagementAPI{
 		
 		qry.add("npcId", npcId);
 		qry.add("characterName", user);
-		JSONObject json=(JSONObject)(Object)getJson(site+"getyesnotest.php?"+qry);
-		String hints=(String)json.get("hints");
+		JSONObject json=getJson(site+"getHints.php?"+qry);
+		QuestHint rs=json==null?null:new QuestHint((String)json.get("hints"));
 		
-		return new QuestHint(hints);
+		return rs;
 	}
 	public void setQuestStatus(String npcId, String user, String status) 
 	{
@@ -125,6 +141,31 @@ public class PhpManagementAPI extends ManagementAPI{
 		
 		return null;
 	}
+	private JSONArray getJsonArray(String urlStr)
+	{
+		try
+		{
+			URL url = new URL(urlStr);
+			InputStream is = url.openStream();
+			BufferedReader rd = new BufferedReader(new InputStreamReader(is, Charset.forName("UTF-8")));
+			
+			StringBuilder sb = new StringBuilder();
+		    int cp;
+			while ((cp = rd.read()) != -1) {
+			      sb.append((char) cp);
+		    }
+			
+			String jsonText = sb.toString();
+			JSONArray json = (JSONArray)new JSONParser().parse(jsonText);
+			
+			return json;
+		}
+		catch(Exception e)
+		{}
+		
+		return null;
+	}
+	
 	private void doUrl(String urlStr)
 	{
 		try
@@ -143,6 +184,29 @@ public class PhpManagementAPI extends ManagementAPI{
 		catch(Exception e)
 		{}
 
+	}
+	private String getHtml(String urlStr)
+	{
+		try
+		{
+			URL url = new URL(urlStr);
+			InputStream is = url.openStream();
+			BufferedReader rd = new BufferedReader(new InputStreamReader(is, Charset.forName("UTF-8")));
+			
+			StringBuilder sb = new StringBuilder();
+		    int cp;
+			while ((cp = rd.read()) != -1) {
+			      sb.append((char) cp);
+		    }
+			
+			String html = sb.toString();
+			
+			return html;
+		}
+		catch(Exception e)
+		{}
+		
+		return null;
 	}
 
 

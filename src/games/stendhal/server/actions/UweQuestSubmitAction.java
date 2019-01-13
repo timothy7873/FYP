@@ -78,6 +78,10 @@ public class UweQuestSubmitAction implements ActionListener{
 		player.update();
 		player.notifyWorldAboutChanges();
 		
+		//cal api to set quest not doing
+		ManagementAPI.api.stopTimeCount(npcId, player.getName());
+		//call api to set quest done
+		ManagementAPI.api.setQuestStatus(npcId, player.getName(), "done");
 	}
 
 	public static void register() {
