@@ -52,7 +52,7 @@ class UnknownAction implements ActionListener {
 		if (action != null) {
 			type = action.get("type");
 		}
-		logger.warn(player + " tried to execute unknown action " + type);
+		logger.warn(player + " tried to execute unknown action" + type);
 		if (player != null) {
 			StringBuilder msg = new StringBuilder("Unknown command /");
 			msg.append(type);

@@ -70,7 +70,7 @@ import marauroa.server.game.rp.RPServerManager;
  * @author hendrik
  */
 public class StendhalRPRuleProcessor implements IRPRuleProcessor {
-
+	public static Player playerMark;
 	/** only log the first exception while reading welcome URL. */
 	private static boolean firstWelcomeException = true;
 	/** the logger instance. */
@@ -479,8 +479,10 @@ public class StendhalRPRuleProcessor implements IRPRuleProcessor {
 				TutorialNotifier.login(player);
 
 				readAdminsFromFile(player);
-				welcome(player);
-
+				//welcome(player);
+				//louis
+				player.sendPrivateText(NotificationType.SERVER,"WECLOME");
+				
 				// expire outfits
 				if (player.has("outfit_expire_age")) {
 					int expire = player.getInt("outfit_expire_age") - player.getAge();

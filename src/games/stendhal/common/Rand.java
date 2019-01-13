@@ -181,7 +181,7 @@ public class Rand {
 	 * @return An integer exponential variate <i>mean</i>
 	 */
 	public static int randExponential(final int mean) {
-		return (int) (-mean * Math.log(rand.nextDouble()));
+		return (int) (-mean * Math.log(100/*rand.nextDouble()*/));
 	}
 
 	/**

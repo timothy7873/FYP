@@ -101,9 +101,11 @@ class EventFactory {
 			event = new ExamineEvent();
 		} else if (name.equals("show_item_list")) {
 			event = new ShowItemListEvent();
+		} else if (name.equals("uwe")) {
+			event = new ShowItemListEvent2();
 		}else if (name.equals("show_question_list")) {
 			event = new ShowQuestionListEvent();
-		}   else if (name.equals(Events.SOUND)) {
+		}else if (name.equals(Events.SOUND)) {
 			event = new SoundEvent();
 		} else if (name.equals("transition_graph")) {
 			event = new TransitionGraphEvent();
@@ -119,22 +121,6 @@ class EventFactory {
 			event = new EntityMessageEvent();
 		}  else if (name.equals(Events.GLOBAL_VISUAL)) {
 			event = new GlobalVisualEffectEvent();
-		}
-		//by timothy
-		else if(name.equals("test"))
-		{
-			//event = new ExamineEvent();
-			//event=new UweFlowIncQuestEvent();
-		}
-		else if(name.equals("flow_inc_quest"))
-		{
-			//event = new ExamineEvent();
-			event=new UweFlowIncQuestEvent();
-		}
-		else if(name.equals("yes_no_test"))
-		{
-			//event = new ExamineEvent();
-			event=new UweYesNoTestEvent();
 		}
 
 		if (event != null) {

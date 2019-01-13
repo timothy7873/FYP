@@ -12,11 +12,13 @@
  ***************************************************************************/
 package games.stendhal.server.maps.semos.guardhouse;
 
+import java.util.Arrays;
 import java.util.LinkedList;
 import java.util.List;
 import java.util.Map;
 import java.util.Random;
 
+import games.stendhal.common.parser.Sentence;
 import games.stendhal.server.core.config.ZoneConfigurator;
 import games.stendhal.server.core.engine.SingletonRepository;
 import games.stendhal.server.core.engine.StendhalRPZone;
@@ -26,12 +28,16 @@ import games.stendhal.server.entity.CollisionAction;
 import games.stendhal.server.entity.npc.ChatAction;
 import games.stendhal.server.entity.npc.ConversationPhrases;
 import games.stendhal.server.entity.npc.ConversationStates;
+import games.stendhal.server.entity.npc.EventRaiser;
 import games.stendhal.server.entity.npc.ShopList;
 import games.stendhal.server.entity.npc.SpeakerNPC;
 import games.stendhal.server.entity.npc.action.EquipItemAction;
 import games.stendhal.server.entity.npc.action.ExamineChatAction;
 import games.stendhal.server.entity.npc.action.MultipleActions;
 import games.stendhal.server.entity.npc.action.SetQuestAction;
+import games.stendhal.server.entity.player.Player;
+import games.stendhal.server.maps.quests.uwe.CrossNPCCondition;
+import games.stendhal.server.maps.quests.uwe.statemark;
 
 /**
  * An old hero (original name: Hayunn Naratha) who players meet when they enter
@@ -72,13 +78,52 @@ public class StarterNPC implements ZoneConfigurator {
 				addHelp("Do you want me to arrange quests for you?");
 				
 				add(ConversationStates.IDLE, 
-				    ConversationPhrases.GREETING_MESSAGES, 
+				    "hello", 
 				     null,
 					 ConversationStates.ATTENDING, 
 					 "How can I #help you?",
 					 new MultipleActions(actions));
-						
-				addJob("My job is to help young programmer grow.    .");
+
+				add(ConversationStates.IDLE, 
+					Arrays.asList("CCTV is watching u"), 
+				     null,
+					 ConversationStates.ATTENDING, 
+					 "What?!",
+					 new MultipleActions(actions));
+
+				add(ConversationStates.IDLE, 
+					Arrays.asList("yo"), 
+				     null,
+					 ConversationStates.ATTENDING, 
+					 "What the hell u did in my house?!",
+					 new MultipleActions(actions));
+				
+				add(ConversationStates.IDLE, 
+						Arrays.asList("i just opened a zoo for u"), 
+					     null,
+						 ConversationStates.ATTENDING, 
+						 "STFU",
+						 new MultipleActions(actions));
+				
+				add(ConversationStates.IDLE, 
+					    "hi", 
+					     new CrossNPCCondition(2),
+						 ConversationStates.ATTENDING, 
+						 "u finally here..i have been waited to long...i know what you going to ask me, u can think about it...is there any benefits to add private keyword inside a function?",
+						 new MultipleActions(new ChatAction() {
+								public void fire(final Player player, final Sentence sentence, final EventRaiser npc) {
+									statemark.state = 0;
+								}
+						 }));
+				
+				add(ConversationStates.IDLE, 
+						Arrays.asList("SB yi"), 
+					     null,
+						 ConversationStates.ATTENDING, 
+						 "Agree!",
+						 new MultipleActions(actions));
+				
+				addJob("Mybbbbbbbbbbbbbbbbbbbbbbbbbb job is to help young programmer grow.    .");
 		
 
 	
@@ -106,6 +151,7 @@ public class StarterNPC implements ZoneConfigurator {
 		npc.setBaseHP(100);
 		npc.setHP(85);
 		zone.add(npc);
+	
 	}
 
 }

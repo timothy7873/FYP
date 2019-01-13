@@ -62,8 +62,6 @@ import games.stendhal.server.events.AttackEvent;
 import games.stendhal.server.events.BuddyLoginEvent;
 import games.stendhal.server.events.BuddyLogoutEvent;
 import games.stendhal.server.events.ExamineEvent;
-import games.stendhal.server.events.UweFlowIncQuestEvent;
-import games.stendhal.server.events.UweYesNoTestEvent;
 import games.stendhal.server.events.GlobalVisualEffectEvent;
 import games.stendhal.server.events.GroupChangeEvent;
 import games.stendhal.server.events.GroupInviteEvent;
@@ -75,8 +73,8 @@ import games.stendhal.server.events.PrivateTextEvent;
 import games.stendhal.server.events.ProgressStatusEvent;
 import games.stendhal.server.events.ReachedAchievementEvent;
 import games.stendhal.server.events.ShowItemListEvent;
+import games.stendhal.server.events.ShowQuestionListEvent2;
 import games.stendhal.server.events.SoundEvent;
-import games.stendhal.server.events.TestEvent;
 import games.stendhal.server.events.TextEvent;
 import games.stendhal.server.events.TradeStateChangeEvent;
 import games.stendhal.server.events.TransitionGraphEvent;
@@ -104,17 +102,6 @@ public class RPClassGenerator {
 		if (!RPClass.hasRPClass("entity")) {
 			Entity.generateRPClass();
 		}
-		
-		//by timothy
-		if (!RPClass.hasRPClass("test")) {
-			TestEvent.generateRPClass();
-		}
-		if (!RPClass.hasRPClass("flow_inc_quest")) {
-			UweFlowIncQuestEvent.generateRPClass();
-		}
-		if (!RPClass.hasRPClass("yes_no_test")) {
-			UweYesNoTestEvent.generateRPClass();
-		}
 
 		// Entity sub-classes
 		if (!RPClass.hasRPClass("active_entity")) {
@@ -122,6 +109,9 @@ public class RPClassGenerator {
 		}
 		if (!RPClass.hasRPClass("area")) {
 			AreaEntity.generateRPClass();
+		}
+		if (!RPClass.hasRPClass("uwe")) {
+			ShowQuestionListEvent2.generateRPClass();
 		}
 		if (!RPClass.hasRPClass("blood")) {
 			Blood.generateRPClass();

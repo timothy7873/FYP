@@ -29,6 +29,7 @@ import games.stendhal.server.entity.CollisionAction;
 import games.stendhal.server.entity.Killer;
 import games.stendhal.server.entity.RPEntity;
 import games.stendhal.server.entity.item.Corpse;
+import games.stendhal.server.entity.npc.action.MultipleActions;
 import games.stendhal.server.entity.npc.action.NPCEmoteAction;
 import games.stendhal.server.entity.npc.condition.EmoteCondition;
 import games.stendhal.server.entity.npc.condition.GreetingMatchesNameCondition;
@@ -228,6 +229,7 @@ public class SpeakerNPC extends NPC {
 	 * needed.
 	 * @param attending2 who has been talked to.
 	 */
+	//protected void onGoodbye(final RPEntity attending2) {
 	protected void onGoodbye(final RPEntity attending2) {
 		// do nothing
 	}
@@ -893,9 +895,26 @@ public class SpeakerNPC extends NPC {
 	public void addGoodbye() {
 		addGoodbye("Bye.");
 	}
+	
+	public void addGoodbyeWithAction(final String text,ChatAction ca) {
+		goodbyeMessage = text;
+		add(ConversationStates.ANY, ConversationPhrases.GOODBYE_MESSAGES,
+				ConversationStates.IDLE, text, new MultipleActions(ca,new ChatAction() {
+
+					@Override
+					public void fire(final Player player, final Sentence sentence,
+							final EventRaiser npc) {
+						((SpeakerNPC) npc.getEntity()).onGoodbye(player);
+					}
+
+					@Override
+					public String toString() {
+						return "SpeakerNPC.onGoodbye";
+					}
+				}));
+	}
 
 	public void addGoodbye(final String text) {
-		goodbyeMessage = text;
 		add(ConversationStates.ANY, ConversationPhrases.GOODBYE_MESSAGES,
 				ConversationStates.IDLE, text, new ChatAction() {
 

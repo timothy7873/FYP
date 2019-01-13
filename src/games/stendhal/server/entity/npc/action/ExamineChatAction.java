@@ -21,7 +21,6 @@ import games.stendhal.server.entity.npc.ChatAction;
 import games.stendhal.server.entity.npc.EventRaiser;
 import games.stendhal.server.entity.player.Player;
 import games.stendhal.server.events.ExamineEvent;
-import games.stendhal.server.events.TestEvent;
 
 /**
  * Opens an examine window on the client showing an image
@@ -52,7 +51,6 @@ public class ExamineChatAction implements ChatAction {
 
 	@Override
 	public void fire(final Player player, final Sentence sentence, final EventRaiser npc) {
-		//player.addEvent(new TestEvent(image, title, caption));
 		player.addEvent(new ExamineEvent(image, title, caption));
 		player.notifyWorldAboutChanges();
 	}

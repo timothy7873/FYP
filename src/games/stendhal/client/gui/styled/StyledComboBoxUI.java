@@ -47,7 +47,7 @@ public class StyledComboBoxUI extends BasicComboBoxUI {
 	}
 
 	@Override
-	protected ListCellRenderer<?> createRenderer() {
+	protected ListCellRenderer<Object> createRenderer() {
 		/*
 		 * In java 6 the transparency setting of the entries gets
 		 * overridden by StyledLabelUI. (It works ok in java 1.5).
@@ -67,7 +67,7 @@ public class StyledComboBoxUI extends BasicComboBoxUI {
 	/**
 	 * A ListCellRenderer that returns opaque labels.
 	 */
-	private static class StyledComboBoxRenderer extends BasicComboBoxRenderer {
+	private static class StyledComboBoxRenderer extends BasicComboBoxRenderer implements ListCellRenderer<Object> {
 		@Override
 		public Component getListCellRendererComponent(@SuppressWarnings("rawtypes") JList list, Object value,
 				int index, boolean isSelected, boolean cellHasFocus) {

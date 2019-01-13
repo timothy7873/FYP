@@ -46,6 +46,11 @@ public class RatsCreatures implements ZoneConfigurator {
 					final Map<String, String> aiProfiles = new HashMap<String, String>(creature.getAIProfiles());
 					aiProfiles.remove("stupid coward");
 					creature.setAIProfiles(aiProfiles);
+				}else if("deer".equals(p.getPrototypeCreature().getName())) {
+					// it is a rat, we will remove ai profile of stupid coward
+					final Creature creature = p.getPrototypeCreature();
+					final Map<String, String> aiProfiles = new HashMap<String, String>(creature.getAIProfiles());
+					creature.setAIProfiles(aiProfiles);
 				}
 			}
 		}

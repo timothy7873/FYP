@@ -130,9 +130,6 @@ public class PlayerRPClass {
 		player.addRPSlot("trade", 4);
 
 		player.addRPSlot("uwebag", 9, Definition.PRIVATE);
-		player.addRPSlot("uwequest", 1, Definition.PRIVATE);
-		for(int i=0;i<10;i++)
-			player.addRPSlot("uwepopup"+i, 1, Definition.PRIVATE);
 
 		
 		// The guild name
@@ -150,13 +147,9 @@ public class PlayerRPClass {
 		player.addRPEvent("transition_graph", Definition.PRIVATE);
 		player.addRPEvent("examine", Definition.PRIVATE);
 		player.addRPEvent("show_item_list", Definition.PRIVATE);
-		
+
 		player.addRPEvent("show_question_list", Definition.PRIVATE);
-		
-		//by timothy
-		player.addRPEvent("test", Definition.PRIVATE);
-		player.addRPEvent("flow_inc_quest", Definition.PRIVATE);
-		player.addRPEvent("yes_no_test", Definition.PRIVATE);
+		player.addRPEvent("uwe", Definition.PRIVATE);
 
 
 		player.addRPEvent(Events.VIEW_CHANGE, Definition.PRIVATE);

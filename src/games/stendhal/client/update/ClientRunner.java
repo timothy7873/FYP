@@ -51,10 +51,10 @@ class ClientRunner {
 			// OLDER JREs.
 			final Method method = clazz.getMethod("boot", paramTypes);
 			method.invoke(object, params);
+			//(new games.stendhal.client.update.Bootstrap()).boot("games.stendhal.client.stendhal",args)
 		} catch (final Exception e) {
 			e.printStackTrace();
 			System.exit(1);
 		}
 	}
-
 }

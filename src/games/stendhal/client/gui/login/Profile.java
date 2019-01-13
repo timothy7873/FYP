@@ -23,7 +23,7 @@ public class Profile {
 	private static final String[] OLD_SERVER_HOSTS = { "stendhal.ath.cx", "stendhal.game-host.org" };
 
 	/** Default server name to replace old ones with. */
-	private static final String NEW_SERVER_HOST = "stendhalgame.org";
+	private static final String NEW_SERVER_HOST = "stendhalgame.org";//stendhalgame.org
 
 	private String host;
 

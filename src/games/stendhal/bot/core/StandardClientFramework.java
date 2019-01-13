@@ -167,7 +167,7 @@ public abstract class StandardClientFramework extends ClientFramework {
 	@Override
 	protected void onAvailableCharacters(final String[] characters) {
 		try {
-			chooseCharacter(character);
+			//chooseCharacter(character);
 		} catch (final Exception e) {
 			e.printStackTrace();
 		}

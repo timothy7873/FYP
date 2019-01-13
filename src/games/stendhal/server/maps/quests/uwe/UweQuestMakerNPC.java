@@ -120,8 +120,6 @@ public class UweQuestMakerNPC implements LoadableContent {
 				ConversationStates.ATTENDING, 
 				"You have completed the quest. You can #restart the quest again.", 
 				null);
-	
-	
 	}
 
 	@Override

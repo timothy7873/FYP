@@ -29,5 +29,6 @@ class ShowQuestionListEvent extends Event<Entity> {
 	public void execute() {
 	
 		new QuestionListImageViewerEvent(event).view();
+		
 	}
 }

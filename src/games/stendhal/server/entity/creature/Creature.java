@@ -38,7 +38,6 @@ import games.stendhal.server.entity.Entity;
 import games.stendhal.server.entity.Killer;
 import games.stendhal.server.entity.RPEntity;
 import games.stendhal.server.entity.Registrator;
-import games.stendhal.server.entity.creature.impl.DropInstanceItem;
 import games.stendhal.server.entity.creature.impl.DropItem;
 import games.stendhal.server.entity.creature.impl.EquipItem;
 import games.stendhal.server.entity.creature.impl.attack.AttackStrategy;
@@ -102,7 +101,7 @@ public class Creature extends NPC {
 	 * is always creature specific.
 	 */
 	protected List<Item> dropItemInstances;
-	
+
 	/** Sound played on death */
 	private String deathSound;
 
@@ -612,7 +611,6 @@ public class Creature extends NPC {
 	 */
 	public void addDropItem(final String name, final double probability, final int amount) {
 		dropsItems.add(new DropItem(name, probability, amount));
-		Logger.getLogger(StendhalRPRuleProcessor.class).error("add call");
 	}
 
 	/**
@@ -651,8 +649,8 @@ public class Creature extends NPC {
 	@Override
 	protected void dropItemsOn(final Corpse corpse) {
 		for (final Item item : dropItemInstances) {
-			corpse.add(item);
 			item.setFromCorpse(true);
+			corpse.add(item);
 			if (corpse.isFull()) {
 				break;
 			}

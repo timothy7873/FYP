@@ -56,7 +56,7 @@ public class UweDataNPC implements LoadableContent {
 	final StendhalRPZone zone = SingletonRepository.getRPWorld().getZone("int_semos_guard_house");
 
 	private void createNPC() {
-
+		
 		npc = new SpeakerNPC(npcName) {
 
 			@Override
@@ -74,30 +74,6 @@ public class UweDataNPC implements LoadableContent {
 		npc.setEntityClass("noimagenpc");
 		npc.setCollisionAction(CollisionAction.REVERSE);
 		npc.setPosition(6, 15);
-		npc.setDirection(Direction.UP);
-		npc.initHP(100);
-		// npc.setSpeed(1.0);
-		zone.add(npc);
-	}
-	private void createNPC1() {
-
-		npc = new SpeakerNPC(npcName) {
-
-			@Override
-			protected void createPath() {
-
-			}
-
-			@Override
-			protected void createDialog() {
-				// done outside
-			}
-		};
-
-		// npc.setOutfit(new Outfit(0, 4, 7, 32, 13));
-		npc.setEntityClass("noimagenpc");
-		npc.setCollisionAction(CollisionAction.REVERSE);
-		npc.setPosition(6, 18);
 		npc.setDirection(Direction.UP);
 		npc.initHP(100);
 		// npc.setSpeed(1.0);
@@ -183,7 +159,6 @@ public class UweDataNPC implements LoadableContent {
 
 		buildConditions();
 		createNPC();
-		//createNPC1();
 
 		addDialog();
 	}

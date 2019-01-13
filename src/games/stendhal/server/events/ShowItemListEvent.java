@@ -40,6 +40,7 @@ public class ShowItemListEvent extends RPEvent {
 	private static final Logger logger = Logger.getLogger(ShowItemListEvent.class);
 
 	/**
+	 * 
 	 * Creates the rpclass.
 	 */
 	public static void generateRPClass() {

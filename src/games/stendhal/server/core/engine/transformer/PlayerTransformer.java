@@ -146,8 +146,7 @@ public class PlayerTransformer implements Transformer {
 
 		// load items
 		final String[] slotsItems = {  "bag", "rhand", "lhand", "head", "armor",
-				"legs", "feet", "finger", "cloak", "back", "belt", "keyring", "trade","uwebag",
-				"uwepopup0","uwepopup1","uwepopup2","uwepopup3","uwepopup4","uwepopup5","uwepopup6","uwepopup7","uwepopup8","uwepopup9" };
+				"legs", "feet", "finger", "cloak", "back", "belt", "keyring", "trade","uwebag", };
 
 		try {
 			for (final String slotName : slotsItems) {
@@ -164,10 +163,6 @@ public class PlayerTransformer implements Transformer {
 				else if (slotName.equals("uwebag")) {
 					newSlot = new UwePlayerTradeSlot(slotName);
 				}
-//				else if (slotName.equals("uwepopup")) {
-//					newSlot = new PlayerSlot(slotName);
-//				}
-				
 				
 				else {
 					newSlot = new PlayerSlot(slotName);
@@ -349,8 +344,7 @@ public class PlayerTransformer implements Transformer {
 		player.removeSlot(slot.getName());
 		player.addSlot(newSlot);
 
-		//ItemTransformer transformer = new ItemTransformer();
-		ItemTransformer transformer = new UweItemTransformer();
+		ItemTransformer transformer = new ItemTransformer();
 		for (final RPObject rpobject : objects) {
 			try {
 				// remove admin items the player does not deserve

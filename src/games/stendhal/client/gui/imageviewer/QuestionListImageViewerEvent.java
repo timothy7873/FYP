@@ -256,14 +256,17 @@ public final class QuestionListImageViewerEvent extends ViewPanel {
 	 * @return new table
 	 */
 	private JTable createTable(int maxPreferredWidth) {
-		String[] columnNames = { "Item", "Symbol", "Description" };
-		Object[][] data = new Object[event.getSlot("content").size()][];
+		String[] columnNames = { "Item", "Symbol", "Description"};
+		Object[][] data = new Object[event.getSlot("content").size()+1][];
 		RPSlot slot = event.getSlot("content");
 		int i = 0;
 		for (RPObject item : slot) {
 			data[i] = createDataRow(item, maxPreferredWidth);
 			i++;
+			data[i] = createDataRow(item, maxPreferredWidth);
 		}
+		//louis
+		//end
 		return new JTable(data, columnNames);
 	}
 

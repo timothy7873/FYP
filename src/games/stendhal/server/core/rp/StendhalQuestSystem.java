@@ -25,7 +25,7 @@ import games.stendhal.server.entity.player.Player;
 import games.stendhal.server.maps.quests.*;
 import games.stendhal.server.maps.quests.uwe.ManageUnsolvableTask;
 import games.stendhal.server.maps.quests.uwe.MeetStarter;
-import games.stendhal.server.maps.quests.uwe.UweNPCPlacer;
+import games.stendhal.server.maps.quests.uwe.UweQuest;
 import games.stendhal.server.maps.quests.uwe.quests.MeetDataTypeQuest;
 import games.stendhal.server.maps.quests.uwe.quests.Q1;
 
@@ -201,7 +201,7 @@ public class StendhalQuestSystem {
 		// uwe research part
 
 		loadQuest(new MeetStarter());
-		loadQuest(new UweNPCPlacer());
+		loadQuest(new UweQuest());
 
 		loadQuest(new ManageUnsolvableTask());
 		 
