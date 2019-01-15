@@ -116,6 +116,14 @@ public class PhpManagementAPI extends ManagementAPI{
 		qry.add("characterName", user);
 		doUrl(site+"setStopTime.php?"+qry);
 	}
+	public void setLastStartTime(String npcId, String user)
+	{
+		QueryString qry = new QueryString();
+		
+		qry.add("npcId", npcId);
+		qry.add("characterName", user);
+		doUrl(site+"setLastStartTime.php?"+qry);
+	}
 	
 	private JSONObject getJson(String urlStr)
 	{

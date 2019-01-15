@@ -54,4 +54,5 @@ public class HardcodeManagementAPI extends ManagementAPI{
 	}
 	public void setQuestStatus(String npcId, String user, String status) {}
 	public void stopTimeCount(String npcId, String user) {}
+	public void setLastStartTime(String npcId, String user) {}
 }

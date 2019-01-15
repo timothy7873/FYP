@@ -80,6 +80,8 @@ public class UweQuestSubmitAction implements ActionListener{
 		
 		//cal api to set quest not doing
 		ManagementAPI.api.stopTimeCount(npcId, player.getName());
+		//cal api to set quest done time
+		ManagementAPI.api.setLastStartTime(npcId, player.getName());
 		//call api to set quest done
 		ManagementAPI.api.setQuestStatus(npcId, player.getName(), "done");
 	}

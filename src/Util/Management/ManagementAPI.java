@@ -11,4 +11,5 @@ public abstract class ManagementAPI {
 	public abstract QuestHint getHint(String npcId, String user);
 	public abstract void setQuestStatus(String npcId, String user, String status);
 	public abstract void stopTimeCount(String npcId, String user);
+	public abstract void setLastStartTime(String npcId, String user);
 }
