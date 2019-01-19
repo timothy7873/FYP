@@ -10,7 +10,7 @@ public class UweItemTransformer extends ItemTransformer{
 	{
 		Item result=null;
 		
-		if (rpobject.get("type").equals("item") &&
+		if (rpobject.get("type")!=null && rpobject.get("type").equals("item") &&
 				UpdateConverter.updateItem(UpdateConverter.updateItemName(rpobject.get("name")))==null)
 			result=UweItemManager.createCodeItem(rpobject.get("name"));
 		else

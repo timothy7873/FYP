@@ -104,6 +104,13 @@ public class UweFlowIncQuestViewPanel extends JComponent implements ContentChang
 		//panel.setParent(parent);
 		//panel.setName(slotName+usedSlot);
 		
+		//return item
+		RPAction action = new RPAction();
+		action.put("type", "UweReturnItem");
+		action.put("npcId", npcId);
+		action.put("questType", type);
+		ClientSingletonRepository.getClientFramework().send(action);
+		
 		//call api to stop timer
 		ManagementAPI.api.stopTimeCount(npcId, User.getCharacterName());
 		

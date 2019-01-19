@@ -14,6 +14,7 @@ import games.stendhal.server.entity.item.Item;
 import games.stendhal.server.entity.item.StackableItem;
 import games.stendhal.server.entity.player.Player;
 import marauroa.common.game.RPAction;
+import marauroa.common.game.RPObject;
 import marauroa.common.game.RPSlot;
 
 public class UweQuestSubmitAction implements ActionListener{
@@ -70,7 +71,10 @@ public class UweQuestSubmitAction implements ActionListener{
 			RPSlot submition=player.getSlot("uwepopup"+i);
 			if(submition==null)
 				break;
-			submition.clear();
+
+			RPObject item=submition.getFirst();
+			if(item!=null)
+				submition.remove(item.getID());
 		}
 		player.setQuest(npcId, "done");
 		
