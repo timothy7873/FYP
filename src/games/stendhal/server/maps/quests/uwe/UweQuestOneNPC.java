@@ -46,7 +46,7 @@ public class UweQuestOneNPC implements LoadableContent{
 
 		npc.setEntityClass("noimagenpc");
 		npc.setCollisionAction(CollisionAction.REVERSE);
-		npc.setPosition(15, 10);
+		npc.setPosition(15, 15);
 		npc.setDirection(Direction.UP);
 		npc.initHP(100);
 		zone.add(npc);

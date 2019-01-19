@@ -71,7 +71,7 @@ public class UweLogicalErrorQuestNPC implements LoadableContent{
 		// npc.setOutfit(new Outfit(0, 4, 7, 32, 13));
 		npc.setEntityClass("noimagenpc");
 		npc.setCollisionAction(CollisionAction.REVERSE);
-		npc.setPosition(15, 12);
+		npc.setPosition(7, 15);
 		npc.setDirection(Direction.UP);
 		npc.initHP(100);
 		// npc.setSpeed(1.0);
