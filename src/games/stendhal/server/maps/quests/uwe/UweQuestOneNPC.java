@@ -14,6 +14,7 @@ import games.stendhal.server.entity.npc.SpeakerNPC;
 import games.stendhal.server.entity.npc.action.SetQuestAction;
 import games.stendhal.server.entity.npc.action.UweProvideHintAction;
 import games.stendhal.server.entity.npc.action.UweStartQuestAction;
+import games.stendhal.server.entity.npc.action.UweTouchLogicalQuestChatAction;
 import games.stendhal.server.entity.npc.condition.AndCondition;
 import games.stendhal.server.entity.npc.condition.QuestInStateCondition;
 import games.stendhal.server.entity.npc.condition.QuestStartedCondition;
@@ -67,9 +68,10 @@ public class UweQuestOneNPC implements LoadableContent{
 				new AndCondition(
 						new QuestStartedCondition(npcName), 
 						new QuestInStateCondition(npcName, "blank")), 
-				ConversationStates.INFORMATION_1, 
-				"Are you familar with java code? #Yes/ #No/ #A #bit", 
-				null);
+				ConversationStates.ATTENDING, 
+				null, 
+				new UweTouchLogicalQuestChatAction(npc));
+		
 		npc.add(ConversationStates.INFORMATION_1, 
 				Arrays.asList("Yes","yes","y"), 
 				null, 

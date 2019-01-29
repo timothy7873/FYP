@@ -32,7 +32,7 @@ public class UweCreature implements LoadableContent {
 	public void addToWorld() {
 		// TODO Auto-generated method stub
 		createCreature();
-		createCreature();
+		//createCreature();
 		//createCreature();
 		//createCreature();
 	}
@@ -90,7 +90,7 @@ public class UweCreature implements LoadableContent {
 		//tCreature.addDropItem("club",100,1);
 		//tCreature.addDropItem(em.getItem("club"));
 		CreatureRespawnPoint tPoint=new CreatureRespawnPoint(tZone, 10, 10, tCreature, 1);
-		tPoint.setRespawnTime(0);
+		tPoint.setRespawnTime(1000);
 		tZone.add(tPoint);
 		
 		tPoint.spawnNow();

@@ -30,6 +30,10 @@ public class PhpManagementAPI extends ManagementAPI{
 		qry.add("characterName", user);
 		qry.add("questType", "Logic error");
 		JSONObject json=getJson(site+"outputQuestion.php?"+qry);
+		if(json==null)
+		{
+			return null;
+		}
 		
 		JSONArray codes=(JSONArray)json.get("code");
 		JSONArray curouts=(JSONArray)json.get("curout");

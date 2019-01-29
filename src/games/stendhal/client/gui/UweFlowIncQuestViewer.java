@@ -32,6 +32,11 @@ public class UweFlowIncQuestViewer {
 			q=ManagementAPI.api.getLogicalQuestion(npcId, User.getCharacterName());
 		}
 		
+		if(q==null)
+		{
+			return;
+		}
+		
 		code=q.code.split("\n");
 		ans=q.ans.split("\n");
 		out=q.out;

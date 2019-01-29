@@ -25,6 +25,7 @@ import games.stendhal.server.entity.npc.SpeakerNPC;
 import games.stendhal.server.entity.npc.action.FireEventChatAction;
 import games.stendhal.server.entity.npc.action.MultipleActions;
 import games.stendhal.server.entity.npc.action.SetQuestAction;
+import games.stendhal.server.entity.npc.action.UweFireQuestEventChatAction;
 import games.stendhal.server.entity.npc.condition.AndCondition;
 import games.stendhal.server.entity.npc.condition.NotCondition;
 import games.stendhal.server.entity.npc.condition.OrCondition;
@@ -98,7 +99,7 @@ public class UweLogicalErrorQuestNPC implements LoadableContent{
 				"Please help me fix the code", 
 				new MultipleActions(
 						new SetQuestAction(leaderNpc, "read"),
-						new FireEventChatAction(new UweFlowIncQuestEvent("logical", "Logical error fixing quest", leaderNpc)))
+						new UweFireQuestEventChatAction(new UweFlowIncQuestEvent("logical", "Logical error fixing quest", leaderNpc)))
 				);
 		npc.add(ConversationStates.ATTENDING, 
 				ConversationPhrases.QUEST_MESSAGES, 

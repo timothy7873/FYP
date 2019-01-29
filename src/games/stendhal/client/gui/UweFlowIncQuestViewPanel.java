@@ -79,30 +79,6 @@ public class UweFlowIncQuestViewPanel extends JComponent implements ContentChang
 	}
 	public void windowClosed(InternalWindow window) {
 		// TODO Auto-generated method stub
-
-//		ItemPanel panel=new ItemPanel(null,null);
-//		panel.setItemNumber(0);
-//		panel.setAcceptedTypes(EntityMap.getClass("item", null, null));
-//		panel.setName("bag");
-//		
-//		RPSlot bag=User.get().getSlot("bag");
-//		for(int i=0;i<10;i++)
-//		{
-//			UweItemPanel pop=panels.("uwepopup"+i);
-//			
-//			
-//			RPSlot slot=User.get().getSlot("uwepopup"+i);
-//			RPObject item=slot.getFirst();
-//			if(item==null)
-//				continue;
-//			if(!bag.isFull())
-//			{
-//				panel.dropEntity(item, -1, new Point());
-//			}
-//			
-//		}
-		//panel.setParent(parent);
-		//panel.setName(slotName+usedSlot);
 		
 		//return item
 		RPAction action = new RPAction();
@@ -114,6 +90,7 @@ public class UweFlowIncQuestViewPanel extends JComponent implements ContentChang
 		//call api to stop timer
 		ManagementAPI.api.stopTimeCount(npcId, User.getCharacterName());
 		
+		//stop mon item change
 		parent.removeContentChangeListener(this);
 	}
 	
@@ -272,9 +249,7 @@ public class UweFlowIncQuestViewPanel extends JComponent implements ContentChang
 				panel.setParent(parent);
 				panel.setName(slotName+usedSlot);
 				usedSlot++;
-				parent.addContentChangeListener(this);
-				//contentAdded(parent.getSlot(slotName));
-				
+
 				panels.put(panel, i);
 			}
 			
@@ -282,6 +257,10 @@ public class UweFlowIncQuestViewPanel extends JComponent implements ContentChang
 			maxWidth=Integer.max(maxWidth, getWidth(box));
 
 		}
+		
+		//add item change monitor
+		parent.addContentChangeListener(this);
+		
 		for(int i=0;i<getComponentCount();i++)
 		{
 			Component c=getComponent(i);
@@ -409,7 +388,7 @@ public class UweFlowIncQuestViewPanel extends JComponent implements ContentChang
 		
 		
 		//handle code
-		if(!(panels.get(UweItemPanel.curDraggedTarget) instanceof Integer))
+		if(!(this.panels.get(UweItemPanel.curDraggedTarget) instanceof Integer))
 		{
 			UweItemPanel.curDraggedTarget=null;
 			return;

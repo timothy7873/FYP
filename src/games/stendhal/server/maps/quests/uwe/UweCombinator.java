@@ -24,8 +24,8 @@ public class UweCombinator implements LoadableContent{
 	
 	public UweCombinator()
 	{
-		posX=10;
-		posY=10;
+		posX=7;
+		posY=8;
 	}
 
 	private void buildConditions() {
