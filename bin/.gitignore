@@ -1,7 +1,8 @@
 /.DS_Store
+/Util/
 /conf/
 /data/
 /findbugs-excludes.xml
 /games/
-/Util/
+/log4j.properties
 /utilities/
