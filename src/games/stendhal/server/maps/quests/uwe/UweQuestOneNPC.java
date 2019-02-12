@@ -80,7 +80,7 @@ public class UweQuestOneNPC implements LoadableContent{
 				Arrays.asList("Yes","yes","y"), 
 				null, 
 				ConversationStates.ATTENDING, 
-				"Please go find #UweFlowIncQuestNPC and get the quest about java code", 
+				"Please go find #UweLogicalErrorQuestNPC and get the quest about java code", 
 				new SetQuestAction(npcName, "started"));
 		npc.add(ConversationStates.INFORMATION_1, 
 				Arrays.asList("A bit","a bit","Abit","abit","ab","a"), 
