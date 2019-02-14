@@ -23,6 +23,9 @@ public class UweYesNoTestViewer {
 		}
 		
 		YesNoTest[] qs=ManagementAPI.api.getYesNoTests(npcId);
+		if(qs.length==0)
+			return;
+		
 		question=new String[qs.length];
 		ans=new boolean[qs.length];
 		for(int i=0;i<qs.length;i++)

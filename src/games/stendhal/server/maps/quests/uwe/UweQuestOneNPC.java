@@ -16,8 +16,10 @@ import games.stendhal.server.entity.npc.action.UweProvideHintAction;
 import games.stendhal.server.entity.npc.action.UweStartQuestAction;
 import games.stendhal.server.entity.npc.action.UweTouchLogicalQuestChatAction;
 import games.stendhal.server.entity.npc.condition.AndCondition;
+import games.stendhal.server.entity.npc.condition.NotCondition;
 import games.stendhal.server.entity.npc.condition.QuestInStateCondition;
 import games.stendhal.server.entity.npc.condition.QuestStartedCondition;
+import games.stendhal.server.entity.npc.condition.UweYesNoTestValidCondition;
 
 public class UweQuestOneNPC implements LoadableContent{
 	
@@ -62,6 +64,8 @@ public class UweQuestOneNPC implements LoadableContent{
 				"\nI am a quest one NPC, I can provide #quest for you.", 
 				new UweStartQuestAction(npcName, "blank"));
 		//quest
+		
+		
 		//quest blank
 		npc.add(ConversationStates.ATTENDING, 
 				Arrays.asList("quest","q"), 
@@ -76,20 +80,27 @@ public class UweQuestOneNPC implements LoadableContent{
 				Arrays.asList("Yes","yes","y"), 
 				null, 
 				ConversationStates.ATTENDING, 
-				"Please go find #UweFlowIncQuestNPC and get the quest about java code", 
+				"Please go find #UweLogicalErrorQuestNPC and get the quest about java code", 
 				new SetQuestAction(npcName, "started"));
+		npc.add(ConversationStates.INFORMATION_1, 
+				Arrays.asList("A bit","a bit","Abit","abit","ab","a"), 
+				new UweYesNoTestValidCondition(npcName), 
+				ConversationStates.ATTENDING, 
+				"Please go find #UweJavaTestNPC to practise java", 
+				null);
+		npc.add(ConversationStates.INFORMATION_1, 
+				Arrays.asList("A bit","a bit","Abit","abit","ab","a"), 
+				new NotCondition(new UweYesNoTestValidCondition(npcName)), 
+				ConversationStates.ATTENDING, 
+				"Please visit #http://www.google.com/ to find resources to learn java", 
+				null);
 		npc.add(ConversationStates.INFORMATION_1, 
 				Arrays.asList("No","no","n"), 
 				null, 
 				ConversationStates.ATTENDING, 
 				"Please visit #http://www.google.com/ to find resources to learn java", 
 				null);
-		npc.add(ConversationStates.INFORMATION_1, 
-				Arrays.asList("A bit","a bit","Abit","abit","ab","a"), 
-				null, 
-				ConversationStates.ATTENDING, 
-				"Please go find #UweJavaTestNPC to practise java", 
-				null);
+		
 		
 		//quest done
 		npc.add(ConversationStates.ATTENDING, 

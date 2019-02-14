@@ -10,6 +10,8 @@ import games.stendhal.server.entity.npc.ConversationStates;
 import games.stendhal.server.entity.npc.NPCList;
 import games.stendhal.server.entity.npc.SpeakerNPC;
 import games.stendhal.server.entity.npc.action.FireEventChatAction;
+import games.stendhal.server.entity.npc.condition.NotCondition;
+import games.stendhal.server.entity.npc.condition.UweYesNoTestValidCondition;
 import games.stendhal.server.events.UweFlowIncQuestEvent;
 import games.stendhal.server.events.UweYesNoTestEvent;
 
@@ -62,10 +64,17 @@ public class UweJavaTestNPC implements LoadableContent{
 		//quest
 		npc.add(ConversationStates.ATTENDING, 
 				Arrays.asList("test","t"), 
-				null, 
+				new UweYesNoTestValidCondition(leaderNpc), 
 				ConversationStates.ATTENDING, 
 				"", 
 				new FireEventChatAction(new UweYesNoTestEvent(leaderNpc,"Java test"))
+				);
+		npc.add(ConversationStates.ATTENDING, 
+				Arrays.asList("test","t"), 
+				new NotCondition(new UweYesNoTestValidCondition(leaderNpc)), 
+				ConversationStates.ATTENDING, 
+				"Sorry but I currently have no test for you.", 
+				null
 				);
 		//bye
 		npc.addGoodbye("Have fun!");

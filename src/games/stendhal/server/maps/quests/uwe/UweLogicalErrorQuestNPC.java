@@ -85,7 +85,7 @@ public class UweLogicalErrorQuestNPC implements LoadableContent{
 				ConversationPhrases.GREETING_MESSAGES, 
 				null, 
 				ConversationStates.ATTENDING,
-				"\nI am a quest NPC of flow incorrect, are you looking for #quest?.", 
+				"\nI am a quest NPC of logical error fixing, are you looking for #quest?.", 
 				null);
 		//quest
 		npc.add(ConversationStates.ATTENDING, 
