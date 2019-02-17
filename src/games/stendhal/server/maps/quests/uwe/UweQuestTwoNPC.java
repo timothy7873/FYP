@@ -14,6 +14,7 @@ import games.stendhal.server.entity.npc.action.SetQuestAction;
 import games.stendhal.server.entity.npc.action.UweProvideHintAction;
 import games.stendhal.server.entity.npc.action.UweStartQuestAction;
 import games.stendhal.server.entity.npc.action.UweTouchLogicalQuestChatAction;
+import games.stendhal.server.entity.npc.action.UweTouchSyntaxQuestChatAction;
 import games.stendhal.server.entity.npc.condition.AndCondition;
 import games.stendhal.server.entity.npc.condition.NotCondition;
 import games.stendhal.server.entity.npc.condition.QuestInStateCondition;
@@ -47,7 +48,7 @@ public class UweQuestTwoNPC implements LoadableContent{
 
 		npc.setEntityClass("noimagenpc");
 		npc.setCollisionAction(CollisionAction.REVERSE);
-		npc.setPosition(17, 15);
+		npc.setPosition(16, 15);
 		npc.setDirection(Direction.UP);
 		npc.initHP(100);
 		zone.add(npc);
@@ -72,7 +73,10 @@ public class UweQuestTwoNPC implements LoadableContent{
 						new QuestInStateCondition(npcName, "blank")), 
 				ConversationStates.ATTENDING, 
 				null, 
-				new UweTouchLogicalQuestChatAction(npc));
+				new UweTouchSyntaxQuestChatAction(npc,
+						"Are you familiar with java syntax? #Yes/ #No/ #A #bit",
+						"Sorry! We currently have no quests that can provide to you!",
+						ConversationStates.INFORMATION_1));
 		
 		npc.add(ConversationStates.INFORMATION_1, 
 				Arrays.asList("Yes","yes","y"), 
@@ -117,7 +121,7 @@ public class UweQuestTwoNPC implements LoadableContent{
 						new QuestStartedCondition(npcName), 
 						new QuestInStateCondition(npcName, "started")), 
 				ConversationStates.ATTENDING, 
-				"Please go find #UweFlowIncQuestNPC and get the quest about java code", 
+				"Please go find #UweSyntaxErrorQuestNPC and get the quest about java code", 
 				null);
 		npc.add(ConversationStates.ATTENDING, 
 				Arrays.asList("quest","q"), 

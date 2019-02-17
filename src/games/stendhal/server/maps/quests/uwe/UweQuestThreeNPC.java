@@ -1,8 +1,7 @@
 package games.stendhal.server.maps.quests.uwe;
+
 import java.util.Arrays;
 
-import Util.Management.HardcodeManagementAPI;
-import Util.Management.ManagementAPI;
 import games.stendhal.common.Direction;
 import games.stendhal.server.core.engine.SingletonRepository;
 import games.stendhal.server.core.engine.StendhalRPZone;
@@ -14,21 +13,20 @@ import games.stendhal.server.entity.npc.SpeakerNPC;
 import games.stendhal.server.entity.npc.action.SetQuestAction;
 import games.stendhal.server.entity.npc.action.UweProvideHintAction;
 import games.stendhal.server.entity.npc.action.UweStartQuestAction;
-import games.stendhal.server.entity.npc.action.UweTouchLogicalQuestChatAction;
+import games.stendhal.server.entity.npc.action.UweTouchProgramTracingQuestChatAction;
 import games.stendhal.server.entity.npc.condition.AndCondition;
 import games.stendhal.server.entity.npc.condition.NotCondition;
 import games.stendhal.server.entity.npc.condition.QuestInStateCondition;
 import games.stendhal.server.entity.npc.condition.QuestStartedCondition;
 import games.stendhal.server.entity.npc.condition.UweYesNoTestValidCondition;
 
-public class UweQuestOneNPC implements LoadableContent{
-	
-	public static String npcName = "UweQuestOne";
+public class UweQuestThreeNPC implements LoadableContent{
+	public static String npcName = "UweQuestThree";
 	private final StendhalRPZone zone = SingletonRepository.getRPWorld().getZone("int_semos_guard_house");
 	
 	private SpeakerNPC npc;
 	
-	public UweQuestOneNPC(){}
+	public UweQuestThreeNPC(){}
 	
 	@Override
 	public void addToWorld() {
@@ -49,7 +47,7 @@ public class UweQuestOneNPC implements LoadableContent{
 
 		npc.setEntityClass("noimagenpc");
 		npc.setCollisionAction(CollisionAction.REVERSE);
-		npc.setPosition(19, 4);
+		npc.setPosition(13, 11);
 		npc.setDirection(Direction.UP);
 		npc.initHP(100);
 		zone.add(npc);
@@ -61,7 +59,7 @@ public class UweQuestOneNPC implements LoadableContent{
 				ConversationPhrases.GREETING_MESSAGES, 
 				null, 
 				ConversationStates.ATTENDING,
-				"\nI am a quest one NPC, I can provide #quest for you.", 
+				"\nI am a quest three NPC, I can provide #quest for you.", 
 				new UweStartQuestAction(npcName, "blank"));
 		//quest
 		
@@ -74,8 +72,8 @@ public class UweQuestOneNPC implements LoadableContent{
 						new QuestInStateCondition(npcName, "blank")), 
 				ConversationStates.ATTENDING, 
 				null, 
-				new UweTouchLogicalQuestChatAction(npc, 
-						"Are you familar with java code? #Yes/ #No/ #A #bit",
+				new UweTouchProgramTracingQuestChatAction(npc,
+						"Are you familiar with program tracing? #Yes/ #No/ #A #bit",
 						"Sorry! We currently have no quests that can provide to you!",
 						ConversationStates.INFORMATION_1));
 		
@@ -83,13 +81,13 @@ public class UweQuestOneNPC implements LoadableContent{
 				Arrays.asList("Yes","yes","y"), 
 				null, 
 				ConversationStates.ATTENDING, 
-				"Please go find #UweLogicalErrorQuestNPC and get the quest about java code", 
+				"Please go find #UweProgrammingTracingQuestNPC and get the quest about java code", 
 				new SetQuestAction(npcName, "started"));
 		npc.add(ConversationStates.INFORMATION_1, 
 				Arrays.asList("A bit","a bit","Abit","abit","ab","a"), 
 				new UweYesNoTestValidCondition(npcName), 
 				ConversationStates.ATTENDING, 
-				"Please go find #UweJavaTestNPC to practise java", 
+				"Please go find #UweTestThreeNPC to practise java", 
 				null);
 		npc.add(ConversationStates.INFORMATION_1, 
 				Arrays.asList("A bit","a bit","Abit","abit","ab","a"), 
@@ -122,7 +120,7 @@ public class UweQuestOneNPC implements LoadableContent{
 						new QuestStartedCondition(npcName), 
 						new QuestInStateCondition(npcName, "started")), 
 				ConversationStates.ATTENDING, 
-				"Please go find #UweLogicalErrorQuestNPC and get the quest about java code", 
+				"Please go find #UweProgramTracingQuestNPC and get the quest about java code", 
 				null);
 		npc.add(ConversationStates.ATTENDING, 
 				Arrays.asList("quest","q"), 

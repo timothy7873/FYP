@@ -1,4 +1,5 @@
 package games.stendhal.server.maps.quests.uwe;
+
 import java.util.Arrays;
 
 import games.stendhal.common.Direction;
@@ -14,23 +15,20 @@ import games.stendhal.server.entity.npc.condition.NotCondition;
 import games.stendhal.server.entity.npc.condition.UweYesNoTestValidCondition;
 import games.stendhal.server.events.UweYesNoTestEvent;
 
-public class UweJavaTestNPC implements LoadableContent{
-	
-	private String npcName = "UweJavaTest";
+public class UweTestThreeNPC implements LoadableContent{
+	private String npcName = "UweTestThree";
 	private final StendhalRPZone zone = SingletonRepository.getRPWorld().getZone("int_semos_guard_house");
 	
 	private SpeakerNPC npc;
 	private String leaderNpc;
 	
-	public UweJavaTestNPC(String leaderNpc)
+	public UweTestThreeNPC(String leaderNpc)
 	{
 		this.leaderNpc=leaderNpc;
 	}
 	
 	@Override
 	public void addToWorld() {
-		//removeNPC(npcName);
-
 		createNPC();
 		addDialog();
 		buildConditions();
@@ -46,7 +44,7 @@ public class UweJavaTestNPC implements LoadableContent{
 
 		npc.setEntityClass("noimagenpc");
 		npc.setCollisionAction(CollisionAction.REVERSE);
-		npc.setPosition(12, 2);
+		npc.setPosition(8, 10);
 		npc.setDirection(Direction.UP);
 		npc.initHP(100);
 		zone.add(npc);
@@ -58,7 +56,7 @@ public class UweJavaTestNPC implements LoadableContent{
 				ConversationPhrases.GREETING_MESSAGES, 
 				null, 
 				ConversationStates.ATTENDING,
-				"\nI am a Java test NPC, I can give #test to you to practise java", 
+				"\nI am a test three NPC, I can give you #test to practise", 
 				null);
 		//quest
 		npc.add(ConversationStates.ATTENDING, 
@@ -66,7 +64,7 @@ public class UweJavaTestNPC implements LoadableContent{
 				new UweYesNoTestValidCondition(leaderNpc), 
 				ConversationStates.ATTENDING, 
 				"", 
-				new FireEventChatAction(new UweYesNoTestEvent(leaderNpc,"Java test"))
+				new FireEventChatAction(new UweYesNoTestEvent(leaderNpc,"Test"))
 				);
 		npc.add(ConversationStates.ATTENDING, 
 				Arrays.asList("test","t"), 

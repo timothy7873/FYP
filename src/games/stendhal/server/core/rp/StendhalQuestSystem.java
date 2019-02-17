@@ -199,14 +199,14 @@ public class StendhalQuestSystem {
 		loadQuest(new MineTownRevivalWeeks());
 		
 		// uwe research part
-
-		loadQuest(new MeetStarter());
+//		loadQuest(new MeetStarter());
 		loadQuest(new UweNPCPlacer());
-
-		loadQuest(new ManageUnsolvableTask());
-		 
-		loadQuest(new MeetDataTypeQuest());
-		loadQuest(new Q1());
+//
+//		loadQuest(new ManageUnsolvableTask());
+//		 
+//		loadQuest(new MeetDataTypeQuest());
+//		loadQuest(new Q1());
+		//-----
 	 
 		
 		TurnNotifier.get().notifyInTurns(10, new DumpGameInformationForWebsite());

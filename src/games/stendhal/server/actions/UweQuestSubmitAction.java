@@ -33,6 +33,10 @@ public class UweQuestSubmitAction implements ActionListener{
 		{
 			rewards.addAll(Arrays.asList(ManagementAPI.api.getLogicalQuestion(npcId, player.getName()).reward));
 		}
+		else if(questType.equals("trace"))
+		{
+			rewards.addAll(Arrays.asList(ManagementAPI.api.getTraceQuestion(npcId, player.getName()).reward));
+		}
 		
 		//add item
 		for(int i=0;i<rewards.size();i++)

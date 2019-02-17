@@ -136,6 +136,11 @@ class EventFactory {
 			//event = new ExamineEvent();
 			event=new UweYesNoTestEvent();
 		}
+		else if(name.equals("output_inc_quest"))
+		{
+			//event = new ExamineEvent();
+			event=new UweOutputIncQuestEvent();
+		}
 
 		if (event != null) {
 			event.init(entity, rpevent);

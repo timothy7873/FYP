@@ -31,6 +31,10 @@ public class UweFlowIncQuestViewer {
 		{
 			q=ManagementAPI.api.getLogicalQuestion(npcId, User.getCharacterName());
 		}
+		else if(type.equals("syntax"))
+		{
+			q=ManagementAPI.api.getSyntaxQuestion(npcId, User.getCharacterName());
+		}
 		
 		if(q==null)
 		{

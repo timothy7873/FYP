@@ -1,19 +1,5 @@
 package games.stendhal.server.maps.quests.uwe;
 
-import java.io.BufferedReader;
-import java.io.IOException;
-import java.io.InputStream;
-import java.io.InputStreamReader;
-import java.io.Reader;
-import java.net.MalformedURLException;
-import java.net.URL;
-import java.nio.charset.Charset;
-
-import org.json.simple.JSONArray;
-import org.json.simple.JSONObject;
-import org.json.simple.parser.JSONParser;
-import org.json.simple.parser.ParseException;
-
 import games.stendhal.common.Direction;
 import games.stendhal.server.core.engine.SingletonRepository;
 import games.stendhal.server.core.engine.StendhalRPZone;
@@ -22,26 +8,24 @@ import games.stendhal.server.entity.npc.ConversationPhrases;
 import games.stendhal.server.entity.npc.ConversationStates;
 import games.stendhal.server.entity.npc.NPCList;
 import games.stendhal.server.entity.npc.SpeakerNPC;
-import games.stendhal.server.entity.npc.action.FireEventChatAction;
 import games.stendhal.server.entity.npc.action.MultipleActions;
 import games.stendhal.server.entity.npc.action.SetQuestAction;
 import games.stendhal.server.entity.npc.action.UweFireQuestEventChatAction;
 import games.stendhal.server.entity.npc.condition.AndCondition;
-import games.stendhal.server.entity.npc.condition.NotCondition;
 import games.stendhal.server.entity.npc.condition.OrCondition;
 import games.stendhal.server.entity.npc.condition.QuestInStateCondition;
 import games.stendhal.server.entity.npc.condition.QuestNotStartedCondition;
 import games.stendhal.server.entity.npc.condition.QuestStartedCondition;
-import games.stendhal.server.events.UweFlowIncQuestEvent;
+import games.stendhal.server.events.UweOutputIncQuestEvent;
 
-public class UweLogicalErrorQuestNPC implements LoadableContent{
-	private String npcName = "UweLogicalErrorQuestNPC";
+public class UweProgramTracingQuestNPC implements LoadableContent{
+	private String npcName = "UweProgramTracingQuestNPC";
 	private final StendhalRPZone zone = SingletonRepository.getRPWorld().getZone("int_semos_guard_house");
 	
 	private String leaderNpc;
 	private SpeakerNPC npc;
 	
-	public UweLogicalErrorQuestNPC(String leaderNpc)
+	public UweProgramTracingQuestNPC(String leaderNpc)
 	{
 		this.leaderNpc=leaderNpc;
 	}
@@ -72,7 +56,7 @@ public class UweLogicalErrorQuestNPC implements LoadableContent{
 		// npc.setOutfit(new Outfit(0, 4, 7, 32, 13));
 		npc.setEntityClass("noimagenpc");
 		npc.setCollisionAction(CollisionAction.REVERSE);
-		npc.setPosition(17, 9);
+		npc.setPosition(4, 12);
 		npc.setDirection(Direction.UP);
 		npc.initHP(100);
 		// npc.setSpeed(1.0);
@@ -85,7 +69,7 @@ public class UweLogicalErrorQuestNPC implements LoadableContent{
 				ConversationPhrases.GREETING_MESSAGES, 
 				null, 
 				ConversationStates.ATTENDING,
-				"\nI am a quest NPC of logical error fixing, are you looking for #quest?.", 
+				"\nI am a quest NPC of program tracing, are you looking for #quest?.", 
 				null);
 		//quest
 		npc.add(ConversationStates.ATTENDING, 
@@ -96,10 +80,10 @@ public class UweLogicalErrorQuestNPC implements LoadableContent{
 								new QuestInStateCondition(leaderNpc, "started"), 
 								new QuestInStateCondition(leaderNpc, "read"))),
 				ConversationStates.ATTENDING, 
-				"Please help me fix the code", 
+				"Please help me fix the output", 
 				new MultipleActions(
 						new SetQuestAction(leaderNpc, "read"),
-						new UweFireQuestEventChatAction(new UweFlowIncQuestEvent("logical", "Logical error fixing quest", leaderNpc)))
+						new UweFireQuestEventChatAction(new UweOutputIncQuestEvent("program tracing quest", leaderNpc)))
 				);
 		npc.add(ConversationStates.ATTENDING, 
 				ConversationPhrases.QUEST_MESSAGES, 
@@ -123,10 +107,6 @@ public class UweLogicalErrorQuestNPC implements LoadableContent{
 	@Override
 	public boolean removeFromWorld() {
 		removeNPC(npcName);
-
-		// final StendhalRPZone zone =
-		// SingletonRepository.getRPWorld().getZone("int_semos_frank_house");
-		// new LittleGirlNPC().createGirlNPC(zone);
 
 		return true;
 	}

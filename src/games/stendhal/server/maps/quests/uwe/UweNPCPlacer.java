@@ -40,23 +40,23 @@ public class UweNPCPlacer extends AbstractQuest {
 	public void addToWorld() {
 //		System.setProperty("stendhal.minetown", "true");
 
-		content.add(new UweGirl());
+		//content.add(new UweGirl());
 
-		content.add(new UweLily());
+		//content.add(new UweLily());
 		
-		content.add(new UweQuestMakerNPC());
+		//content.add(new UweQuestMakerNPC());
 		
 
 		//content.add(new UweDataNPC());
 
 		//content.add(new UweComparisionNPC());
 
-		content.add(new UweGuider());
-		content.add(new UweDog()); 
+		//content.add(new UweGuider());
+		//content.add(new UweDog()); 
 		
 		content.add(new UweCreature());
 
-		content.add(new UweConstantNPC());
+		//content.add(new UweConstantNPC());
 		
 		content.add(new UweCombinator());
 		//content.add(new UweFillInBlankQuestNPC());
@@ -66,6 +66,16 @@ public class UweNPCPlacer extends AbstractQuest {
 		content.add(new UweQuestOneNPC());
 		content.add(new UweLogicalErrorQuestNPC(UweQuestOneNPC.npcName));
 		content.add(new UweJavaTestNPC(UweQuestOneNPC.npcName));
+		
+		//Set two
+		content.add(new UweQuestTwoNPC());
+		content.add(new UweSyntaxErrorQuestNPC(UweQuestTwoNPC.npcName));
+		content.add(new UweTestTwoNPC(UweQuestTwoNPC.npcName));
+		
+		//Set three
+		content.add(new UweQuestThreeNPC());
+		content.add(new UweProgramTracingQuestNPC(UweQuestThreeNPC.npcName));
+		content.add(new UweTestThreeNPC(UweQuestThreeNPC.npcName));
 		
 //		content.add(new DadNPC());
 //		content.add(new SoldierNPCs());

@@ -8,15 +8,14 @@ import games.stendhal.server.entity.npc.EventRaiser;
 import games.stendhal.server.entity.npc.SpeakerNPC;
 import games.stendhal.server.entity.player.Player;
 
-public class UweTouchLogicalQuestChatAction implements ChatAction{
+public class UweTouchSyntaxQuestChatAction implements ChatAction{
 	private SpeakerNPC npc;
 	private String success;
 	private String failed;
 	private ConversationStates next;
 	
-	public UweTouchLogicalQuestChatAction(SpeakerNPC npc, String success, String failed, ConversationStates next)
+	public UweTouchSyntaxQuestChatAction(SpeakerNPC npc, String success, String failed, ConversationStates next)
 	{
-		this.npc=npc;
 		this.npc=npc;
 		this.success=success;
 		this.failed=failed;
@@ -26,7 +25,7 @@ public class UweTouchLogicalQuestChatAction implements ChatAction{
 	@Override
 	public void fire(Player player, Sentence sentence, EventRaiser npc) {
 		// TODO Auto-generated method stub
-		if(ManagementAPI.api.getLogicalQuestion(npc.getName(), player.getName())==null)
+		if(ManagementAPI.api.getSyntaxQuestion(npc.getName(), player.getName())==null)
 		{
 			npc.say(failed);
 		}
@@ -37,5 +36,4 @@ public class UweTouchLogicalQuestChatAction implements ChatAction{
 		}
 		ManagementAPI.api.stopTimeCount(npc.getName(), player.getName());
 	}
-	
 }

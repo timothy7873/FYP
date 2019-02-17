@@ -157,6 +157,7 @@ public class PlayerRPClass {
 		player.addRPEvent("test", Definition.PRIVATE);
 		player.addRPEvent("flow_inc_quest", Definition.PRIVATE);
 		player.addRPEvent("yes_no_test", Definition.PRIVATE);
+		player.addRPEvent("output_inc_quest", Definition.PRIVATE);
 
 
 		player.addRPEvent(Events.VIEW_CHANGE, Definition.PRIVATE);
