@@ -20,13 +20,13 @@ import games.stendhal.server.entity.npc.condition.QuestInStateCondition;
 import games.stendhal.server.entity.npc.condition.QuestStartedCondition;
 import games.stendhal.server.entity.npc.condition.UweYesNoTestValidCondition;
 
-public class UweQuestThreeNPC implements LoadableContent{
-	public static String npcName = "UweQuestThree";
+public class UweQuestFourNPC implements LoadableContent{
+	public static String npcName = "UweQuestFour";
 	private final StendhalRPZone zone = SingletonRepository.getRPWorld().getZone("int_semos_guard_house");
 	
 	private SpeakerNPC npc;
 	
-	public UweQuestThreeNPC(){}
+	public UweQuestFourNPC(){}
 	
 	@Override
 	public void addToWorld() {
@@ -59,7 +59,7 @@ public class UweQuestThreeNPC implements LoadableContent{
 				ConversationPhrases.GREETING_MESSAGES, 
 				null, 
 				ConversationStates.ATTENDING,
-				"\nI am a quest three NPC, I can provide #quest for you.", 
+				"\nI am a quest four NPC, I can provide #quest for you.", 
 				new UweStartQuestAction(npcName, "blank"));
 		//quest
 		
@@ -73,7 +73,7 @@ public class UweQuestThreeNPC implements LoadableContent{
 				ConversationStates.ATTENDING, 
 				null, 
 				new UweTouchProgramTracingQuestChatAction(npc,
-						"Are you familiar with program tracing? #Yes/ #No/ #A #bit",
+						"Are you familiar with program understanding? #Yes/ #No/ #A #bit",
 						"Sorry! We currently have no quests that can provide to you!",
 						ConversationStates.INFORMATION_1));
 		
@@ -81,13 +81,13 @@ public class UweQuestThreeNPC implements LoadableContent{
 				Arrays.asList("Yes","yes","y"), 
 				null, 
 				ConversationStates.ATTENDING, 
-				"Please go find #UweProgrammingTracingQuestNPC and get the quest", 
+				"Please go find #UweReorderQuestNPC and get the quest", 
 				new SetQuestAction(npcName, "started"));
 		npc.add(ConversationStates.INFORMATION_1, 
 				Arrays.asList("A bit","a bit","Abit","abit","ab","a"), 
 				new UweYesNoTestValidCondition(npcName), 
 				ConversationStates.ATTENDING, 
-				"Please go find #UweTestThreeNPC to practise java", 
+				"Please go find #UweTestFourNPC to practise java", 
 				null);
 		npc.add(ConversationStates.INFORMATION_1, 
 				Arrays.asList("A bit","a bit","Abit","abit","ab","a"), 

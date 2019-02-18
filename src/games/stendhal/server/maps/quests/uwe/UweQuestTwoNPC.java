@@ -82,7 +82,7 @@ public class UweQuestTwoNPC implements LoadableContent{
 				Arrays.asList("Yes","yes","y"), 
 				null, 
 				ConversationStates.ATTENDING, 
-				"Please go find #UweSyntaxErrorQuestNPC and get the quest about java code", 
+				"Please go find #UweSyntaxErrorQuestNPC and get the quest", 
 				new SetQuestAction(npcName, "started"));
 		npc.add(ConversationStates.INFORMATION_1, 
 				Arrays.asList("A bit","a bit","Abit","abit","ab","a"), 
