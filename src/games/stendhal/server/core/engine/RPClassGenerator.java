@@ -64,6 +64,7 @@ import games.stendhal.server.events.BuddyLogoutEvent;
 import games.stendhal.server.events.ExamineEvent;
 import games.stendhal.server.events.UweFlowIncQuestEvent;
 import games.stendhal.server.events.UweOutputIncQuestEvent;
+import games.stendhal.server.events.UweReorderQuestEvent;
 import games.stendhal.server.events.UweYesNoTestEvent;
 import games.stendhal.server.events.GlobalVisualEffectEvent;
 import games.stendhal.server.events.GroupChangeEvent;
@@ -118,6 +119,9 @@ public class RPClassGenerator {
 		}
 		if (!RPClass.hasRPClass("output_inc_quest")) {
 			UweOutputIncQuestEvent.generateRPClass();
+		}
+		if (!RPClass.hasRPClass("reorderquest")) {
+			UweReorderQuestEvent.generateRPClass();
 		}
 
 		// Entity sub-classes

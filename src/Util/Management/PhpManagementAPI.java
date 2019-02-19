@@ -168,6 +168,7 @@ public class PhpManagementAPI extends ManagementAPI{
 		
 		return new TraceQuest(code, curout, ans, (Reward[])rewards.toArray(new Reward[0]));
 	}
+	public ReorderQuest getReorderQuestion(String npcId, String user) {return null;}
 	public YesNoTest[] getYesNoTests(String npcId) 
 	{
 		List result=new LinkedList();
