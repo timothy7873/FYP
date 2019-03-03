@@ -7,6 +7,7 @@ public abstract class ManagementAPI {
 	public abstract FlowIncQuest getLogicalQuestion(String npcId, String user);
 	public abstract FlowIncQuest getSyntaxQuestion(String npcId, String user);
 	public abstract TraceQuest getTraceQuestion(String npcId, String user);
+	public abstract ReorderQuest getReorderQuestion(String npcId, String user);
 	public abstract YesNoTest[] getYesNoTests(String npcId);
 	public abstract QuestHint getHint(String npcId, String user);
 	public abstract void setQuestStatus(String npcId, String user, String status);
