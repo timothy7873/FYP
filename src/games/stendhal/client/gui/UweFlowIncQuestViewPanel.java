@@ -22,6 +22,7 @@ import javax.swing.Spring;
 import javax.swing.SpringLayout;
 
 import Util.Management.*;
+import Util.game.client.UweClientAction;
 import games.stendhal.client.ClientSingletonRepository;
 import games.stendhal.client.GameObjects;
 import games.stendhal.client.entity.ContentChangeListener;
@@ -646,24 +647,7 @@ public class UweFlowIncQuestViewPanel extends JComponent implements ContentChang
 				//close window
 				
 				JOptionPane.showMessageDialog(null, "Correct!", "Quest", JOptionPane.INFORMATION_MESSAGE);;
-				
-				String items="";
-				int exp=0;
-				double karma=0;
-				Reward[] rewards=self.getRewards();
-				for(int i=0;i<rewards.length;i++)
-				{
-					if(rewards[i].itemName!=null)
-						items+=rewards[i].itemName+","+rewards[i].count+";";
-					exp+=rewards[i].exp;
-					karma+=0;
-				}
-				
-				RPAction action = new RPAction();
-				action.put("type", "UweQuestSubmit");
-				action.put("npcId", npcId);
-				action.put("questType", type);
-				ClientSingletonRepository.getClientFramework().send(action);
+				UweClientAction.submitQuest(npcId, self.getRewards());
 				
 				self.window.closeButton.doClick();
 			}

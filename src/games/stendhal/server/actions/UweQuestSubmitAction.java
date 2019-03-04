@@ -27,47 +27,51 @@ public class UweQuestSubmitAction implements ActionListener{
 		String npcId=action.get("npcId");
 		
 		//get reward
-		List rewards=new LinkedList();
-		String questType=action.get("questType");
-		if(questType.equals("logical"))
+		int money=0;
+		int exp=0;
+		double karma=0;
+		LinkedList<Reward> items=new LinkedList<Reward>();
+		try
 		{
-			rewards.addAll(Arrays.asList(ManagementAPI.api.getLogicalQuestion(npcId, player.getName()).reward));
+			money=Integer.parseInt(action.get("money"));
+			exp=Integer.parseInt(action.get("exp"));
+			karma=Double.parseDouble(action.get("karma"));
+			
+			String itemStr=action.get("items");
+			String[] rows=itemStr.split("\n");
+			for(int i=0;i<rows.length;i++)
+			{
+				String[] cols=rows[i].split(",");
+				if(cols.length!=2)
+					continue;
+				int itemCount=Integer.parseInt(cols[1]);
+				items.add(new Reward(cols[0],itemCount,0,0,0));
+				
+			}
 		}
-		else if(questType.equals("trace"))
-		{
-			rewards.addAll(Arrays.asList(ManagementAPI.api.getTraceQuestion(npcId, player.getName()).reward));
-		}
+		catch(Exception e) 
+		{}
 		
 		//add item
-		for(int i=0;i<rewards.size();i++)
+		for(int i=0;i<items.size();i++)
 		{
-			Reward reward=(Reward)rewards.get(i);
+			Reward reward=(Reward)items.get(i);
 			if(reward.itemName==null)
 				continue;
 
 			Item item=em.getItem(reward.itemName);
+			if(item==null)
+				continue;
 			for(int q=0;q<reward.count;q++)
 				slot.add(item);
 		}
 
-		//add exp & karma
-		int exp=0;
-		for(int i=0;i<rewards.size();i++)
-			exp+=((Reward)rewards.get(i)).exp;
-		player.addXP(exp);
-		
-		double karma=0;
-		for(int i=0;i<rewards.size();i++)
-			karma+=((Reward)rewards.get(i)).karma;
-		player.addKarma(karma);
-		
-		//add money
-		int money=0;
-		for(int i=0;i<rewards.size();i++)
-			money+=((Reward)rewards.get(i)).money;
+		//add money, exp, karma
 		StackableItem moneyItem = (StackableItem)SingletonRepository.getEntityManager().getItem("money");
 		moneyItem.setQuantity(money);
 		player.equipOrPutOnGround(moneyItem);
+		player.addXP(exp);
+		player.addKarma(karma);
 
 		//clear submitted item
 		for(int i=0;;i++)

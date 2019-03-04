@@ -29,6 +29,7 @@ import javax.swing.SpringLayout;
 import java.awt.event.MouseListener;
 
 import Util.Management.*;
+import Util.game.client.UweClientAction;
 import games.stendhal.client.ClientSingletonRepository;
 import games.stendhal.client.GameObjects;
 import games.stendhal.client.entity.ContentChangeListener;
@@ -190,8 +191,8 @@ public class UweReorderQuestViewPanel extends JComponent implements ContentChang
 		for(int i=0;i<code.length;i++)
 			m.addElement((code[i]+"\t").replaceAll("\t", "        "));
 		final JList list = new JList(m);
-		list.setCellRenderer(new DefaultListCellRenderer());
 		list.setFixedCellHeight(50+5);
+		list.addMouseListener(new DragEventHander(list));
 		add(list);
 		setX(list, 5+50+5);
 		setY(list, lastY+5);
@@ -444,41 +445,36 @@ public class UweReorderQuestViewPanel extends JComponent implements ContentChang
 			if(!btn.getName().equals("submit"))
 				return;
 			
-			String msg="";
+			//find list element
+			JList list=null;
 			Component[] coms=self.getComponents();
 			for(int i=0;i<coms.length;i++)
 			{
-				if(coms[i] instanceof JTextField)
+				if(coms[i] instanceof JList)
 				{
-					JTextField text=(JTextField)coms[i];
-					
-					Map m=text.getFont().getAttributes();
-					if(m.get(TextAttribute.STRIKETHROUGH)==TextAttribute.STRIKETHROUGH_ON)
-					{
-						msg="Please active all codes with correct code item";
-						break;
-					}
-					if(text.getFont().getStyle()==Font.ITALIC)
-					{
-						msg="Please active all codes before submitting";
-						break;
-					}
+					list=(JList)coms[i];
+					break;
 				}
 			}
-			if(msg.equals(""))
+			if(list==null)
+				return;//data error, suppose list exist, should be found
+			DefaultListModel data=(DefaultListModel)list.getModel();
+			if(!(data instanceof DefaultListModel))
+				return;//data error, suppose data is DefaultListModel
+			for(int i=0;i<data.getSize();i++)
 			{
-				//build second stage dialog
-				//remove all component
-				Component[] coms1=self.getComponents();
-				for(int i=0;i<coms1.length;i++)
-					self.remove(coms1[i]);
-				//start build
-				self.buildSecondStage();
+				if(!data.getElementAt(i).toString().replaceAll("    ", "\t").replaceAll("\t", "").equals(ans[i].replaceAll("\t", "")))
+				{
+					JOptionPane.showMessageDialog(null, "The answer is incorrect, please retry", "Quest", JOptionPane.INFORMATION_MESSAGE);
+					return;
+				}
 			}
-			else
-			{
-				JOptionPane.showMessageDialog(null, msg, "Quest", JOptionPane.INFORMATION_MESSAGE);
-			}
+			
+			//success
+			JOptionPane.showMessageDialog(null, "Correct!", "Quest", JOptionPane.INFORMATION_MESSAGE);
+			UweClientAction.submitQuest(npcId, self.getRewards());
+			
+			self.window.closeButton.doClick();
 		}
 	}
 
@@ -493,56 +489,32 @@ public class UweReorderQuestViewPanel extends JComponent implements ContentChang
 		}
 		
 		public void mouseClicked(MouseEvent e) {}
-		public void mousePressed(MouseEvent e) {}
+		public void mouseEntered(MouseEvent e) {}
 		public void mouseExited(MouseEvent e) {}
 		
 		@Override
-		public void mouseReleased(MouseEvent e) {
+		public void mousePressed(MouseEvent e) {
 			// TODO Auto-generated method stub
 			from=list.locationToIndex(e.getPoint());
 		}
 
 		@Override
-		public void mouseEntered(MouseEvent e) {
+		public void mouseReleased(MouseEvent e) {
 			// TODO Auto-generated method stub
 			int to=list.locationToIndex(e.getPoint());
+			
 			String fromStr,toStr;
-			fromStr=list.get;
-			list.clearSelection();
+			fromStr=list.getModel().getElementAt(from).toString();
+			toStr=list.getModel().getElementAt(to).toString();
 			
-//			for (int i = 0; i < numlist.length; i++) {
-//				if (Integer.parseInt(m.getElementAt(i).toString().substring(0, 1)) == numlist[i]) {
-//					Component ct = list.getComponent(i);
-//					ct.setBackground(Color.GREEN);
-//				}
-//			}
-			
-			sec = list.locationToIndex(e.getPoint());
-			System.out.println(sec);
-			String buf = "";
-			if (sec != -1) {
-				String s1 = m.getElementAt(first).toString();
-				String s2 = m.getElementAt(sec).toString();
-				if (first != sec) {
-					if (first > sec) {
-						System.out.println("up");
-						for (int i = first; i > sec; i--) {
-							buf = m.getElementAt(i).toString();
-							m.set(i, m.getElementAt(i - 1).toString());
-							m.set(i - 1, buf);
-						}
-					} else {
-						System.out.println("down");
-						for (int i = first; i < sec; i++) {
-							buf = m.getElementAt(i).toString();
-							m.set(i, m.getElementAt(i + 1).toString());
-							m.set(i + 1, buf);
-						}
-					}
-					list.clearSelection();
-				}
+			DefaultListModel data=(DefaultListModel)list.getModel();
+			if(data instanceof DefaultListModel)
+			{
+				data.set(from, toStr);
+				data.set(to, fromStr);
 			}
-
+			
+			//list.clearSelection();
 
 		}
 		

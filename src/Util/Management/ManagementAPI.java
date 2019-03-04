@@ -1,7 +1,7 @@
 package Util.Management;
 
 public abstract class ManagementAPI {
-	public static ManagementAPI api=new PhpManagementAPI("http://127.0.0.1:8888/fyp_php/");
+	public static ManagementAPI api=new PhpManagementAPI("http://127.0.0.1/fyp_php/");
 	//public static ManagementAPI api=new HardcodeManagementAPI();
 	
 	public abstract FlowIncQuest getLogicalQuestion(String npcId, String user);

@@ -65,7 +65,7 @@ public class PhpManagementAPI extends ManagementAPI{
 		for(int i=0;i<items.size();i++)
 		{
 			JSONObject item=(JSONObject)items.get(i);
-			String itemName=(String)item.get("itemName");
+			String itemName=(String)item.get("itemname");
 			int qty=Integer.parseInt((String)item.get("qty"));
 			rewards.add(new Reward(itemName,qty,0,0,0));
 		}
@@ -115,7 +115,7 @@ public class PhpManagementAPI extends ManagementAPI{
 		for(int i=0;i<items.size();i++)
 		{
 			JSONObject item=(JSONObject)items.get(i);
-			String itemName=(String)item.get("itemName");
+			String itemName=(String)item.get("itemname");
 			int qty=Integer.parseInt((String)item.get("qty"));
 			rewards.add(new Reward(itemName,qty,0,0,0));
 		}
@@ -161,7 +161,7 @@ public class PhpManagementAPI extends ManagementAPI{
 		for(int i=0;i<items.size();i++)
 		{
 			JSONObject item=(JSONObject)items.get(i);
-			String itemName=(String)item.get("itemName");
+			String itemName=(String)item.get("itemname");
 			int qty=Integer.parseInt((String)item.get("qty"));
 			rewards.add(new Reward(itemName,qty,0,0,0));
 		}
@@ -207,12 +207,12 @@ public class PhpManagementAPI extends ManagementAPI{
 		for(int i=0;i<items.size();i++)
 		{
 			JSONObject item=(JSONObject)items.get(i);
-			String itemName=(String)item.get("itemName");
+			String itemName=(String)item.get("itemname");
 			int qty=Integer.parseInt((String)item.get("qty"));
 			rewards.add(new Reward(itemName,qty,0,0,0));
 		}
 		
-		return new ReorderQuest(code, expout, ans, (Reward[])rewards.toArray(new Reward[0]));
+		return new ReorderQuest(code, ans, expout, (Reward[])rewards.toArray(new Reward[0]));
 	}
 	public YesNoTest[] getYesNoTests(String npcId) 
 	{
