@@ -11,6 +11,7 @@ import java.awt.Insets;
 import java.awt.Label;
 import java.awt.event.ActionEvent;
 import java.awt.event.ActionListener;
+import java.awt.event.MouseEvent;
 import java.awt.font.TextAttribute;
 import java.util.HashMap;
 import java.util.Map;
@@ -25,6 +26,7 @@ import javax.swing.JTextArea;
 import javax.swing.JTextField;
 import javax.swing.Spring;
 import javax.swing.SpringLayout;
+import java.awt.event.MouseListener;
 
 import Util.Management.*;
 import games.stendhal.client.ClientSingletonRepository;
@@ -166,219 +168,65 @@ public class UweReorderQuestViewPanel extends JComponent implements ContentChang
 			}
 		}
 		
-//		int outAreaY;
-//		
-//		//add code heading
-//		JLabel codeHeading=new JLabel("Please first activate the codes");
-//		add(codeHeading);
-//		setX(codeHeading,10);
-//		setY(codeHeading,0);
-//		setHeight(codeHeading,30);
-//		
-//		//add code
-//		//int maxWidth=getWidth(codeHeading);
-//		JTextArea codeBody=new JTextArea();
-//		codeBody.setEditable(false);
-//		codeBody.setText(code);
-//		add(codeBody);
-//		setX(codeBody,5);
-//		setY(codeBody,getY(codeHeading)+getHeight(codeHeading));
-//		setWidth(codeBody,getWidth(codeBody)+50);
-//		//setHeight(codeBody,getHeight(codeBody)*out.length);
-//
-//		//add out heading
-//		JLabel outHeading=new JLabel("Please select the incorrect output line");
-//		add(outHeading);
-//		setX(outHeading,10);
-//		setY(outHeading,getY(codeBody)+getHeight(codeBody));
-//		setHeight(outHeading,20);
-//		outAreaY=getY(outHeading)+getHeight(outHeading);
-//		
-//		//add out body
-//		int maxWidth=getWidth(codeBody);
-//		for(int i=0;i<out.length;i++)
-//		{
-//			String line=out[i];
-//			
-//			Button btn=new Button("Select");
-//			btn.setPreferredSize(new Dimension(50,OUTPUTHEIGHT));
-//			btn.setName("line"+i);
-//			btn.addActionListener(firstBtnHandler);
-//			add(btn);
-//			setX(btn,5);
-//			setY(btn,outAreaY+5+OUTPUTHEIGHT*i);
-//			
-//			JTextField box=new JTextField();
-//			box.setEditable(false);
-//			box.setText(line);
-//			box.setName("line"+i);
-//			add(box);
-//			setX(box,5+50+5);
-//			setY(box,outAreaY+5+OUTPUTHEIGHT*i);
-//			setHeight(box,OUTPUTHEIGHT);
-//			
-//			maxWidth=Integer.max(maxWidth, getWidth(box));
-//		}
-//		for(int i=0;i<getComponentCount();i++)
-//		{
-//			Component c=getComponent(i);
-//
-//			if(c instanceof JTextField)
-//				setWidth(c,maxWidth-50-5);
-//		}
-//		
-//		//add submit button
-//		Button submit=new Button("Submit");
-//		submit.addActionListener(firstBtnHandler);
-//		submit.setName("submit");
-//		add(submit);
-//		setWidth(submit,70);
-//		setHeight(submit,30);
-//		setX(submit,maxWidth-getWidth(submit));
-//		setY(submit,outAreaY+5+out.length*OUTPUTHEIGHT+10);
-//		
-//		
-//		//format all btn and box text
-//		Font f=new Font("arial",Font.PLAIN,12);
-//		Component[] coms=this.getComponents();
-//		for(int i=0;i<coms.length;i++)
-//		{
-//			if(coms[i] instanceof Button || coms[i] instanceof JTextField)
-//			{
-//				coms[i].setFont(f);
-//				coms[i].setForeground(Color.BLACK);
-//			}
-//		}
-//
-//		setWindowSize(maxWidth+5+5, getY(submit)+getHeight(submit)+5);
+		//add item handler
+		parent.addContentChangeListener(this);
+		
 	}
 	public void buildSecondStage()
 	{
-		final DefaultListModel m = new DefaultListModel();
+		int lastY;
+		int maxWidth;
+		
+		//add code heading
+		JLabel codeHeading=new JLabel("Please reorder the codes by draging them");
+		add(codeHeading);
+		setX(codeHeading,10);
+		setY(codeHeading,0);
+		setHeight(codeHeading,30);
+		lastY=getY(codeHeading)+getHeight(codeHeading);
+		maxWidth=getX(codeHeading)+getWidth(codeHeading);
+		
+		DefaultListModel m = new DefaultListModel();
 		for(int i=0;i<code.length;i++)
 			m.addElement((code[i]+"\t").replaceAll("\t", "        "));
 		final JList list = new JList(m);
 		list.setCellRenderer(new DefaultListCellRenderer());
-		list.setFixedCellHeight(CODEHEIGHT+20);
+		list.setFixedCellHeight(50+5);
 		add(list);
-		setX(list, 10);
-		setY(list, 10);
+		setX(list, 5+50+5);
+		setY(list, lastY+5);
+		lastY=getY(list)+getHeight(list);
+		maxWidth=getX(list)+getWidth(list)>maxWidth?getX(list)+getWidth(list):maxWidth;
 		
-		setWindowSize(getX(list)+getWidth(list)+10, getY(list)+getHeight(list)+10);
+		//format list width to max width
+		setWidth(list, maxWidth-getX(list));
+
+		//add submit button
+		Button submit=new Button("Submit");
+		submit.addActionListener(secondBtnHandler);
+		submit.setName("submit");
+		add(submit);
+		setWidth(submit,70);
+		setHeight(submit,30);
+		setX(submit,maxWidth+10-getWidth(submit));
+		setY(submit,lastY+10);
+
+		int w=getX(submit)+getWidth(submit)+10+5+5;
+		int h=getY(submit)+getHeight(submit)+5+5;
+		Insets in=window.getInsets();
+		h+=window.getTitlebar().getHeight();
+		window.setSize(w, h);
 		
-//		int lastY=0;
-//		
-//		//add code heading
-//		JLabel codeHeading=new JLabel("The existing program code");
-//		add(codeHeading);
-//		setX(codeHeading,10);
-//		setY(codeHeading,0);
-//		setHeight(codeHeading,30);
-//		lastY=getY(codeHeading)+getHeight(codeHeading);
-//		
-//		//add code body
-//		JTextArea codeBody=new JTextArea();
-//		codeBody.setEditable(false);
-//		codeBody.setText(code);
-//		add(codeBody);
-//		setX(codeBody,5);
-//		setY(codeBody,lastY);
-//		setWidth(codeBody,getWidth(codeBody)+50);
-//		lastY=getY(codeBody)+getHeight(codeBody);
-//
-//		//add out heading
-//		JLabel outHeading=new JLabel("Current output");
-//		add(outHeading);
-//		setX(outHeading,10);
-//		setY(outHeading,lastY+10);
-//		setHeight(outHeading,20);
-//		lastY=getY(outHeading)+getHeight(outHeading);
-//		
-//		//add out body
-//		Font f=new Font("arial",Font.PLAIN,12);
-//		int maxWidth=getWidth(codeBody);
-//		for(int i=0;i<out.length;i++)
-//		{
-//			String line=out[i];
-//			
-//			JTextField box;
-//			box=new JTextField();
-//			box.setEditable(false);
-//			box.setText(line);
-//			box.setName("line"+i);
-//			box.setFont(f);
-//			box.setForeground(Color.BLACK);
-//			add(box);
-//			setX(box,5+50+5);
-//			setY(box,lastY+5);
-//			
-//			if(ans[i].equals(out[i]))
-//				setHeight(box,OUTPUTHEIGHT);
-//			else
-//			{
-//				Map attr=f.getAttributes();
-//				attr.put(TextAttribute.STRIKETHROUGH, TextAttribute.STRIKETHROUGH_ON);
-//				box.setFont(new Font(attr));
-//				setHeight(box,50);
-//				
-//				//add item container
-//				UweItemPanel panel = new UweItemPanel(null, null);
-//				panel.setItemNumber(panels.size());
-//				//panel.("line"+i);
-//				add(panel);
-//				setX(panel,10);//ori=5
-//				setY(panel,getY(box)+5);
-//				setWidth(panel,50);
-//				setHeight(panel,50);
-//				panel.setAcceptedTypes(EntityMap.getClass("item", null, null));
-//				panel.setParent(parent);
-//				panel.setName(slotName+usedSlot);
-//				usedSlot++;
-//
-//				panels.put(panel, i);
-//			}
-//			
-//			lastY=getY(box)+getHeight(box);
-//			maxWidth=Integer.max(maxWidth, getWidth(box));
-//
-//		}
-//		for(int i=0;i<getComponentCount();i++)
-//		{
-//			Component c=getComponent(i);
-//
-//			if(c instanceof JTextField)
-//				setWidth(c,maxWidth-50);
-//		}
-//		
-//		//add item change monitor
-//		parent.addContentChangeListener(this);
-//		
-//		//add submit button
-//		Button submit=new Button("Submit");
-//		submit.addActionListener(secondBtnHandler);
-//		submit.setName("submit");
-//		add(submit);
-//		setWidth(submit,70);
-//		setHeight(submit,30);
-//		setX(submit,maxWidth-getWidth(submit));
-//		setY(submit,lastY+10);
-//
-//		int w=getX(submit)+getWidth(submit)+10+5+5;
-//		int h=getY(submit)+getHeight(submit)+5+5;
-//		Insets in=window.getInsets();
-//		h+=window.getTitlebar().getHeight();
-//		window.setSize(w, h);
-//		
-//		//update dialog
-//		validate();
-//		revalidate();
-//		repaint();
-//		window.validate();
-//		window.revalidate();
-//		window.repaint();
-//		window.getParent().validate();
-//		window.getParent().revalidate();
-//		window.getParent().repaint();
+		//update dialog
+		validate();
+		revalidate();
+		repaint();
+		window.validate();
+		window.revalidate();
+		window.repaint();
+		window.getParent().validate();
+		window.getParent().revalidate();
+		window.getParent().repaint();
 		
 	}
 	public void prepare()
@@ -441,7 +289,8 @@ public class UweReorderQuestViewPanel extends JComponent implements ContentChang
 			UweItemPanel.curDraggedTarget=null;
 			return;
 		}
-		String name="line"+((Integer)panels.get(UweItemPanel.curDraggedTarget)).intValue();
+		int index=((Integer)panels.get(UweItemPanel.curDraggedTarget)).intValue();
+		String name="line"+index;
 		Component[] c=getComponents();
 		for(int i=0;i<c.length;i++)
 		{
@@ -451,12 +300,21 @@ public class UweReorderQuestViewPanel extends JComponent implements ContentChang
 			{
 				JTextField box=(JTextField)c[i];
 				
+				Font f;
+				f=new Font("arial",Font.BOLD,12);
+				if(!obj.get("name").replaceAll("\t", "").equals(code[index].replaceAll("\t", "")))
+				{
+					Map attr=f.getAttributes();
+					attr.put(TextAttribute.STRIKETHROUGH, TextAttribute.STRIKETHROUGH_ON);
+					f=new Font(attr);
+				}
+				box.setFont(f);
+				
 				String tabs="";
 				for(int pos=0;pos<box.getText().length() && box.getText().charAt(pos)=='\t';pos++)
 					tabs+="\t";
 				box.setText(tabs+obj.get("name"));
-				
-				box.setFont(new Font("arial",Font.BOLD,12));
+
 				break;
 			}
 		}
@@ -492,12 +350,9 @@ public class UweReorderQuestViewPanel extends JComponent implements ContentChang
 							if(c instanceof JTextField && c.getName().equals(name))
 							{
 								JTextField text=(JTextField)c;
-								//text.setText(out[index]);
 								
-								Font f=new Font("arial",Font.PLAIN,12);
-								Map attr=f.getAttributes();
-								attr.put(TextAttribute.STRIKETHROUGH, TextAttribute.STRIKETHROUGH_ON);
-								text.setFont(new Font(attr));
+								text.setText(code[index]);
+								text.setFont(new Font("arial",Font.ITALIC,12));
 							}
 						}
 						
@@ -520,112 +375,47 @@ public class UweReorderQuestViewPanel extends JComponent implements ContentChang
 		
 		public void actionPerformed(ActionEvent e)
 		{
-			Button curBtn=(Button)e.getSource();
+			if(!(e.getSource() instanceof Button))
+				return;
 			
-			if(curBtn.getName().length()>4 && curBtn.getName().substring(0,4).equals("line"))//select btn
+			Button btn=(Button)e.getSource();
+			if(!btn.getName().equals("submit"))
+				return;
+			
+			String msg="";
+			Component[] coms=self.getComponents();
+			for(int i=0;i<coms.length;i++)
 			{
-				int index=-1;
-				try
+				if(coms[i] instanceof JTextField)
 				{
-					index=Integer.parseInt(curBtn.getName().substring(4));
-				}
-				catch(Exception ex)
-				{return;}
-				
-				if(curBtn.getLabel().equals("Select"))
-				{
-					Component[] coms=self.getComponents();
-					for(int i=0;i<coms.length;i++)
-					{
-						Component c=coms[i];
-						if(c instanceof JTextField && c.getName().equals("line"+index))
-						{
-							JTextField text=(JTextField)c;
-							
-							Font f=new Font("arial",Font.BOLD,12);
-							Map attr=f.getAttributes();
-							attr.put(TextAttribute.STRIKETHROUGH, TextAttribute.STRIKETHROUGH_ON);
-							c.setFont(new Font(attr));
-							break;
-						}
-					}
+					JTextField text=(JTextField)coms[i];
 					
-					curBtn.setLabel("Cancel");
-				}
-				else
-				{
-					Component[] coms=self.getComponents();
-					for(int i=0;i<coms.length;i++)
+					Map m=text.getFont().getAttributes();
+					if(m.get(TextAttribute.STRIKETHROUGH)==TextAttribute.STRIKETHROUGH_ON)
 					{
-						Component c=coms[i];
-						if(c instanceof JTextField && c.getName().equals("line"+index))
-						{
-							c.setFont(new Font("arial",Font.PLAIN,12));
-							break;
-						}
+						msg="Please active all codes with correct code item";
+						break;
 					}
-					
-					curBtn.setLabel("Select");
+					if(text.getFont().getStyle()==Font.ITALIC)
+					{
+						msg="Please active all codes before submitting";
+						break;
+					}
 				}
-				
-
 			}
-			else if(curBtn.getName().equals("submit"))//submit btn
+			if(msg.equals(""))
 			{
-				boolean allCorrect=true;
-				
-				String[] ans=self.getAns();
-				Component[] coms=self.getComponents();
-				for(int i=0;i<coms.length;i++)
-				{
-					if(coms[i] instanceof JTextField)
-					{
-						JTextField text=(JTextField)coms[i];
-						
-						//get index
-						int index=-1;
-						if(text.getName()==null)//sometimes null
-							continue;
-						if(text.getName().length()<=4)//check if name so short, 100% not start with "line"
-							continue;
-						if(!text.getName().substring(0, 4).equals("line"))//check if start with "line"
-							continue;
-						try {index=Integer.parseInt(text.getName().substring(4));}//convert to int
-						catch(Exception ex) {continue;}
-						if(index>=ans.length)//check if index out of bounds
-							continue;
-						
-						
-						if(!ans[index].equals(text.getText()) &&
-							text.getFont().getAttributes().get(TextAttribute.STRIKETHROUGH)!=TextAttribute.STRIKETHROUGH_ON)//need tick
-						{
-							allCorrect=false;
-							break;
-						}
-						else if(ans[index].replaceAll("\t", "").equals(text.getText().replaceAll("\t", "")) &&
-								text.getFont().getAttributes().get(TextAttribute.STRIKETHROUGH)==TextAttribute.STRIKETHROUGH_ON)//no need tick but ticked
-						{
-							allCorrect=false;
-							break;
-						}
-					}
-
-				}
-				if(allCorrect)
-				{
-					//build second stage dialog
-					//remove all component
-					Component[] coms1=self.getComponents();
-					for(int i=0;i<coms1.length;i++)
-						self.remove(coms1[i]);
-					//start build
-					self.buildSecondStage();
-				}
-				else
-				{
-					JOptionPane.showMessageDialog(null, "Your selections are not correct, please retry!", "Quest", JOptionPane.INFORMATION_MESSAGE);
-				}
-				
+				//build second stage dialog
+				//remove all component
+				Component[] coms1=self.getComponents();
+				for(int i=0;i<coms1.length;i++)
+					self.remove(coms1[i]);
+				//start build
+				self.buildSecondStage();
+			}
+			else
+			{
+				JOptionPane.showMessageDialog(null, msg, "Quest", JOptionPane.INFORMATION_MESSAGE);
 			}
 			
 
@@ -654,9 +444,7 @@ public class UweReorderQuestViewPanel extends JComponent implements ContentChang
 			if(!btn.getName().equals("submit"))
 				return;
 			
-			boolean allCorrect=true;
-			
-			String[] ans=self.getAns();
+			String msg="";
 			Component[] coms=self.getComponents();
 			for(int i=0;i<coms.length;i++)
 			{
@@ -664,65 +452,100 @@ public class UweReorderQuestViewPanel extends JComponent implements ContentChang
 				{
 					JTextField text=(JTextField)coms[i];
 					
-					//get index
-					int index=-1;
-					if(text.getName()==null)//sometimes null
-						continue;
-					if(text.getName().length()<=4)//check if name so short, 100% not start with "line"
-						continue;
-					if(!text.getName().substring(0, 4).equals("line"))//check if start with "line"
-						continue;
-					try {index=Integer.parseInt(text.getName().substring(4));}//convert to int
-					catch(Exception ex) {continue;}
-					if(index>=ans.length)//check if index out of bounds
-						continue;
-					
-					
-					if(!ans[index].equals(text.getText()))
+					Map m=text.getFont().getAttributes();
+					if(m.get(TextAttribute.STRIKETHROUGH)==TextAttribute.STRIKETHROUGH_ON)
 					{
-						allCorrect=false;
+						msg="Please active all codes with correct code item";
+						break;
+					}
+					if(text.getFont().getStyle()==Font.ITALIC)
+					{
+						msg="Please active all codes before submitting";
 						break;
 					}
 				}
-
 			}
-			if(allCorrect)
+			if(msg.equals(""))
 			{
-				//tell correct
-				//send reward
-				//send destroy code item
-				//close window
-				
-				JOptionPane.showMessageDialog(null, "Correct!", "Quest", JOptionPane.INFORMATION_MESSAGE);;
-				
-				String items="";
-				int exp=0;
-				double karma=0;
-				Reward[] rewards=self.getRewards();
-				for(int i=0;i<rewards.length;i++)
-				{
-					if(rewards[i].itemName!=null)
-						items+=rewards[i].itemName+","+rewards[i].count+";";
-					exp+=rewards[i].exp;
-					karma+=0;
-				}
-				
-				RPAction action = new RPAction();
-				action.put("type", "UweQuestSubmit");
-				action.put("npcId", npcId);
-				action.put("questType", "trace");
-				ClientSingletonRepository.getClientFramework().send(action);
-				
-				self.window.closeButton.doClick();
+				//build second stage dialog
+				//remove all component
+				Component[] coms1=self.getComponents();
+				for(int i=0;i<coms1.length;i++)
+					self.remove(coms1[i]);
+				//start build
+				self.buildSecondStage();
 			}
 			else
 			{
-				JOptionPane.showMessageDialog(null, "Your codes are not correct, please retry!", "Quest", JOptionPane.INFORMATION_MESSAGE);;
+				JOptionPane.showMessageDialog(null, msg, "Quest", JOptionPane.INFORMATION_MESSAGE);
 			}
-			
-			
-
 		}
 	}
 
+	private class DragEventHander implements MouseListener
+	{
+		private int from;
+		private JList list;
+		
+		public DragEventHander(JList list)
+		{
+			this.list=list;
+		}
+		
+		public void mouseClicked(MouseEvent e) {}
+		public void mousePressed(MouseEvent e) {}
+		public void mouseExited(MouseEvent e) {}
+		
+		@Override
+		public void mouseReleased(MouseEvent e) {
+			// TODO Auto-generated method stub
+			from=list.locationToIndex(e.getPoint());
+		}
+
+		@Override
+		public void mouseEntered(MouseEvent e) {
+			// TODO Auto-generated method stub
+			int to=list.locationToIndex(e.getPoint());
+			String fromStr,toStr;
+			fromStr=list.get;
+			list.clearSelection();
+			
+//			for (int i = 0; i < numlist.length; i++) {
+//				if (Integer.parseInt(m.getElementAt(i).toString().substring(0, 1)) == numlist[i]) {
+//					Component ct = list.getComponent(i);
+//					ct.setBackground(Color.GREEN);
+//				}
+//			}
+			
+			sec = list.locationToIndex(e.getPoint());
+			System.out.println(sec);
+			String buf = "";
+			if (sec != -1) {
+				String s1 = m.getElementAt(first).toString();
+				String s2 = m.getElementAt(sec).toString();
+				if (first != sec) {
+					if (first > sec) {
+						System.out.println("up");
+						for (int i = first; i > sec; i--) {
+							buf = m.getElementAt(i).toString();
+							m.set(i, m.getElementAt(i - 1).toString());
+							m.set(i - 1, buf);
+						}
+					} else {
+						System.out.println("down");
+						for (int i = first; i < sec; i++) {
+							buf = m.getElementAt(i).toString();
+							m.set(i, m.getElementAt(i + 1).toString());
+							m.set(i + 1, buf);
+						}
+					}
+					list.clearSelection();
+				}
+			}
+
+
+		}
+		
+		
+	}
 }
