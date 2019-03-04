@@ -120,7 +120,7 @@ public class RPClassGenerator {
 		if (!RPClass.hasRPClass("output_inc_quest")) {
 			UweOutputIncQuestEvent.generateRPClass();
 		}
-		if (!RPClass.hasRPClass("reorderquest")) {
+		if (!RPClass.hasRPClass(UweReorderQuestEvent.RPCLASS_NAME)) {
 			UweReorderQuestEvent.generateRPClass();
 		}
 

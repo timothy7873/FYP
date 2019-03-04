@@ -168,7 +168,52 @@ public class PhpManagementAPI extends ManagementAPI{
 		
 		return new TraceQuest(code, curout, ans, (Reward[])rewards.toArray(new Reward[0]));
 	}
-	public ReorderQuest getReorderQuestion(String npcId, String user) {return null;}
+	public ReorderQuest getReorderQuestion(String npcId, String user)
+	{
+		QueryString qry = new QueryString();
+		
+		qry.add("npcId", npcId);
+		qry.add("characterName", user);
+		qry.add("questType", "Reorder");
+		JSONObject json=getJson(site+"outputQuestion.php?"+qry);
+		if(json==null)
+		{
+			return null;
+		}
+		
+		JSONArray codes=(JSONArray)json.get("code");
+		JSONArray expouts=(JSONArray)json.get("expout");
+		JSONArray anss=(JSONArray)json.get("answer");
+		
+		String code="",expout="",ans="";
+		for(int i=0;i<codes.size();i++)
+			code+=codes.get(i)+"\n";
+		for(int i=0;i<expouts.size();i++)
+			expout+=expouts.get(i)+"\n";
+		for(int i=0;i<anss.size();i++)
+			ans+=anss.get(i)+"\n";
+		code=code.substring(0,code.length()-1);
+		expout=expout.substring(0,expout.length()-1);
+		ans=ans.substring(0,ans.length()-1);
+		
+		JSONObject reward=(JSONObject)json.get("reward");
+		int exp=Integer.parseInt((String)reward.get("experience"));
+		double karma=Double.parseDouble((String)reward.get("karma"));
+		int money=Integer.parseInt((String)reward.get("money"));
+		JSONArray items=(JSONArray)reward.get("item");
+		
+		List rewards=new LinkedList();
+		rewards.add(new Reward(null,0,exp,karma,money));
+		for(int i=0;i<items.size();i++)
+		{
+			JSONObject item=(JSONObject)items.get(i);
+			String itemName=(String)item.get("itemName");
+			int qty=Integer.parseInt((String)item.get("qty"));
+			rewards.add(new Reward(itemName,qty,0,0,0));
+		}
+		
+		return new ReorderQuest(code, expout, ans, (Reward[])rewards.toArray(new Reward[0]));
+	}
 	public YesNoTest[] getYesNoTests(String npcId) 
 	{
 		List result=new LinkedList();

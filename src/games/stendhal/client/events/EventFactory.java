@@ -141,6 +141,11 @@ class EventFactory {
 			//event = new ExamineEvent();
 			event=new UweOutputIncQuestEvent();
 		}
+		else if(name.equals("reorder_quest"))
+		{
+			//event = new ExamineEvent();
+			event=new UweReorderQuestEvent();
+		}
 
 		if (event != null) {
 			event.init(entity, rpevent);

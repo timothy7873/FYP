@@ -22,7 +22,7 @@ public class UweReorderQuestViewer {
 			npcId = e.get("npcId");
 		}
 		
-		TraceQuest q=ManagementAPI.api.getTraceQuestion(npcId, User.getCharacterName());
+		ReorderQuest q=ManagementAPI.api.getReorderQuestion(npcId, User.getCharacterName());
 		if(q==null)
 		{
 			return;
@@ -36,7 +36,7 @@ public class UweReorderQuestViewer {
 		view();
 	}
 	public static void viewQuest(final RPEvent e) {
-		new UweOutputIncQuestViewer(e);
+		new UweReorderQuestViewer(e);
 	}
 	public void view()
 	{

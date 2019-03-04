@@ -40,7 +40,12 @@ public class HardcodeManagementAPI extends ManagementAPI{
 	}
 	public FlowIncQuest getSyntaxQuestion(String npcId, String user){return null;}
 	public TraceQuest getTraceQuestion(String npcId, String user){return null;}
-	public ReorderQuest getReorderQuestion(String npcId, String user) {return null;}
+	public ReorderQuest getReorderQuestion(String npcId, String user) 
+	{
+		Reward[] rewards={new Reward(null,0,0,0,0)};
+		
+		return new ReorderQuest("","","",rewards);
+	}
 	public YesNoTest[] getYesNoTests(String npcId)
 	{
 		return new YesNoTest[] {new YesNoTest("Is java a program language?",true),new YesNoTest("Is java a script language?",false)};

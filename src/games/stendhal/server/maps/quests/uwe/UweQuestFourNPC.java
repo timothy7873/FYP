@@ -14,6 +14,7 @@ import games.stendhal.server.entity.npc.action.SetQuestAction;
 import games.stendhal.server.entity.npc.action.UweProvideHintAction;
 import games.stendhal.server.entity.npc.action.UweStartQuestAction;
 import games.stendhal.server.entity.npc.action.UweTouchProgramTracingQuestChatAction;
+import games.stendhal.server.entity.npc.action.UweTouchReorderQuestChatAction;
 import games.stendhal.server.entity.npc.condition.AndCondition;
 import games.stendhal.server.entity.npc.condition.NotCondition;
 import games.stendhal.server.entity.npc.condition.QuestInStateCondition;
@@ -72,7 +73,7 @@ public class UweQuestFourNPC implements LoadableContent{
 						new QuestInStateCondition(npcName, "blank")), 
 				ConversationStates.ATTENDING, 
 				null, 
-				new UweTouchProgramTracingQuestChatAction(npc,
+				new UweTouchReorderQuestChatAction(npc,
 						"Are you familiar with program understanding? #Yes/ #No/ #A #bit",
 						"Sorry! We currently have no quests that can provide to you!",
 						ConversationStates.INFORMATION_1));

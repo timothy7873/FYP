@@ -8,14 +8,18 @@ import java.awt.Component;
 import java.awt.Dimension;
 import java.awt.Font;
 import java.awt.Insets;
+import java.awt.Label;
 import java.awt.event.ActionEvent;
 import java.awt.event.ActionListener;
 import java.awt.font.TextAttribute;
 import java.util.HashMap;
 import java.util.Map;
 
+import javax.swing.DefaultListCellRenderer;
+import javax.swing.DefaultListModel;
 import javax.swing.JComponent;
 import javax.swing.JLabel;
+import javax.swing.JList;
 import javax.swing.JOptionPane;
 import javax.swing.JTextArea;
 import javax.swing.JTextField;
@@ -48,9 +52,8 @@ public class UweReorderQuestViewPanel extends JComponent implements ContentChang
 	private String npcId;
 	private Map<UweItemPanel,Integer> panels;
 	private String slotName="uwepopup";
-	private int usedSlot=0;
 	private IEntity parent;
-	private final int OUTPUTHEIGHT=25;
+	private final int CODEHEIGHT=25;
 	private FirstStageBtnHandler firstBtnHandler;
 	private SecondStageBtnHandler secondBtnHandler;
 
@@ -92,6 +95,77 @@ public class UweReorderQuestViewPanel extends JComponent implements ContentChang
 	
 	public void buildFirstStage()
 	{
+		int lastY=0;
+		
+		//add code heading
+		JLabel codeHeading=new JLabel("Please first activate the codes");
+		add(codeHeading);
+		setX(codeHeading,10);
+		setY(codeHeading,0);
+		setHeight(codeHeading,30);
+		lastY=getY(codeHeading)+getHeight(codeHeading);
+		
+		//add code body
+		int maxWidth=getX(codeHeading)+getWidth(codeHeading);
+		Font f=new Font("arial",Font.ITALIC,12);
+		for(int i=0;i<code.length;i++)
+		{
+			String line=code[i]+"\t";
+			
+			JTextField box;
+			box=new JTextField();
+			box.setEditable(false);
+			box.setText(line);
+			box.setName("line"+i);
+			box.setFont(f);
+			box.setForeground(Color.BLACK);
+			add(box);
+			setX(box,5+50+5);
+			setY(box,lastY+5+i*(50+5));
+			setHeight(box,50);
+			Map attr=f.getAttributes();
+			box.setFont(new Font(attr));
+			maxWidth=getX(box)+getWidth(box)>maxWidth?getX(box)+getWidth(box):maxWidth;
+			
+			//add item container
+			UweItemPanel panel = new UweItemPanel(null, null);
+			//panel.setItemNumber(panels.size());
+			panel.setItemNumber(0);
+			add(panel);
+			setX(panel,10);//ori=5
+			setY(panel,getY(box)+5);
+			setWidth(panel,50);
+			setHeight(panel,50);
+			panel.setAcceptedTypes(EntityMap.getClass("item", null, null));
+			panel.setParent(parent);
+			panel.setName(slotName+i);
+
+			panels.put(panel, i);
+		}
+		lastY+=5+code.length*(50+5);
+		
+		//add submit button
+		Button submit=new Button("Submit");
+		submit.addActionListener(firstBtnHandler);
+		submit.setName("submit");
+		add(submit);
+		setWidth(submit,70);
+		setHeight(submit,30);
+		setX(submit,maxWidth-getWidth(submit));
+		setY(submit,lastY+10);
+		
+		setWindowSize(maxWidth+5+5, getY(submit)+getHeight(submit)+5);
+		
+		//format all box width
+		Component[] coms=this.getComponents();
+		for(int i=0;i<coms.length;i++)
+		{
+			if(coms[i] instanceof JTextField)
+			{
+				setWidth(coms[i],maxWidth-getX(coms[i]));
+			}
+		}
+		
 //		int outAreaY;
 //		
 //		//add code heading
@@ -180,6 +254,18 @@ public class UweReorderQuestViewPanel extends JComponent implements ContentChang
 	}
 	public void buildSecondStage()
 	{
+		final DefaultListModel m = new DefaultListModel();
+		for(int i=0;i<code.length;i++)
+			m.addElement((code[i]+"\t").replaceAll("\t", "        "));
+		final JList list = new JList(m);
+		list.setCellRenderer(new DefaultListCellRenderer());
+		list.setFixedCellHeight(CODEHEIGHT+20);
+		add(list);
+		setX(list, 10);
+		setY(list, 10);
+		
+		setWindowSize(getX(list)+getWidth(list)+10, getY(list)+getHeight(list)+10);
+		
 //		int lastY=0;
 //		
 //		//add code heading

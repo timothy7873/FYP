@@ -11,7 +11,7 @@ import marauroa.common.game.Definition.DefinitionClass;
 import marauroa.common.game.Definition.Type;
 
 public class UweReorderQuestEvent extends RPEvent {
-	private static final String RPCLASS_NAME = "reorder_quest";
+	public static final String RPCLASS_NAME = "reorder_quest";
 	private static final String TITLE = "title";
 	private static final String NPCID = "npcId";
 	
