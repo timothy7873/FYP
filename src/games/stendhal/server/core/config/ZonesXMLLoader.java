@@ -143,6 +143,10 @@ public final class ZonesXMLLoader {
 			}
 
 			logger.info("Loading zone: " + name);
+			if(name.equals("-1_semos_dungeon"))
+			{
+				String blank="11";
+			}
 
 			try {
 				final StendhalMapStructure zonedata = TMXLoader.load(StendhalRPWorld.MAPS_FOLDER
