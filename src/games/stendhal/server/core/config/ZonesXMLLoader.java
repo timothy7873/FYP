@@ -37,6 +37,7 @@ import games.stendhal.server.core.config.zone.TMXLoader;
 import games.stendhal.server.core.engine.SingletonRepository;
 import games.stendhal.server.core.engine.StendhalRPWorld;
 import games.stendhal.server.core.engine.StendhalRPZone;
+import games.stendhal.server.core.engine.UweFiltedStendhalRPZone;
 
 /**
  * Load and configure zones via an XML configuration file.
@@ -203,11 +204,7 @@ public final class ZonesXMLLoader {
 		final String name = desc.getName();
 
 		final StendhalRPZone zone;
-		if (desc.getImplementation() == null) {
-			zone = new StendhalRPZone(name);
-		} else {
-			zone = createZone(desc, name);
-		}
+		zone = createZone(desc, name);
 
 		zone.addTilesets(name + ".tilesets", zonedata.getTilesets());
 		zone.addLayer(name + ".0_floor", zonedata.getLayer("0_floor"));
@@ -265,26 +262,32 @@ public final class ZonesXMLLoader {
 
 	@SuppressWarnings("unchecked")
 	private StendhalRPZone createZone(final ZoneDesc desc, final String name)  {
-		try {
-			Class<StendhalRPZone> zoneclass = (Class<StendhalRPZone>) Class.forName(desc.getImplementation());
-			Constructor<StendhalRPZone> constr = zoneclass.getConstructor(String.class);
-			return constr.newInstance(name);
-		} catch (ClassNotFoundException e) {
-			logger.error(e, e);
-		} catch (SecurityException e) {
-			logger.error(e, e);
-		} catch (NoSuchMethodException e) {
-			logger.error(e, e);
-		} catch (IllegalArgumentException e) {
-			logger.error(e, e);
-		} catch (InstantiationException e) {
-			logger.error(e, e);
-		} catch (IllegalAccessException e) {
-			logger.error(e, e);
-		} catch (InvocationTargetException e) {
-			logger.error(e, e);
+		if (desc.getImplementation() != null)
+		{
+			try {
+				Class<StendhalRPZone> zoneclass = (Class<StendhalRPZone>) Class.forName(desc.getImplementation());
+				Constructor<StendhalRPZone> constr = zoneclass.getConstructor(String.class);
+				return constr.newInstance(name);
+			} catch (ClassNotFoundException e) {
+				logger.error(e, e);
+			} catch (SecurityException e) {
+				logger.error(e, e);
+			} catch (NoSuchMethodException e) {
+				logger.error(e, e);
+			} catch (IllegalArgumentException e) {
+				logger.error(e, e);
+			} catch (InstantiationException e) {
+				logger.error(e, e);
+			} catch (IllegalAccessException e) {
+				logger.error(e, e);
+			} catch (InvocationTargetException e) {
+				logger.error(e, e);
+			}
 		}
-		return new StendhalRPZone(name);
+		
+		//return new StendhalRPZone(name);
+		return new UweFiltedStendhalRPZone(name);
+		
 	}
 
 	public ZoneDesc readZone(final Element element) {

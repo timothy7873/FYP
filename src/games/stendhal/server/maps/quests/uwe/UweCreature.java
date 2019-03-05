@@ -92,6 +92,8 @@ public class UweCreature implements LoadableContent {
 		tZone.add(tPoint);
 		
 		tPoint.spawnNow();
+		
+		//tZone.collisionMap.setCollide(11, 6);
 	}
 
 }
