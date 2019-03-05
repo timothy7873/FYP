@@ -1,5 +1,6 @@
 package games.stendhal.server.maps.quests.uwe;
 
+import java.awt.Point;
 import java.util.Arrays;
 
 import games.stendhal.common.Direction;
@@ -17,21 +18,17 @@ import games.stendhal.server.entity.npc.action.ExamineChatAction;
 
 public class UweCombinator implements LoadableContent{
 	private String npcName = "UweCombinator";
+	final StendhalRPZone zone = SingletonRepository.getRPWorld().getZone("int_semos_guard_house");
+	private final Point pos=new Point(41,28);
+	
 	private SpeakerNPC npc;
 	private CombinatorCorpse corpse;
 	
-	private int posX, posY;
-	
 	public UweCombinator()
-	{
-		posX=7;
-		posY=8;
-	}
+	{}
 
 	private void buildConditions() {
 	}
-
-	final StendhalRPZone zone = SingletonRepository.getRPWorld().getZone("int_semos_guard_house");
 
 	private void createNPC() {
 
@@ -51,7 +48,7 @@ public class UweCombinator implements LoadableContent{
 		// npc.setOutfit(new Outfit(0, 4, 7, 32, 13));
 		npc.setEntityClass("noimagenpc");
 		npc.setCollisionAction(CollisionAction.REVERSE);
-		npc.setPosition(posX, posY);
+		npc.setPosition(pos.x, pos.y);
 		npc.setDirection(Direction.UP);
 		npc.initHP(100);
 		// npc.setSpeed(1.0);
@@ -95,7 +92,7 @@ public class UweCombinator implements LoadableContent{
 	
 	private void createCorpse()
 	{
-		corpse=new CombinatorCorpse(posX+1,posY);
+		corpse=new CombinatorCorpse(pos.x+1,pos.y);
 		zone.add(corpse);
 	}
 

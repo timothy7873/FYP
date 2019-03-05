@@ -1,31 +1,30 @@
-<?xml version="1.0" encoding="UTF-8"?>
-<statistics time="1551772103">
-  <uptime value="12615.443"/>
-  <memory total="91648" used="54491"/>
-<attrib name="Transfer content" value="5" />
-<attrib name="Transfer content cache" value="42" />
-<attrib name="Bytes recv" value="26033" />
-<attrib name="Killed rat" value="3" />
-<attrib name="Actions UweReturnItem" value="2" />
-<attrib name="Actions use" value="1" />
-<attrib name="Message send" value="3504" />
-<attrib name="Actions stop" value="52" />
-<attrib name="Actions added" value="294" />
+<?xml version="1.0" encoding="GBK"?>
+<statistics time="1551789209">
+  <uptime value="134.601"/>
+  <memory total="91136" used="45731"/>
+<attrib name="Transfer content" value="1" />
+<attrib name="Transfer content cache" value="8" />
+<attrib name="Bytes recv" value="6034" />
+<attrib name="Killed rat" value="1" />
+<attrib name="Actions UweReturnItem" value="1" />
+<attrib name="Message send" value="312" />
+<attrib name="Actions stop" value="9" />
+<attrib name="Actions added" value="69" />
+<attrib name="Actions destroy" value="1" />
 <attrib name="Players timeout" value="0" />
-<attrib name="Message recv" value="628" />
-<attrib name="Actions UweQuestSubmit" value="2" />
-<attrib name="Objects now" value="5313" />
-<attrib name="Actions invalid" value="59" />
+<attrib name="Message recv" value="77" />
+<attrib name="Objects now" value="5102" />
+<attrib name="Actions invalid" value="9" />
 <attrib name="Ips online" value="1" />
-<attrib name="Perceptions DELTA" value="11497" />
-<attrib name="Actions move" value="155" />
-<attrib name="Actions equip" value="18" />
-<attrib name="Actions look" value="5" />
-<attrib name="Bytes send" value="427095" />
+<attrib name="Perceptions DELTA" value="356" />
+<attrib name="Actions move" value="39" />
+<attrib name="Actions equip" value="8" />
+<attrib name="Actions look" value="2" />
+<attrib name="Bytes send" value="44494" />
 <attrib name="Players logged" value="1" />
-<attrib name="Perceptions SYNC" value="5" />
+<attrib name="Perceptions SYNC" value="1" />
 <attrib name="Players online" value="0" />
-<attrib name="Players login" value="3" />
-<attrib name="Tranfer content size" value="728" />
+<attrib name="Players login" value="1" />
+<attrib name="Tranfer content size" value="142" />
 <attrib name="Players logout" value="0" />
 </statistics>

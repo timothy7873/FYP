@@ -24,8 +24,12 @@ import javax.swing.JList;
 import javax.swing.JOptionPane;
 import javax.swing.JTextArea;
 import javax.swing.JTextField;
+import javax.swing.ListCellRenderer;
 import javax.swing.Spring;
 import javax.swing.SpringLayout;
+import javax.swing.border.AbstractBorder;
+import javax.swing.border.BevelBorder;
+
 import java.awt.event.MouseListener;
 
 import Util.Management.*;
@@ -173,13 +177,31 @@ public class UweReorderQuestViewPanel extends JComponent implements ContentChang
 		parent.addContentChangeListener(this);
 		
 	}
+	
+	private class BorderCellRenderer extends DefaultListCellRenderer implements ListCellRenderer<Object> 
+	{
+	   AbstractBorder border;
+	  
+	   public BorderCellRenderer(AbstractBorder border) {
+	      this.border = border;
+	   }
+	  
+	   public Component getListCellRendererComponent(JList list,Object value,int index,boolean isSelected,boolean cellHasFocus)
+	   {
+	      Component c = super.getListCellRendererComponent(list, value, index, isSelected, cellHasFocus);
+	  
+	      ((JComponent) c).setBorder(border);
+	  
+	      return c;
+	   }
+	}
 	public void buildSecondStage()
 	{
 		int lastY;
 		int maxWidth;
 		
 		//add code heading
-		JLabel codeHeading=new JLabel("Please reorder the codes by draging them");
+		JLabel codeHeading=new JLabel("Please reorder the codes by draging them to meet the expected output");
 		add(codeHeading);
 		setX(codeHeading,10);
 		setY(codeHeading,0);
@@ -187,10 +209,12 @@ public class UweReorderQuestViewPanel extends JComponent implements ContentChang
 		lastY=getY(codeHeading)+getHeight(codeHeading);
 		maxWidth=getX(codeHeading)+getWidth(codeHeading);
 		
+		//add code body
 		DefaultListModel m = new DefaultListModel();
 		for(int i=0;i<code.length;i++)
 			m.addElement((code[i]+"\t").replaceAll("\t", "        "));
 		final JList list = new JList(m);
+		list.setCellRenderer(new BorderCellRenderer(new BevelBorder(BevelBorder.LOWERED)));
 		list.setFixedCellHeight(50+5);
 		list.addMouseListener(new DragEventHander(list));
 		add(list);
@@ -199,8 +223,28 @@ public class UweReorderQuestViewPanel extends JComponent implements ContentChang
 		lastY=getY(list)+getHeight(list);
 		maxWidth=getX(list)+getWidth(list)>maxWidth?getX(list)+getWidth(list):maxWidth;
 		
-		//format list width to max width
+		//add exp out heading
+		JLabel expHeading=new JLabel("Expected output");
+		add(expHeading);
+		setX(expHeading,10);
+		setY(expHeading,lastY+10);
+		setHeight(expHeading,30);
+		lastY=getY(expHeading)+getHeight(expHeading);
+		maxWidth=getX(expHeading)+getWidth(expHeading)>maxWidth?getX(expHeading)+getWidth(expHeading):maxWidth;
+		
+		//add exp out body
+		JTextArea expBody=new JTextArea();
+		expBody.setEditable(false);
+		expBody.setText(out);
+		add(expBody);
+		setX(expBody,5+50+5);
+		setY(expBody,lastY);
+		lastY=getY(expBody)+getHeight(expBody);
+		maxWidth=getX(expBody)+getWidth(expBody)>maxWidth?getX(expBody)+getWidth(expBody):maxWidth;
+		
+		//format list & exp out width to max width
 		setWidth(list, maxWidth-getX(list));
+		setWidth(expBody, maxWidth-getX(expBody));
 
 		//add submit button
 		Button submit=new Button("Submit");
@@ -210,10 +254,10 @@ public class UweReorderQuestViewPanel extends JComponent implements ContentChang
 		setWidth(submit,70);
 		setHeight(submit,30);
 		setX(submit,maxWidth+10-getWidth(submit));
-		setY(submit,lastY+10);
+		setY(submit,lastY+20);
 
 		int w=getX(submit)+getWidth(submit)+10+5+5;
-		int h=getY(submit)+getHeight(submit)+5+5;
+		int h=getY(submit)+getHeight(submit)+20;
 		Insets in=window.getInsets();
 		h+=window.getTitlebar().getHeight();
 		window.setSize(w, h);

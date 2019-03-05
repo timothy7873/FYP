@@ -1,5 +1,6 @@
 package games.stendhal.server.maps.quests.uwe;
 
+import java.awt.Point;
 import java.io.BufferedReader;
 import java.io.IOException;
 import java.io.InputStream;
@@ -36,7 +37,9 @@ import games.stendhal.server.events.UweFlowIncQuestEvent;
 
 public class UweLogicalErrorQuestNPC implements LoadableContent{
 	private String npcName = "UweLogicalErrorQuestNPC";
-	private final StendhalRPZone zone = SingletonRepository.getRPWorld().getZone("int_semos_guard_house");
+	//private final StendhalRPZone zone = SingletonRepository.getRPWorld().getZone("int_semos_guard_house");
+	private final StendhalRPZone zone = SingletonRepository.getRPWorld().getZone("-1_semos_dungeon");
+	private final Point spawnPoint = new Point(20,40);
 	
 	private String leaderNpc;
 	private SpeakerNPC npc;
@@ -72,7 +75,7 @@ public class UweLogicalErrorQuestNPC implements LoadableContent{
 		// npc.setOutfit(new Outfit(0, 4, 7, 32, 13));
 		npc.setEntityClass("noimagenpc");
 		npc.setCollisionAction(CollisionAction.REVERSE);
-		npc.setPosition(17, 9);
+		npc.setPosition(spawnPoint.x, spawnPoint.y);
 		npc.setDirection(Direction.UP);
 		npc.initHP(100);
 		// npc.setSpeed(1.0);

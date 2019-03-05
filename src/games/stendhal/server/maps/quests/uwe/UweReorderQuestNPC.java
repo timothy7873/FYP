@@ -1,5 +1,7 @@
 package games.stendhal.server.maps.quests.uwe;
 
+import java.awt.Point;
+
 import games.stendhal.common.Direction;
 import games.stendhal.server.core.engine.SingletonRepository;
 import games.stendhal.server.core.engine.StendhalRPZone;
@@ -16,12 +18,13 @@ import games.stendhal.server.entity.npc.condition.OrCondition;
 import games.stendhal.server.entity.npc.condition.QuestInStateCondition;
 import games.stendhal.server.entity.npc.condition.QuestNotStartedCondition;
 import games.stendhal.server.entity.npc.condition.QuestStartedCondition;
-import games.stendhal.server.events.UweFlowIncQuestEvent;
 import games.stendhal.server.events.UweReorderQuestEvent;
 
 public class UweReorderQuestNPC implements LoadableContent{
 	private String npcName = "UweReorderQuestNPC";
-	private final StendhalRPZone zone = SingletonRepository.getRPWorld().getZone("int_semos_guard_house");
+	//private final StendhalRPZone zone = SingletonRepository.getRPWorld().getZone("int_semos_guard_house");
+	private final StendhalRPZone zone = SingletonRepository.getRPWorld().getZone("-1_semos_dungeon");
+	private final Point spawnPoint = new Point(38,43);
 	
 	private String leaderNpc;
 	private SpeakerNPC npc;
@@ -57,7 +60,7 @@ public class UweReorderQuestNPC implements LoadableContent{
 		// npc.setOutfit(new Outfit(0, 4, 7, 32, 13));
 		npc.setEntityClass("noimagenpc");
 		npc.setCollisionAction(CollisionAction.REVERSE);
-		npc.setPosition(5, 15);
+		npc.setPosition(spawnPoint.x, spawnPoint.y);
 		npc.setDirection(Direction.UP);
 		npc.initHP(100);
 		// npc.setSpeed(1.0);

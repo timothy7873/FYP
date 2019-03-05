@@ -1,5 +1,6 @@
 package games.stendhal.server.maps.quests.uwe;
 
+import java.awt.Point;
 import java.util.Arrays;
 
 import games.stendhal.common.Direction;
@@ -17,7 +18,9 @@ import games.stendhal.server.events.UweYesNoTestEvent;
 
 public class UweTestThreeNPC implements LoadableContent{
 	private String npcName = "UweTestThree";
-	private final StendhalRPZone zone = SingletonRepository.getRPWorld().getZone("int_semos_guard_house");
+	//private final StendhalRPZone zone = SingletonRepository.getRPWorld().getZone("int_semos_guard_house");
+	private final StendhalRPZone zone = SingletonRepository.getRPWorld().getZone("-1_semos_dungeon");
+	private final Point spawnPoint = new Point(25,52);
 	
 	private SpeakerNPC npc;
 	private String leaderNpc;
@@ -44,7 +47,7 @@ public class UweTestThreeNPC implements LoadableContent{
 
 		npc.setEntityClass("noimagenpc");
 		npc.setCollisionAction(CollisionAction.REVERSE);
-		npc.setPosition(8, 10);
+		npc.setPosition(spawnPoint.x, spawnPoint.y);
 		npc.setDirection(Direction.UP);
 		npc.initHP(100);
 		zone.add(npc);

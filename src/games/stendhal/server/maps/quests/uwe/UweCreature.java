@@ -23,8 +23,6 @@ import games.stendhal.server.entity.mapstuff.spawner.CreatureRespawnPoint;
 import games.stendhal.server.entity.npc.PassiveNPC;
 
 public class UweCreature implements LoadableContent {
-
-	final StendhalRPZone zone = SingletonRepository.getRPWorld().getZone("int_semos_guard_house");
 	private final EntityManager em = SingletonRepository.getEntityManager();
 	private static final Logger logger = Logger.getLogger(StendhalRPRuleProcessor.class);
 
@@ -72,26 +70,23 @@ public class UweCreature implements LoadableContent {
 		
 		
 		//timothy
-		StendhalRPZone tZone = SingletonRepository.getRPWorld().getZone("int_semos_guard_house");
-		EntityManager em = SingletonRepository.getEntityManager();
+		
+		StendhalRPZone tZone = SingletonRepository.getRPWorld().getZone("-1_semos_dungeon");
 		Creature tRat = em.getCreature("rat");
-		//Creature tCreature = new ItemGuardCreature(tRat, "=");
-		//Creature tCreature=tRat;
 		UweQuestCreature tCreature=new UweQuestCreature(tRat);
-		//tCreature.addDropItem("golden key", 100, 2);
 
 		tCreature.addDropItem(UweItemManager.createCodeItem("System.out.println(x)"),100);
 		tCreature.addDropItem(UweItemManager.createCodeItem(";"),100);
 		tCreature.addDropItem(UweItemManager.createCodeItem("int x=11;"),100);
-		
-		//tCreature.addDropItem(em.getItem("club"),100);
-		//tCreature.addDropItem("club",100,1);
-		//tCreature.addDropItem(em.getItem("club"));
-		CreatureRespawnPoint tPoint=new CreatureRespawnPoint(tZone, 10, 10, tCreature, 1);
-		tPoint.setRespawnTime(1000);
+		tCreature.addDropItem(UweItemManager.createCodeItem("x"),100);
+
+		CreatureRespawnPoint tPoint=new CreatureRespawnPoint(tZone, 32, 34, tCreature, 1);
+		tPoint.setRespawnTime(1);
 		tZone.add(tPoint);
 		
 		tPoint.spawnNow();
+		
+		
 		
 		//tZone.collisionMap.setCollide(11, 6);
 	}
