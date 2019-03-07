@@ -243,6 +243,10 @@ public class PhpManagementAPI extends ManagementAPI{
 		
 		return rs;
 	}
+	public Journey[] getJourneyList(String npcId, String user) {
+		return null;
+	}
+	
 	public void setQuestStatus(String npcId, String user, String status) 
 	{
 		QueryString qry = new QueryString();

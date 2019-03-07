@@ -1,5 +1,4 @@
 package games.stendhal.server.maps.quests.uwe;
-
 import java.awt.Point;
 import java.util.Arrays;
 
@@ -12,26 +11,22 @@ import games.stendhal.server.entity.npc.ConversationStates;
 import games.stendhal.server.entity.npc.NPCList;
 import games.stendhal.server.entity.npc.SpeakerNPC;
 import games.stendhal.server.entity.npc.action.FireEventChatAction;
-import games.stendhal.server.entity.npc.condition.NotCondition;
-import games.stendhal.server.entity.npc.condition.UweYesNoTestValidCondition;
-import games.stendhal.server.events.UweYesNoTestEvent;
+import games.stendhal.server.entity.npc.action.UweStartQuestAction;
+import games.stendhal.server.events.UweShowJourneyListEvent;
 
-public class UweTestFourNPC implements LoadableContent{
-	private String npcName = "UweTestFour";
-	//private final StendhalRPZone zone = SingletonRepository.getRPWorld().getZone("int_semos_guard_house");
-	private final StendhalRPZone zone = SingletonRepository.getRPWorld().getZone("-1_semos_dungeon");
-	private final Point spawnPoint = new Point(43,38);
+public class UweJourneyStarterNPC extends UweNpc{
+	public static String npcName = "UweJourneyStarterOneNPC";
+	protected final StendhalRPZone zone = SingletonRepository.getRPWorld().getZone("-1_semos_dungeon");
+	protected final Point spawnPoint = new Point(6,10);
 	
 	private SpeakerNPC npc;
-	private String leaderNpc;
 	
-	public UweTestFourNPC(String leaderNpc)
-	{
-		this.leaderNpc=leaderNpc;
-	}
+	public UweJourneyStarterNPC(){}
 	
 	@Override
 	public void addToWorld() {
+		//removeNPC(npcName);
+
 		createNPC();
 		addDialog();
 		buildConditions();
@@ -59,23 +54,16 @@ public class UweTestFourNPC implements LoadableContent{
 				ConversationPhrases.GREETING_MESSAGES, 
 				null, 
 				ConversationStates.ATTENDING,
-				"\nI am a test four NPC, I can give you #test to practise", 
-				null);
-		//quest
+				"\nI am a journey NPC, I can provide #journey for you.", 
+				new UweStartQuestAction(npcName, "blank"));
+		//journey
 		npc.add(ConversationStates.ATTENDING, 
-				Arrays.asList("test","t"), 
-				new UweYesNoTestValidCondition(leaderNpc), 
-				ConversationStates.ATTENDING, 
-				"", 
-				new FireEventChatAction(new UweYesNoTestEvent(leaderNpc,"Test"))
-				);
-		npc.add(ConversationStates.ATTENDING, 
-				Arrays.asList("test","t"), 
-				new NotCondition(new UweYesNoTestValidCondition(leaderNpc)), 
-				ConversationStates.ATTENDING, 
-				"Sorry but I currently have no test for you.", 
-				null
-				);
+				Arrays.asList("journey","j","jn"), 
+				null, 
+				ConversationStates.ATTENDING,
+				null, 
+				new FireEventChatAction(new UweShowJourneyListEvent(npcName, true)));
+		
 		//bye
 		npc.addGoodbye("Have fun!");
 		

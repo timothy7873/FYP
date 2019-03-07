@@ -13,4 +13,6 @@ public abstract class ManagementAPI {
 	public abstract void setQuestStatus(String npcId, String user, String status);
 	public abstract void stopTimeCount(String npcId, String user);
 	public abstract void setLastStartTime(String npcId, String user);
+	
+	public abstract Journey[] getJourneyList(String npcId, String user);
 }

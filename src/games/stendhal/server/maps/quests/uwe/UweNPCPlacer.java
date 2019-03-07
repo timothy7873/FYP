@@ -82,6 +82,13 @@ public class UweNPCPlacer extends AbstractQuest {
 		content.add(new UweReorderQuestNPC(UweQuestFourNPC.npcName));
 		content.add(new UweTestFourNPC(UweQuestFourNPC.npcName));
 		
+		//Journey
+		//starter
+		content.add(new UweJourneyStarterNPC());
+		
+		
+		
+		
 //		content.add(new DadNPC());
 //		content.add(new SoldierNPCs());
 //		content.add(new MakeupArtist());

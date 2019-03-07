@@ -1,30 +1,26 @@
 <?xml version="1.0" encoding="GBK"?>
-<statistics time="1551789209">
-  <uptime value="134.601"/>
-  <memory total="91136" used="45731"/>
-<attrib name="Transfer content" value="1" />
-<attrib name="Transfer content cache" value="8" />
-<attrib name="Bytes recv" value="6034" />
-<attrib name="Killed rat" value="1" />
-<attrib name="Actions UweReturnItem" value="1" />
-<attrib name="Message send" value="312" />
-<attrib name="Actions stop" value="9" />
-<attrib name="Actions added" value="69" />
-<attrib name="Actions destroy" value="1" />
-<attrib name="Players timeout" value="0" />
-<attrib name="Message recv" value="77" />
-<attrib name="Objects now" value="5102" />
-<attrib name="Actions invalid" value="9" />
-<attrib name="Ips online" value="1" />
-<attrib name="Perceptions DELTA" value="356" />
-<attrib name="Actions move" value="39" />
-<attrib name="Actions equip" value="8" />
-<attrib name="Actions look" value="2" />
-<attrib name="Bytes send" value="44494" />
+<statistics time="1551976948">
+  <uptime value="4274.15"/>
+  <memory total="74240" used="60843"/>
+<attrib name="Transfer content" value="13" />
+<attrib name="Transfer content cache" value="38" />
+<attrib name="Bytes recv" value="14635" />
+<attrib name="Bytes send" value="60144" />
 <attrib name="Players logged" value="1" />
-<attrib name="Perceptions SYNC" value="1" />
+<attrib name="Perceptions SYNC" value="6" />
+<attrib name="Message send" value="278" />
 <attrib name="Players online" value="0" />
 <attrib name="Players login" value="1" />
-<attrib name="Tranfer content size" value="142" />
+<attrib name="Tranfer content size" value="6695" />
+<attrib name="Actions stop" value="32" />
+<attrib name="Actions where" value="2" />
 <attrib name="Players logout" value="0" />
+<attrib name="Actions added" value="130" />
+<attrib name="Players timeout" value="0" />
+<attrib name="Message recv" value="547" />
+<attrib name="Objects now" value="5321" />
+<attrib name="Actions invalid" value="2" />
+<attrib name="Ips online" value="1" />
+<attrib name="Perceptions DELTA" value="14172" />
+<attrib name="Actions move" value="94" />
 </statistics>

@@ -133,18 +133,19 @@ class EventFactory {
 		}
 		else if(name.equals("yes_no_test"))
 		{
-			//event = new ExamineEvent();
 			event=new UweYesNoTestEvent();
 		}
 		else if(name.equals("output_inc_quest"))
 		{
-			//event = new ExamineEvent();
 			event=new UweOutputIncQuestEvent();
 		}
 		else if(name.equals("reorder_quest"))
 		{
-			//event = new ExamineEvent();
 			event=new UweReorderQuestEvent();
+		}
+		else if(name.equals("journey_list"))
+		{
+			event=new UweShowJourneyListEvent();
 		}
 
 		if (event != null) {
