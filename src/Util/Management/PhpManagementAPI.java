@@ -243,8 +243,25 @@ public class PhpManagementAPI extends ManagementAPI{
 		
 		return rs;
 	}
-	public Journey[] getJourneyList(String npcId, String user) {
-		return null;
+	public Journey[] getNewJourneyList(String user) {
+		List result=new LinkedList();
+		
+		QueryString qry = new QueryString();
+		
+		qry.add("characterName", user);
+		JSONArray json=getJsonArray(site+"getNewJourneyList.php?"+qry);
+		for(int i=0;i<json.size();i++)
+		{
+			JSONObject journey=(JSONObject)json.get(i);
+			String id=(String)journey.get("id");
+			String name=(String)journey.get("name");
+			String des=(String)journey.get("des");
+			String begin=(String)journey.get("begin");
+			String end=(String)journey.get("end");
+			result.add(new Journey(id,name,des,begin,end));
+		}
+		
+		return (Journey[])result.toArray(new Journey[0]);
 	}
 	
 	public void setQuestStatus(String npcId, String user, String status) 

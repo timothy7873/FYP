@@ -216,7 +216,7 @@ public class UweReorderQuestViewPanel extends JComponent implements ContentChang
 		final JList list = new JList(m);
 		list.setCellRenderer(new BorderCellRenderer(new BevelBorder(BevelBorder.LOWERED)));
 		list.setFixedCellHeight(50+5);
-		list.addMouseListener(new DragEventHander(list));
+		list.addMouseListener(new DragEventHandler(list));
 		add(list);
 		setX(list, 5+50+5);
 		setY(list, lastY+5);
@@ -256,6 +256,7 @@ public class UweReorderQuestViewPanel extends JComponent implements ContentChang
 		setX(submit,maxWidth+10-getWidth(submit));
 		setY(submit,lastY+20);
 
+		//resize window
 		int w=getX(submit)+getWidth(submit)+10+5+5;
 		int h=getY(submit)+getHeight(submit)+20;
 		Insets in=window.getInsets();
@@ -522,12 +523,12 @@ public class UweReorderQuestViewPanel extends JComponent implements ContentChang
 		}
 	}
 
-	private class DragEventHander implements MouseListener
+	private class DragEventHandler implements MouseListener
 	{
 		private int from;
 		private JList list;
 		
-		public DragEventHander(JList list)
+		public DragEventHandler(JList list)
 		{
 			this.list=list;
 		}

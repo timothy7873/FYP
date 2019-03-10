@@ -2,6 +2,7 @@ package games.stendhal.client.gui;
 
 import Util.Management.Journey;
 import Util.Management.ManagementAPI;
+import games.stendhal.client.entity.User;
 import marauroa.common.game.RPEvent;
 
 public class UweJourneyListViewer {
@@ -17,7 +18,7 @@ public class UweJourneyListViewer {
 		}
 		showNew=e.has("showNew") && e.get("npcId").equals("new");
 		
-		journeys=ManagementAPI.api.getJourneyList(npcId, user);
+		journeys=ManagementAPI.api.getNewJourneyList(User.getCharacterName());
 		
 		view();
 	}

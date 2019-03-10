@@ -58,7 +58,7 @@ public class HardcodeManagementAPI extends ManagementAPI{
 		hints.remove(0);
 		return h;
 	}
-	public Journey[] getJourneyList(String npcId, String user) {
+	public Journey[] getNewJourneyList(String user) {
 		return null;
 	}
 	

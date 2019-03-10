@@ -23,6 +23,8 @@ public class UweShowJourneyListEvent extends RPEvent{
 	public static void generateRPClass() {
 		try {
 		final RPClass rpclass = new RPClass(RPCLASS_NAME);
+		rpclass.add(DefinitionClass.ATTRIBUTE, NPCID, Type.STRING, Definition.PRIVATE);
+		rpclass.add(DefinitionClass.ATTRIBUTE, SHOWNEW, Type.STRING, Definition.PRIVATE);
 		} catch (final SyntaxException e) {
 			logger.error("cannot generateRPClass", e);
 		}

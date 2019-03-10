@@ -16,7 +16,7 @@ import games.stendhal.server.events.UweShowJourneyListEvent;
 
 public class UweJourneyStarterNPC extends UweNpc{
 	public static String npcName = "UweJourneyStarterOneNPC";
-	protected final StendhalRPZone zone = SingletonRepository.getRPWorld().getZone("-1_semos_dungeon");
+	protected final StendhalRPZone zone = SingletonRepository.getRPWorld().getZone("-2_semos_dungeon");
 	protected final Point spawnPoint = new Point(6,10);
 	
 	private SpeakerNPC npc;
