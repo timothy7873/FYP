@@ -15,4 +15,7 @@ public abstract class ManagementAPI {
 	public abstract void setLastStartTime(String npcId, String user);
 	
 	public abstract Journey[] getNewJourneyList(String user);
+	public abstract void startJourney(String user, String journeyId);
+	public abstract Journey[] getOnDoingJourney(String user, String npcId);
+	public abstract JourneyRow getJourneyRow(String user, String journeyId);
 }

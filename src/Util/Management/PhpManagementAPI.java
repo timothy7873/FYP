@@ -22,6 +22,7 @@ public class PhpManagementAPI extends ManagementAPI{
 		this.site=site;
 	}
 	
+	//copmmon read
 	public FlowIncQuest getLogicalQuestion(String npcId, String user)
 	{
 		QueryString qry = new QueryString();
@@ -243,27 +244,8 @@ public class PhpManagementAPI extends ManagementAPI{
 		
 		return rs;
 	}
-	public Journey[] getNewJourneyList(String user) {
-		List result=new LinkedList();
-		
-		QueryString qry = new QueryString();
-		
-		qry.add("characterName", user);
-		JSONArray json=getJsonArray(site+"getNewJourneyList.php?"+qry);
-		for(int i=0;i<json.size();i++)
-		{
-			JSONObject journey=(JSONObject)json.get(i);
-			String id=(String)journey.get("id");
-			String name=(String)journey.get("name");
-			String des=(String)journey.get("des");
-			String begin=(String)journey.get("begin");
-			String end=(String)journey.get("end");
-			result.add(new Journey(id,name,des,begin,end));
-		}
-		
-		return (Journey[])result.toArray(new Journey[0]);
-	}
 	
+	//common set
 	public void setQuestStatus(String npcId, String user, String status) 
 	{
 		QueryString qry = new QueryString();
@@ -290,6 +272,76 @@ public class PhpManagementAPI extends ManagementAPI{
 		doUrl(site+"setLastStartTime.php?"+qry);
 	}
 	
+	//journey
+	public Journey[] getNewJourneyList(String user) {
+		List result=new LinkedList();
+		
+		QueryString qry = new QueryString();
+		
+		qry.add("characterName", user);
+		JSONArray json=getJsonArray(site+"getNewJourneyList.php?"+qry);
+		for(int i=0;i<json.size();i++)
+		{
+			JSONObject journey=(JSONObject)json.get(i);
+			String id=(String)journey.get("id");
+			String name=(String)journey.get("name");
+			String des=(String)journey.get("des");
+			String begin=(String)journey.get("begin");
+			String end=(String)journey.get("end");
+			result.add(new Journey(id,name,des,begin,end));
+		}
+		
+		return (Journey[])result.toArray(new Journey[0]);
+	}
+	public void startJourney(String user, String journeyId) 
+	{
+		QueryString qry = new QueryString();
+		
+		qry.add("characterName", user);
+		qry.add("journeyId", journeyId);
+		doUrl(site+"startJourney.php?"+qry);
+	}
+	public Journey[] getOnDoingJourney(String user, String npcId)
+	{
+		List result=new LinkedList();
+		
+		QueryString qry = new QueryString();
+		
+		qry.add("characterName", user);
+		qry.add("npcId", npcId);
+		JSONArray json=getJsonArray(site+"getOnDoingJourneyQuest.php?"+qry);
+		for(int i=0;i<json.size();i++)
+		{
+			JSONObject journey=(JSONObject)json.get(i);
+			String id=(String)journey.get("id");
+			String name=(String)journey.get("name");
+			String des=(String)journey.get("des");
+			String begin=(String)journey.get("begin");
+			String end=(String)journey.get("end");
+			result.add(new Journey(id,name,des,begin,end));
+		}
+		
+		return (Journey[])result.toArray(new Journey[0]);
+	}
+	public JourneyRow getJourneyRow(String user, String journeyId)
+	{
+		QueryString qry = new QueryString();
+		
+		qry.add("characterName", user);
+		qry.add("journeyId", journeyId);
+		JSONObject json=getJson(site+"getJourneyRow.php?"+qry);
+		
+		String id=(String)json.get("id");
+		String jid=(String)json.get("jid");
+		String before=(String)json.get("before");
+		String after=(String)json.get("after");
+		int row=Integer.parseInt((String)json.get("row"));
+		String npcId=(String)json.get("npcId");
+		
+		return new JourneyRow(id,jid,before,after,row,npcId);
+	}
+	
+	//lib
 	private JSONObject getJson(String urlStr)
 	{
 		try

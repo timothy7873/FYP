@@ -58,11 +58,13 @@ public class HardcodeManagementAPI extends ManagementAPI{
 		hints.remove(0);
 		return h;
 	}
-	public Journey[] getNewJourneyList(String user) {
-		return null;
-	}
 	
 	public void setQuestStatus(String npcId, String user, String status) {}
 	public void stopTimeCount(String npcId, String user) {}
 	public void setLastStartTime(String npcId, String user) {}
+	
+	public Journey[] getNewJourneyList(String user) {return null;}
+	public void startJourney(String user, String journeyId) {}
+	public Journey[] getOnDoingJourney(String user, String npcId) {return null;}
+	public JourneyRow getJourneyRow(String user, String journeyId) {return null;}
 }

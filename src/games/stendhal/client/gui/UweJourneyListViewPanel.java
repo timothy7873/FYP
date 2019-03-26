@@ -17,18 +17,27 @@ import javax.swing.Spring;
 import javax.swing.SpringLayout;
 
 import Util.Management.Journey;
+import Util.Management.ManagementAPI;
+import games.stendhal.client.ClientSingletonRepository;
+import games.stendhal.client.entity.User;
+import games.stendhal.client.gui.chatlog.HeaderLessEventLine;
+import games.stendhal.common.NotificationType;
 
 public class UweJourneyListViewPanel extends JComponent{
 	/**
 	 * 
 	 */
 	private static final long serialVersionUID = -1137127972118811668L;
-	private InternalManagedWindow window=null;
+	public InternalManagedWindow window=null;
 	private Journey[] journeys;
+	private UweJourneyListBtnAction submitAction;
+	private String submitBtnName;
 	
-	public UweJourneyListViewPanel(Journey[] journeys)
+	public UweJourneyListViewPanel(Journey[] journeys, UweJourneyListBtnAction submitAction, String submitBtnName)
 	{
 		this.journeys=journeys;
+		this.submitAction=submitAction;
+		this.submitBtnName=submitBtnName;
 	}
 	public void setWindow(InternalManagedWindow window)
 	{
@@ -133,8 +142,9 @@ public class UweJourneyListViewPanel extends JComponent{
 		setY(cancel,lastY+20);
 		
 		//add start journey
-		Button submit=new Button("Start journey");
-		//submit.addActionListener(secondBtnHandler);
+		submitAction.setInfo(this, list, journeys);
+		Button submit=new Button(submitBtnName);
+		submit.addActionListener(submitAction);
 		submit.setName("cancel");
 		add(submit);
 		setWidth(submit,100);
@@ -160,23 +170,7 @@ public class UweJourneyListViewPanel extends JComponent{
 		}
 		
 	}
-	private class SubmitBtnHandler implements ActionListener
-	{
-		private JList list;
-		private Journey[] data;
-		
-		public SubmitBtnHandler(JList list,Journey[] data)
-		{
-			this.list=list;
-			this.data=data;
-		}
-		
-		public void actionPerformed(ActionEvent e)
-		{
-			
-		}
-	}
-	
+
 	private class ClickEventHandler implements MouseListener
 	{
 		private JList list;

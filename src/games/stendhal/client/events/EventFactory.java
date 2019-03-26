@@ -147,6 +147,10 @@ class EventFactory {
 		{
 			event=new UweShowJourneyListEvent();
 		}
+		else if(name.equals("select_ondoing_journey"))
+		{
+			event=new UweSelectOnDoingJourneyEvent();
+		}
 
 		if (event != null) {
 			event.init(entity, rpevent);

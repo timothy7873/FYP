@@ -2,8 +2,6 @@ package games.stendhal.server.maps.quests.uwe;
 import java.awt.Point;
 import java.util.Arrays;
 
-import Util.Management.HardcodeManagementAPI;
-import Util.Management.ManagementAPI;
 import games.stendhal.common.Direction;
 import games.stendhal.server.core.engine.SingletonRepository;
 import games.stendhal.server.core.engine.StendhalRPZone;
@@ -12,18 +10,20 @@ import games.stendhal.server.entity.npc.ConversationPhrases;
 import games.stendhal.server.entity.npc.ConversationStates;
 import games.stendhal.server.entity.npc.NPCList;
 import games.stendhal.server.entity.npc.SpeakerNPC;
+import games.stendhal.server.entity.npc.action.FireEventChatAction;
 import games.stendhal.server.entity.npc.action.SetQuestAction;
 import games.stendhal.server.entity.npc.action.UweProvideHintAction;
 import games.stendhal.server.entity.npc.action.UweStartQuestAction;
-import games.stendhal.server.entity.npc.action.UweTouchLogicalQuestChatAction;
 import games.stendhal.server.entity.npc.condition.AndCondition;
 import games.stendhal.server.entity.npc.condition.NotCondition;
 import games.stendhal.server.entity.npc.condition.QuestInStateCondition;
 import games.stendhal.server.entity.npc.condition.QuestStartedCondition;
+import games.stendhal.server.entity.npc.condition.UweHasJourneyQuestCondition;
 import games.stendhal.server.entity.npc.condition.UweYesNoTestValidCondition;
+import games.stendhal.server.events.UweSelectOnDoingJourneyEvent;
 
 public class UweJourneyQuestOneProviderNPC extends UweNpc{
-	public static String npcName = "UweQuestOne";
+	public static String npcName = "UweJourneyQuestOne";
 	protected final StendhalRPZone zone = SingletonRepository.getRPWorld().getZone("-1_semos_dungeon");
 	protected final Point spawnPoint = new Point(20,33);
 	
@@ -72,25 +72,32 @@ public class UweJourneyQuestOneProviderNPC extends UweNpc{
 				Arrays.asList("quest","q"), 
 				new AndCondition(
 						new QuestStartedCondition(npcName), 
-						new QuestInStateCondition(npcName, "blank")), 
+						new QuestInStateCondition(npcName, "blank"),
+						new UweHasJourneyQuestCondition(npcName)), 
+				ConversationStates.INFORMATION_1, 
+				"Are you familar with java code? #Yes/ #No/ #A #bit", 
+				null);
+		npc.add(ConversationStates.ATTENDING, 
+				Arrays.asList("quest","q"), 
+				new AndCondition(
+						new QuestStartedCondition(npcName), 
+						new QuestInStateCondition(npcName, "blank"),
+						new NotCondition(new UweHasJourneyQuestCondition(npcName))), 
 				ConversationStates.ATTENDING, 
-				null, 
-				new UweTouchLogicalQuestChatAction(npc, 
-						"Are you familar with java code? #Yes/ #No/ #A #bit",
-						"Sorry! We currently have no quests that can provide to you!",
-						ConversationStates.INFORMATION_1));
+				"Sorry! We currently have no quests that can provide to you!", 
+				null);
 		
 		npc.add(ConversationStates.INFORMATION_1, 
 				Arrays.asList("Yes","yes","y"), 
 				null, 
 				ConversationStates.ATTENDING, 
-				"Please go find #UweLogicalErrorQuestNPC and get the quest about java code", 
-				new SetQuestAction(npcName, "started"));
+				null,//"Please go find #UweJourneyQuestOneNPC and get the quest about java code", 
+				new FireEventChatAction(new UweSelectOnDoingJourneyEvent(npcName)));
 		npc.add(ConversationStates.INFORMATION_1, 
 				Arrays.asList("A bit","a bit","Abit","abit","ab","a"), 
 				new UweYesNoTestValidCondition(npcName), 
 				ConversationStates.ATTENDING, 
-				"Please go find #UweJavaTestNPC to practise java", 
+				"Please go find #UweJourneyQuestOneTestNPC to practise java", 
 				null);
 		npc.add(ConversationStates.INFORMATION_1, 
 				Arrays.asList("A bit","a bit","Abit","abit","ab","a"), 

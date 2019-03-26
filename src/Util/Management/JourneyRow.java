@@ -1,19 +1,21 @@
 package Util.Management;
 
 public class JourneyRow {
-	public FlowIncQuest flowIncQuest;
-	public TraceQuest traceQuest;
-	public ReorderQuest reorderQuest;
+	public String journeyRowId;
+	public String journeyId;
 	public String speakBefore;
 	public String speakAfter;
+	public int row;
+	public String npcId;
 	
 	public JourneyRow() {}
-	public JourneyRow(FlowIncQuest flowIncQuest, TraceQuest traceQuest, ReorderQuest reorderQuest, String speakBefore, String speakAfter) 
+	public JourneyRow(String journeyRowId, String journeyId, String speakBefore, String speakAfter, int row, String npcId) 
 	{
-		this.flowIncQuest=flowIncQuest;
-		this.traceQuest=traceQuest;
-		this.reorderQuest=reorderQuest;
+		this.journeyRowId=journeyRowId;
+		this.journeyId=journeyId;
 		this.speakBefore=speakBefore;
 		this.speakAfter=speakAfter;
+		this.row=row;
+		this.npcId=npcId;
 	}
 }

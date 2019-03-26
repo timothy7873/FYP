@@ -62,30 +62,33 @@ public class UweNPCPlacer extends AbstractQuest {
 		//content.add(new UweFillInBlankQuestNPC());
 		//content.add(new UweHelper());
 		
-		//Set one
-		content.add(new UweQuestOneNPC());
-		content.add(new UweLogicalErrorQuestNPC(UweQuestOneNPC.npcName));
-		content.add(new UweJavaTestNPC(UweQuestOneNPC.npcName));
-		
-		//Set two
-		content.add(new UweQuestTwoNPC());
-		content.add(new UweSyntaxErrorQuestNPC(UweQuestTwoNPC.npcName));
-		content.add(new UweTestTwoNPC(UweQuestTwoNPC.npcName));
-		
-		//Set three
-		content.add(new UweQuestThreeNPC());
-		content.add(new UweProgramTracingQuestNPC(UweQuestThreeNPC.npcName));
-		content.add(new UweTestThreeNPC(UweQuestThreeNPC.npcName));
-		
-		//Set four
-		content.add(new UweQuestFourNPC());
-		content.add(new UweReorderQuestNPC(UweQuestFourNPC.npcName));
-		content.add(new UweTestFourNPC(UweQuestFourNPC.npcName));
+//		//Set one
+//		content.add(new UweQuestOneNPC());
+//		content.add(new UweLogicalErrorQuestNPC(UweQuestOneNPC.npcName));
+//		content.add(new UweJavaTestNPC(UweQuestOneNPC.npcName));
+//		
+//		//Set two
+//		content.add(new UweQuestTwoNPC());
+//		content.add(new UweSyntaxErrorQuestNPC(UweQuestTwoNPC.npcName));
+//		content.add(new UweTestTwoNPC(UweQuestTwoNPC.npcName));
+//		
+//		//Set three
+//		content.add(new UweQuestThreeNPC());
+//		content.add(new UweProgramTracingQuestNPC(UweQuestThreeNPC.npcName));
+//		content.add(new UweTestThreeNPC(UweQuestThreeNPC.npcName));
+//		
+//		//Set four
+//		content.add(new UweQuestFourNPC());
+//		content.add(new UweReorderQuestNPC(UweQuestFourNPC.npcName));
+//		content.add(new UweTestFourNPC(UweQuestFourNPC.npcName));
 		
 		//Journey
 		//starter
 		content.add(new UweJourneyStarterNPC());
 		
+		//Set one
+		content.add(new UweJourney(UweJourneyStarterNPC.npcName));
+		content.add(new UweJavaTestNPC(UweJourneyStarterNPC.npcName));
 		
 		
 		

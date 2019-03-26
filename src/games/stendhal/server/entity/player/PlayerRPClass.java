@@ -16,6 +16,7 @@ import static games.stendhal.common.constants.Actions.AUTOWALK;
 import static games.stendhal.common.constants.Actions.MOVE_CONTINUOUS;
 
 import games.stendhal.common.constants.Events;
+import games.stendhal.server.events.UweSelectOnDoingJourneyEvent;
 import games.stendhal.server.events.UweShowJourneyListEvent;
 import marauroa.common.game.Definition;
 import marauroa.common.game.Definition.Type;
@@ -161,6 +162,7 @@ public class PlayerRPClass {
 		player.addRPEvent("output_inc_quest", Definition.PRIVATE);
 		player.addRPEvent("reorder_quest", Definition.PRIVATE);
 		player.addRPEvent(UweShowJourneyListEvent.RPCLASS_NAME, Definition.PRIVATE);
+		player.addRPEvent(UweSelectOnDoingJourneyEvent.RPCLASS_NAME, Definition.PRIVATE);
 
 
 		player.addRPEvent(Events.VIEW_CHANGE, Definition.PRIVATE);
