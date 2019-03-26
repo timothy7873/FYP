@@ -29,7 +29,7 @@ public class UweQuestOneNPC implements LoadableContent{
 	private final StendhalRPZone zone = SingletonRepository.getRPWorld().getZone("-1_semos_dungeon");
 	private final Point spawnPoint = new Point(20,33);
 	
-	private SpeakerNPC npc;
+	public SpeakerNPC npc;
 	
 	public UweQuestOneNPC(){}
 	

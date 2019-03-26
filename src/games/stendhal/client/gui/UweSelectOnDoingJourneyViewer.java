@@ -7,6 +7,7 @@ import Util.Management.JourneyRow;
 import Util.Management.ManagementAPI;
 import Util.Management.ReorderQuest;
 import Util.Management.Reward;
+import Util.game.client.UweClientAction;
 import games.stendhal.client.ClientSingletonRepository;
 import games.stendhal.client.entity.User;
 import games.stendhal.client.gui.chatlog.HeaderLessEventLine;
@@ -61,6 +62,9 @@ public class UweSelectOnDoingJourneyViewer {
 			ClientSingletonRepository.getUserInterface().addGameScreenText(
 					self.getX() + (self.getWidth() / 2.0), self.getY(),
 					str.replace("|", ""), NotificationType.TUTORIAL, false);
+			
+			//send selected journey
+			UweClientAction.selectJourney(npcId, j.id);
 			
 			//close window
 			self.window.closeButton.doClick();

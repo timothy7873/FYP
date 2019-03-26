@@ -23,13 +23,22 @@ import games.stendhal.server.entity.npc.condition.UweYesNoTestValidCondition;
 import games.stendhal.server.events.UweSelectOnDoingJourneyEvent;
 
 public class UweJourneyQuestOneProviderNPC extends UweNpc{
-	public static String npcName = "UweJourneyQuestOne";
+	public String npcName = "UweJourneyQuestOne";
 	protected final StendhalRPZone zone = SingletonRepository.getRPWorld().getZone("-1_semos_dungeon");
 	protected final Point spawnPoint = new Point(20,33);
 	
 	private SpeakerNPC npc;
+	private String quester;
+	private String tester;
+	private String area;
 	
-	public UweJourneyQuestOneProviderNPC(){}
+	public UweJourneyQuestOneProviderNPC(String npcId, String quester, String tester, String area)
+	{
+		this.npcName=npcId;
+		this.quester=quester;
+		this.tester=tester;
+		this.area=area;
+	}
 	
 	@Override
 	public void addToWorld() {
@@ -62,7 +71,7 @@ public class UweJourneyQuestOneProviderNPC extends UweNpc{
 				ConversationPhrases.GREETING_MESSAGES, 
 				null, 
 				ConversationStates.ATTENDING,
-				"\nI am a quest one NPC, I can provide #quest for you.", 
+				"\nI am a "+npcName+", I can provide #quest for you.", 
 				new UweStartQuestAction(npcName, "blank"));
 		//quest
 		
@@ -75,7 +84,7 @@ public class UweJourneyQuestOneProviderNPC extends UweNpc{
 						new QuestInStateCondition(npcName, "blank"),
 						new UweHasJourneyQuestCondition(npcName)), 
 				ConversationStates.INFORMATION_1, 
-				"Are you familar with java code? #Yes/ #No/ #A #bit", 
+				"Are you familar with "+area+"? #Yes/ #No/ #A #bit", 
 				null);
 		npc.add(ConversationStates.ATTENDING, 
 				Arrays.asList("quest","q"), 
@@ -97,7 +106,7 @@ public class UweJourneyQuestOneProviderNPC extends UweNpc{
 				Arrays.asList("A bit","a bit","Abit","abit","ab","a"), 
 				new UweYesNoTestValidCondition(npcName), 
 				ConversationStates.ATTENDING, 
-				"Please go find #UweJourneyQuestOneTestNPC to practise java", 
+				"Please go find #"+tester+" to practise java", 
 				null);
 		npc.add(ConversationStates.INFORMATION_1, 
 				Arrays.asList("A bit","a bit","Abit","abit","ab","a"), 
@@ -130,7 +139,7 @@ public class UweJourneyQuestOneProviderNPC extends UweNpc{
 						new QuestStartedCondition(npcName), 
 						new QuestInStateCondition(npcName, "started")), 
 				ConversationStates.ATTENDING, 
-				"Please go find #UweLogicalErrorQuestNPC and get the quest about java code", 
+				"Please go find #"+quester+" and get the quest about java code", 
 				null);
 		npc.add(ConversationStates.ATTENDING, 
 				Arrays.asList("quest","q"), 

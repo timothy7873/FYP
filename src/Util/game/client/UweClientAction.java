@@ -42,4 +42,14 @@ public class UweClientAction {
 		action.put("items", items);
 		ClientSingletonRepository.getClientFramework().send(action);
 	}
+	public static void selectJourney(String npcId, String journeyId)
+	{
+		//send
+		RPAction action = new RPAction();
+		action.put("type", "UweSelectJourney");
+		action.put("npcId", npcId);
+		action.put("journeyId", journeyId);
+		ClientSingletonRepository.getClientFramework().send(action);
+	}
+	
 }

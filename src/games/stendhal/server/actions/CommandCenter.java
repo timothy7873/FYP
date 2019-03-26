@@ -131,6 +131,7 @@ public class CommandCenter {
 		
 		UweQuestSubmitAction.register();
 		UweReturnItemAction.register();
+		UweSelectJourneyAction.register();
 	}
 
 	/**

@@ -58,6 +58,7 @@ public class HardcodeManagementAPI extends ManagementAPI{
 		hints.remove(0);
 		return h;
 	}
+	public String getQuestType(String user, String journeyId) {return null;}
 	
 	public void setQuestStatus(String npcId, String user, String status) {}
 	public void stopTimeCount(String npcId, String user) {}

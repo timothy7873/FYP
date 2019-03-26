@@ -340,6 +340,16 @@ public class PhpManagementAPI extends ManagementAPI{
 		
 		return new JourneyRow(id,jid,before,after,row,npcId);
 	}
+	public String getQuestType(String user, String journeyId)
+	{
+		QueryString qry = new QueryString();
+		
+		qry.add("characterName", user);
+		qry.add("journeyId", journeyId);
+		JSONObject json=getJson(site+"getQuestType.php?"+qry);
+		
+		return (String)json.get("result");
+	}
 	
 	//lib
 	private JSONObject getJson(String urlStr)
