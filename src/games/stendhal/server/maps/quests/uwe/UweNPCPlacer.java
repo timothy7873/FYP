@@ -87,8 +87,8 @@ public class UweNPCPlacer extends AbstractQuest {
 		content.add(new UweJourneyStarterNPC());
 		
 		//Set one
-		content.add(new UweJourney(UweJourneyStarterNPC.npcName));
-		content.add(new UweJavaTestNPC(UweJourneyStarterNPC.npcName));
+		content.add(new UweJourneyQuestOneProviderNPC());
+		content.add(new UweJavaTestNPC(UweJourneyQuestOneProviderNPC.npcName));
 		
 		
 		
