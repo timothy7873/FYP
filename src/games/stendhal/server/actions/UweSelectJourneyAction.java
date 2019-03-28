@@ -4,7 +4,6 @@ import static games.stendhal.common.constants.Actions.*;
 
 import Util.game.server.UweNpcInfo;
 import games.stendhal.server.entity.player.Player;
-import games.stendhal.server.maps.quests.uwe.UweNpc;
 import marauroa.common.game.RPAction;
 
 public class UweSelectJourneyAction implements ActionListener{
@@ -12,13 +11,8 @@ public class UweSelectJourneyAction implements ActionListener{
 	{
 		String npcId=action.get("npcId");
 		String journeyId=action.get("journeyId");
-		UweNpc npc=UweNpcInfo.npcs.get(npcId);
-		if(npc==null)
-		{
-			return;
-		}
-		npc.curJourney=journeyId;
 		
+		UweNpcInfo.setNpcQuestStart(player, npcId, journeyId);
 	}
 	
 	public static void register() {

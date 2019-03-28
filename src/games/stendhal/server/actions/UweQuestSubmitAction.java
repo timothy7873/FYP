@@ -6,6 +6,7 @@ import java.util.Arrays;
 import java.util.LinkedList;
 import java.util.List;
 
+import Util.Management.JourneyRow;
 import Util.Management.ManagementAPI;
 import Util.Management.Reward;
 import games.stendhal.server.core.engine.SingletonRepository;
@@ -24,7 +25,8 @@ public class UweQuestSubmitAction implements ActionListener{
 		// TODO Auto-generated method stub
 		EntityManager em = SingletonRepository.getEntityManager();
 		RPSlot slot=player.getSlot("bag");
-		String npcId=action.get("npcId");
+		String journeyRowId=action.get("journeyRowId");
+		JourneyRow jr=ManagementAPI.api.getJourneyRow(journeyRowId);
 		
 		//get reward
 		int money=0;
@@ -84,18 +86,18 @@ public class UweQuestSubmitAction implements ActionListener{
 			if(item!=null)
 				submition.remove(item.getID());
 		}
-		player.setQuest(npcId, "done");
+		player.setQuest(jr.npcId, "done");
 		
 		player.updateItemAtkDef();
 		player.update();
 		player.notifyWorldAboutChanges();
 		
 		//cal api to set quest not doing
-		ManagementAPI.api.stopTimeCount(npcId, player.getName());
+		ManagementAPI.api.stopTimeCount(journeyRowId, player.getName());
 		//cal api to set quest done time
-		ManagementAPI.api.setLastStartTime(npcId, player.getName());
+		ManagementAPI.api.setLastStartTime(journeyRowId, player.getName());
 		//call api to set quest done
-		ManagementAPI.api.setQuestStatus(npcId, player.getName(), "done");
+		ManagementAPI.api.setQuestStatus(journeyRowId, player.getName(), "done");
 	}
 
 	public static void register() {

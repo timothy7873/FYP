@@ -14,7 +14,7 @@ public class UweFlowIncQuestEvent extends RPEvent {
 	private static final String RPCLASS_NAME = "flow_inc_quest";
 	private static final String TYPE = "type";
 	private static final String TITLE = "title";
-	private static final String NPCID = "npcId";
+	private static final String JOURNEYROWID = "journeyRowId";
 	
 	/** the logger instance. */
 	private static final Logger logger = Logger.getLogger(UweFlowIncQuestEvent.class);
@@ -29,7 +29,7 @@ public class UweFlowIncQuestEvent extends RPEvent {
 		final RPClass rpclass = new RPClass(RPCLASS_NAME);
 		rpclass.add(DefinitionClass.ATTRIBUTE, TYPE, Type.STRING, Definition.PRIVATE);
 		rpclass.add(DefinitionClass.ATTRIBUTE, TITLE, Type.STRING, Definition.PRIVATE);
-		rpclass.add(DefinitionClass.ATTRIBUTE, NPCID, Type.STRING, Definition.PRIVATE);
+		rpclass.add(DefinitionClass.ATTRIBUTE, JOURNEYROWID, Type.STRING, Definition.PRIVATE);
 		} catch (final SyntaxException e) {
 			logger.error("cannot generateRPClass", e);
 		}
@@ -43,12 +43,12 @@ public class UweFlowIncQuestEvent extends RPEvent {
 	 * @param title title of image viewer
 	 * @param caption text to display along the image
 	 */
-	public UweFlowIncQuestEvent(String type, String title, String npcId) {
+	public UweFlowIncQuestEvent(String type, String title, String journeyRowId) {
 		super(RPCLASS_NAME);
 
 		super.put(TYPE, type);
 		super.put(TITLE, title);
-		super.put(NPCID, npcId);
+		super.put(JOURNEYROWID, journeyRowId);
 		
 	}
 

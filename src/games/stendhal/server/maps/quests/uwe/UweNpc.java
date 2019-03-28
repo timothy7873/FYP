@@ -6,7 +6,6 @@ import games.stendhal.server.core.engine.StendhalRPZone;
 
 public class UweNpc implements LoadableContent{
 	public String npcName = "UweNpc";
-	public String curJourney="";
 	protected StendhalRPZone zone = null;//SingletonRepository.getRPWorld().getZone("-1_semos_dungeon");
 	protected Point spawnPoint = new Point(0,0);
 
@@ -22,6 +21,4 @@ public class UweNpc implements LoadableContent{
 		return false;
 	}
 	
-	public void setCurJourney(String journeyId) {this.curJourney=journeyId;}
-	public String getCurJourney() {return curJourney;}
 }

@@ -28,7 +28,7 @@ public class UweJourneyListViewPanel extends JComponent{
 	 * 
 	 */
 	private static final long serialVersionUID = -1137127972118811668L;
-	public InternalManagedWindow window=null;
+	private InternalManagedWindow window=null;
 	private Journey[] journeys;
 	private UweJourneyListBtnAction submitAction;
 	private String submitBtnName;
@@ -155,6 +155,7 @@ public class UweJourneyListViewPanel extends JComponent{
 		//set window size
 		setWindowSize(getX(submit)+getWidth(submit)+10,getY(submit)+getHeight(submit)+10);
 	}
+	public void closeWindow() {window.closeButton.doClick();}
 	
 	private class CancelBtnHandler implements ActionListener
 	{

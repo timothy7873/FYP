@@ -1,5 +1,6 @@
 package games.stendhal.server.entity.npc.action;
 
+import Util.Management.JourneyRow;
 import Util.Management.ManagementAPI;
 import games.stendhal.common.parser.Sentence;
 import games.stendhal.server.entity.npc.ChatAction;
@@ -12,23 +13,33 @@ import games.stendhal.server.maps.quests.uwe.UweNpc;
 import marauroa.common.game.RPEvent;
 
 public class UweFireQuestChatAction implements ChatAction{
-	private UweNpc npc;
-	public UweFireQuestChatAction(UweNpc npc)
+	private String npcId;
+	public UweFireQuestChatAction(String npcId)
 	{
-		this.npc=npc;
+		this.npcId=npcId;
 	}
 	public void fire(final Player player, final Sentence sentence, final EventRaiser npc) {
+		String journeyId="";
 		RPEvent event=null;
 		
-		String type=ManagementAPI.api.getQuestType(player.getName(), this.npc.curJourney);
+		String quest=player.getQuest(npcId);
+		if(quest==null)
+			return;
+		String[] strs=quest.split("_");
+		if(strs.length!=2)
+			return;
+		journeyId=strs[1];
+		
+		String type=ManagementAPI.api.getQuestType(player.getName(), journeyId);
+		JourneyRow jr=ManagementAPI.api.getJourneyRow(player.getName(), journeyId);
 		if(type.equals("Logic error"))
-			event=new UweFlowIncQuestEvent(type, "Logical error fixing",this.npc.npcName);
+			event=new UweFlowIncQuestEvent("logic", "Logical error fixing",jr.journeyRowId);
 		else if(type.equals("Syntax error"))
-			event=new UweFlowIncQuestEvent(type, "Syntax error fixing",this.npc.npcName);
+			event=new UweFlowIncQuestEvent("syntax", "Syntax error fixing",jr.journeyRowId);
 		else if(type.equals("Tracing program"))
-			event=new UweOutputIncQuestEvent("Program output tracing",this.npc.npcName);
+			event=new UweOutputIncQuestEvent("Program output tracing",jr.journeyRowId);
 		else if(type.equals("Reorder"))
-			event=new UweReorderQuestEvent("Program components reordering",this.npc.npcName);
+			event=new UweReorderQuestEvent("Program components reordering",jr.journeyRowId);
 		else
 			return;
 		

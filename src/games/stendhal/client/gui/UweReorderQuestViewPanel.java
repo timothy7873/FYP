@@ -56,7 +56,7 @@ public class UweReorderQuestViewPanel extends JComponent implements ContentChang
 	private String out;
 	private String[] ans;
 	private Reward[] rewards;
-	private String npcId;
+	private String journeyRowId;
 	private Map<UweItemPanel,Integer> panels;
 	private String slotName="uwepopup";
 	private IEntity parent;
@@ -64,13 +64,13 @@ public class UweReorderQuestViewPanel extends JComponent implements ContentChang
 	private FirstStageBtnHandler firstBtnHandler;
 	private SecondStageBtnHandler secondBtnHandler;
 
-	public UweReorderQuestViewPanel(String[] code,String out,String[] ans, Reward[] rewards, String npcId)
+	public UweReorderQuestViewPanel(String[] code,String out,String[] ans, Reward[] rewards, String journeyRowId)
 	{
 		this.code=code;
 		this.ans=ans;
 		this.out=out;
 		this.rewards=rewards;
-		this.npcId=npcId;
+		this.journeyRowId=journeyRowId;
 		
 		setLayout(new BorderLayout(2,2));
 		setOpaque(true);
@@ -94,7 +94,7 @@ public class UweReorderQuestViewPanel extends JComponent implements ContentChang
 		ClientSingletonRepository.getClientFramework().send(action);
 		
 		//call api to stop timer
-		ManagementAPI.api.stopTimeCount(npcId, User.getCharacterName());
+		ManagementAPI.api.stopTimeCount(journeyRowId, User.getCharacterName());
 		
 		//stop mon item change
 		parent.removeContentChangeListener(this);
@@ -517,7 +517,7 @@ public class UweReorderQuestViewPanel extends JComponent implements ContentChang
 			
 			//success
 			JOptionPane.showMessageDialog(null, "Correct!", "Quest", JOptionPane.INFORMATION_MESSAGE);
-			UweClientAction.submitQuest(npcId, self.getRewards());
+			UweClientAction.submitQuest(journeyRowId, self.getRewards());
 			
 			self.window.closeButton.doClick();
 		}

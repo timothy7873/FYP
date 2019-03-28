@@ -8,7 +8,7 @@ public class UweOutputIncQuestViewer {
 	private String code;
 	private String[] ans;
 	private String[] out;
-	private String title,npcId;
+	private String title,journeyRowId;
 	private Reward[] rewards;
 	
 	public UweOutputIncQuestViewer(final RPEvent e)
@@ -17,12 +17,12 @@ public class UweOutputIncQuestViewer {
 		if (e.has("title")) {
 			title = e.get("title");
 		}
-		npcId="";
-		if (e.has("npcId")) {
-			npcId = e.get("npcId");
+		journeyRowId="";
+		if (e.has("journeyRowId")) {
+			journeyRowId = e.get("journeyRowId");
 		}
 		
-		TraceQuest q=ManagementAPI.api.getTraceQuestion(npcId, User.getCharacterName());
+		TraceQuest q=ManagementAPI.api.getTraceQuestion(User.getCharacterName(), journeyRowId);
 		if(q==null)
 		{
 			return;
@@ -40,7 +40,7 @@ public class UweOutputIncQuestViewer {
 	}
 	public void view()
 	{
-		UweOutputIncQuestViewPanel vp=new UweOutputIncQuestViewPanel(code,out,ans,rewards,npcId);
+		UweOutputIncQuestViewPanel vp=new UweOutputIncQuestViewPanel(code,out,ans,rewards,journeyRowId);
 		new UweOutputIncQuestWindow(vp,title);
 	}
 	

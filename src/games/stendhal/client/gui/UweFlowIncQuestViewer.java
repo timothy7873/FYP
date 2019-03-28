@@ -8,7 +8,7 @@ public class UweFlowIncQuestViewer {
 	private String[] code;
 	private String[] ans;
 	private String out,exp;
-	private String title,type,npcId;
+	private String title,type,journeyRowId;
 	private Reward[] rewards;
 	
 	public UweFlowIncQuestViewer(final RPEvent e)
@@ -21,25 +21,22 @@ public class UweFlowIncQuestViewer {
 		if (e.has("type")) {
 			type = e.get("type");
 		}
-		npcId="";
-		if (e.has("npcId")) {
-			npcId = e.get("npcId");
+		journeyRowId="";
+		if (e.has("journeyRowId")) {
+			journeyRowId = e.get("journeyRowId");
 		}
 		
 		FlowIncQuest q=null;
 		if(type.equals("logical"))
 		{
-			q=ManagementAPI.api.getLogicalQuestion(npcId, User.getCharacterName());
+			q=ManagementAPI.api.getLogicalQuestion(User.getCharacterName(),journeyRowId);
 		}
 		else if(type.equals("syntax"))
 		{
-			q=ManagementAPI.api.getSyntaxQuestion(npcId, User.getCharacterName());
+			q=ManagementAPI.api.getSyntaxQuestion(User.getCharacterName(),journeyRowId);
 		}
-		
 		if(q==null)
-		{
 			return;
-		}
 		
 		code=q.code.split("\n");
 		ans=q.ans.split("\n");
@@ -54,7 +51,7 @@ public class UweFlowIncQuestViewer {
 	}
 	public void view()
 	{
-		UweFlowIncQuestViewPanel vp=new UweFlowIncQuestViewPanel(code,ans,out,exp,rewards,npcId,type);
+		UweFlowIncQuestViewPanel vp=new UweFlowIncQuestViewPanel(code,ans,out,exp,rewards, journeyRowId);
 		new UweFlowIncQuestWindow(vp,title);
 	}
 	

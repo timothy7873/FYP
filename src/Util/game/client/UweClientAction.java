@@ -5,7 +5,13 @@ import games.stendhal.client.ClientSingletonRepository;
 import marauroa.common.game.RPAction;
 
 public class UweClientAction {
-	public static void submitQuest(String npcId, Reward[] rewards)
+	public static void returnItems()
+	{
+		RPAction action = new RPAction();
+		action.put("type", "UweReturnItem");
+		ClientSingletonRepository.getClientFramework().send(action);
+	}
+	public static void submitQuest(String journeyRowId, Reward[] rewards)
 	{
 		//cal exp
 		int exp=0;
@@ -34,7 +40,7 @@ public class UweClientAction {
 		//send
 		RPAction action = new RPAction();
 		action.put("type", "UweQuestSubmit");
-		action.put("npcId", npcId);
+		action.put("journeyRowId", journeyRowId);
 		
 		action.put("karma", karma);
 		action.put("money", money);

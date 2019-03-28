@@ -13,12 +13,15 @@ import games.stendhal.server.entity.npc.SpeakerNPC;
 import games.stendhal.server.entity.npc.action.FireEventChatAction;
 import games.stendhal.server.entity.npc.action.SetQuestAction;
 import games.stendhal.server.entity.npc.action.UweProvideHintAction;
-import games.stendhal.server.entity.npc.action.UweStartQuestAction;
+import games.stendhal.server.entity.npc.action.UweInitQuestStateAction;
 import games.stendhal.server.entity.npc.condition.AndCondition;
 import games.stendhal.server.entity.npc.condition.NotCondition;
 import games.stendhal.server.entity.npc.condition.QuestInStateCondition;
 import games.stendhal.server.entity.npc.condition.QuestStartedCondition;
 import games.stendhal.server.entity.npc.condition.UweHasJourneyQuestCondition;
+import games.stendhal.server.entity.npc.condition.UweJourneyQuestDoneCondition;
+import games.stendhal.server.entity.npc.condition.UweJourneyQuestTotalCleanCondition;
+import games.stendhal.server.entity.npc.condition.UweJourneyQuestReadCondition;
 import games.stendhal.server.entity.npc.condition.UweYesNoTestValidCondition;
 import games.stendhal.server.events.UweSelectOnDoingJourneyEvent;
 
@@ -71,8 +74,8 @@ public class UweJourneyQuestOneProviderNPC extends UweNpc{
 				ConversationPhrases.GREETING_MESSAGES, 
 				null, 
 				ConversationStates.ATTENDING,
-				"\nI am a "+npcName+", I can provide #quest for you.", 
-				new UweStartQuestAction(npcName, "blank"));
+				"\nI am "+npcName+", I can provide #quest for you.", 
+				new UweInitQuestStateAction(npcName));
 		//quest
 		
 		
@@ -80,8 +83,7 @@ public class UweJourneyQuestOneProviderNPC extends UweNpc{
 		npc.add(ConversationStates.ATTENDING, 
 				Arrays.asList("quest","q"), 
 				new AndCondition(
-						new QuestStartedCondition(npcName), 
-						new QuestInStateCondition(npcName, "blank"),
+						new UweJourneyQuestTotalCleanCondition(npcName),
 						new UweHasJourneyQuestCondition(npcName)), 
 				ConversationStates.INFORMATION_1, 
 				"Are you familar with "+area+"? #Yes/ #No/ #A #bit", 
@@ -89,8 +91,7 @@ public class UweJourneyQuestOneProviderNPC extends UweNpc{
 		npc.add(ConversationStates.ATTENDING, 
 				Arrays.asList("quest","q"), 
 				new AndCondition(
-						new QuestStartedCondition(npcName), 
-						new QuestInStateCondition(npcName, "blank"),
+						new UweJourneyQuestTotalCleanCondition(npcName),
 						new NotCondition(new UweHasJourneyQuestCondition(npcName))), 
 				ConversationStates.ATTENDING, 
 				"Sorry! We currently have no quests that can provide to you!", 
@@ -125,9 +126,7 @@ public class UweJourneyQuestOneProviderNPC extends UweNpc{
 		//quest done
 		npc.add(ConversationStates.ATTENDING, 
 				Arrays.asList("quest","q"), 
-				new AndCondition(
-						new QuestStartedCondition(npcName), 
-						new QuestInStateCondition(npcName, "done")), 
+				new UweJourneyQuestDoneCondition(npcName), 
 				ConversationStates.ATTENDING, 
 				"Good job, you have complete the previous quest\nLet me give you some bonus reward\nWe are welcome if you want more #quest", 
 				new SetQuestAction(npcName, "blank"));
@@ -135,17 +134,13 @@ public class UweJourneyQuestOneProviderNPC extends UweNpc{
 		//quest doing
 		npc.add(ConversationStates.ATTENDING, 
 				Arrays.asList("quest","q"), 
-				new AndCondition(
-						new QuestStartedCondition(npcName), 
-						new QuestInStateCondition(npcName, "started")), 
+				new UweJourneyQuestReadCondition(npcName), 
 				ConversationStates.ATTENDING, 
 				"Please go find #"+quester+" and get the quest about java code", 
 				null);
 		npc.add(ConversationStates.ATTENDING, 
 				Arrays.asList("quest","q"), 
-				new AndCondition(
-						new QuestStartedCondition(npcName), 
-						new QuestInStateCondition(npcName, "read")), 
+				new UweJourneyQuestReadCondition(npcName), 
 				ConversationStates.INFORMATION_2, 
 				"Oh you came back, if you think the quest is too hard, we can provide some #hints to you", 
 				null);

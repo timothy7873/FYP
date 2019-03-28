@@ -16,7 +16,6 @@ import java.util.ArrayList;
 import java.util.LinkedList;
 import java.util.List;
 
-import Util.game.server.UweNpcInfo;
 import games.stendhal.server.entity.player.Player;
 import games.stendhal.server.maps.Region;
 import games.stendhal.server.maps.quests.AbstractQuest;
@@ -90,9 +89,9 @@ public class UweNPCPlacer extends AbstractQuest {
 		
 		//Set one
 		npc=new UweJourneyQuestOneProviderNPC("UweJourneyQuestOneProviderNPC","UweJourneyQuestOneNPC","UweJourneyQuestOneTestNPC","Java");
-		UweNpcInfo.npcs.put(npc.npcName, npc);
+		//UweNpcInfo.npcs.put(npc.npcName, npc);
 		content.add(npc);
-		//content.add(new UweJourneyQuestOneNPC(npc,"UweJourneyQuestOneNPC"));
+		content.add(new UweJourneyQuestOneNPC(npc,"UweJourneyQuestOneNPC"));
 		//content.add(new UweJavaTestNPC(npc.npcName));
 		
 		

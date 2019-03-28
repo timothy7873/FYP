@@ -45,8 +45,7 @@ public class UweFlowIncQuestViewPanel extends JComponent implements ContentChang
 	private String[] ans;
 	private String out,exp;
 	private Reward[] rewards;
-	private String npcId;
-	private String type;
+	private String journeyRowId;
 	private Map<UweItemPanel,Integer> panels;
 	private String slotName="uwepopup";
 	private int usedSlot=0;
@@ -55,15 +54,14 @@ public class UweFlowIncQuestViewPanel extends JComponent implements ContentChang
 	private FirstStageBtnHandler firstBtnHandler;
 	private SecondStageBtnHandler secondBtnHandler;
 
-	public UweFlowIncQuestViewPanel(String[] lines,String[] ans,String out, String exp, Reward[] rewards, String npcId, String type)
+	public UweFlowIncQuestViewPanel(String[] lines,String[] ans,String out, String exp, Reward[] rewards, String journeyRowId)
 	{
 		this.lines=lines;
 		this.ans=ans;
 		this.out=out;
 		this.exp=exp;
 		this.rewards=rewards;
-		this.npcId=npcId;
-		this.type=type;
+		this.journeyRowId=journeyRowId;
 		
 		setLayout(new BorderLayout(2,2));
 		setOpaque(true);
@@ -82,14 +80,10 @@ public class UweFlowIncQuestViewPanel extends JComponent implements ContentChang
 		// TODO Auto-generated method stub
 		
 		//return item
-		RPAction action = new RPAction();
-		action.put("type", "UweReturnItem");
-		action.put("npcId", npcId);
-		action.put("questType", type);
-		ClientSingletonRepository.getClientFramework().send(action);
+		UweClientAction.returnItems();
 		
 		//call api to stop timer
-		ManagementAPI.api.stopTimeCount(npcId, User.getCharacterName());
+		ManagementAPI.api.stopTimeCount(journeyRowId, User.getCharacterName());
 		
 		//stop mon item change
 		parent.removeContentChangeListener(this);
@@ -647,7 +641,7 @@ public class UweFlowIncQuestViewPanel extends JComponent implements ContentChang
 				//close window
 				
 				JOptionPane.showMessageDialog(null, "Correct!", "Quest", JOptionPane.INFORMATION_MESSAGE);;
-				UweClientAction.submitQuest(npcId, self.getRewards());
+				UweClientAction.submitQuest(journeyRowId, self.getRewards());
 				
 				self.window.closeButton.doClick();
 			}

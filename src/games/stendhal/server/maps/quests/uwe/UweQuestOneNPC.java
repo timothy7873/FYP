@@ -14,7 +14,7 @@ import games.stendhal.server.entity.npc.NPCList;
 import games.stendhal.server.entity.npc.SpeakerNPC;
 import games.stendhal.server.entity.npc.action.SetQuestAction;
 import games.stendhal.server.entity.npc.action.UweProvideHintAction;
-import games.stendhal.server.entity.npc.action.UweStartQuestAction;
+import games.stendhal.server.entity.npc.action.UweInitQuestStateAction;
 import games.stendhal.server.entity.npc.action.UweTouchLogicalQuestChatAction;
 import games.stendhal.server.entity.npc.condition.AndCondition;
 import games.stendhal.server.entity.npc.condition.NotCondition;
@@ -65,7 +65,7 @@ public class UweQuestOneNPC implements LoadableContent{
 				null, 
 				ConversationStates.ATTENDING,
 				"\nI am a quest one NPC, I can provide #quest for you.", 
-				new UweStartQuestAction(npcName, "blank"));
+				new UweInitQuestStateAction(npcName));
 		//quest
 		
 		

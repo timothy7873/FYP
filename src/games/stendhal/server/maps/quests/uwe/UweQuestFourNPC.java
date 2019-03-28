@@ -13,7 +13,7 @@ import games.stendhal.server.entity.npc.NPCList;
 import games.stendhal.server.entity.npc.SpeakerNPC;
 import games.stendhal.server.entity.npc.action.SetQuestAction;
 import games.stendhal.server.entity.npc.action.UweProvideHintAction;
-import games.stendhal.server.entity.npc.action.UweStartQuestAction;
+import games.stendhal.server.entity.npc.action.UweInitQuestStateAction;
 import games.stendhal.server.entity.npc.action.UweTouchProgramTracingQuestChatAction;
 import games.stendhal.server.entity.npc.action.UweTouchReorderQuestChatAction;
 import games.stendhal.server.entity.npc.condition.AndCondition;
@@ -64,7 +64,7 @@ public class UweQuestFourNPC implements LoadableContent{
 				null, 
 				ConversationStates.ATTENDING,
 				"\nI am a quest four NPC, I can provide #quest for you.", 
-				new UweStartQuestAction(npcName, "blank"));
+				new UweInitQuestStateAction(npcName));
 		//quest
 		
 		

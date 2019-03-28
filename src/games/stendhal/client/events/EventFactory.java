@@ -145,7 +145,7 @@ class EventFactory {
 		}
 		else if(name.equals("journey_list"))
 		{
-			event=new UweShowJourneyListEvent();
+			event=new UweShowNewJourneyListEvent();
 		}
 		else if(name.equals("select_ondoing_journey"))
 		{

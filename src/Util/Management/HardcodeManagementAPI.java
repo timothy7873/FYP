@@ -15,7 +15,7 @@ public class HardcodeManagementAPI extends ManagementAPI{
 		hints.add(new QuestHint("java is good"));
 	}
 	
-	public FlowIncQuest getLogicalQuestion(String npcId, String user)
+	public FlowIncQuest getLogicalQuestion(String user, String journeyId)
 	{
 		String code,out,exp,ans;
 		
@@ -38,9 +38,9 @@ public class HardcodeManagementAPI extends ManagementAPI{
 		
 		return new FlowIncQuest(code,out,exp,ans,rewards);
 	}
-	public FlowIncQuest getSyntaxQuestion(String npcId, String user){return null;}
-	public TraceQuest getTraceQuestion(String npcId, String user){return null;}
-	public ReorderQuest getReorderQuestion(String npcId, String user) 
+	public FlowIncQuest getSyntaxQuestion(String user, String journeyId){return null;}
+	public TraceQuest getTraceQuestion(String user, String journeyId){return null;}
+	public ReorderQuest getReorderQuestion(String user, String journeyId) 
 	{
 		Reward[] rewards={new Reward(null,0,0,0,0)};
 		
@@ -60,12 +60,13 @@ public class HardcodeManagementAPI extends ManagementAPI{
 	}
 	public String getQuestType(String user, String journeyId) {return null;}
 	
-	public void setQuestStatus(String npcId, String user, String status) {}
-	public void stopTimeCount(String npcId, String user) {}
-	public void setLastStartTime(String npcId, String user) {}
+	public void setQuestStatus(String journeyRowId, String user, String status) {}
+	public void stopTimeCount(String journeyRowId, String user) {}
+	public void setLastStartTime(String journeyRowId, String user) {}
 	
 	public Journey[] getNewJourneyList(String user) {return null;}
 	public void startJourney(String user, String journeyId) {}
 	public Journey[] getOnDoingJourney(String user, String npcId) {return null;}
 	public JourneyRow getJourneyRow(String user, String journeyId) {return null;}
+	public JourneyRow getJourneyRow(String journeyRowId) {return null;}
 }

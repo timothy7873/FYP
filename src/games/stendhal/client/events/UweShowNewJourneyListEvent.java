@@ -3,32 +3,19 @@ package games.stendhal.client.events;
 import java.awt.event.ActionEvent;
 
 import Util.Management.Journey;
-import Util.Management.JourneyRow;
 import Util.Management.ManagementAPI;
-import Util.game.client.UweClientAction;
 import games.stendhal.client.ClientSingletonRepository;
 import games.stendhal.client.entity.Entity;
 import games.stendhal.client.entity.User;
-import games.stendhal.client.gui.*;
+import games.stendhal.client.gui.UweJourneyListBtnAction;
+import games.stendhal.client.gui.UweJourneyListViewer;
 import games.stendhal.client.gui.chatlog.HeaderLessEventLine;
 import games.stendhal.common.NotificationType;
 
-public class UweSelectOnDoingJourneyEvent extends Event<Entity>{
-	private String npcId;
-	
+public class UweShowNewJourneyListEvent extends Event<Entity>{
 	public void execute() {
-		npcId="";
-		if (event.has("npcId")) {
-			npcId = event.get("npcId");
-		}
-		
-		Journey[] journeys=ManagementAPI.api.getOnDoingJourney(User.getCharacterName(), npcId);
-		if(journeys==null)
-		{
-			return;
-		}
-		
-		UweJourneyListViewer.viewJourneyList(event, "On doing journey list", "Choose journey", new SubmitBtnHandler(), journeys);
+		Journey[] journeys=ManagementAPI.api.getNewJourneyList(User.getCharacterName());
+		UweJourneyListViewer.viewJourneyList(event, "Available journey list", "Start journey", new SubmitBtnHandler(), journeys);
 	}
 	
 	private class SubmitBtnHandler extends UweJourneyListBtnAction
@@ -42,17 +29,13 @@ public class UweSelectOnDoingJourneyEvent extends Event<Entity>{
 			if(list.getSelectedIndex()>=data.length || list.getSelectedIndex()<0)
 				return;
 			Journey j=data[list.getSelectedIndex()];
-			JourneyRow jr=ManagementAPI.api.getJourneyRow(User.getCharacterName(), j.id);
+			ManagementAPI.api.startJourney(User.getCharacterName(), j.id);
 			
-			//perform before string
-			String str=jr.speakBefore;
-			ClientSingletonRepository.getUserInterface().addEventLine(new HeaderLessEventLine(str, NotificationType.TUTORIAL));
+			//perform starting
+			ClientSingletonRepository.getUserInterface().addEventLine(new HeaderLessEventLine(j.begining, NotificationType.TUTORIAL));
 			ClientSingletonRepository.getUserInterface().addGameScreenText(
 					self.getX() + (self.getWidth() / 2.0), self.getY(),
-					str.replace("|", ""), NotificationType.TUTORIAL, false);
-			
-			//send selected journey
-			UweClientAction.selectJourney(npcId, j.id);
+					j.begining.replace("|", ""), NotificationType.TUTORIAL, false);
 			
 			//close window
 			self.closeWindow();

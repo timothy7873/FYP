@@ -25,15 +25,15 @@ public class UweTouchReorderQuestChatAction implements ChatAction{
 	@Override
 	public void fire(Player player, Sentence sentence, EventRaiser npc) {
 		// TODO Auto-generated method stub
-		if(ManagementAPI.api.getReorderQuestion(npc.getName(), player.getName())==null)
-		{
-			npc.say(failed);
-		}
-		else
-		{
-			npc.setCurrentState(next);
-			npc.say(success);
-		}
-		ManagementAPI.api.stopTimeCount(npc.getName(), player.getName());
+//		if(ManagementAPI.api.getReorderQuestion(npc.getName(), player.getName())==null)
+//		{
+//			npc.say(failed);
+//		}
+//		else
+//		{
+//			npc.setCurrentState(next);
+//			npc.say(success);
+//		}
+//		ManagementAPI.api.stopTimeCount(npc.getName(), player.getName());
 	}
 }

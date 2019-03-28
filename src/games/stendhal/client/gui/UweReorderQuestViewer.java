@@ -8,7 +8,7 @@ public class UweReorderQuestViewer {
 	private String[] code;
 	private String[] ans;
 	private String out;
-	private String title,npcId;
+	private String title,journeyRowId;
 	private Reward[] rewards;
 	
 	public UweReorderQuestViewer(final RPEvent e)
@@ -17,12 +17,12 @@ public class UweReorderQuestViewer {
 		if (e.has("title")) {
 			title = e.get("title");
 		}
-		npcId="";
-		if (e.has("npcId")) {
-			npcId = e.get("npcId");
+		journeyRowId="";
+		if (e.has("journeyRowId")) {
+			journeyRowId = e.get("journeyRowId");
 		}
 		
-		ReorderQuest q=ManagementAPI.api.getReorderQuestion(npcId, User.getCharacterName());
+		ReorderQuest q=ManagementAPI.api.getReorderQuestion(User.getCharacterName(),journeyRowId);
 		if(q==null)
 		{
 			return;
@@ -40,7 +40,7 @@ public class UweReorderQuestViewer {
 	}
 	public void view()
 	{
-		UweReorderQuestViewPanel vp=new UweReorderQuestViewPanel(code,out,ans,rewards,npcId);
+		UweReorderQuestViewPanel vp=new UweReorderQuestViewPanel(code,out,ans,rewards,journeyRowId);
 		new UweReorderQuestWindow(vp,title);
 	}
 	

@@ -23,13 +23,61 @@ public class PhpManagementAPI extends ManagementAPI{
 	}
 	
 	//copmmon read
-	public FlowIncQuest getLogicalQuestion(String npcId, String user)
+	public FlowIncQuest getLogicalQuestion(String user, String journeyId)
 	{
 		QueryString qry = new QueryString();
 		
-		qry.add("npcId", npcId);
 		qry.add("characterName", user);
-		qry.add("questType", "Logic error");
+		qry.add("journeyId", "journeyId");
+		JSONObject json=getJson(site+"getQuest.php?"+qry);
+		if(json==null)
+		{
+			return null;
+		}
+		
+		JSONArray codes=(JSONArray)json.get("code");
+		JSONArray curouts=(JSONArray)json.get("curout");
+		JSONArray expouts=(JSONArray)json.get("expout");
+		JSONArray anss=(JSONArray)json.get("answer");
+		
+		String code="",curout="",expout="",ans="";
+		for(int i=0;i<codes.size();i++)
+			code+=codes.get(i)+"\n";
+		for(int i=0;i<curouts.size();i++)
+			curout+=curouts.get(i)+"\n";
+		for(int i=0;i<expouts.size();i++)
+			expout+=expouts.get(i)+"\n";
+		for(int i=0;i<anss.size();i++)
+			ans+=anss.get(i)+"\n";
+		code=code.substring(0,code.length()-1);
+		curout=curout.substring(0,curout.length()-1);
+		expout=expout.substring(0,expout.length()-1);
+		ans=ans.substring(0,ans.length()-1);
+		
+		JSONObject reward=(JSONObject)json.get("reward");
+		int exp=Integer.parseInt((String)reward.get("experience"));
+		double karma=Double.parseDouble((String)reward.get("karma"));
+		int money=Integer.parseInt((String)reward.get("money"));
+		JSONArray items=(JSONArray)reward.get("item");
+		
+		List rewards=new LinkedList();
+		rewards.add(new Reward(null,0,exp,karma,money));
+		for(int i=0;i<items.size();i++)
+		{
+			JSONObject item=(JSONObject)items.get(i);
+			String itemName=(String)item.get("itemname");
+			int qty=Integer.parseInt((String)item.get("qty"));
+			rewards.add(new Reward(itemName,qty,0,0,0));
+		}
+		
+		return new FlowIncQuest(code, curout, expout, ans, (Reward[])rewards.toArray(new Reward[0]));
+	}
+	public FlowIncQuest getSyntaxQuestion(String user, String journeyRowId)
+	{
+		QueryString qry = new QueryString();
+		
+		qry.add("journeyRowId", journeyRowId);
+		qry.add("characterName", user);
 		JSONObject json=getJson(site+"outputQuestion.php?"+qry);
 		if(json==null)
 		{
@@ -73,57 +121,7 @@ public class PhpManagementAPI extends ManagementAPI{
 		
 		return new FlowIncQuest(code, curout, expout, ans, (Reward[])rewards.toArray(new Reward[0]));
 	}
-	public FlowIncQuest getSyntaxQuestion(String npcId, String user)
-	{
-		QueryString qry = new QueryString();
-		
-		qry.add("npcId", npcId);
-		qry.add("characterName", user);
-		qry.add("questType", "Syntax error");
-		JSONObject json=getJson(site+"outputQuestion.php?"+qry);
-		if(json==null)
-		{
-			return null;
-		}
-		
-		JSONArray codes=(JSONArray)json.get("code");
-		JSONArray curouts=(JSONArray)json.get("curout");
-		JSONArray expouts=(JSONArray)json.get("expout");
-		JSONArray anss=(JSONArray)json.get("answer");
-		
-		String code="",curout="",expout="",ans="";
-		for(int i=0;i<codes.size();i++)
-			code+=codes.get(i)+"\n";
-		for(int i=0;i<curouts.size();i++)
-			curout+=curouts.get(i)+"\n";
-		for(int i=0;i<expouts.size();i++)
-			expout+=expouts.get(i)+"\n";
-		for(int i=0;i<anss.size();i++)
-			ans+=anss.get(i)+"\n";
-		code=code.substring(0,code.length()-1);
-		curout=curout.substring(0,curout.length()-1);
-		expout=expout.substring(0,expout.length()-1);
-		ans=ans.substring(0,ans.length()-1);
-		
-		JSONObject reward=(JSONObject)json.get("reward");
-		int exp=Integer.parseInt((String)reward.get("experience"));
-		double karma=Double.parseDouble((String)reward.get("karma"));
-		int money=Integer.parseInt((String)reward.get("money"));
-		JSONArray items=(JSONArray)reward.get("item");
-		
-		List rewards=new LinkedList();
-		rewards.add(new Reward(null,0,exp,karma,money));
-		for(int i=0;i<items.size();i++)
-		{
-			JSONObject item=(JSONObject)items.get(i);
-			String itemName=(String)item.get("itemname");
-			int qty=Integer.parseInt((String)item.get("qty"));
-			rewards.add(new Reward(itemName,qty,0,0,0));
-		}
-		
-		return new FlowIncQuest(code, curout, expout, ans, (Reward[])rewards.toArray(new Reward[0]));
-	}
-	public TraceQuest getTraceQuestion(String npcId, String user) 
+	public TraceQuest getTraceQuestion(String user, String journeyId) 
 	{
 		QueryString qry = new QueryString();
 		
@@ -169,7 +167,7 @@ public class PhpManagementAPI extends ManagementAPI{
 		
 		return new TraceQuest(code, curout, ans, (Reward[])rewards.toArray(new Reward[0]));
 	}
-	public ReorderQuest getReorderQuestion(String npcId, String user)
+	public ReorderQuest getReorderQuestion(String user, String journeyId)
 	{
 		QueryString qry = new QueryString();
 		
@@ -246,28 +244,28 @@ public class PhpManagementAPI extends ManagementAPI{
 	}
 	
 	//common set
-	public void setQuestStatus(String npcId, String user, String status) 
+	public void setQuestStatus(String journeyRowId, String user, String status) 
 	{
 		QueryString qry = new QueryString();
 		
-		qry.add("npcId", npcId);
+		qry.add("journeyRowId", journeyRowId);
 		qry.add("characterName", user);
 		qry.add("status", status);
 		doUrl(site+"setQuestStatus.php?"+qry);
 	}
-	public void stopTimeCount(String npcId, String user) 
+	public void stopTimeCount(String journeyRowId, String user) 
 	{
 		QueryString qry = new QueryString();
 		
-		qry.add("npcId", npcId);
+		qry.add("journeyRowId", journeyRowId);
 		qry.add("characterName", user);
 		doUrl(site+"setStopTime.php?"+qry);
 	}
-	public void setLastStartTime(String npcId, String user)
+	public void setLastStartTime(String journeyRowId, String user)
 	{
 		QueryString qry = new QueryString();
 		
-		qry.add("npcId", npcId);
+		qry.add("journeyRowId", journeyRowId);
 		qry.add("characterName", user);
 		doUrl(site+"setLastStartTime.php?"+qry);
 	}
@@ -309,7 +307,7 @@ public class PhpManagementAPI extends ManagementAPI{
 		
 		qry.add("characterName", user);
 		qry.add("npcId", npcId);
-		JSONArray json=getJsonArray(site+"getOnDoingJourneyQuest.php?"+qry);
+		JSONArray json=getJsonArray(site+"getOnDoingJourney.php?"+qry);
 		for(int i=0;i<json.size();i++)
 		{
 			JSONObject journey=(JSONObject)json.get(i);
@@ -330,6 +328,22 @@ public class PhpManagementAPI extends ManagementAPI{
 		qry.add("characterName", user);
 		qry.add("journeyId", journeyId);
 		JSONObject json=getJson(site+"getJourneyRow.php?"+qry);
+		
+		String id=(String)json.get("id");
+		String jid=(String)json.get("jid");
+		String before=(String)json.get("before");
+		String after=(String)json.get("after");
+		int row=Integer.parseInt((String)json.get("row"));
+		String npcId=(String)json.get("npcId");
+		
+		return new JourneyRow(id,jid,before,after,row,npcId);
+	}
+	public JourneyRow getJourneyRow(String journeyRowId)
+	{
+		QueryString qry = new QueryString();
+		
+		qry.add("journeyRowId", journeyRowId);
+		JSONObject json=getJson(site+"getJourneyRowWithId.php?"+qry);
 		
 		String id=(String)json.get("id");
 		String jid=(String)json.get("jid");

@@ -46,7 +46,7 @@ public class UweOutputIncQuestViewPanel extends JComponent implements ContentCha
 	private String[] out;
 	private String[] ans;
 	private Reward[] rewards;
-	private String npcId;
+	private String journeyRowId;
 	private Map<UweItemPanel,Integer> panels;
 	private String slotName="uwepopup";
 	private int usedSlot=0;
@@ -55,13 +55,13 @@ public class UweOutputIncQuestViewPanel extends JComponent implements ContentCha
 	private FirstStageBtnHandler firstBtnHandler;
 	private SecondStageBtnHandler secondBtnHandler;
 
-	public UweOutputIncQuestViewPanel(String code,String[] out,String[] ans, Reward[] rewards, String npcId)
+	public UweOutputIncQuestViewPanel(String code,String[] out,String[] ans, Reward[] rewards, String journeyRowId)
 	{
 		this.code=code;
 		this.ans=ans;
 		this.out=out;
 		this.rewards=rewards;
-		this.npcId=npcId;
+		this.journeyRowId=journeyRowId;
 		
 		setLayout(new BorderLayout(2,2));
 		setOpaque(true);
@@ -85,7 +85,7 @@ public class UweOutputIncQuestViewPanel extends JComponent implements ContentCha
 		ClientSingletonRepository.getClientFramework().send(action);
 		
 		//call api to stop timer
-		ManagementAPI.api.stopTimeCount(npcId, User.getCharacterName());
+		ManagementAPI.api.stopTimeCount(journeyRowId, User.getCharacterName());
 		
 		//stop mon item change
 		parent.removeContentChangeListener(this);
@@ -609,7 +609,7 @@ public class UweOutputIncQuestViewPanel extends JComponent implements ContentCha
 				//close window
 				
 				JOptionPane.showMessageDialog(null, "Correct!", "Quest", JOptionPane.INFORMATION_MESSAGE);;
-				UweClientAction.submitQuest(npcId, self.getRewards());
+				UweClientAction.submitQuest(journeyRowId, self.getRewards());
 				
 				self.window.closeButton.doClick();
 			}

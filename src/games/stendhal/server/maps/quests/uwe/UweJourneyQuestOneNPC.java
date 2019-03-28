@@ -12,19 +12,25 @@ import games.stendhal.server.entity.npc.NPCList;
 import games.stendhal.server.entity.npc.SpeakerNPC;
 import games.stendhal.server.entity.npc.action.MultipleActions;
 import games.stendhal.server.entity.npc.action.SetQuestAction;
+import games.stendhal.server.entity.npc.action.UweFireQuestChatAction;
 import games.stendhal.server.entity.npc.action.UweFireQuestEventChatAction;
+import games.stendhal.server.entity.npc.action.UweSetJourneyQuestReadChatAction;
 import games.stendhal.server.entity.npc.condition.AndCondition;
+import games.stendhal.server.entity.npc.condition.NotCondition;
 import games.stendhal.server.entity.npc.condition.OrCondition;
 import games.stendhal.server.entity.npc.condition.QuestInStateCondition;
 import games.stendhal.server.entity.npc.condition.QuestNotStartedCondition;
 import games.stendhal.server.entity.npc.condition.QuestStartedCondition;
+import games.stendhal.server.entity.npc.condition.UweJourneyQuestTotalCleanCondition;
+import games.stendhal.server.entity.npc.condition.UweJourneyQuestReadCondition;
+import games.stendhal.server.entity.npc.condition.UweJourneyQuestStartedCondition;
 import games.stendhal.server.events.UweReorderQuestEvent;
 
 public class UweJourneyQuestOneNPC extends UweNpc{
 	private String npcName = "UweReorderQuestNPC";
 	//private final StendhalRPZone zone = SingletonRepository.getRPWorld().getZone("int_semos_guard_house");
-	private final StendhalRPZone zone = SingletonRepository.getRPWorld().getZone("-1_semos_dungeon");
-	private final Point spawnPoint = new Point(38,43);
+	protected final StendhalRPZone zone = SingletonRepository.getRPWorld().getZone("-1_semos_dungeon");
+	protected final Point spawnPoint = new Point(20,40);
 	
 	private UweNpc leaderNpc;
 	private SpeakerNPC npc;
@@ -82,19 +88,20 @@ public class UweJourneyQuestOneNPC extends UweNpc{
 				new AndCondition(
 						new QuestStartedCondition(leaderNpc.npcName), 
 						new OrCondition(
-								new QuestInStateCondition(leaderNpc.npcName, "started"), 
-								new QuestInStateCondition(leaderNpc.npcName, "read"))),
+								new UweJourneyQuestStartedCondition(leaderNpc.npcName), 
+								new UweJourneyQuestReadCondition(leaderNpc.npcName))),
 				ConversationStates.ATTENDING, 
 				"Please help me fix the code", 
 				new MultipleActions(
-						new SetQuestAction(leaderNpc.npcName, "read"),
-						new UweFireQuestEventChatAction(new UweReorderQuestEvent("program components reordering quest", leaderNpc.npcName)))
+						new UweSetJourneyQuestReadChatAction(leaderNpc.npcName),
+						new UweFireQuestChatAction(leaderNpc.npcName))
+						
 				);
 		npc.add(ConversationStates.ATTENDING, 
 				ConversationPhrases.QUEST_MESSAGES, 
 				new OrCondition(
 						new QuestNotStartedCondition(leaderNpc.npcName),
-						new QuestInStateCondition(leaderNpc.npcName, "blank"), 
+						new UweJourneyQuestTotalCleanCondition(leaderNpc.npcName), 
 						new QuestInStateCondition(leaderNpc.npcName, "done")),
 				ConversationStates.ATTENDING, 
 				"Oh i have no quest in here currently", 

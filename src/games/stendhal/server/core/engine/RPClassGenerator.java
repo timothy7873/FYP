@@ -66,7 +66,7 @@ import games.stendhal.server.events.UweFlowIncQuestEvent;
 import games.stendhal.server.events.UweOutputIncQuestEvent;
 import games.stendhal.server.events.UweReorderQuestEvent;
 import games.stendhal.server.events.UweSelectOnDoingJourneyEvent;
-import games.stendhal.server.events.UweShowJourneyListEvent;
+import games.stendhal.server.events.UweShowNewJourneyListEvent;
 import games.stendhal.server.events.UweYesNoTestEvent;
 import games.stendhal.server.events.GlobalVisualEffectEvent;
 import games.stendhal.server.events.GroupChangeEvent;
@@ -125,8 +125,8 @@ public class RPClassGenerator {
 		if (!RPClass.hasRPClass(UweReorderQuestEvent.RPCLASS_NAME)) {
 			UweReorderQuestEvent.generateRPClass();
 		}
-		if (!RPClass.hasRPClass(UweShowJourneyListEvent.RPCLASS_NAME)) {
-			UweShowJourneyListEvent.generateRPClass();
+		if (!RPClass.hasRPClass(UweShowNewJourneyListEvent.RPCLASS_NAME)) {
+			UweShowNewJourneyListEvent.generateRPClass();
 		}
 		if (!RPClass.hasRPClass(UweSelectOnDoingJourneyEvent.RPCLASS_NAME)) {
 			UweSelectOnDoingJourneyEvent.generateRPClass();

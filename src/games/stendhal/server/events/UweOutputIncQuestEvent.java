@@ -13,7 +13,7 @@ import marauroa.common.game.Definition.Type;
 public class UweOutputIncQuestEvent extends RPEvent {
 	private static final String RPCLASS_NAME = "output_inc_quest";
 	private static final String TITLE = "title";
-	private static final String NPCID = "npcId";
+	private static final String JOURNEYROWID = "journeyRowId";
 	
 	/** the logger instance. */
 	private static final Logger logger = Logger.getLogger(UweOutputIncQuestEvent.class);
@@ -27,7 +27,7 @@ public class UweOutputIncQuestEvent extends RPEvent {
 		try {
 		final RPClass rpclass = new RPClass(RPCLASS_NAME);
 		rpclass.add(DefinitionClass.ATTRIBUTE, TITLE, Type.STRING, Definition.PRIVATE);
-		rpclass.add(DefinitionClass.ATTRIBUTE, NPCID, Type.STRING, Definition.PRIVATE);
+		rpclass.add(DefinitionClass.ATTRIBUTE, JOURNEYROWID, Type.STRING, Definition.PRIVATE);
 		} catch (final SyntaxException e) {
 			logger.error("cannot generateRPClass", e);
 		}
@@ -41,11 +41,11 @@ public class UweOutputIncQuestEvent extends RPEvent {
 	 * @param title title of image viewer
 	 * @param caption text to display along the image
 	 */
-	public UweOutputIncQuestEvent(String title, String npcId) {
+	public UweOutputIncQuestEvent(String title, String journeyRowId) {
 		super(RPCLASS_NAME);
 
 		super.put(TITLE, title);
-		super.put(NPCID, npcId);
+		super.put(JOURNEYROWID, journeyRowId);
 		
 	}
 

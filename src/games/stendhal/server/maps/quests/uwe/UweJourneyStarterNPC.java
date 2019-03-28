@@ -11,8 +11,8 @@ import games.stendhal.server.entity.npc.ConversationStates;
 import games.stendhal.server.entity.npc.NPCList;
 import games.stendhal.server.entity.npc.SpeakerNPC;
 import games.stendhal.server.entity.npc.action.FireEventChatAction;
-import games.stendhal.server.entity.npc.action.UweStartQuestAction;
-import games.stendhal.server.events.UweShowJourneyListEvent;
+import games.stendhal.server.entity.npc.action.UweInitQuestStateAction;
+import games.stendhal.server.events.UweShowNewJourneyListEvent;
 
 public class UweJourneyStarterNPC extends UweNpc{
 	public static String npcName = "UweJourneyStarterOneNPC";
@@ -55,14 +55,14 @@ public class UweJourneyStarterNPC extends UweNpc{
 				null, 
 				ConversationStates.ATTENDING,
 				"\nI am a journey NPC, I can provide #journey for you.", 
-				new UweStartQuestAction(npcName, "blank"));
+				new UweInitQuestStateAction(npcName));
 		//journey
 		npc.add(ConversationStates.ATTENDING, 
 				Arrays.asList("journey","j","jn"), 
 				null, 
 				ConversationStates.ATTENDING,
 				null, 
-				new FireEventChatAction(new UweShowJourneyListEvent(npcName, true)));
+				new FireEventChatAction(new UweShowNewJourneyListEvent(npcName, true)));
 		
 		//bye
 		npc.addGoodbye("Have fun!");
