@@ -13,16 +13,16 @@ import games.stendhal.server.maps.quests.uwe.UweNpc;
 import marauroa.common.game.RPEvent;
 
 public class UweFireQuestChatAction implements ChatAction{
-	private String npcId;
-	public UweFireQuestChatAction(String npcId)
+	private UweNpc npc;
+	public UweFireQuestChatAction(UweNpc npc)
 	{
-		this.npcId=npcId;
+		this.npc=npc;
 	}
 	public void fire(final Player player, final Sentence sentence, final EventRaiser npc) {
 		String journeyId="";
 		RPEvent event=null;
 		
-		String quest=player.getQuest(npcId);
+		String quest=player.getQuest(this.npc.getNpcName());
 		if(quest==null)
 			return;
 		String[] strs=quest.split("_");
@@ -30,7 +30,7 @@ public class UweFireQuestChatAction implements ChatAction{
 			return;
 		journeyId=strs[1];
 		
-		boolean questValid=ManagementAPI.api.touchQuest(player.getName(), journeyId);
+		boolean questValid=ManagementAPI.api.touchQuest(player.getName(), journeyId, this.npc.getArea());
 		if(!questValid)
 			return;
 		String type=ManagementAPI.api.getQuestType(player.getName(), journeyId);

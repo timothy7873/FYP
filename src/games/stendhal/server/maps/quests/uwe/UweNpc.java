@@ -5,7 +5,8 @@ import java.awt.Point;
 import games.stendhal.server.core.engine.StendhalRPZone;
 
 public class UweNpc implements LoadableContent{
-	private String npcName = "UweNpc";
+	protected String npcName = "UweNpc";
+	private String area="Java";
 	protected StendhalRPZone zone = null;//SingletonRepository.getRPWorld().getZone("-1_semos_dungeon");
 	protected Point spawnPoint = new Point(0,0);
 
@@ -24,4 +25,6 @@ public class UweNpc implements LoadableContent{
 	public void journeyChosenCallback() {}
 	public String getNpcName() {return this.npcName;}
 	public void setNpcName(String npcName) {this.npcName=npcName;}
+	public String getArea() {return area;}
+	public void setArea(String area) {this.area=area;}
 }

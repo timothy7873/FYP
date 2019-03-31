@@ -91,7 +91,7 @@ public class UweNPCPlacer extends AbstractQuest {
 		
 		//Set one
 		npc=new UweJourneyQuestOneProviderNPC("-1_semos_dungeon", new Point(20,33), 
-				"UweJourneyQuestOneProviderNPC","UweJourneyQuestOneNPC","UweJourneyQuestOneTestNPC","Java");
+				"UweJourneyQuestOneProviderNPC","UweJourneyQuestOneNPC","UweJourneyQuestOneTestNPC","int");
 		UweNpcInfo.npcs.put(npc.getNpcName(), npc);
 		content.add(npc);
 		content.add(new UweJourneyQuestOneNPC("-1_semos_dungeon", new Point(20,40), npc,"UweJourneyQuestOneNPC"));

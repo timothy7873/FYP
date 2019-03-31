@@ -96,7 +96,7 @@ public class UweJourneyQuestOneNPC extends UweNpc{
 				"Please help me fix the code", 
 				new MultipleActions(
 						new UweSetJourneyQuestReadChatAction(leaderNpc.getNpcName()),
-						new UweFireQuestChatAction(leaderNpc.getNpcName()))
+						new UweFireQuestChatAction(leaderNpc))
 				);
 		npc.add(ConversationStates.ATTENDING, 
 				ConversationPhrases.QUEST_MESSAGES, 

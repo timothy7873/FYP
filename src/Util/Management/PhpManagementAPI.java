@@ -362,12 +362,13 @@ public class PhpManagementAPI extends ManagementAPI{
 		
 		return (String)json.get("type");
 	}
-	public boolean touchQuest(String user, String journeyId)
+	public boolean touchQuest(String user, String journeyId, String subject)
 	{
 		QueryString qry = new QueryString();
 		
 		qry.add("characterName", user);
 		qry.add("journeyId", journeyId);
+		qry.add("subject", subject);
 		JSONObject json=getJson(site+"touchQuest.php?"+qry);
 		
 		return ((String)json.get("result")).equals("1");

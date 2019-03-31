@@ -11,7 +11,9 @@ import games.stendhal.server.entity.npc.ConversationStates;
 import games.stendhal.server.entity.npc.NPCList;
 import games.stendhal.server.entity.npc.SpeakerNPC;
 import games.stendhal.server.entity.npc.action.FireEventChatAction;
+import games.stendhal.server.entity.npc.action.MultipleActions;
 import games.stendhal.server.entity.npc.action.SetQuestAction;
+import games.stendhal.server.entity.npc.action.UweBonusRewardsChatAction;
 import games.stendhal.server.entity.npc.action.UweProvideHintAction;
 import games.stendhal.server.entity.npc.action.UweInitQuestStateAction;
 import games.stendhal.server.entity.npc.condition.AndCondition;
@@ -35,6 +37,9 @@ public class UweJourneyQuestOneProviderNPC extends UweNpc{
 	private String area;
 	
 	public String getNpcName() {return this.npcName;}
+	public void setNpcName(String npcName) {this.npcName=npcName;}
+	public String getArea() {return area;}
+	public void setArea(String area) {this.area=area;}
 	public UweJourneyQuestOneProviderNPC(String zoneName, Point pos, String npcId, String quester, String tester, String area)
 	{
 		this.zone=SingletonRepository.getRPWorld().getZone(zoneName);
@@ -135,7 +140,9 @@ public class UweJourneyQuestOneProviderNPC extends UweNpc{
 				new UweJourneyQuestDoneCondition(npcName), 
 				ConversationStates.ATTENDING, 
 				"Good job, you have complete the previous quest\nLet me give you some bonus reward\nWe are welcome if you want more #quest", 
-				new SetQuestAction(npcName, "blank"));
+				new MultipleActions(
+						new SetQuestAction(npcName, "blank"),
+						new UweBonusRewardsChatAction()));
 		
 		//quest doing
 		npc.add(ConversationStates.ATTENDING, 
