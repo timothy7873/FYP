@@ -13,6 +13,7 @@ public class UweSelectJourneyAction implements ActionListener{
 		String journeyId=action.get("journeyId");
 		
 		UweNpcInfo.setNpcQuestStart(player, npcId, journeyId);
+		UweNpcInfo.callJourneySetected(npcId);
 	}
 	
 	public static void register() {

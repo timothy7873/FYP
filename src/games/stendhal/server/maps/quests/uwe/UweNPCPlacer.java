@@ -12,10 +12,12 @@
  ***************************************************************************/
 package games.stendhal.server.maps.quests.uwe;
 
+import java.awt.Point;
 import java.util.ArrayList;
 import java.util.LinkedList;
 import java.util.List;
 
+import Util.game.server.UweNpcInfo;
 import games.stendhal.server.entity.player.Player;
 import games.stendhal.server.maps.Region;
 import games.stendhal.server.maps.quests.AbstractQuest;
@@ -88,11 +90,20 @@ public class UweNPCPlacer extends AbstractQuest {
 		content.add(new UweJourneyStarterNPC());
 		
 		//Set one
-		npc=new UweJourneyQuestOneProviderNPC("UweJourneyQuestOneProviderNPC","UweJourneyQuestOneNPC","UweJourneyQuestOneTestNPC","Java");
-		//UweNpcInfo.npcs.put(npc.npcName, npc);
+		npc=new UweJourneyQuestOneProviderNPC("-1_semos_dungeon", new Point(20,33), 
+				"UweJourneyQuestOneProviderNPC","UweJourneyQuestOneNPC","UweJourneyQuestOneTestNPC","Java");
+		UweNpcInfo.npcs.put(npc.getNpcName(), npc);
 		content.add(npc);
-		content.add(new UweJourneyQuestOneNPC(npc,"UweJourneyQuestOneNPC"));
-		//content.add(new UweJavaTestNPC(npc.npcName));
+		content.add(new UweJourneyQuestOneNPC("-1_semos_dungeon", new Point(20,40), npc,"UweJourneyQuestOneNPC"));
+		content.add(new UweJourneyQuestOneTestNPC("-1_semos_dungeon", new Point(30,36), npc,"UweJourneyQuestOneTestNPC"));
+		
+		//Set two
+		npc=new UweJourneyQuestOneProviderNPC("-1_semos_dungeon", new Point(20,33), 
+				"UweJourneyQuestTwoProviderNPC","UweJourneyQuestTwoNPC","UweJourneyQuestTwoTestNPC","Java");
+		UweNpcInfo.npcs.put(npc.getNpcName(), npc);
+		content.add(npc);
+		content.add(new UweJourneyQuestOneNPC("-1_semos_dungeon", new Point(20,40), npc,"UweJourneyQuestTwoNPC"));
+		content.add(new UweJourneyQuestOneTestNPC("-1_semos_dungeon", new Point(30,36), npc,"UweJourneyQuestTwoTestNPC"));
 		
 		
 		

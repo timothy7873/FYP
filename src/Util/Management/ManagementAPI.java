@@ -4,10 +4,10 @@ public abstract class ManagementAPI {
 	public static ManagementAPI api=new PhpManagementAPI("http://127.0.0.1/fyp_php/");
 	//public static ManagementAPI api=new HardcodeManagementAPI();
 	
-	public abstract FlowIncQuest getLogicalQuestion(String user, String journeyId);
-	public abstract FlowIncQuest getSyntaxQuestion(String user, String journeyId);
-	public abstract TraceQuest getTraceQuestion(String user, String journeyId);
-	public abstract ReorderQuest getReorderQuestion(String user, String journeyId);
+	public abstract FlowIncQuest getLogicalQuestion(String user, String journeyRowId);
+	public abstract FlowIncQuest getSyntaxQuestion(String user, String journeyRowId);
+	public abstract TraceQuest getTraceQuestion(String user, String journeyRowId);
+	public abstract ReorderQuest getReorderQuestion(String user, String journeyRowId);
 	public abstract YesNoTest[] getYesNoTests(String npcId);
 	public abstract QuestHint getHint(String npcId, String user);
 	public abstract void setQuestStatus(String journeyRowId, String user, String status);
@@ -20,4 +20,5 @@ public abstract class ManagementAPI {
 	public abstract JourneyRow getJourneyRow(String user, String journeyId);
 	public abstract JourneyRow getJourneyRow(String journeyRowId);
 	public abstract String getQuestType(String user, String journeyId);
+	public abstract boolean touchQuest(String user, String journeyId);
 }

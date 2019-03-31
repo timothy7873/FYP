@@ -18,7 +18,7 @@ import games.stendhal.server.entity.npc.action.ExamineChatAction;
 
 public class UweCombinator implements LoadableContent{
 	private String npcName = "UweCombinator";
-	final StendhalRPZone zone = SingletonRepository.getRPWorld().getZone("int_semos_guard_house");
+	final StendhalRPZone zone = SingletonRepository.getRPWorld().getZone("-1_semos_dungeon");
 	private final Point pos=new Point(41,28);
 	
 	private SpeakerNPC npc;

@@ -30,10 +30,13 @@ public class UweFireQuestChatAction implements ChatAction{
 			return;
 		journeyId=strs[1];
 		
+		boolean questValid=ManagementAPI.api.touchQuest(player.getName(), journeyId);
+		if(!questValid)
+			return;
 		String type=ManagementAPI.api.getQuestType(player.getName(), journeyId);
 		JourneyRow jr=ManagementAPI.api.getJourneyRow(player.getName(), journeyId);
 		if(type.equals("Logic error"))
-			event=new UweFlowIncQuestEvent("logic", "Logical error fixing",jr.journeyRowId);
+			event=new UweFlowIncQuestEvent("logical", "Logical error fixing",jr.journeyRowId);
 		else if(type.equals("Syntax error"))
 			event=new UweFlowIncQuestEvent("syntax", "Syntax error fixing",jr.journeyRowId);
 		else if(type.equals("Tracing program"))

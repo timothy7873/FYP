@@ -15,7 +15,7 @@ public class HardcodeManagementAPI extends ManagementAPI{
 		hints.add(new QuestHint("java is good"));
 	}
 	
-	public FlowIncQuest getLogicalQuestion(String user, String journeyId)
+	public FlowIncQuest getLogicalQuestion(String user, String journeyRowId)
 	{
 		String code,out,exp,ans;
 		
@@ -38,9 +38,9 @@ public class HardcodeManagementAPI extends ManagementAPI{
 		
 		return new FlowIncQuest(code,out,exp,ans,rewards);
 	}
-	public FlowIncQuest getSyntaxQuestion(String user, String journeyId){return null;}
-	public TraceQuest getTraceQuestion(String user, String journeyId){return null;}
-	public ReorderQuest getReorderQuestion(String user, String journeyId) 
+	public FlowIncQuest getSyntaxQuestion(String user, String journeyRowId){return null;}
+	public TraceQuest getTraceQuestion(String user, String journeyRowId){return null;}
+	public ReorderQuest getReorderQuestion(String user, String journeyRowId) 
 	{
 		Reward[] rewards={new Reward(null,0,0,0,0)};
 		
@@ -69,4 +69,5 @@ public class HardcodeManagementAPI extends ManagementAPI{
 	public Journey[] getOnDoingJourney(String user, String npcId) {return null;}
 	public JourneyRow getJourneyRow(String user, String journeyId) {return null;}
 	public JourneyRow getJourneyRow(String journeyRowId) {return null;}
+	public boolean touchQuest(String user, String journeyId) {return false;}
 }

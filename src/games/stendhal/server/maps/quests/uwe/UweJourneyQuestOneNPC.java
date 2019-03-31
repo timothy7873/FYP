@@ -24,19 +24,21 @@ import games.stendhal.server.entity.npc.condition.QuestStartedCondition;
 import games.stendhal.server.entity.npc.condition.UweJourneyQuestTotalCleanCondition;
 import games.stendhal.server.entity.npc.condition.UweJourneyQuestReadCondition;
 import games.stendhal.server.entity.npc.condition.UweJourneyQuestStartedCondition;
-import games.stendhal.server.events.UweReorderQuestEvent;
 
 public class UweJourneyQuestOneNPC extends UweNpc{
-	private String npcName = "UweReorderQuestNPC";
+	private String npcName = "UweJourneyQuestOneNPC";
 	//private final StendhalRPZone zone = SingletonRepository.getRPWorld().getZone("int_semos_guard_house");
-	protected final StendhalRPZone zone = SingletonRepository.getRPWorld().getZone("-1_semos_dungeon");
-	protected final Point spawnPoint = new Point(20,40);
+	protected StendhalRPZone zone = SingletonRepository.getRPWorld().getZone("-1_semos_dungeon");
+	protected Point spawnPoint = new Point(20,40);
 	
 	private UweNpc leaderNpc;
 	private SpeakerNPC npc;
 	
-	public UweJourneyQuestOneNPC(UweNpc leaderNpc,String npcId)
+	public String getNpcName() {return this.npcName;}
+	public UweJourneyQuestOneNPC(String zoneName, Point pos, UweNpc leaderNpc,String npcId)
 	{
+		this.zone=SingletonRepository.getRPWorld().getZone(zoneName);
+		this.spawnPoint=pos;
 		this.leaderNpc=leaderNpc;
 		this.npcName=npcId;
 	}
@@ -86,23 +88,22 @@ public class UweJourneyQuestOneNPC extends UweNpc{
 		npc.add(ConversationStates.ATTENDING, 
 				ConversationPhrases.QUEST_MESSAGES, 
 				new AndCondition(
-						new QuestStartedCondition(leaderNpc.npcName), 
+						new QuestStartedCondition(leaderNpc.getNpcName()), 
 						new OrCondition(
-								new UweJourneyQuestStartedCondition(leaderNpc.npcName), 
-								new UweJourneyQuestReadCondition(leaderNpc.npcName))),
+								new UweJourneyQuestStartedCondition(leaderNpc.getNpcName()), 
+								new UweJourneyQuestReadCondition(leaderNpc.getNpcName()))),
 				ConversationStates.ATTENDING, 
 				"Please help me fix the code", 
 				new MultipleActions(
-						new UweSetJourneyQuestReadChatAction(leaderNpc.npcName),
-						new UweFireQuestChatAction(leaderNpc.npcName))
-						
+						new UweSetJourneyQuestReadChatAction(leaderNpc.getNpcName()),
+						new UweFireQuestChatAction(leaderNpc.getNpcName()))
 				);
 		npc.add(ConversationStates.ATTENDING, 
 				ConversationPhrases.QUEST_MESSAGES, 
 				new OrCondition(
-						new QuestNotStartedCondition(leaderNpc.npcName),
-						new UweJourneyQuestTotalCleanCondition(leaderNpc.npcName), 
-						new QuestInStateCondition(leaderNpc.npcName, "done")),
+						new QuestNotStartedCondition(leaderNpc.getNpcName()),
+						new UweJourneyQuestTotalCleanCondition(leaderNpc.getNpcName()), 
+						new QuestInStateCondition(leaderNpc.getNpcName(), "done")),
 				ConversationStates.ATTENDING, 
 				"Oh i have no quest in here currently", 
 				null);

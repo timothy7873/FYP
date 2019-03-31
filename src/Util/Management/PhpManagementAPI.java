@@ -23,12 +23,12 @@ public class PhpManagementAPI extends ManagementAPI{
 	}
 	
 	//copmmon read
-	public FlowIncQuest getLogicalQuestion(String user, String journeyId)
+	public FlowIncQuest getLogicalQuestion(String user, String journeyRowId)
 	{
 		QueryString qry = new QueryString();
 		
 		qry.add("characterName", user);
-		qry.add("journeyId", "journeyId");
+		qry.add("journeyRowId", journeyRowId);
 		JSONObject json=getJson(site+"getQuest.php?"+qry);
 		if(json==null)
 		{
@@ -76,9 +76,9 @@ public class PhpManagementAPI extends ManagementAPI{
 	{
 		QueryString qry = new QueryString();
 		
-		qry.add("journeyRowId", journeyRowId);
 		qry.add("characterName", user);
-		JSONObject json=getJson(site+"outputQuestion.php?"+qry);
+		qry.add("journeyRowId", journeyRowId);
+		JSONObject json=getJson(site+"getQuest.php?"+qry);
 		if(json==null)
 		{
 			return null;
@@ -121,14 +121,13 @@ public class PhpManagementAPI extends ManagementAPI{
 		
 		return new FlowIncQuest(code, curout, expout, ans, (Reward[])rewards.toArray(new Reward[0]));
 	}
-	public TraceQuest getTraceQuestion(String user, String journeyId) 
+	public TraceQuest getTraceQuestion(String user, String journeyRowId) 
 	{
 		QueryString qry = new QueryString();
 		
-		qry.add("npcId", npcId);
 		qry.add("characterName", user);
-		qry.add("questType", "Tracing program");
-		JSONObject json=getJson(site+"outputQuestion.php?"+qry);
+		qry.add("journeyRowId", journeyRowId);
+		JSONObject json=getJson(site+"getQuest.php?"+qry);
 		if(json==null)
 		{
 			return null;
@@ -167,14 +166,13 @@ public class PhpManagementAPI extends ManagementAPI{
 		
 		return new TraceQuest(code, curout, ans, (Reward[])rewards.toArray(new Reward[0]));
 	}
-	public ReorderQuest getReorderQuestion(String user, String journeyId)
+	public ReorderQuest getReorderQuestion(String user, String journeyRowId)
 	{
 		QueryString qry = new QueryString();
 		
-		qry.add("npcId", npcId);
 		qry.add("characterName", user);
-		qry.add("questType", "Reorder");
-		JSONObject json=getJson(site+"outputQuestion.php?"+qry);
+		qry.add("journeyRowId", journeyRowId);
+		JSONObject json=getJson(site+"getQuest.php?"+qry);
 		if(json==null)
 		{
 			return null;
@@ -362,8 +360,19 @@ public class PhpManagementAPI extends ManagementAPI{
 		qry.add("journeyId", journeyId);
 		JSONObject json=getJson(site+"getQuestType.php?"+qry);
 		
-		return (String)json.get("result");
+		return (String)json.get("type");
 	}
+	public boolean touchQuest(String user, String journeyId)
+	{
+		QueryString qry = new QueryString();
+		
+		qry.add("characterName", user);
+		qry.add("journeyId", journeyId);
+		JSONObject json=getJson(site+"touchQuest.php?"+qry);
+		
+		return ((String)json.get("result")).equals("1");
+	}
+	
 	
 	//lib
 	private JSONObject getJson(String urlStr)

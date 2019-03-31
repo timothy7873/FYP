@@ -132,7 +132,7 @@ public class UweYesNoTestViewerViewPanel extends JComponent implements CloseList
 			qindex++;
 			if(qindex>=ans.length)
 			{
-				JOptionPane.showMessageDialog(null, "You have done the test and you suppose to be ready for the quest about java.", "Done", JOptionPane.INFORMATION_MESSAGE);
+				JOptionPane.showMessageDialog(null, "You have done the test and you suppose to be ready for the quest.", "Done", JOptionPane.INFORMATION_MESSAGE);
 				self.window.closeButton.doClick();
 			}
 			else

@@ -16,33 +16,39 @@ import games.stendhal.server.entity.npc.action.UweProvideHintAction;
 import games.stendhal.server.entity.npc.action.UweInitQuestStateAction;
 import games.stendhal.server.entity.npc.condition.AndCondition;
 import games.stendhal.server.entity.npc.condition.NotCondition;
-import games.stendhal.server.entity.npc.condition.QuestInStateCondition;
-import games.stendhal.server.entity.npc.condition.QuestStartedCondition;
 import games.stendhal.server.entity.npc.condition.UweHasJourneyQuestCondition;
 import games.stendhal.server.entity.npc.condition.UweJourneyQuestDoneCondition;
 import games.stendhal.server.entity.npc.condition.UweJourneyQuestTotalCleanCondition;
 import games.stendhal.server.entity.npc.condition.UweJourneyQuestReadCondition;
+import games.stendhal.server.entity.npc.condition.UweJourneyQuestStartedCondition;
 import games.stendhal.server.entity.npc.condition.UweYesNoTestValidCondition;
 import games.stendhal.server.events.UweSelectOnDoingJourneyEvent;
 
 public class UweJourneyQuestOneProviderNPC extends UweNpc{
-	public String npcName = "UweJourneyQuestOne";
-	protected final StendhalRPZone zone = SingletonRepository.getRPWorld().getZone("-1_semos_dungeon");
-	protected final Point spawnPoint = new Point(20,33);
+	private String npcName = "UweJourneyQuestOneProviderNPC";
+	protected StendhalRPZone zone = SingletonRepository.getRPWorld().getZone("-1_semos_dungeon");
+	protected Point spawnPoint = new Point(20,33);
 	
 	private SpeakerNPC npc;
 	private String quester;
 	private String tester;
 	private String area;
 	
-	public UweJourneyQuestOneProviderNPC(String npcId, String quester, String tester, String area)
+	public String getNpcName() {return this.npcName;}
+	public UweJourneyQuestOneProviderNPC(String zoneName, Point pos, String npcId, String quester, String tester, String area)
 	{
+		this.zone=SingletonRepository.getRPWorld().getZone(zoneName);
+		this.spawnPoint=pos;
 		this.npcName=npcId;
 		this.quester=quester;
 		this.tester=tester;
 		this.area=area;
 	}
 	
+	public void journeyChosenCallback()
+	{
+		npc.say("Please go find #"+quester+" and get the quest about "+area);
+	}
 	@Override
 	public void addToWorld() {
 		//removeNPC(npcName);
@@ -134,7 +140,7 @@ public class UweJourneyQuestOneProviderNPC extends UweNpc{
 		//quest doing
 		npc.add(ConversationStates.ATTENDING, 
 				Arrays.asList("quest","q"), 
-				new UweJourneyQuestReadCondition(npcName), 
+				new UweJourneyQuestStartedCondition(npcName), 
 				ConversationStates.ATTENDING, 
 				"Please go find #"+quester+" and get the quest about java code", 
 				null);
