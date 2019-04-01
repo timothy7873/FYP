@@ -99,13 +99,19 @@ public class UweNPCPlacer extends AbstractQuest {
 		
 		//Set two
 		npc=new UweJourneyQuestOneProviderNPC("-1_semos_dungeon", new Point(20,33), 
-				"UweJourneyQuestTwoProviderNPC","UweJourneyQuestTwoNPC","UweJourneyQuestTwoTestNPC","Java");
+				"UweJourneyQuestTwoProviderNPC","UweJourneyQuestTwoNPC","UweJourneyQuestTwoTestNPC","operator");
 		UweNpcInfo.npcs.put(npc.getNpcName(), npc);
 		content.add(npc);
 		content.add(new UweJourneyQuestOneNPC("-1_semos_dungeon", new Point(20,40), npc,"UweJourneyQuestTwoNPC"));
 		content.add(new UweJourneyQuestOneTestNPC("-1_semos_dungeon", new Point(30,36), npc,"UweJourneyQuestTwoTestNPC"));
 		
-		
+		//Set three
+		npc=new UweJourneyQuestOneProviderNPC("-1_semos_dungeon", new Point(20,33), 
+				"UweJourneyQuestTwoProviderNPC","UweJourneyQuestTwoNPC","UweJourneyQuestTwoTestNPC","operator");
+		UweNpcInfo.npcs.put(npc.getNpcName(), npc);
+		content.add(npc);
+		content.add(new UweJourneyQuestOneNPC("-1_semos_dungeon", new Point(20,40), npc,"UweJourneyQuestTwoNPC"));
+		content.add(new UweJourneyQuestOneTestNPC("-1_semos_dungeon", new Point(30,36), npc,"UweJourneyQuestTwoTestNPC"));
 		
 		
 //		content.add(new DadNPC());
