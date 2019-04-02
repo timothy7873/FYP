@@ -53,7 +53,7 @@ public class UweJourneyQuestOneProviderNPC extends UweNpc{
 	
 	public void journeyChosenCallback()
 	{
-		npc.say("Please go find #"+quester+" and get the quest about "+area);
+		npc.say("Please go find #"+quester+" and get the quest about "+area+"\nAfter that, go back and find me.");
 	}
 	@Override
 	public void addToWorld() {

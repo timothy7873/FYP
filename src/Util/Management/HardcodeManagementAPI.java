@@ -70,4 +70,5 @@ public class HardcodeManagementAPI extends ManagementAPI{
 	public JourneyRow getJourneyRow(String user, String journeyId) {return null;}
 	public JourneyRow getJourneyRow(String journeyRowId) {return null;}
 	public boolean touchQuest(String user, String journeyId, String subject) {return false;}
+	public boolean nextJourneyRow(String user, String journeyId) {return false;}
 }

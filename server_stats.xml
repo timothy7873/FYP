@@ -1,32 +1,30 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<statistics time="1554194078">
-  <uptime value="1701.831"/>
-  <memory total="92160" used="55786"/>
-<attrib name="Transfer content" value="2" />
-<attrib name="Transfer content cache" value="15" />
-<attrib name="Bytes recv" value="17721" />
+<statistics time="1554196458">
+  <uptime value="1222.994"/>
+  <memory total="92672" used="55218"/>
+<attrib name="Transfer content" value="1" />
+<attrib name="Transfer content cache" value="8" />
+<attrib name="Bytes recv" value="8451" />
 <attrib name="Killed rat" value="1" />
-<attrib name="Actions UweReturnItem" value="2" />
-<attrib name="Message send" value="1051" />
-<attrib name="Actions stop" value="23" />
-<attrib name="Actions added" value="219" />
+<attrib name="Actions UweReturnItem" value="1" />
+<attrib name="Message send" value="1055" />
+<attrib name="Actions stop" value="9" />
+<attrib name="Actions added" value="88" />
 <attrib name="Players timeout" value="0" />
-<attrib name="Message recv" value="357" />
-<attrib name="Actions UweQuestSubmit" value="2" />
-<attrib name="Objects now" value="5253" />
-<attrib name="Actions invalid" value="26" />
+<attrib name="Message recv" value="199" />
+<attrib name="Actions UweQuestSubmit" value="1" />
+<attrib name="Objects now" value="5307" />
+<attrib name="Actions invalid" value="18" />
 <attrib name="Ips online" value="1" />
-<attrib name="Perceptions DELTA" value="1837" />
-<attrib name="Actions move" value="146" />
-<attrib name="Actions equip" value="15" />
-<attrib name="Bytes send" value="130481" />
+<attrib name="Perceptions DELTA" value="3718" />
+<attrib name="Actions move" value="48" />
+<attrib name="Actions equip" value="10" />
+<attrib name="Bytes send" value="123977" />
 <attrib name="Players logged" value="1" />
-<attrib name="Perceptions SYNC" value="2" />
-<attrib name="Actions displace" value="1" />
+<attrib name="Perceptions SYNC" value="1" />
 <attrib name="Players online" value="0" />
 <attrib name="Players login" value="1" />
-<attrib name="Tranfer content size" value="268" />
+<attrib name="Tranfer content size" value="142" />
 <attrib name="Players logout" value="0" />
-<attrib name="Actions drop" value="2" />
-<attrib name="Actions UweSelectJourney" value="2" />
+<attrib name="Actions UweSelectJourney" value="1" />
 </statistics>

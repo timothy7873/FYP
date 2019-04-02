@@ -21,4 +21,5 @@ public abstract class ManagementAPI {
 	public abstract JourneyRow getJourneyRow(String journeyRowId);
 	public abstract String getQuestType(String user, String journeyId);
 	public abstract boolean touchQuest(String user, String journeyId, String subject);
+	public abstract boolean nextJourneyRow(String user, String journeyId);
 }

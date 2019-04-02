@@ -19,12 +19,16 @@ public class UweQuestCompleteChatAction implements ChatAction{
 	{
 		try
 		{
+			//perform after text
 			String quest=player.getQuest(npcId);
-			String journeyRowId=quest.substring(5, quest.length()-5);
+			String journeyRowId=quest.substring(5, quest.length());
 			JourneyRow jr=ManagementAPI.api.getJourneyRow(journeyRowId);
 			
 			player.addEvent(new UweSpeakTextEvent(jr.speakAfter));
 			player.notifyWorldAboutChanges();
+			
+			//add next journeyrow record
+			
 		}
 		catch(Exception e) {}
 		

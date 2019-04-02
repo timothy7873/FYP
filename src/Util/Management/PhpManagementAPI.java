@@ -373,6 +373,16 @@ public class PhpManagementAPI extends ManagementAPI{
 		
 		return ((String)json.get("result")).equals("1");
 	}
+	public boolean nextJourneyRow(String user, String journeyId)
+	{
+		QueryString qry = new QueryString();
+		
+		qry.add("characterName", user);
+		qry.add("journeyId", journeyId);
+		JSONObject json=getJson(site+"nextJourneyRow.php?"+qry);
+		
+		return ((String)json.get("result")).equals("1");
+	}
 	
 	
 	//lib
