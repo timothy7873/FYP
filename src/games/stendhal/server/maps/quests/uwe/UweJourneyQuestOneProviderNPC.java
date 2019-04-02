@@ -15,6 +15,7 @@ import games.stendhal.server.entity.npc.action.MultipleActions;
 import games.stendhal.server.entity.npc.action.SetQuestAction;
 import games.stendhal.server.entity.npc.action.UweBonusRewardsChatAction;
 import games.stendhal.server.entity.npc.action.UweProvideHintAction;
+import games.stendhal.server.entity.npc.action.UweQuestCompleteChatAction;
 import games.stendhal.server.entity.npc.action.UweInitQuestStateAction;
 import games.stendhal.server.entity.npc.condition.AndCondition;
 import games.stendhal.server.entity.npc.condition.NotCondition;
@@ -141,8 +142,10 @@ public class UweJourneyQuestOneProviderNPC extends UweNpc{
 				ConversationStates.ATTENDING, 
 				"Good job, you have complete the previous quest\nLet me give you some bonus reward\nWe are welcome if you want more #quest", 
 				new MultipleActions(
+						new UweQuestCompleteChatAction(npcName),
 						new SetQuestAction(npcName, "blank"),
-						new UweBonusRewardsChatAction()));
+						new UweBonusRewardsChatAction()
+						));
 		
 		//quest doing
 		npc.add(ConversationStates.ATTENDING, 

@@ -98,21 +98,21 @@ public class UweNPCPlacer extends AbstractQuest {
 		content.add(new UweJourneyQuestOneTestNPC("-1_semos_dungeon", new Point(30,36), npc,"UweJourneyQuestOneTestNPC"));
 		
 		//Set two
-		npc=new UweJourneyQuestOneProviderNPC("-1_semos_dungeon", new Point(20,33), 
+		npc=new UweJourneyQuestOneProviderNPC("-1_semos_dungeon", new Point(14,9), 
 				"UweJourneyQuestTwoProviderNPC","UweJourneyQuestTwoNPC","UweJourneyQuestTwoTestNPC","operator");
 		UweNpcInfo.npcs.put(npc.getNpcName(), npc);
 		content.add(npc);
-		content.add(new UweJourneyQuestOneNPC("-1_semos_dungeon", new Point(20,40), npc,"UweJourneyQuestTwoNPC"));
-		content.add(new UweJourneyQuestOneTestNPC("-1_semos_dungeon", new Point(30,36), npc,"UweJourneyQuestTwoTestNPC"));
+		content.add(new UweJourneyQuestOneNPC("-1_semos_dungeon", new Point(15,16), npc,"UweJourneyQuestTwoNPC"));
+		content.add(new UweJourneyQuestOneTestNPC("-1_semos_dungeon", new Point(20,10), npc,"UweJourneyQuestTwoTestNPC"));
 		
 		//Set three
-		npc=new UweJourneyQuestOneProviderNPC("-1_semos_dungeon", new Point(20,33), 
-				"UweJourneyQuestTwoProviderNPC","UweJourneyQuestTwoNPC","UweJourneyQuestTwoTestNPC","operator");
+		npc=new UweJourneyQuestOneProviderNPC("-1_semos_dungeon", new Point(16,51), 
+				"UweJourneyQuestThreeProviderNPC","UweJourneyQuestThreeNPC","UweJourneyQuestThreeTestNPC","String");
 		UweNpcInfo.npcs.put(npc.getNpcName(), npc);
 		content.add(npc);
-		content.add(new UweJourneyQuestOneNPC("-1_semos_dungeon", new Point(20,40), npc,"UweJourneyQuestTwoNPC"));
-		content.add(new UweJourneyQuestOneTestNPC("-1_semos_dungeon", new Point(30,36), npc,"UweJourneyQuestTwoTestNPC"));
-		
+		content.add(new UweJourneyQuestOneNPC("-1_semos_dungeon", new Point(16,59), npc,"UweJourneyQuestThreeNPC"));
+		content.add(new UweJourneyQuestOneTestNPC("-1_semos_dungeon", new Point(25,52), npc,"UweJourneyQuestThreeTestNPC"));
+
 		
 //		content.add(new DadNPC());
 //		content.add(new SoldierNPCs());

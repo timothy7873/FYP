@@ -67,6 +67,7 @@ import games.stendhal.server.events.UweOutputIncQuestEvent;
 import games.stendhal.server.events.UweReorderQuestEvent;
 import games.stendhal.server.events.UweSelectOnDoingJourneyEvent;
 import games.stendhal.server.events.UweShowNewJourneyListEvent;
+import games.stendhal.server.events.UweSpeakTextEvent;
 import games.stendhal.server.events.UweYesNoTestEvent;
 import games.stendhal.server.events.GlobalVisualEffectEvent;
 import games.stendhal.server.events.GroupChangeEvent;
@@ -130,6 +131,9 @@ public class RPClassGenerator {
 		}
 		if (!RPClass.hasRPClass(UweSelectOnDoingJourneyEvent.RPCLASS_NAME)) {
 			UweSelectOnDoingJourneyEvent.generateRPClass();
+		}
+		if (!RPClass.hasRPClass(UweSpeakTextEvent.RPCLASS_NAME)) {
+			UweSpeakTextEvent.generateRPClass();
 		}
 
 		// Entity sub-classes

@@ -21,9 +21,9 @@ public class UweNpcInfo {
 	{
 		player.setQuest(npcId, "read_"+journeyId);
 	}
-	public static void setNpcQuestDone(Player player, String npcId)
+	public static void setNpcQuestDone(Player player, String npcId, String journeyRowId)
 	{
-		player.setQuest(npcId, "done");
+		player.setQuest(npcId, "done_"+journeyRowId);
 	}
 	
 	public static void callJourneySetected(String npcId)

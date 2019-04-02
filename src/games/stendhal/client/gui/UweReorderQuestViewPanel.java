@@ -41,6 +41,8 @@ import games.stendhal.client.entity.IEntity;
 import games.stendhal.client.entity.User;
 import games.stendhal.client.entity.factory.EntityMap;
 import games.stendhal.client.gui.InternalWindow.CloseListener;
+import games.stendhal.client.gui.chatlog.HeaderLessEventLine;
+import games.stendhal.common.NotificationType;
 import marauroa.common.game.RPAction;
 import marauroa.common.game.RPObject;
 import marauroa.common.game.RPObject.ID;

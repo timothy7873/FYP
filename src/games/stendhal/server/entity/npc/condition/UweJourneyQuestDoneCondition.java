@@ -19,7 +19,8 @@ public class UweJourneyQuestDoneCondition implements ChatCondition{
 		
 		if(!player.hasQuest(npcId))
 			return false;
+		String quest=player.getQuest(npcId);
 		
-		return player.getQuest(npcId).equals(state);
+		return quest.length()>state.length() && quest.substring(0, state.length()).equals(state);
 	}
 }

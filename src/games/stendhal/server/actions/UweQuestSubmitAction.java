@@ -9,6 +9,7 @@ import java.util.List;
 import Util.Management.JourneyRow;
 import Util.Management.ManagementAPI;
 import Util.Management.Reward;
+import Util.game.server.UweNpcInfo;
 import games.stendhal.server.core.engine.SingletonRepository;
 import games.stendhal.server.core.rule.EntityManager;
 import games.stendhal.server.entity.item.Item;
@@ -86,7 +87,7 @@ public class UweQuestSubmitAction implements ActionListener{
 			if(item!=null)
 				submition.remove(item.getID());
 		}
-		player.setQuest(jr.npcId, "done");
+		UweNpcInfo.setNpcQuestDone(player, jr.npcId, journeyRowId);
 		
 		player.updateItemAtkDef();
 		player.update();

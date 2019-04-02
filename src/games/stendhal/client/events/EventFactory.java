@@ -151,6 +151,10 @@ class EventFactory {
 		{
 			event=new UweSelectOnDoingJourneyEvent();
 		}
+		else if(name.equals("speak_text"))
+		{
+			event=new UweSpeakTextEvent();
+		}
 
 		if (event != null) {
 			event.init(entity, rpevent);
