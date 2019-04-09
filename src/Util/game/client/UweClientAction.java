@@ -35,7 +35,8 @@ public class UweClientAction {
 			if(rewards[i].count>0 && rewards[i].itemName!=null)
 				items+=rewards[i].itemName+","+rewards[i].count+"\n";
 		}
-		items=items.substring(0,items.length()-1);
+		if(items.length()>0)
+			items=items.substring(0,items.length()-1);
 		
 		//send
 		RPAction action = new RPAction();

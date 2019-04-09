@@ -1,5 +1,6 @@
 package games.stendhal.server.entity.npc.action;
 
+import Util.Management.Journey;
 import Util.Management.JourneyRow;
 import Util.Management.ManagementAPI;
 import games.stendhal.common.parser.Sentence;
@@ -27,8 +28,20 @@ public class UweQuestCompleteChatAction implements ChatAction{
 			player.addEvent(new UweSpeakTextEvent(jr.speakAfter));
 			player.notifyWorldAboutChanges();
 			
-			//add next journeyrow record
-			
+			//check has next journeyrow record
+			if(ManagementAPI.api.hasNextJourneyRow(player.getName(), jr.journeyId))
+			{
+				//add next journey row record
+				ManagementAPI.api.nextJourneyRow(player.getName(), jr.journeyId);
+			}
+			else
+			{
+				//perform ending
+				Journey j=ManagementAPI.api.getJourney(jr.journeyId);
+				
+				player.addEvent(new UweSpeakTextEvent(j.ending));
+				player.notifyWorldAboutChanges();
+			}
 		}
 		catch(Exception e) {}
 		

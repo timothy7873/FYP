@@ -373,17 +373,40 @@ public class PhpManagementAPI extends ManagementAPI{
 		
 		return ((String)json.get("result")).equals("1");
 	}
-	public boolean nextJourneyRow(String user, String journeyId)
+	public void nextJourneyRow(String user, String journeyId)
 	{
 		QueryString qry = new QueryString();
 		
 		qry.add("characterName", user);
 		qry.add("journeyId", journeyId);
-		JSONObject json=getJson(site+"nextJourneyRow.php?"+qry);
+		doUrl(site+"nextJourneyRow.php?"+qry);
+	}
+	public boolean hasNextJourneyRow(String user, String journeyId)
+	{
+		QueryString qry = new QueryString();
+				
+		qry.add("characterName", user);
+		qry.add("journeyId", journeyId);
+		JSONObject json=getJson(site+"hasNextJourneyRow.php?"+qry);
 		
 		return ((String)json.get("result")).equals("1");
 	}
-	
+	public Journey getJourney(String journeyId)
+	{
+		Journey rs=null;
+		QueryString qry = new QueryString();
+		
+		qry.add("journeyId", journeyId);
+		JSONObject json=getJson(site+"getJourneyWithId.php?"+qry);
+		
+		String id=(String)json.get("id");
+		String name=(String)json.get("name");
+		String des=(String)json.get("des");
+		String begin=(String)json.get("begin");
+		String end=(String)json.get("end");
+		
+		return new Journey(id,name,des,begin,end);
+	}
 	
 	//lib
 	private JSONObject getJson(String urlStr)

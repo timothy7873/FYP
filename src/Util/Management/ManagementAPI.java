@@ -1,7 +1,7 @@
 package Util.Management;
 
 public abstract class ManagementAPI {
-	public static ManagementAPI api=new PhpManagementAPI("http://127.0.0.1:8888/fyp_php/API/");
+	public static ManagementAPI api=new PhpManagementAPI("http://127.0.0.1/fyp_php/API/");
 	//public static ManagementAPI api=new HardcodeManagementAPI();
 	
 	public abstract FlowIncQuest getLogicalQuestion(String user, String journeyRowId);
@@ -21,5 +21,7 @@ public abstract class ManagementAPI {
 	public abstract JourneyRow getJourneyRow(String journeyRowId);
 	public abstract String getQuestType(String user, String journeyId);
 	public abstract boolean touchQuest(String user, String journeyId, String subject);
-	public abstract boolean nextJourneyRow(String user, String journeyId);
+	public abstract void nextJourneyRow(String user, String journeyId);
+	public abstract boolean hasNextJourneyRow(String user, String journeyId);
+	public abstract Journey getJourney(String journeyId);
 }
