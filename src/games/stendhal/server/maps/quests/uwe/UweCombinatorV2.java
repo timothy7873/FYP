@@ -7,26 +7,21 @@ import games.stendhal.common.Direction;
 import games.stendhal.server.core.engine.SingletonRepository;
 import games.stendhal.server.core.engine.StendhalRPZone;
 import games.stendhal.server.entity.CollisionAction;
-import games.stendhal.server.entity.item.CombinatorCorpse;
-import games.stendhal.server.entity.item.Corpse;
 import games.stendhal.server.entity.npc.ConversationPhrases;
 import games.stendhal.server.entity.npc.ConversationStates;
 import games.stendhal.server.entity.npc.NPCList;
 import games.stendhal.server.entity.npc.SpeakerNPC;
-import games.stendhal.server.entity.npc.action.CombinatorAction;
-import games.stendhal.server.entity.npc.action.ExamineChatAction;
-import games.stendhal.server.entity.npc.action.FireEventChatAction;
+import games.stendhal.server.entity.npc.action.UweFireQuestEventChatAction;
 import games.stendhal.server.events.UweCombinatorEvent;
 
-public class UweCombinator implements LoadableContent{
+public class UweCombinatorV2 implements LoadableContent{
 	private String npcName = "UweCombinator";
 	final StendhalRPZone zone = SingletonRepository.getRPWorld().getZone("-1_semos_dungeon");
 	private final Point pos=new Point(41,28);
 	
 	private SpeakerNPC npc;
-	private CombinatorCorpse corpse;
 	
-	public UweCombinator()
+	public UweCombinatorV2()
 	{}
 
 	private void buildConditions() {
@@ -69,9 +64,8 @@ public class UweCombinator implements LoadableContent{
 				Arrays.asList("combine","combinator","com","c"),
 				null, 
 				ConversationStates.ATTENDING, 
-				"Combination complete, enjoy! ",
-				//null
-				new CombinatorAction(npc, corpse)
+				null,
+				new UweFireQuestEventChatAction(new UweCombinatorEvent())
 		);
 		npc.addJob("I can provide items to power up yourself. ");
 		npc.addQuest("I don't have any quests for you, I am a combinator! ");
@@ -91,12 +85,6 @@ public class UweCombinator implements LoadableContent{
 		}
 		npc.getZone().remove(npc);
 	}
-	
-	private void createCorpse()
-	{
-		corpse=new CombinatorCorpse(pos.x+1,pos.y);
-		zone.add(corpse);
-	}
 
 	/**
 	 * removes Susi from her home in Ados and adds her to the Mine Towns.
@@ -110,7 +98,6 @@ public class UweCombinator implements LoadableContent{
 
 		//addDialog();
 		
-		createCorpse();
 		createNPC();
 		
 		addDialog();

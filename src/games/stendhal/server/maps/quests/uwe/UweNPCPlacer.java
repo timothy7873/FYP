@@ -60,7 +60,9 @@ public class UweNPCPlacer extends AbstractQuest {
 
 		//content.add(new UweConstantNPC());
 		
-		content.add(new UweCombinator());
+		//content.add(new UweCombinator());
+		content.add(new UweCombinatorV2());
+		
 		//content.add(new UweFillInBlankQuestNPC());
 		//content.add(new UweHelper());
 		

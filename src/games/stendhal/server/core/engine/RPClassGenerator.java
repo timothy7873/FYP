@@ -85,6 +85,7 @@ import games.stendhal.server.events.TestEvent;
 import games.stendhal.server.events.TextEvent;
 import games.stendhal.server.events.TradeStateChangeEvent;
 import games.stendhal.server.events.TransitionGraphEvent;
+import games.stendhal.server.events.UweCombinatorEvent;
 import games.stendhal.server.events.ViewChangeEvent;
 import marauroa.common.game.Definition.DefinitionClass;
 import marauroa.common.game.Definition.Type;
@@ -134,6 +135,9 @@ public class RPClassGenerator {
 		}
 		if (!RPClass.hasRPClass(UweSpeakTextEvent.RPCLASS_NAME)) {
 			UweSpeakTextEvent.generateRPClass();
+		}
+		if (!RPClass.hasRPClass(UweCombinatorEvent.RPCLASS_NAME)) {
+			UweCombinatorEvent.generateRPClass();
 		}
 
 		// Entity sub-classes

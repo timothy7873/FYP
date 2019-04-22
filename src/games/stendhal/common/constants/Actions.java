@@ -196,6 +196,7 @@ public final class Actions {
 	public final static String UWEQUESTSUBMIT = "UweQuestSubmit";
 	public final static String UWERETURNITEM = "UweReturnItem";
 	public final static String UWESELECTJOURNEY = "UweSelectJourney";
+	public final static String UWECOMBINE = "UweCombine";
 
 	private Actions() {
 		// hide constructor

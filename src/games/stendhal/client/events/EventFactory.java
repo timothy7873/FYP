@@ -155,6 +155,10 @@ class EventFactory {
 		{
 			event=new UweSpeakTextEvent();
 		}
+		else if(name.equals("combinator"))
+		{
+			event=new UweCombinatorEvent();
+		}
 
 		if (event != null) {
 			event.init(entity, rpevent);

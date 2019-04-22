@@ -58,5 +58,12 @@ public class UweClientAction {
 		action.put("journeyId", journeyId);
 		ClientSingletonRepository.getClientFramework().send(action);
 	}
+	public static void doCombine()
+	{
+		//send
+		RPAction action = new RPAction();
+		action.put("type", "UweCombine");
+		ClientSingletonRepository.getClientFramework().send(action);
+	}
 	
 }
