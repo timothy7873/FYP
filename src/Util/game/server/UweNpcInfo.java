@@ -33,4 +33,15 @@ public class UweNpcInfo {
 			return;
 		npc.journeyChosenCallback();
 	}
+	
+	public static String getJourneyIdFromNpc(Player player, String npcId)
+	{
+		String quest=player.getQuest(npcId);
+		if(quest.equals("blank"))
+			return null;
+		String[] infos=quest.split("_");
+		if(infos.length!=2)
+			return null;
+		return infos[1];
+	}
 }

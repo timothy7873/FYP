@@ -22,6 +22,7 @@ public class UweItemManager {
 	{
 		Item result;
 		result=new Item("blank","blank","blank",null);
+		//result=new Item("code","code","code",null);
 		//result=em.getItem("club");
 		
 		result.put("name", codeName);

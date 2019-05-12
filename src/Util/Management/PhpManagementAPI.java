@@ -229,11 +229,11 @@ public class PhpManagementAPI extends ManagementAPI{
 		
 		return (YesNoTest[])result.toArray(new YesNoTest[0]);
 	}
-	public QuestHint getHint(String npcId, String user) 
+	public QuestHint getHint(String user, String journeyId) 
 	{
 		QueryString qry = new QueryString();
 		
-		qry.add("npcId", npcId);
+		qry.add("journeyId", journeyId);
 		qry.add("characterName", user);
 		JSONObject json=getJson(site+"getHints.php?"+qry);
 		QuestHint rs=json==null?null:new QuestHint((String)json.get("hints"));

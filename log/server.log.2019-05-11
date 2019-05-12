@@ -1,0 +1,128 @@
+2019-05-11 22:52:03 INFO  [verManager] RPServerManager          ( 122) - Request (TIMEOUT) disconnection of Player /127.0.0.1
+2019-05-11 22:52:03 WARN  [verManager] RPServerManager          ( 207) - RP Disconnecting entry: PlayerEntry[clientid=2049669028][channel=Channel [internalChannel=java.nio.channels.SocketChannel[connected local=/127.0.0.1:32160 remote=/127.0.0.1:49382], address=/127.0.0.1:49382]][state=GAME_BEGIN][username=abcdef][character=abcdef][object defined=true]
+2019-05-11 22:52:03 INFO  [verManager] NIONetworkConnectionManager( 122) - NET Disconnecting /127.0.0.1:49382
+2019-05-11 22:52:03 INFO  [verManager] GameServerManager        ( 122) - GAME Disconnecting /127.0.0.1:49382
+2019-05-11 22:52:03 WARN  [verManager] RPServerManager          ( 207) - Turn duration overflow by 502 ms:  0 0 0 210 210 652 652 706 712 713 713 802
+2019-05-11 22:52:04 WARN  [verManager] RPServerManager          ( 207) - Turn duration overflow by 447 ms:  725 725 725 737 737 738 738 746 747 747 747 747
+2019-05-11 22:52:04 ERROR [mmandQueue] DBCommandQueueBackgroundThread(  67) [DelayedEventHandlerThread: games.stendhal.server.core.engine.dbcommand.SetOnlineStatusCommand@7123c259] - com.mysql.jdbc.exceptions.jdbc4.CommunicationsException: Communications link failure
+
+Last packet sent to the server was 87 ms ago.
+com.mysql.jdbc.exceptions.jdbc4.CommunicationsException: Communications link failure
+
+Last packet sent to the server was 87 ms ago.
+	at sun.reflect.NativeConstructorAccessorImpl.newInstance0(Native Method)
+	at sun.reflect.NativeConstructorAccessorImpl.newInstance(Unknown Source)
+	at sun.reflect.DelegatingConstructorAccessorImpl.newInstance(Unknown Source)
+	at java.lang.reflect.Constructor.newInstance(Unknown Source)
+	at com.mysql.jdbc.Util.handleNewInstance(Util.java:406)
+	at com.mysql.jdbc.SQLError.createCommunicationsException(SQLError.java:1074)
+	at com.mysql.jdbc.MysqlIO.reuseAndReadPacket(MysqlIO.java:2873)
+	at com.mysql.jdbc.MysqlIO.reuseAndReadPacket(MysqlIO.java:2763)
+	at com.mysql.jdbc.MysqlIO.checkErrorPacket(MysqlIO.java:3299)
+	at com.mysql.jdbc.MysqlIO.sendCommand(MysqlIO.java:1837)
+	at com.mysql.jdbc.MysqlIO.sqlQueryDirect(MysqlIO.java:1961)
+	at com.mysql.jdbc.ConnectionImpl.execSQL(ConnectionImpl.java:2537)
+	at com.mysql.jdbc.ConnectionImpl.execSQL(ConnectionImpl.java:2466)
+	at com.mysql.jdbc.StatementImpl.execute(StatementImpl.java:735)
+	at marauroa.server.db.adapter.AbstractDatabaseAdapter.execute(AbstractDatabaseAdapter.java:136)
+	at marauroa.server.db.DBTransaction.execute(DBTransaction.java:172)
+	at games.stendhal.server.core.engine.db.StendhalWebsiteDAO.setOnlineStatus(StendhalWebsiteDAO.java:71)
+	at games.stendhal.server.core.engine.dbcommand.SetOnlineStatusCommand.execute(SetOnlineStatusCommand.java:44)
+	at marauroa.server.db.command.DBCommandQueueBackgroundThread.executeDBAction(DBCommandQueueBackgroundThread.java:103)
+	at marauroa.server.db.command.DBCommandQueueBackgroundThread.processCommand(DBCommandQueueBackgroundThread.java:75)
+	at marauroa.server.db.command.DBCommandQueueBackgroundThread.run(DBCommandQueueBackgroundThread.java:49)
+	at java.lang.Thread.run(Unknown Source)
+Caused by: java.net.SocketException: Software caused connection abort: recv failed
+	at java.net.SocketInputStream.socketRead0(Native Method)
+	at java.net.SocketInputStream.socketRead(Unknown Source)
+	at java.net.SocketInputStream.read(Unknown Source)
+	at java.net.SocketInputStream.read(Unknown Source)
+	at com.mysql.jdbc.util.ReadAheadInputStream.fill(ReadAheadInputStream.java:113)
+	at com.mysql.jdbc.util.ReadAheadInputStream.readFromUnderlyingStreamIfNecessary(ReadAheadInputStream.java:160)
+	at com.mysql.jdbc.util.ReadAheadInputStream.read(ReadAheadInputStream.java:188)
+	at com.mysql.jdbc.MysqlIO.readFully(MysqlIO.java:2329)
+	at com.mysql.jdbc.MysqlIO.reuseAndReadPacket(MysqlIO.java:2774)
+	... 15 more
+2019-05-11 22:52:04 WARN  [mmandQueue] TransactionPool          ( 207) [DelayedEventHandlerThread: games.stendhal.server.core.engine.dbcommand.SetOnlineStatusCommand@7123c259] - Killing dead transaction marauroa.server.db.DBTransaction@34bde49d.
+2019-05-11 22:52:04 WARN  [mmandQueue] TransactionPool          ( 207) [DelayedEventHandlerThread: games.stendhal.server.core.engine.dbcommand.SetOnlineStatusCommand@7123c259] - Killing dead transaction marauroa.server.db.DBTransaction@3ce1e309.
+2019-05-11 22:52:04 WARN  [mmandQueue] TransactionPool          ( 207) [DelayedEventHandlerThread: games.stendhal.server.core.engine.dbcommand.SetOnlineStatusCommand@7123c259] - Killing dead transaction marauroa.server.db.DBTransaction@4b86805d.
+2019-05-11 22:52:04 WARN  [mmandQueue] DBCommandQueueBackgroundThread( 207) [DelayedEventHandlerThread: games.stendhal.server.core.engine.dbcommand.SetOnlineStatusCommand@7123c259] - Retrying DBCommand [DelayedEventHandlerThread: games.stendhal.server.core.engine.dbcommand.SetOnlineStatusCommand@7123c259]
+2019-05-11 22:52:04 INFO  [mmandQueue] AbstractDatabaseAdapter  ( 122) [DelayedEventHandlerThread: games.stendhal.server.core.engine.dbcommand.SetOnlineStatusCommand@7123c259] - Connected to jdbc:mysql://localhost/marauroa127a?useUnicode=yes&characterEncoding=UTF-8: MySQL 5.6.34-log with driver MySQL-AB JDBC Driver mysql-connector-java-5.1.5 ( Revision: ${svn.Revision} )
+2019-05-11 22:52:05 INFO  [mmandQueue] AbstractDatabaseAdapter  ( 122) [DelayedEventHandlerThread: games.stendhal.server.core.engine.dbcommand.SetOnlineStatusCommand@7123c259] - Connected to jdbc:mysql://localhost/marauroa127a?useUnicode=yes&characterEncoding=UTF-8: MySQL 5.6.34-log with driver MySQL-AB JDBC Driver mysql-connector-java-5.1.5 ( Revision: ${svn.Revision} )
+2019-05-11 22:52:05 INFO  [mmandQueue] AbstractDatabaseAdapter  ( 122) [DelayedEventHandlerThread: games.stendhal.server.core.engine.dbcommand.SetOnlineStatusCommand@7123c259] - Connected to jdbc:mysql://localhost/marauroa127a?useUnicode=yes&characterEncoding=UTF-8: MySQL 5.6.34-log with driver MySQL-AB JDBC Driver mysql-connector-java-5.1.5 ( Revision: ${svn.Revision} )
+2019-05-11 22:52:05 INFO  [mmandQueue] AbstractDatabaseAdapter  ( 122) [DelayedEventHandlerThread: games.stendhal.server.core.engine.dbcommand.SetOnlineStatusCommand@7123c259] - Connected to jdbc:mysql://localhost/marauroa127a?useUnicode=yes&characterEncoding=UTF-8: MySQL 5.6.34-log with driver MySQL-AB JDBC Driver mysql-connector-java-5.1.5 ( Revision: ${svn.Revision} )
+2019-05-11 22:52:16 INFO  [marauroad ] Statistics               ( 122) - Total/Used memory: 80896/48546
+2019-05-11 22:53:16 INFO  [marauroad ] Statistics               ( 122) - Total/Used memory: 80896/53526
+2019-05-11 22:54:16 INFO  [marauroad ] Statistics               ( 122) - Total/Used memory: 80896/38209
+2019-05-11 22:55:16 INFO  [marauroad ] Statistics               ( 122) - Total/Used memory: 80896/43258
+2019-05-11 22:56:16 INFO  [marauroad ] Statistics               ( 122) - Total/Used memory: 80896/36913
+2019-05-11 22:57:16 INFO  [marauroad ] Statistics               ( 122) - Total/Used memory: 80896/42149
+2019-05-11 22:58:16 INFO  [marauroad ] Statistics               ( 122) - Total/Used memory: 80896/48098
+2019-05-11 22:59:16 INFO  [marauroad ] Statistics               ( 122) - Total/Used memory: 80896/53253
+2019-05-11 23:00:16 INFO  [marauroad ] Statistics               ( 122) - Total/Used memory: 80896/47779
+2019-05-11 23:01:16 INFO  [marauroad ] Statistics               ( 122) - Total/Used memory: 80896/52913
+2019-05-11 23:02:16 INFO  [marauroad ] Statistics               ( 122) - Total/Used memory: 80896/38215
+2019-05-11 23:03:16 INFO  [marauroad ] Statistics               ( 122) - Total/Used memory: 80896/43418
+2019-05-11 23:04:16 INFO  [marauroad ] Statistics               ( 122) - Total/Used memory: 80896/48298
+2019-05-11 23:04:40 INFO  [verManager] TeleporterBehaviour      ( 174) - Cannot place teleporting NPC Rose Leigh at 0_nalwor_forest_nw 71 93
+2019-05-11 23:05:16 INFO  [marauroad ] Statistics               ( 122) - Total/Used memory: 80896/42224
+2019-05-11 23:06:16 INFO  [marauroad ] Statistics               ( 122) - Total/Used memory: 80896/47384
+2019-05-11 23:07:16 INFO  [marauroad ] Statistics               ( 122) - Total/Used memory: 80896/52570
+2019-05-11 23:08:16 INFO  [marauroad ] Statistics               ( 122) - Total/Used memory: 80896/39043
+2019-05-11 23:09:16 INFO  [marauroad ] Statistics               ( 122) - Total/Used memory: 80896/47416
+2019-05-11 23:10:16 INFO  [marauroad ] Statistics               ( 122) - Total/Used memory: 80896/52570
+2019-05-11 23:11:16 INFO  [marauroad ] Statistics               ( 122) - Total/Used memory: 80896/37843
+2019-05-11 23:12:16 INFO  [marauroad ] Statistics               ( 122) - Total/Used memory: 80896/43069
+2019-05-11 23:13:16 INFO  [marauroad ] Statistics               ( 122) - Total/Used memory: 79872/48209
+2019-05-11 23:13:42 INFO  [verManager] TeleporterBehaviour      ( 174) - Cannot place teleporting NPC Rose Leigh at 0_kalavan_forest 96 69
+2019-05-11 23:14:16 INFO  [marauroad ] Statistics               ( 122) - Total/Used memory: 80384/55390
+2019-05-11 23:15:16 INFO  [marauroad ] Statistics               ( 122) - Total/Used memory: 80384/41484
+2019-05-11 23:16:16 INFO  [marauroad ] Statistics               ( 122) - Total/Used memory: 80384/47471
+2019-05-11 23:17:16 INFO  [marauroad ] Statistics               ( 122) - Total/Used memory: 80384/52593
+2019-05-11 23:18:12 INFO  [verManager] TeleporterBehaviour      ( 174) - Cannot place teleporting NPC Rose Leigh at 0_kalavan_forest_e 69 14
+2019-05-11 23:18:12 INFO  [verManager] TeleporterBehaviour      ( 174) - Cannot place teleporting NPC Rose Leigh at 0_amazon_island_sw 123 68
+2019-05-11 23:18:16 INFO  [marauroad ] Statistics               ( 122) - Total/Used memory: 80384/38668
+2019-05-11 23:19:16 INFO  [marauroad ] Statistics               ( 122) - Total/Used memory: 80384/43830
+2019-05-11 23:20:16 INFO  [marauroad ] Statistics               ( 122) - Total/Used memory: 80384/49053
+2019-05-11 23:21:16 INFO  [marauroad ] Statistics               ( 122) - Total/Used memory: 80384/53810
+2019-05-11 23:22:16 INFO  [marauroad ] Statistics               ( 122) - Total/Used memory: 80384/39065
+2019-05-11 23:23:16 INFO  [marauroad ] Statistics               ( 122) - Total/Used memory: 80384/44625
+2019-05-11 23:24:16 INFO  [marauroad ] Statistics               ( 122) - Total/Used memory: 79872/49846
+2019-05-11 23:25:16 INFO  [marauroad ] Statistics               ( 122) - Total/Used memory: 79872/54999
+2019-05-11 23:26:16 INFO  [marauroad ] Statistics               ( 122) - Total/Used memory: 79872/39861
+2019-05-11 23:27:16 INFO  [marauroad ] Statistics               ( 122) - Total/Used memory: 79872/45474
+2019-05-11 23:28:16 INFO  [marauroad ] Statistics               ( 122) - Total/Used memory: 79872/50647
+2019-05-11 23:29:16 INFO  [marauroad ] Statistics               ( 122) - Total/Used memory: 79872/55793
+2019-05-11 23:30:16 INFO  [marauroad ] Statistics               ( 122) - Total/Used memory: 79872/41128
+2019-05-11 23:31:16 INFO  [marauroad ] Statistics               ( 122) - Total/Used memory: 79872/46345
+2019-05-11 23:31:44 INFO  [verManager] TeleporterBehaviour      ( 174) - Cannot place teleporting NPC Mizuno at 0_ados_city_s 122 77
+2019-05-11 23:32:16 INFO  [marauroad ] Statistics               ( 122) - Total/Used memory: 79872/51802
+2019-05-11 23:33:16 INFO  [marauroad ] Statistics               ( 122) - Total/Used memory: 79872/36742
+2019-05-11 23:34:16 INFO  [marauroad ] Statistics               ( 122) - Total/Used memory: 79872/41936
+2019-05-11 23:35:16 INFO  [marauroad ] Statistics               ( 122) - Total/Used memory: 79872/47160
+2019-05-11 23:36:16 INFO  [marauroad ] Statistics               ( 122) - Total/Used memory: 79872/53409
+2019-05-11 23:37:16 INFO  [marauroad ] Statistics               ( 122) - Total/Used memory: 79872/38334
+2019-05-11 23:38:16 INFO  [marauroad ] Statistics               ( 122) - Total/Used memory: 79872/43561
+2019-05-11 23:39:16 INFO  [marauroad ] Statistics               ( 122) - Total/Used memory: 79872/48686
+2019-05-11 23:40:16 INFO  [marauroad ] Statistics               ( 122) - Total/Used memory: 79872/53809
+2019-05-11 23:41:16 INFO  [marauroad ] Statistics               ( 122) - Total/Used memory: 79872/43139
+2019-05-11 23:42:16 INFO  [marauroad ] Statistics               ( 122) - Total/Used memory: 79872/47866
+2019-05-11 23:43:16 INFO  [marauroad ] Statistics               ( 122) - Total/Used memory: 79872/54228
+2019-05-11 23:44:16 INFO  [marauroad ] Statistics               ( 122) - Total/Used memory: 79872/39543
+2019-05-11 23:45:16 INFO  [verManager] TeleporterBehaviour      ( 174) - Cannot place teleporting NPC Rose Leigh at 0_athor_ship_w2 53 83
+2019-05-11 23:45:16 INFO  [verManager] TeleporterBehaviour      ( 174) - Cannot place teleporting NPC Rose Leigh at 0_nalwor_river_se 111 105
+2019-05-11 23:45:16 INFO  [marauroad ] Statistics               ( 122) - Total/Used memory: 79872/45104
+2019-05-11 23:46:16 INFO  [marauroad ] Statistics               ( 122) - Total/Used memory: 79872/49894
+2019-05-11 23:47:16 INFO  [marauroad ] Statistics               ( 122) - Total/Used memory: 79872/55017
+2019-05-11 23:48:16 INFO  [marauroad ] Statistics               ( 122) - Total/Used memory: 79872/40339
+2019-05-11 23:49:16 INFO  [marauroad ] Statistics               ( 122) - Total/Used memory: 79872/45468
+2019-05-11 23:50:16 INFO  [marauroad ] Statistics               ( 122) - Total/Used memory: 79872/51054
+2019-05-11 23:51:16 INFO  [marauroad ] Statistics               ( 122) - Total/Used memory: 79872/36360
+2019-05-11 23:52:16 INFO  [marauroad ] Statistics               ( 122) - Total/Used memory: 79872/41600
+2019-05-11 23:53:16 INFO  [marauroad ] Statistics               ( 122) - Total/Used memory: 79872/46311
+2019-05-11 23:54:16 INFO  [marauroad ] Statistics               ( 122) - Total/Used memory: 79872/51745
+2019-05-11 23:55:16 INFO  [marauroad ] Statistics               ( 122) - Total/Used memory: 79872/37140
+2019-05-11 23:56:16 INFO  [marauroad ] Statistics               ( 122) - Total/Used memory: 79872/42333
+2019-05-11 23:57:16 INFO  [marauroad ] Statistics               ( 122) - Total/Used memory: 79872/47522
+2019-05-11 23:58:16 INFO  [marauroad ] Statistics               ( 122) - Total/Used memory: 79872/52279
+2019-05-11 23:59:16 INFO  [marauroad ] Statistics               ( 122) - Total/Used memory: 79872/37936

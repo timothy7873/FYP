@@ -119,13 +119,17 @@ public class UweJourneyListViewPanel extends JComponent{
 		lastY=getY(desHeading)+getHeight(desHeading);
 		
 		//add des body
+		
 		JTextArea desBody=new JTextArea();
 		desBody.setEditable(false);
-		add(desBody);
+		desBody.setLineWrap(true);
+		desBody.setWrapStyleWord(true);
+		//JScrollPane rDesBody=new JScrollPane(desBody);
 		setX(desBody,getX(desHeading));
 		setY(desBody,lastY);
 		setWidth(desBody,300);
 		setHeight(desBody,getHeight(listBody));
+		add(desBody);
 		lastY=getY(desBody)+getHeight(desBody);
 		
 		//add mouse listener for list

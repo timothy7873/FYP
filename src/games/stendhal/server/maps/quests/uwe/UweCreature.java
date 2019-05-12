@@ -50,13 +50,13 @@ public class UweCreature implements LoadableContent {
 		 * item.setImplementation(Item.class); item.setWeight(1);
 		 * item.setEquipableSlots(slots); manager.addItem(item);
 		 */
-		// Item item = manager.getItem( "golden key");
+		 //Item item = em.getItem( "golden key");
 	//	Item item = em.getItem("=");
 		//item.put("menu", "Drink|Use");
 
-//		Creature rat = em.getCreature("rat");
+		//Creature rat = em.getCreature("rat");
 //
-//		// rat.addDropItem("golden key", 100, 2);
+		//rat.addDropItem("golden key", 100, 2);
 //
 //		final Creature creature = new ItemGuardCreature(rat, "=");
 //

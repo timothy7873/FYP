@@ -9,7 +9,7 @@ public abstract class ManagementAPI {
 	public abstract TraceQuest getTraceQuestion(String user, String journeyRowId);
 	public abstract ReorderQuest getReorderQuestion(String user, String journeyRowId);
 	public abstract YesNoTest[] getYesNoTests(String npcId);
-	public abstract QuestHint getHint(String npcId, String user);
+	public abstract QuestHint getHint(String user, String journeyId);
 	public abstract void setQuestStatus(String journeyRowId, String user, String status);
 	public abstract void setLastStartTime(String journeyRowId, String user);
 	public abstract void stopTimeCount(String journeyRowId, String user);

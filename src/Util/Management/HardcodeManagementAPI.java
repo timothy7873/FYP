@@ -50,7 +50,7 @@ public class HardcodeManagementAPI extends ManagementAPI{
 	{
 		return new YesNoTest[] {new YesNoTest("Is java a program language?",true),new YesNoTest("Is java a script language?",false)};
 	}
-	public QuestHint getHint(String npcId, String user) 
+	public QuestHint getHint(String user, String journeyId) 
 	{
 		if(hints.size()==0)
 			return null;

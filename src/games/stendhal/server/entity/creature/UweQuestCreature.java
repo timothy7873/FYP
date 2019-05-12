@@ -11,6 +11,7 @@ import games.stendhal.server.entity.creature.impl.DropItem;
 import games.stendhal.server.entity.item.Corpse;
 import games.stendhal.server.entity.item.Item;
 import games.stendhal.server.entity.item.StackableItem;
+import games.stendhal.server.entity.item.UweItemManager;
 
 public class UweQuestCreature extends Creature{
 	private static final double SERVER_DROP_GENEROSITY = 1;
@@ -41,7 +42,9 @@ public class UweQuestCreature extends Creature{
 	{
 		super.dropItemsOn(corpse);
 		
-		for (final Item item : getDroppedItems()) {
+		for (Item item : getDroppedItems()) {
+			if(UweItemManager.isCodeItem(item))
+				item=UweItemManager.createCodeItem(item.getName());
 			corpse.add(item);
 			item.setFromCorpse(true);
 			if (corpse.isFull()) {
